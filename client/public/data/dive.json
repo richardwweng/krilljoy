@@ -1,22 +1,25 @@
 {
   "generated": "2026-11-03",
   "data_generated": "2026-11-03",
-  "attribution": "Data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0.",
+  "game_version": "13.09.00.5777412",
+  "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
   "prompts": [
     {
       "id": "sentinels",
       "text": "Name a tier 1 player who has played for Sentinels",
+      "pool": "players",
       "answers": [
         {
           "id": "zekken",
           "aliases": [
             "zekken"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zekken",
           "tier": "plankton",
           "points": 10,
           "score": 67,
-          "source": "https://liquipedia.net/valorant/Zekken",
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -45,10 +48,11 @@
           "aliases": [
             "zellsis"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zellsis",
           "tier": "plankton",
           "points": 10,
           "score": 60,
-          "source": "https://liquipedia.net/valorant/Zellsis",
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -75,10 +79,11 @@
           "aliases": [
             "johnqt"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Johnqt",
           "tier": "plankton",
           "points": 10,
           "score": 59,
-          "source": "https://liquipedia.net/valorant/Johnqt",
           "evidence": {
             "tier1_events": 14,
             "international_events": 5,
@@ -108,10 +113,11 @@
           "aliases": [
             "sacy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sacy",
           "tier": "schooler",
           "points": 30,
           "score": 50,
-          "source": "https://liquipedia.net/valorant/Sacy",
           "evidence": {
             "tier1_events": 12,
             "international_events": 8,
@@ -136,10 +142,11 @@
             "tenz",
             "tenzera"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/TenZ",
           "tier": "schooler",
           "points": 30,
           "score": 50,
-          "source": "https://liquipedia.net/valorant/TenZ",
           "evidence": {
             "tier1_events": 10,
             "international_events": 6,
@@ -166,10 +173,11 @@
           "aliases": [
             "bang"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Bang",
           "tier": "schooler",
           "points": 30,
           "score": 46,
-          "source": "https://liquipedia.net/valorant/Bang",
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -189,10 +197,11 @@
           "aliases": [
             "n4rrate"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/N4RRATE",
           "tier": "schooler",
           "points": 30,
           "score": 41,
-          "source": "https://liquipedia.net/valorant/N4RRATE",
           "evidence": {
             "tier1_events": 14,
             "international_events": 5,
@@ -214,10 +223,11 @@
             "food",
             "victor"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Victor",
           "tier": "rare",
           "points": 60,
           "score": 38,
-          "source": "https://liquipedia.net/valorant/Victor",
           "evidence": {
             "tier1_events": 13,
             "international_events": 8,
@@ -234,10 +244,11 @@
           "aliases": [
             "jonahp"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/JonahP",
           "tier": "rare",
           "points": 60,
           "score": 33,
-          "source": "https://liquipedia.net/valorant/JonahP",
           "evidence": {
             "tier1_events": 14,
             "international_events": 6,
@@ -253,10 +264,11 @@
           "aliases": [
             "pancada"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/PANcada",
           "tier": "rare",
           "points": 60,
           "score": 32,
-          "source": "https://liquipedia.net/valorant/PANcada",
           "evidence": {
             "tier1_events": 11,
             "international_events": 4,
@@ -276,10 +288,11 @@
             "jimzo",
             "marved"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Marved",
           "tier": "rare",
           "points": 60,
           "score": 30,
-          "source": "https://liquipedia.net/valorant/Marved",
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
@@ -298,10 +311,11 @@
             "cortez",
             "cortezia"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Cortezia",
           "tier": "rare",
           "points": 60,
           "score": 21,
-          "source": "https://liquipedia.net/valorant/Cortezia",
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -318,10 +332,11 @@
           "aliases": [
             "shahzam"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
           "tier": "rare",
           "points": 60,
           "score": 20,
-          "source": "https://liquipedia.net/valorant/ShahZaM",
           "evidence": {
             "tier1_events": 4,
             "international_events": 3,
@@ -340,10 +355,11 @@
           "aliases": [
             "dapr"
           ],
-          "tier": "rare",
-          "points": 60,
-          "score": 19,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Dapr",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -362,10 +378,11 @@
           "aliases": [
             "sick"
           ],
-          "tier": "rare",
-          "points": 60,
-          "score": 19,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/SicK",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -384,10 +401,11 @@
           "aliases": [
             "zombs"
           ],
-          "tier": "rare",
-          "points": 60,
-          "score": 19,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Zombs",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -406,10 +424,11 @@
           "aliases": [
             "curry"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Curry",
           "tier": "deep_cut",
           "points": 85,
           "score": 18,
-          "source": "https://liquipedia.net/valorant/Curry",
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -429,10 +448,11 @@
           "aliases": [
             "reduxx"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Reduxx",
           "tier": "deep_cut",
           "points": 85,
           "score": 12,
-          "source": "https://liquipedia.net/valorant/Reduxx",
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -449,10 +469,11 @@
           "aliases": [
             "dephh"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dephh",
           "tier": "deep_cut",
           "points": 85,
           "score": 11,
-          "source": "https://liquipedia.net/valorant/Dephh",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -467,10 +488,11 @@
           "aliases": [
             "jerrwin"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jerrwin",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/Jerrwin",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -486,10 +508,11 @@
           "aliases": [
             "kyu"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Kyu",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 7,
-          "source": "https://liquipedia.net/valorant/Kyu",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -504,16 +527,18 @@
     {
       "id": "intl_winner",
       "text": "Name a tier 1 player who has won an international event",
+      "pool": "players",
       "answers": [
         {
           "id": "Chronicle",
           "aliases": [
             "chronicle"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Chronicle",
           "tier": "plankton",
           "points": 10,
           "score": 67,
-          "source": "https://liquipedia.net/valorant/Chronicle",
           "evidence": {
             "tier1_events": 21,
             "international_events": 11,
@@ -529,10 +554,11 @@
           "aliases": [
             "d4v41"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/D4v41",
           "tier": "plankton",
           "points": 10,
           "score": 65,
-          "source": "https://liquipedia.net/valorant/D4v41",
           "evidence": {
             "tier1_events": 25,
             "international_events": 15,
@@ -546,10 +572,11 @@
           "aliases": [
             "f0rsaken"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/F0rsakeN",
           "tier": "plankton",
           "points": 10,
           "score": 65,
-          "source": "https://liquipedia.net/valorant/F0rsakeN",
           "evidence": {
             "tier1_events": 25,
             "international_events": 15,
@@ -563,10 +590,11 @@
           "aliases": [
             "boaster"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Boaster",
           "tier": "plankton",
           "points": 10,
           "score": 63,
-          "source": "https://liquipedia.net/valorant/Boaster",
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -582,10 +610,11 @@
             "derke",
             "derkeps"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Derke",
           "tier": "plankton",
           "points": 10,
           "score": 63,
-          "source": "https://liquipedia.net/valorant/Derke",
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -600,10 +629,11 @@
           "aliases": [
             "buzz"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/BuZz",
           "tier": "plankton",
           "points": 10,
           "score": 59,
-          "source": "https://liquipedia.net/valorant/BuZz",
           "evidence": {
             "tier1_events": 23,
             "international_events": 13,
@@ -617,10 +647,11 @@
           "aliases": [
             "jinggg"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jinggg",
           "tier": "plankton",
           "points": 10,
           "score": 59,
-          "source": "https://liquipedia.net/valorant/Jinggg",
           "evidence": {
             "tier1_events": 23,
             "international_events": 13,
@@ -634,10 +665,11 @@
           "aliases": [
             "munchkin"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Munchkin",
           "tier": "plankton",
           "points": 10,
           "score": 56,
-          "source": "https://liquipedia.net/valorant/Munchkin",
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -651,10 +683,11 @@
           "aliases": [
             "stax"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Stax",
           "tier": "plankton",
           "points": 10,
           "score": 56,
-          "source": "https://liquipedia.net/valorant/Stax",
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -670,10 +703,11 @@
             "mengquan",
             "taylor13"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/CHICHOO",
           "tier": "plankton",
           "points": 10,
           "score": 55,
-          "source": "https://liquipedia.net/valorant/CHICHOO",
           "evidence": {
             "tier1_events": 21,
             "international_events": 12,
@@ -687,10 +721,11 @@
           "aliases": [
             "nobody"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Nobody",
           "tier": "plankton",
           "points": 10,
           "score": 55,
-          "source": "https://liquipedia.net/valorant/Nobody",
           "evidence": {
             "tier1_events": 21,
             "international_events": 12,
@@ -705,10 +740,11 @@
             "mikasa",
             "smoggy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Smoggy",
           "tier": "plankton",
           "points": 10,
           "score": 55,
-          "source": "https://liquipedia.net/valorant/Smoggy",
           "evidence": {
             "tier1_events": 21,
             "international_events": 12,
@@ -724,10 +760,11 @@
             "kk",
             "zmjjkk"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ZmjjKK",
           "tier": "plankton",
           "points": 10,
           "score": 55,
-          "source": "https://liquipedia.net/valorant/ZmjjKK",
           "evidence": {
             "tier1_events": 21,
             "international_events": 12,
@@ -741,10 +778,11 @@
           "aliases": [
             "alfajer"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Alfajer",
           "tier": "schooler",
           "points": 30,
           "score": 54,
-          "source": "https://liquipedia.net/valorant/Alfajer",
           "evidence": {
             "tier1_events": 19,
             "international_events": 9,
@@ -759,10 +797,11 @@
           "aliases": [
             "meteor"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Meteor",
           "tier": "schooler",
           "points": 30,
           "score": 54,
-          "source": "https://liquipedia.net/valorant/Meteor",
           "evidence": {
             "tier1_events": 19,
             "international_events": 9,
@@ -777,10 +816,11 @@
           "aliases": [
             "ethan"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ethan",
           "tier": "schooler",
           "points": 30,
           "score": 51,
-          "source": "https://liquipedia.net/valorant/Ethan",
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -795,10 +835,11 @@
           "aliases": [
             "aspas"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Aspas",
           "tier": "schooler",
           "points": 30,
           "score": 50,
-          "source": "https://liquipedia.net/valorant/Aspas",
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -812,10 +853,11 @@
           "aliases": [
             "crashies"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Crashies",
           "tier": "schooler",
           "points": 30,
           "score": 50,
-          "source": "https://liquipedia.net/valorant/Crashies",
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -829,10 +871,11 @@
           "aliases": [
             "nats"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/NAts",
           "tier": "schooler",
           "points": 30,
           "score": 50,
-          "source": "https://liquipedia.net/valorant/NAts",
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -846,10 +889,11 @@
           "aliases": [
             "rb"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Rb",
           "tier": "schooler",
           "points": 30,
           "score": 50,
-          "source": "https://liquipedia.net/valorant/Rb",
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -863,10 +907,11 @@
           "aliases": [
             "mindfreak"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Mindfreak_(Indonesian_player)",
           "tier": "schooler",
           "points": 30,
           "score": 49,
-          "source": "https://liquipedia.net/valorant/Mindfreak_(Indonesian_player)",
           "evidence": {
             "tier1_events": 17,
             "international_events": 11,
@@ -880,10 +925,11 @@
           "aliases": [
             "jawgemo"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jawgemo",
           "tier": "schooler",
           "points": 30,
           "score": 47,
-          "source": "https://liquipedia.net/valorant/Jawgemo",
           "evidence": {
             "tier1_events": 19,
             "international_events": 9,
@@ -897,10 +943,11 @@
           "aliases": [
             "saadhak"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Saadhak",
           "tier": "schooler",
           "points": 30,
           "score": 46,
-          "source": "https://liquipedia.net/valorant/Saadhak",
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -915,10 +962,11 @@
             "smthlikeyou",
             "something"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Something",
           "tier": "schooler",
           "points": 30,
           "score": 46,
-          "source": "https://liquipedia.net/valorant/Something",
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -932,10 +980,11 @@
           "aliases": [
             "zekken"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zekken",
           "tier": "schooler",
           "points": 30,
           "score": 44,
-          "source": "https://liquipedia.net/valorant/Zekken",
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -949,10 +998,11 @@
           "aliases": [
             "less"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Less",
           "tier": "schooler",
           "points": 30,
           "score": 43,
-          "source": "https://liquipedia.net/valorant/Less",
           "evidence": {
             "tier1_events": 17,
             "international_events": 8,
@@ -966,10 +1016,11 @@
           "aliases": [
             "sacy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sacy",
           "tier": "schooler",
           "points": 30,
           "score": 42,
-          "source": "https://liquipedia.net/valorant/Sacy",
           "evidence": {
             "tier1_events": 12,
             "international_events": 8,
@@ -984,10 +1035,11 @@
           "aliases": [
             "suygetsu"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SUYGETSU",
           "tier": "schooler",
           "points": 30,
           "score": 41,
-          "source": "https://liquipedia.net/valorant/SUYGETSU",
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -1001,10 +1053,11 @@
           "aliases": [
             "zellsis"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zellsis",
           "tier": "schooler",
           "points": 30,
           "score": 41,
-          "source": "https://liquipedia.net/valorant/Zellsis",
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -1019,10 +1072,11 @@
             "food",
             "victor"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Victor",
           "tier": "schooler",
           "points": 30,
           "score": 39,
-          "source": "https://liquipedia.net/valorant/Victor",
           "evidence": {
             "tier1_events": 13,
             "international_events": 8,
@@ -1036,10 +1090,11 @@
           "aliases": [
             "carpe"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Carpe",
           "tier": "rare",
           "points": 60,
           "score": 38,
-          "source": "https://liquipedia.net/valorant/Carpe",
           "evidence": {
             "tier1_events": 14,
             "international_events": 7,
@@ -1053,10 +1108,11 @@
           "aliases": [
             "cned"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/CNed",
           "tier": "rare",
           "points": 60,
           "score": 38,
-          "source": "https://liquipedia.net/valorant/CNed",
           "evidence": {
             "tier1_events": 14,
             "international_events": 7,
@@ -1071,10 +1127,11 @@
             "finesse",
             "fns"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/FNS",
           "tier": "rare",
           "points": 60,
           "score": 38,
-          "source": "https://liquipedia.net/valorant/FNS",
           "evidence": {
             "tier1_events": 12,
             "international_events": 8,
@@ -1088,10 +1145,11 @@
           "aliases": [
             "kingg"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/KiNgg",
           "tier": "rare",
           "points": 60,
           "score": 38,
-          "source": "https://liquipedia.net/valorant/KiNgg",
           "evidence": {
             "tier1_events": 16,
             "international_events": 6,
@@ -1105,10 +1163,11 @@
           "aliases": [
             "shao"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Shao",
           "tier": "rare",
           "points": 60,
           "score": 36,
-          "source": "https://liquipedia.net/valorant/Shao",
           "evidence": {
             "tier1_events": 14,
             "international_events": 6,
@@ -1123,10 +1182,11 @@
             "tenz",
             "tenzera"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/TenZ",
           "tier": "rare",
           "points": 60,
           "score": 36,
-          "source": "https://liquipedia.net/valorant/TenZ",
           "evidence": {
             "tier1_events": 10,
             "international_events": 6,
@@ -1141,10 +1201,11 @@
           "aliases": [
             "ange1"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ANGE1",
           "tier": "rare",
           "points": 60,
           "score": 35,
-          "source": "https://liquipedia.net/valorant/ANGE1",
           "evidence": {
             "tier1_events": 13,
             "international_events": 6,
@@ -1158,10 +1219,11 @@
           "aliases": [
             "c0m"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/C0M",
           "tier": "rare",
           "points": 60,
           "score": 35,
-          "source": "https://liquipedia.net/valorant/C0M",
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -1176,10 +1238,11 @@
             "s3xture",
             "t3xture"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/T3xture",
           "tier": "rare",
           "points": 60,
           "score": 35,
-          "source": "https://liquipedia.net/valorant/T3xture",
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -1193,10 +1256,11 @@
           "aliases": [
             "izu"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/IZu",
           "tier": "rare",
           "points": 60,
           "score": 34,
-          "source": "https://liquipedia.net/valorant/IZu",
           "evidence": {
             "tier1_events": 14,
             "international_events": 5,
@@ -1210,10 +1274,11 @@
           "aliases": [
             "johnqt"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Johnqt",
           "tier": "rare",
           "points": 60,
           "score": 34,
-          "source": "https://liquipedia.net/valorant/Johnqt",
           "evidence": {
             "tier1_events": 14,
             "international_events": 5,
@@ -1227,10 +1292,11 @@
           "aliases": [
             "lakia"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Lakia",
           "tier": "rare",
           "points": 60,
           "score": 34,
-          "source": "https://liquipedia.net/valorant/Lakia",
           "evidence": {
             "tier1_events": 12,
             "international_events": 6,
@@ -1244,10 +1310,11 @@
           "aliases": [
             "zyppan"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zyppan",
           "tier": "rare",
           "points": 60,
           "score": 34,
-          "source": "https://liquipedia.net/valorant/Zyppan",
           "evidence": {
             "tier1_events": 12,
             "international_events": 6,
@@ -1262,10 +1329,11 @@
             "yay",
             "yayster"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Yay",
           "tier": "rare",
           "points": 60,
           "score": 33,
-          "source": "https://liquipedia.net/valorant/Yay",
           "evidence": {
             "tier1_events": 11,
             "international_events": 6,
@@ -1281,10 +1349,11 @@
             "leoo",
             "ziz"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Leo",
           "tier": "rare",
           "points": 60,
           "score": 32,
-          "source": "https://liquipedia.net/valorant/Leo",
           "evidence": {
             "tier1_events": 8,
             "international_events": 5,
@@ -1300,10 +1369,11 @@
             "hunter",
             "karon"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Karon",
           "tier": "rare",
           "points": 60,
           "score": 31,
-          "source": "https://liquipedia.net/valorant/Karon",
           "evidence": {
             "tier1_events": 13,
             "international_events": 4,
@@ -1318,10 +1388,11 @@
             "ardiis",
             "icepaperhands"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ardiis",
           "tier": "rare",
           "points": 60,
           "score": 29,
-          "source": "https://liquipedia.net/valorant/Ardiis",
           "evidence": {
             "tier1_events": 10,
             "international_events": 6,
@@ -1336,10 +1407,11 @@
             "jimzo",
             "marved"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Marved",
           "tier": "rare",
           "points": 60,
           "score": 29,
-          "source": "https://liquipedia.net/valorant/Marved",
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
@@ -1353,10 +1425,11 @@
           "aliases": [
             "pancada"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/PANcada",
           "tier": "rare",
           "points": 60,
           "score": 29,
-          "source": "https://liquipedia.net/valorant/PANcada",
           "evidence": {
             "tier1_events": 11,
             "international_events": 4,
@@ -1370,10 +1443,11 @@
           "aliases": [
             "starxo"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Starxo",
           "tier": "rare",
           "points": 60,
           "score": 29,
-          "source": "https://liquipedia.net/valorant/Starxo",
           "evidence": {
             "tier1_events": 11,
             "international_events": 4,
@@ -1387,10 +1461,11 @@
           "aliases": [
             "boostio"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Boostio",
           "tier": "rare",
           "points": 60,
           "score": 28,
-          "source": "https://liquipedia.net/valorant/Boostio",
           "evidence": {
             "tier1_events": 10,
             "international_events": 4,
@@ -1404,10 +1479,11 @@
           "aliases": [
             "demon1"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Demon1",
           "tier": "rare",
           "points": 60,
           "score": 28,
-          "source": "https://liquipedia.net/valorant/Demon1",
           "evidence": {
             "tier1_events": 12,
             "international_events": 3,
@@ -1421,10 +1497,11 @@
           "aliases": [
             "mada"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Mada",
           "tier": "rare",
           "points": 60,
           "score": 28,
-          "source": "https://liquipedia.net/valorant/Mada",
           "evidence": {
             "tier1_events": 10,
             "international_events": 4,
@@ -1438,10 +1515,11 @@
           "aliases": [
             "brawk"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Brawk",
           "tier": "rare",
           "points": 60,
           "score": 27,
-          "source": "https://liquipedia.net/valorant/Brawk",
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -1455,10 +1533,11 @@
           "aliases": [
             "patmen"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/PatMen",
           "tier": "rare",
           "points": 60,
           "score": 27,
-          "source": "https://liquipedia.net/valorant/PatMen",
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -1472,10 +1551,11 @@
           "aliases": [
             "s0m"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/S0m",
           "tier": "rare",
           "points": 60,
           "score": 27,
-          "source": "https://liquipedia.net/valorant/S0m",
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -1489,10 +1569,11 @@
           "aliases": [
             "sheydos"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sheydos",
           "tier": "deep_cut",
           "points": 85,
           "score": 26,
-          "source": "https://liquipedia.net/valorant/Sheydos",
           "evidence": {
             "tier1_events": 10,
             "international_events": 3,
@@ -1506,10 +1587,11 @@
           "aliases": [
             "skuba"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Skuba",
           "tier": "deep_cut",
           "points": 85,
           "score": 26,
-          "source": "https://liquipedia.net/valorant/Skuba",
           "evidence": {
             "tier1_events": 8,
             "international_events": 4,
@@ -1523,10 +1605,11 @@
           "aliases": [
             "redgar"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Redgar",
           "tier": "deep_cut",
           "points": 85,
           "score": 25,
-          "source": "https://liquipedia.net/valorant/Redgar",
           "evidence": {
             "tier1_events": 8,
             "international_events": 5,
@@ -1540,10 +1623,11 @@
           "aliases": [
             "kamyk"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Kamyk",
           "tier": "deep_cut",
           "points": 85,
           "score": 23,
-          "source": "https://liquipedia.net/valorant/Kamyk",
           "evidence": {
             "tier1_events": 7,
             "international_events": 3,
@@ -1557,10 +1641,11 @@
           "aliases": [
             "dambi"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dambi",
           "tier": "deep_cut",
           "points": 85,
           "score": 22,
-          "source": "https://liquipedia.net/valorant/Dambi",
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -1575,10 +1660,11 @@
             "francis",
             "zik"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Francis",
           "tier": "deep_cut",
           "points": 85,
           "score": 22,
-          "source": "https://liquipedia.net/valorant/Francis",
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -1592,10 +1678,11 @@
           "aliases": [
             "ivy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ivy_(Korean_player)",
           "tier": "deep_cut",
           "points": 85,
           "score": 22,
-          "source": "https://liquipedia.net/valorant/Ivy_(Korean_player)",
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -1609,10 +1696,11 @@
           "aliases": [
             "lukxo"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Lukxo",
           "tier": "deep_cut",
           "points": 85,
           "score": 19,
-          "source": "https://liquipedia.net/valorant/Lukxo",
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -1626,10 +1714,11 @@
           "aliases": [
             "spikezin"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SpikeziN",
           "tier": "deep_cut",
           "points": 85,
           "score": 19,
-          "source": "https://liquipedia.net/valorant/SpikeziN",
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -1643,10 +1732,11 @@
           "aliases": [
             "sylvan"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sylvan",
           "tier": "deep_cut",
           "points": 85,
           "score": 19,
-          "source": "https://liquipedia.net/valorant/Sylvan",
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -1660,10 +1750,11 @@
           "aliases": [
             "xross"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Xross",
           "tier": "deep_cut",
           "points": 85,
           "score": 19,
-          "source": "https://liquipedia.net/valorant/Xross",
           "evidence": {
             "tier1_events": 5,
             "international_events": 2,
@@ -1677,10 +1768,11 @@
           "aliases": [
             "s1mon"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/S1Mon",
           "tier": "deep_cut",
           "points": 85,
           "score": 18,
-          "source": "https://liquipedia.net/valorant/S1Mon",
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -1694,10 +1786,11 @@
           "aliases": [
             "bonecold"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/BONECOLD",
           "tier": "deep_cut",
           "points": 85,
           "score": 17,
-          "source": "https://liquipedia.net/valorant/BONECOLD",
           "evidence": {
             "tier1_events": 4,
             "international_events": 3,
@@ -1711,10 +1804,11 @@
           "aliases": [
             "sato"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sato",
           "tier": "deep_cut",
           "points": 85,
           "score": 17,
-          "source": "https://liquipedia.net/valorant/Sato",
           "evidence": {
             "tier1_events": 5,
             "international_events": 1,
@@ -1728,10 +1822,11 @@
           "aliases": [
             "shahzam"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
           "tier": "deep_cut",
           "points": 85,
           "score": 17,
-          "source": "https://liquipedia.net/valorant/ShahZaM",
           "evidence": {
             "tier1_events": 4,
             "international_events": 3,
@@ -1746,10 +1841,11 @@
             "blowz",
             "blowz1n"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Blowz",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Blowz",
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -1763,10 +1859,11 @@
           "aliases": [
             "dapr"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dapr",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Dapr",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -1780,10 +1877,11 @@
           "aliases": [
             "darker"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Darker",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Darker",
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -1797,10 +1895,11 @@
           "aliases": [
             "neon"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Neon_(Argentine_player)",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Neon_(Argentine_player)",
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -1814,10 +1913,11 @@
           "aliases": [
             "sick"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SicK",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/SicK",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -1831,10 +1931,11 @@
           "aliases": [
             "zeek"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zeek",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Zeek",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -1848,10 +1949,11 @@
           "aliases": [
             "zombs"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zombs",
           "tier": "deep_cut",
           "points": 85,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Zombs",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -1865,10 +1967,11 @@
           "aliases": [
             "erde"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Erde",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 15,
-          "source": "https://liquipedia.net/valorant/Erde",
           "evidence": {
             "tier1_events": 3,
             "international_events": 1,
@@ -1882,10 +1985,11 @@
           "aliases": [
             "davih"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/DaviH",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 14,
-          "source": "https://liquipedia.net/valorant/DaviH",
           "evidence": {
             "tier1_events": 2,
             "international_events": 1,
@@ -1899,10 +2003,11 @@
           "aliases": [
             "tkzin"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Tkzin",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 14,
-          "source": "https://liquipedia.net/valorant/Tkzin",
           "evidence": {
             "tier1_events": 2,
             "international_events": 1,
@@ -1916,10 +2021,11 @@
           "aliases": [
             "curry"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Curry",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/Curry",
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -1933,10 +2039,11 @@
           "aliases": [
             "d3ffo"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/D3ffo",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/D3ffo",
           "evidence": {
             "tier1_events": 2,
             "international_events": 2,
@@ -1950,10 +2057,11 @@
           "aliases": [
             "kiles"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Kiles",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/Kiles",
           "evidence": {
             "tier1_events": 2,
             "international_events": 2,
@@ -1967,10 +2075,11 @@
           "aliases": [
             "wooday1"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/WoodAy1",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/WoodAy1",
           "evidence": {
             "tier1_events": 2,
             "international_events": 1,
@@ -1984,16 +2093,18 @@
     {
       "id": "usa",
       "text": "Name a tier 1 player who is from the United States",
+      "pool": "players",
       "answers": [
         {
           "id": "crashies",
           "aliases": [
             "crashies"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Crashies",
           "tier": "plankton",
           "points": 10,
           "score": 47,
-          "source": "https://liquipedia.net/valorant/Crashies",
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -2010,10 +2121,11 @@
           "aliases": [
             "ethan"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ethan",
           "tier": "plankton",
           "points": 10,
           "score": 45,
-          "source": "https://liquipedia.net/valorant/Ethan",
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -2031,10 +2143,11 @@
           "aliases": [
             "jawgemo"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jawgemo",
           "tier": "plankton",
           "points": 10,
           "score": 44,
-          "source": "https://liquipedia.net/valorant/Jawgemo",
           "evidence": {
             "tier1_events": 19,
             "international_events": 9,
@@ -2051,10 +2164,11 @@
           "aliases": [
             "leaf"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Leaf",
           "tier": "plankton",
           "points": 10,
           "score": 43,
-          "source": "https://liquipedia.net/valorant/Leaf",
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -2069,10 +2183,11 @@
           "aliases": [
             "zekken"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zekken",
           "tier": "plankton",
           "points": 10,
           "score": 41,
-          "source": "https://liquipedia.net/valorant/Zekken",
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -2091,10 +2206,11 @@
             "habib",
             "trent"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Trent",
           "tier": "plankton",
           "points": 10,
           "score": 39,
-          "source": "https://liquipedia.net/valorant/Trent",
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -2109,10 +2225,11 @@
           "aliases": [
             "valyn"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Valyn",
           "tier": "plankton",
           "points": 10,
           "score": 39,
-          "source": "https://liquipedia.net/valorant/Valyn",
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -2127,10 +2244,11 @@
           "aliases": [
             "zellsis"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zellsis",
           "tier": "plankton",
           "points": 10,
           "score": 38,
-          "source": "https://liquipedia.net/valorant/Zellsis",
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -2148,10 +2266,11 @@
             "food",
             "victor"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Victor",
           "tier": "plankton",
           "points": 10,
           "score": 36,
-          "source": "https://liquipedia.net/valorant/Victor",
           "evidence": {
             "tier1_events": 13,
             "international_events": 8,
@@ -2168,10 +2287,11 @@
           "aliases": [
             "bang"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Bang",
           "tier": "plankton",
           "points": 10,
           "score": 34,
-          "source": "https://liquipedia.net/valorant/Bang",
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -2186,10 +2306,11 @@
           "aliases": [
             "c0m"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/C0M",
           "tier": "schooler",
           "points": 30,
           "score": 32,
-          "source": "https://liquipedia.net/valorant/C0M",
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -2207,10 +2328,11 @@
             "yay",
             "yayster"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Yay",
           "tier": "schooler",
           "points": 30,
           "score": 30,
-          "source": "https://liquipedia.net/valorant/Yay",
           "evidence": {
             "tier1_events": 11,
             "international_events": 6,
@@ -2227,10 +2349,11 @@
           "aliases": [
             "asuna"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Asuna",
           "tier": "schooler",
           "points": 30,
           "score": 28,
-          "source": "https://liquipedia.net/valorant/Asuna",
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -2246,10 +2369,11 @@
             "cryo",
             "cryocells"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Cryocells",
           "tier": "schooler",
           "points": 30,
           "score": 28,
-          "source": "https://liquipedia.net/valorant/Cryocells",
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -2265,10 +2389,11 @@
           "aliases": [
             "n4rrate"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/N4RRATE",
           "tier": "schooler",
           "points": 30,
           "score": 27,
-          "source": "https://liquipedia.net/valorant/N4RRATE",
           "evidence": {
             "tier1_events": 14,
             "international_events": 5,
@@ -2283,10 +2408,11 @@
           "aliases": [
             "boostio"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Boostio",
           "tier": "schooler",
           "points": 30,
           "score": 25,
-          "source": "https://liquipedia.net/valorant/Boostio",
           "evidence": {
             "tier1_events": 10,
             "international_events": 4,
@@ -2303,10 +2429,11 @@
           "aliases": [
             "demon1"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Demon1",
           "tier": "schooler",
           "points": 30,
           "score": 25,
-          "source": "https://liquipedia.net/valorant/Demon1",
           "evidence": {
             "tier1_events": 12,
             "international_events": 3,
@@ -2324,10 +2451,11 @@
           "aliases": [
             "brawk"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Brawk",
           "tier": "schooler",
           "points": 30,
           "score": 24,
-          "source": "https://liquipedia.net/valorant/Brawk",
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -2344,10 +2472,11 @@
           "aliases": [
             "s0m"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/S0m",
           "tier": "schooler",
           "points": 30,
           "score": 24,
-          "source": "https://liquipedia.net/valorant/S0m",
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -2364,10 +2493,11 @@
           "aliases": [
             "skuba"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Skuba",
           "tier": "schooler",
           "points": 30,
           "score": 23,
-          "source": "https://liquipedia.net/valorant/Skuba",
           "evidence": {
             "tier1_events": 8,
             "international_events": 4,
@@ -2384,10 +2514,11 @@
           "aliases": [
             "babybay"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Babybay",
           "tier": "schooler",
           "points": 30,
           "score": 19,
-          "source": "https://liquipedia.net/valorant/Babybay",
           "evidence": {
             "tier1_events": 8,
             "international_events": 4,
@@ -2402,10 +2533,11 @@
           "aliases": [
             "tex"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Tex",
           "tier": "schooler",
           "points": 30,
           "score": 18,
-          "source": "https://liquipedia.net/valorant/Tex",
           "evidence": {
             "tier1_events": 11,
             "international_events": 2,
@@ -2421,10 +2553,11 @@
           "aliases": [
             "xeppaa"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Xeppaa",
           "tier": "schooler",
           "points": 30,
           "score": 18,
-          "source": "https://liquipedia.net/valorant/Xeppaa",
           "evidence": {
             "tier1_events": 11,
             "international_events": 2,
@@ -2439,10 +2572,11 @@
           "aliases": [
             "derrek"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Derrek",
           "tier": "schooler",
           "points": 30,
           "score": 16,
-          "source": "https://liquipedia.net/valorant/Derrek",
           "evidence": {
             "tier1_events": 9,
             "international_events": 2,
@@ -2457,10 +2591,11 @@
           "aliases": [
             "verno"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Verno",
           "tier": "rare",
           "points": 60,
           "score": 15,
-          "source": "https://liquipedia.net/valorant/Verno",
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -2475,10 +2610,11 @@
           "aliases": [
             "icy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Icy",
           "tier": "rare",
           "points": 60,
           "score": 14,
-          "source": "https://liquipedia.net/valorant/Icy",
           "evidence": {
             "tier1_events": 7,
             "international_events": 2,
@@ -2493,10 +2629,11 @@
           "aliases": [
             "shahzam"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
           "tier": "rare",
           "points": 60,
           "score": 14,
-          "source": "https://liquipedia.net/valorant/ShahZaM",
           "evidence": {
             "tier1_events": 4,
             "international_events": 3,
@@ -2513,10 +2650,11 @@
           "aliases": [
             "dapr"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dapr",
           "tier": "rare",
           "points": 60,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/Dapr",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2533,10 +2671,11 @@
           "aliases": [
             "rossy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Rossy",
           "tier": "rare",
           "points": 60,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/Rossy",
           "evidence": {
             "tier1_events": 8,
             "international_events": 1,
@@ -2551,10 +2690,11 @@
           "aliases": [
             "sick"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SicK",
           "tier": "rare",
           "points": 60,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/SicK",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2571,10 +2711,11 @@
           "aliases": [
             "zombs"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zombs",
           "tier": "rare",
           "points": 60,
           "score": 13,
-          "source": "https://liquipedia.net/valorant/Zombs",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2591,10 +2732,11 @@
           "aliases": [
             "governor"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Governor",
           "tier": "rare",
           "points": 60,
           "score": 12,
-          "source": "https://liquipedia.net/valorant/Governor",
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -2609,10 +2751,11 @@
           "aliases": [
             "oxy"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/OXY",
           "tier": "rare",
           "points": 60,
           "score": 12,
-          "source": "https://liquipedia.net/valorant/OXY",
           "evidence": {
             "tier1_events": 9,
             "international_events": 0,
@@ -2627,10 +2770,11 @@
           "aliases": [
             "supamen"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Supamen",
           "tier": "rare",
           "points": 60,
           "score": 12,
-          "source": "https://liquipedia.net/valorant/Supamen",
           "evidence": {
             "tier1_events": 9,
             "international_events": 0,
@@ -2645,10 +2789,11 @@
           "aliases": [
             "vanity"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Vanity",
           "tier": "rare",
           "points": 60,
           "score": 12,
-          "source": "https://liquipedia.net/valorant/Vanity",
           "evidence": {
             "tier1_events": 6,
             "international_events": 3,
@@ -2663,10 +2808,11 @@
           "aliases": [
             "net"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/NeT",
           "tier": "rare",
           "points": 60,
           "score": 11,
-          "source": "https://liquipedia.net/valorant/NeT",
           "evidence": {
             "tier1_events": 6,
             "international_events": 1,
@@ -2681,10 +2827,11 @@
           "aliases": [
             "stellar"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Stellar",
           "tier": "rare",
           "points": 60,
           "score": 11,
-          "source": "https://liquipedia.net/valorant/Stellar",
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -2699,10 +2846,11 @@
           "aliases": [
             "curry"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Curry",
           "tier": "rare",
           "points": 60,
           "score": 10,
-          "source": "https://liquipedia.net/valorant/Curry",
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -2719,10 +2867,11 @@
           "aliases": [
             "bcj"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/BcJ",
           "tier": "rare",
           "points": 60,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/BcJ",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2737,10 +2886,11 @@
           "aliases": [
             "dephh"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dephh",
           "tier": "rare",
           "points": 60,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/Dephh",
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2756,10 +2906,11 @@
           "aliases": [
             "glyph"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/GLYPH",
           "tier": "rare",
           "points": 60,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/GLYPH",
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -2775,10 +2926,11 @@
           "aliases": [
             "mitch"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Mitch",
           "tier": "rare",
           "points": 60,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/Mitch",
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -2794,10 +2946,11 @@
             "csnature",
             "nature"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/NaturE",
           "tier": "rare",
           "points": 60,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/NaturE",
           "evidence": {
             "tier1_events": 6,
             "international_events": 0,
@@ -2812,10 +2965,11 @@
           "aliases": [
             "v1c"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/V1c",
           "tier": "rare",
           "points": 60,
           "score": 9,
-          "source": "https://liquipedia.net/valorant/V1c",
           "evidence": {
             "tier1_events": 6,
             "international_events": 0,
@@ -2830,10 +2984,11 @@
           "aliases": [
             "nerve"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Nerve",
           "tier": "rare",
           "points": 60,
           "score": 8,
-          "source": "https://liquipedia.net/valorant/Nerve",
           "evidence": {
             "tier1_events": 3,
             "international_events": 1,
@@ -2848,10 +3003,11 @@
           "aliases": [
             "eggsterr"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Eggsterr",
           "tier": "deep_cut",
           "points": 85,
           "score": 6,
-          "source": "https://liquipedia.net/valorant/Eggsterr",
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -2866,10 +3022,11 @@
           "aliases": [
             "flyuh"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Flyuh",
           "tier": "deep_cut",
           "points": 85,
           "score": 6,
-          "source": "https://liquipedia.net/valorant/Flyuh",
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -2885,10 +3042,11 @@
             "big bean",
             "jakee"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jakee",
           "tier": "deep_cut",
           "points": 85,
           "score": 6,
-          "source": "https://liquipedia.net/valorant/Jakee",
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -2903,10 +3061,11 @@
           "aliases": [
             "juv3nile"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Juv3nile",
           "tier": "deep_cut",
           "points": 85,
           "score": 6,
-          "source": "https://liquipedia.net/valorant/Juv3nile",
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -2921,10 +3080,11 @@
           "aliases": [
             "reduxx"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Reduxx",
           "tier": "deep_cut",
           "points": 85,
           "score": 6,
-          "source": "https://liquipedia.net/valorant/Reduxx",
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -2940,10 +3100,11 @@
           "aliases": [
             "chloric"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Chloric",
           "tier": "deep_cut",
           "points": 85,
           "score": 5,
-          "source": "https://liquipedia.net/valorant/Chloric",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -2958,10 +3119,11 @@
           "aliases": [
             "jackk"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jackk",
           "tier": "deep_cut",
           "points": 85,
           "score": 5,
-          "source": "https://liquipedia.net/valorant/Jackk",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -2976,10 +3138,11 @@
           "aliases": [
             "p0ppin"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/P0PPIN",
           "tier": "deep_cut",
           "points": 85,
           "score": 5,
-          "source": "https://liquipedia.net/valorant/P0PPIN",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -2995,10 +3158,11 @@
           "aliases": [
             "paincakes"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Paincakes",
           "tier": "deep_cut",
           "points": 85,
           "score": 5,
-          "source": "https://liquipedia.net/valorant/Paincakes",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3013,10 +3177,11 @@
           "aliases": [
             "pxs"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/PxS",
           "tier": "deep_cut",
           "points": 85,
           "score": 5,
-          "source": "https://liquipedia.net/valorant/PxS",
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3032,10 +3197,11 @@
           "aliases": [
             "boni"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Boni",
           "tier": "deep_cut",
           "points": 85,
           "score": 4,
-          "source": "https://liquipedia.net/valorant/Boni",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3051,10 +3217,11 @@
             "fireball",
             "fireballops"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/FireBallOps",
           "tier": "deep_cut",
           "points": 85,
           "score": 4,
-          "source": "https://liquipedia.net/valorant/FireBallOps",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3069,10 +3236,11 @@
           "aliases": [
             "nightz"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Nightz",
           "tier": "deep_cut",
           "points": 85,
           "score": 4,
-          "source": "https://liquipedia.net/valorant/Nightz",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3087,10 +3255,11 @@
           "aliases": [
             "notexxd"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Notexxd",
           "tier": "deep_cut",
           "points": 85,
           "score": 4,
-          "source": "https://liquipedia.net/valorant/Notexxd",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3106,10 +3275,11 @@
           "aliases": [
             "spaz"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Spaz",
           "tier": "deep_cut",
           "points": 85,
           "score": 4,
-          "source": "https://liquipedia.net/valorant/Spaz",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3126,10 +3296,11 @@
             "cane",
             "canezerra"
           ],
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 3,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Canezerra",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 3,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3144,10 +3315,11 @@
           "aliases": [
             "hiko"
           ],
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 3,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Hiko",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 3,
           "evidence": {
             "tier1_events": 1,
             "international_events": 1,
@@ -3163,10 +3335,11 @@
             "jammy",
             "jammyz"
           ],
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 3,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Jammyz",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 3,
           "evidence": {
             "tier1_events": 1,
             "international_events": 1,
@@ -3181,10 +3354,11 @@
           "aliases": [
             "nitr0"
           ],
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 3,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Nitr0",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 3,
           "evidence": {
             "tier1_events": 1,
             "international_events": 1,
@@ -3199,10 +3373,11 @@
           "aliases": [
             "runi"
           ],
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 3,
+          "icon": null,
           "source": "https://liquipedia.net/valorant/Runi",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 3,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3218,10 +3393,11 @@
             "add3r",
             "add3r2k"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Add3r",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 2,
-          "source": "https://liquipedia.net/valorant/Add3r",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3236,10 +3412,11 @@
           "aliases": [
             "bdog"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Bdog",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 2,
-          "source": "https://liquipedia.net/valorant/Bdog",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3255,10 +3432,11 @@
             "babyj",
             "inspire"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Inspire",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 2,
-          "source": "https://liquipedia.net/valorant/Inspire",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3273,10 +3451,11 @@
           "aliases": [
             "pa1nt"
           ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Pa1nt",
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": -1,
-          "source": "https://liquipedia.net/valorant/Pa1nt",
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
