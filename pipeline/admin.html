@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vallion Admin</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23ff4655'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #0f1419; --panel: #171d24; --panel2: #1e252e; --line: #2a333e;
+    --text: #e8edf2; --muted: #8b97a5; --accent: #ff4655; --accent2: #ff6b78;
+    --ok: #3ddc97;
+    --t-plankton: #7b8794; --t-schooler: #2bb3a3; --t-rare: #3d8bfd;
+    --t-deep_cut: #9b6bff; --t-one_in_a_krillion: #f5b83d; --t-too_clever: #ff6fb1;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 14px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  button, input, select { font: inherit; color: inherit; }
+  header { display: flex; align-items: center; gap: 16px; padding: 12px 20px;
+           border-bottom: 1px solid var(--line); background: var(--panel); position: sticky; top: 0; z-index: 5; }
+  header h1 { font-size: 16px; margin: 0; letter-spacing: .02em; }
+  header h1 span { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 12px; }
+  .spacer { flex: 1; }
+  .status { font-size: 12px; color: var(--muted); min-width: 90px; text-align: right; }
+  .status.ok { color: var(--ok); } .status.err { color: var(--accent2); }
+  .btn { border: 1px solid var(--line); background: var(--panel2); padding: 7px 14px;
+         border-radius: 6px; cursor: pointer; }
+  .btn:hover { border-color: #3a4552; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  .btn.primary:hover { background: var(--accent2); }
+  .btn.danger { color: var(--accent2); }
+  .btn.small { padding: 4px 10px; font-size: 13px; }
+  .layout { display: grid; grid-template-columns: 320px 1fr; min-height: calc(100vh - 57px); }
+  aside { border-right: 1px solid var(--line); background: var(--panel); padding: 14px; overflow-y: auto; }
+  aside .btn { width: 100%; margin-bottom: 12px; }
+  .q { padding: 10px 12px; border-radius: 6px; cursor: pointer; border: 1px solid transparent; margin-bottom: 4px; }
+  .q:hover { background: var(--panel2); }
+  .q.active { background: var(--panel2); border-color: var(--accent); }
+  .q .t { font-size: 13px; }
+  .q .m { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .q.off .t { color: var(--muted); text-decoration: line-through; }
+  main { padding: 20px 28px; overflow-y: auto; max-width: 1100px; }
+  .empty { color: var(--muted); padding: 40px 0; }
+  label.f { display: block; font-size: 12px; color: var(--muted); margin: 0 0 4px; text-transform: uppercase; letter-spacing: .05em; }
+  input.text, select { background: var(--panel2); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+  input.text:focus, select:focus { outline: none; border-color: var(--accent); }
+  .question { width: 100%; font-size: 18px; padding: 10px 12px; }
+  .row { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; margin-top: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin-top: 18px; }
+  .card h2 { font-size: 13px; margin: 0 0 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+  .cond { display: flex; gap: 8px; margin-bottom: 8px; align-items: center; }
+  .cond select:first-child { width: 220px; } .cond select:nth-child(2) { flex: 1; min-width: 200px; }
+  .x { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 18px; padding: 0 6px; }
+  .x:hover { color: var(--accent2); }
+  .hint { font-size: 12px; color: var(--muted); }
+  .bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; margin: 6px 0 10px; background: var(--panel2); }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+  .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  th { text-align: left; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em;
+       font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td { padding: 6px 8px; border-bottom: 1px solid #222a33; vertical-align: top; }
+  td a { color: var(--text); text-decoration: none; font-weight: 600; }
+  td a:hover { color: var(--accent2); }
+  td.num { color: var(--muted); font-variant-numeric: tabular-nums; }
+  td .why { color: var(--muted); font-size: 12px; }
+  select.tier { padding: 3px 6px; font-size: 12px; border-width: 1px 1px 1px 4px; }
+  .manual { font-size: 10px; color: var(--t-too_clever); margin-left: 6px; }
+  .search { width: 220px; }
+  .count { font-size: 13px; }
+  .toggle { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13px; padding-bottom: 8px; }
+  @media (max-width: 820px) { .layout { grid-template-columns: 1fr; } aside { border-right: none; border-bottom: 1px solid var(--line); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Val<span>lion</span> · Questions</h1>
+  <div class="meta" id="meta"></div>
+  <div class="spacer"></div>
+  <div class="status" id="status"></div>
+  <button class="btn primary" id="publish" title="Write all enabled questions to out/dive.json">Publish to game</button>
+</header>
+<div class="layout">
+  <aside>
+    <button class="btn" id="new">+ New question</button>
+    <div id="list"></div>
+  </aside>
+  <main id="editor"><div class="empty">Loading…</div></main>
+</div>
+
+<script>
+const TIER_LABEL = { plankton: "Plankton", schooler: "Schooler", rare: "Rare", deep_cut: "Deep Cut",
+                     one_in_a_krillion: "One in a Krillion", too_clever: "Too Clever" };
+let S = { prompts: [], options: null, current: 0, answers: {}, filter: "" };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+
+async function api(path, body) {
+  const r = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" },
+                                       body: JSON.stringify(body) } : {});
+  const j = await r.json();
+  if (j.error) throw new Error(j.error);
+  return j;
+}
+function status(msg, cls = "") { const s = $("status"); s.textContent = msg; s.className = "status " + cls; }
+
+const slug = (t) => t.toLowerCase().replace(/^name an? (tier 1 )?(player )?(who )?((is|has|was) )?/, "").replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").slice(0, 40) || "question";
+function uniqueId(base, skip) {
+  let id = base, n = 2;
+  while (S.prompts.some((p, i) => i !== skip && p.id === id)) id = `${base}_${n++}`;
+  return id;
+}
+
+// ---------- saving ----------
+const save = debounce(async () => {
+  try { await api("/api/save", { prompts: S.prompts }); status("Saved", "ok"); }
+  catch (e) { status("Save failed", "err"); console.error(e); }
+}, 500);
+function changed({ preview = true } = {}) {
+  status("Saving…");
+  save();
+  renderList();
+  if (preview) refreshPreview();
+}
+
+// ---------- preview ----------
+async function previewFor(i) {
+  const { answers } = await api("/api/preview", { prompt: S.prompts[i] });
+  S.answers[S.prompts[i].id] = answers;
+  return answers;
+}
+const refreshPreview = debounce(async () => {
+  if (!S.prompts[S.current]) return;
+  try { await previewFor(S.current); renderPreview(); renderList(); }
+  catch (e) { $("preview").innerHTML = `<div class="hint">Preview failed: ${esc(e.message)}</div>`; }
+}, 200);
+
+// ---------- sidebar ----------
+function renderList() {
+  $("list").innerHTML = S.prompts.map((p, i) => {
+    const a = S.answers[p.id];
+    const m = a ? `${a.length} answers` : "…";
+    return `<div class="q ${i === S.current ? "active" : ""} ${p.enabled === false ? "off" : ""}" data-i="${i}">
+      <div class="t">${esc(p.text || "(untitled)")}</div><div class="m">${esc(p.id)} · ${m}</div></div>`;
+  }).join("") || `<div class="hint">No questions yet.</div>`;
+  $("list").querySelectorAll(".q").forEach(el => el.onclick = () => { S.current = +el.dataset.i; S.filter = ""; renderEditor(); renderList(); });
+}
+
+// ---------- editor ----------
+function valueOptions(type, selected) {
+  const cond = S.options.conditions.find(c => c.type === type);
+  const kind = { played_for: "teams", not_played_for: "teams", country: "countries", won: "intl_events", played_at: "all_events" }[type];
+  const vals = S.options.values[kind] || [];
+  return `<option value="">Choose…</option>` + vals.map(v =>
+    `<option value="${esc(v.value)}" ${v.value === selected ? "selected" : ""}>${esc(v.label)}</option>`).join("");
+}
+function renderEditor() {
+  const p = S.prompts[S.current];
+  if (!p) { $("editor").innerHTML = `<div class="empty">Click “+ New question” to add one.</div>`; return; }
+  const types = S.options.conditions;
+  $("editor").innerHTML = `
+    <label class="f">Question</label>
+    <input class="text question" id="q-text" value="${esc(p.text)}" placeholder="Name a tier 1 player who…">
+    <div class="row">
+      <div><label class="f">ID</label><input class="text" id="q-id" value="${esc(p.id)}" style="width:220px"></div>
+      <label class="toggle"><input type="checkbox" id="q-on" ${p.enabled !== false ? "checked" : ""}> Include in game</label>
+      <div class="spacer"></div>
+      <button class="btn small" id="dup">Duplicate</button>
+      <button class="btn small danger" id="del">Delete</button>
+    </div>
+    <div class="card">
+      <h2>Valid answers are tier 1 players who…</h2>
+      <div id="conds">${(p.conditions || []).map((c, ci) => `
+        <div class="cond" data-ci="${ci}">
+          <select class="c-type">${types.map(t => `<option value="${t.type}" ${t.type === c.type ? "selected" : ""}>${esc(t.label)}</option>`).join("")}</select>
+          <select class="c-val">${valueOptions(c.type, c.value)}</select>
+          <button class="x c-del" title="Remove">×</button>
+        </div>`).join("")}</div>
+      <button class="btn small" id="add-cond">+ Add condition</button>
+      <span class="hint" style="margin-left:10px">Players must match every condition.</span>
+    </div>
+    <div class="card" id="preview"><div class="hint">Add a condition to see answers.</div></div>`;
+
+  $("q-text").oninput = (e) => {
+    const autoId = !p.id || p.id.startsWith("new_question") || p.id === uniqueId(slug(p.text), S.current);
+    p.text = e.target.value;
+    if (autoId) { p.id = uniqueId(slug(p.text), S.current); $("q-id").value = p.id; }
+    changed({ preview: false });
+  };
+  $("q-id").onchange = (e) => {
+    const old = p.id; p.id = uniqueId(slug(e.target.value), S.current); e.target.value = p.id;
+    S.answers[p.id] = S.answers[old]; changed({ preview: false });
+  };
+  $("q-on").onchange = (e) => { p.enabled = e.target.checked; changed({ preview: false }); };
+  $("add-cond").onclick = () => { (p.conditions ||= []).push({ type: "played_for", value: "" }); renderEditor(); changed(); };
+  $("dup").onclick = () => {
+    const copy = structuredClone(p); copy.id = uniqueId(p.id + "_copy", -1); copy.text = p.text + " (copy)";
+    S.prompts.splice(S.current + 1, 0, copy); S.current++; renderEditor(); changed();
+  };
+  $("del").onclick = () => {
+    if (!confirm(`Delete “${p.text}”?`)) return;
+    S.prompts.splice(S.current, 1); S.current = Math.max(0, S.current - 1); renderEditor(); changed();
+  };
+  $("conds").querySelectorAll(".cond").forEach(row => {
+    const c = p.conditions[+row.dataset.ci];
+    row.querySelector(".c-type").onchange = (e) => { c.type = e.target.value; c.value = ""; renderEditor(); changed(); };
+    row.querySelector(".c-val").onchange = (e) => { c.value = e.target.value; changed(); };
+    row.querySelector(".c-del").onclick = () => { p.conditions.splice(+row.dataset.ci, 1); renderEditor(); changed(); };
+  });
+  refreshPreview();
+}
+
+function whyText(ev) {
+  const parts = [];
+  if (ev.international_wins?.length) parts.push(`won ${ev.international_wins.join(", ")}`);
+  parts.push(`${ev.international_events} intl · ${ev.tier1_events} tier 1 events`);
+  for (const [k, v] of Object.entries(ev)) {
+    if (["tier1_events", "international_events", "international_wins"].includes(k)) continue;
+    if (Array.isArray(v) && v.length) parts.push(`${k}: ${v.join(", ")}`);
+  }
+  return parts.join(" · ");
+}
+function renderPreview() {
+  const p = S.prompts[S.current];
+  const answers = S.answers[p.id] || [];
+  const box = $("preview");
+  if (!(p.conditions || []).some(c => c.value)) { box.innerHTML = `<div class="hint">Add a condition to see answers.</div>`; return; }
+  if (!answers.length) { box.innerHTML = `<h2>Preview</h2><div class="hint">No players match. Loosen a condition.</div>`; return; }
+  const counts = {}; answers.forEach(a => counts[a.tier] = (counts[a.tier] || 0) + 1);
+  const tiers = S.options.tiers.map(t => t.name);
+  const bar = tiers.filter(t => counts[t]).map(t =>
+    `<div style="flex:${counts[t]};background:var(--t-${t})" title="${TIER_LABEL[t]}: ${counts[t]}"></div>`).join("");
+  const legend = tiers.filter(t => counts[t]).map(t =>
+    `<span><span class="dot" style="background:var(--t-${t})"></span>${TIER_LABEL[t]} ${counts[t]}</span>`).join("");
+  const q = S.filter.toLowerCase();
+  const rows = answers.filter(a => !q || a.aliases.some(x => x.includes(q))).map(a => `
+    <tr>
+      <td><a href="${esc(a.source)}" target="_blank" rel="noopener">${esc(a.id)}</a></td>
+      <td><select class="tier" data-id="${esc(a.id)}" style="border-left-color:var(--t-${a.tier})">
+        ${tiers.map(t => `<option value="${t}" ${t === a.tier ? "selected" : ""}>${TIER_LABEL[t]}</option>`).join("")}
+      </select>${a.tier !== a.auto_tier ? `<span class="manual">manual</span>` : ""}</td>
+      <td class="num">${a.points}</td>
+      <td class="num">${a.score}</td>
+      <td><div class="why">${esc(whyText(a.evidence))}</div></td>
+    </tr>`).join("");
+  box.innerHTML = `
+    <div class="row" style="margin:0;align-items:center">
+      <h2 style="margin:0">Preview</h2><span class="count">${answers.length} valid answers</span>
+      <div class="spacer"></div>
+      <input class="text search" id="find" placeholder="Find a player…" value="${esc(S.filter)}">
+    </div>
+    <div class="bar">${bar}</div><div class="legend">${legend}</div>
+    <table><thead><tr><th>Player</th><th>Tier</th><th>Pts</th><th>Fame</th><th>Why it counts (Liquipedia)</th></tr></thead>
+    <tbody>${rows}</tbody></table>
+    <div class="hint" style="margin-top:8px">Most obvious answers first. Change a tier to override it, set it back to remove the override.</div>`;
+  const find = $("find");
+  find.oninput = (e) => { S.filter = e.target.value; renderPreview(); const f = $("find"); f.focus(); f.setSelectionRange(f.value.length, f.value.length); };
+  box.querySelectorAll("select.tier").forEach(sel => sel.onchange = (e) => {
+    const a = answers.find(x => x.id === sel.dataset.id);
+    p.overrides ||= {};
+    if (e.target.value === a.auto_tier) delete p.overrides[a.id]; else p.overrides[a.id] = e.target.value;
+    changed();
+  });
+}
+
+// ---------- top buttons ----------
+$("new").onclick = () => {
+  S.prompts.push({ id: uniqueId("new_question", -1), text: "", conditions: [{ type: "played_for", value: "" }], overrides: {}, enabled: true });
+  S.current = S.prompts.length - 1; S.filter = ""; renderEditor(); changed({ preview: false });
+  $("q-text").focus();
+};
+$("publish").onclick = async () => {
+  status("Publishing…");
+  try {
+    const r = await api("/api/publish", { prompts: S.prompts });
+    const empty = r.prompts.filter(x => !x.answers).map(x => x.id);
+    status(`Published ${r.prompts.length} questions`, "ok");
+    if (empty.length) alert(`Published, but these have no answers yet: ${empty.join(", ")}`);
+  } catch (e) { status("Publish failed", "err"); alert(e.message); }
+};
+
+// ---------- start ----------
+(async () => {
+  try {
+    const st = await api("/api/state");
+    S.prompts = st.prompts; S.options = st.options;
+    $("meta").textContent = `${st.dataset.players} players · ${st.dataset.events} events · data from ${st.dataset.generated}`;
+    renderList(); renderEditor();
+    for (let i = 0; i < S.prompts.length; i++) { await previewFor(i).catch(() => {}); renderList(); }
+  } catch (e) {
+    $("editor").innerHTML = `<div class="empty">Couldn't load: ${esc(e.message)}</div>`;
+  }
+})();
+</script>
+</body>
+</html>

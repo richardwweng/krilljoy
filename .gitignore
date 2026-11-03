@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Liquipedia cache (re-downloadable) and your private contact info
+pipeline/cache/
+pipeline/local_settings.py
