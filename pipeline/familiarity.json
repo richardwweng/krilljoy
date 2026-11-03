@@ -1,0 +1,147 @@
+{
+  "_about": [
+    "How well known each answer is, on a 1-10 scale (10 = nearly every Valorant fan knows it).",
+    "Estimated by Claude in Nov 2026 from knowledge of the game and pro scene, the same way Krillion uses model judgment.",
+    "Content released after mid-2026 (e.g. Miks, Hush, Veto, Warden, Bandit, Summit) is rated low on purpose: newer = less familiar.",
+    "Anything not listed falls back to a formula (see prompts.py). Edit a number here and run build.py to change it.",
+    "Each step up is roughly twice as likely to be named, so 8 vs 6 means about 4x more players would say it."
+  ],
+
+  "players": {
+    "tenz": 10, "aspas": 10, "scream": 9, "derke": 9,
+    "boaster": 8, "chronicle": 8, "f0rsaken": 8, "demon1": 8, "yay": 8, "sacy": 8, "zekken": 8,
+    "something": 7, "jinggg": 7, "pancada": 7, "less": 7, "saadhak": 7, "alfajer": 7, "nats": 7,
+    "mako": 7, "zmjjkk": 7, "cned": 7,
+    "d4v41": 6, "mindfreak": 6, "zellsis": 6, "johnqt": 6, "leo": 6, "crashies": 6, "victor": 6,
+    "marved": 6, "fns": 6, "ethan": 6, "leaf": 6, "cryocells": 6, "asuna": 6, "hiko": 6,
+    "shahzam": 6, "sick": 6, "dapr": 6, "buzz": 6, "stax": 6, "meteor": 6, "munchkin": 6,
+    "laz": 6, "dep": 6, "kingg": 6, "keznit": 6, "jamppi": 6, "benjyfishy": 6, "miniboo": 6,
+    "nivera": 6, "sayaplayer": 6,
+    "cauanzin": 5, "tuyz": 5, "bang": 5, "n4rrate": 5, "s0m": 5, "boostio": 5, "c0m": 5,
+    "jawgemo": 5, "trent": 5, "valyn": 5, "nitr0": 5, "zombs": 5, "rb": 5, "zest": 5,
+    "sugarz3ro": 5, "chichoo": 5, "nobody": 5, "smoggy": 5, "haodong": 5, "mazino": 5, "tex": 5,
+    "shao": 5, "redgar": 5, "sayf": 5, "boo": 5, "riens": 5, "patitek": 5, "ange1": 5,
+    "ardiis": 5, "karon": 5, "t3xture": 5, "carpe": 5, "izu": 5, "benkai": 5, "heat": 5,
+    "brawk": 5, "mada": 5, "kamo": 5, "wo0t": 5, "suygetsu": 5,
+    "icy": 4, "jonahp": 4, "lakia": 4, "crow": 4, "zyppan": 4, "mistic": 4, "magnum": 4,
+    "kicks": 4, "trexx": 4, "invy": 4, "jemkin": 4, "sheydos": 4, "klaus": 4, "keiko": 4,
+    "skuba": 4, "xeppaa": 4, "soulcas": 4, "qraxs": 4, "crws": 4, "whz": 4, "curry": 4
+  },
+
+  "agents": {
+    "Jett": 10, "Reyna": 9, "Sage": 9, "Omen": 8, "Phoenix": 8, "Sova": 8, "Raze": 8,
+    "Brimstone": 7, "Viper": 7, "Killjoy": 7, "Cypher": 7,
+    "Chamber": 6, "Skye": 6, "Breach": 5, "Neon": 5, "KAY/O": 5, "Yoru": 5, "Astra": 5,
+    "Fade": 5, "Clove": 5, "Gekko": 5, "Harbor": 4, "Iso": 4, "Vyse": 4, "Deadlock": 3,
+    "Tejo": 3, "Waylay": 3, "Veto": 2, "Hush": 2, "Miks": 2
+  },
+
+  "ability_bonus": {
+    "_about": "Added to the agent's rating. Ultimates get +0.5 and passives -2 automatically.",
+    "Tailwind": 2.5, "Blade Storm": 2, "Updraft": 1.5, "Cloudburst": 1,
+    "Barrier Orb": 2, "Healing Orb": 2, "Resurrection": 2, "Slow Orb": 1,
+    "Showstopper": 2, "Blast Pack": 2, "Boom Bot": 1.5, "Paint Shells": 1.5,
+    "Recon Bolt": 2.5, "Shock Bolt": 1.5, "Hunter's Fury": 1.5, "Owl Drone": 1.5,
+    "Dark Cover": 2, "Paranoia": 2, "From the Shadows": 1.5, "Shrouded Step": 1,
+    "Curveball": 2, "Run it Back": 2, "Hot Hands": 1, "Blaze": 1,
+    "Devour": 2, "Dismiss": 2, "Empress": 2, "Leer": 1.5,
+    "Toxic Screen": 2, "Poison Cloud": 2, "Viper's Pit": 2, "Snake Bite": 1.5,
+    "Sky Smoke": 1.5, "Stim Beacon": 1.5, "Orbital Strike": 2, "Incendiary": 1,
+    "Trapwire": 2, "Spycam": 2, "Cyber Cage": 1, "Neural Theft": 1,
+    "Lockdown": 2, "TURRET": 2, "ALARMBOT": 1.5, "Nanoswarm": 1.5,
+    "Headhunter": 2, "Tour De Force": 2, "Rendezvous": 1, "Trademark": 1,
+    "Fault Line": 1.5, "Flashpoint": 1.5, "Rolling Thunder": 1.5,
+    "Guiding Light": 1.5, "Seekers": 1.5, "Trailblazer": 1,
+    "Gravity Well": 1, "Nova Pulse": 1, "Cosmic Divide": 1.5,
+    "FLASH/drive": 1.5, "ZERO/point": 1.5, "NULL/cmd": 1.5,
+    "High Gear": 1.5, "Overdrive": 1,
+    "Dizzy": 1.5, "Wingman": 1.5, "Thrash": 1,
+    "Haunt": 1, "Prowler": 1, "Nightfall": 1,
+    "Pick-me-up": 1, "Not Dead Yet": 1.5,
+    "GATECRASH": 1, "FAKEOUT": 1, "BLINDSIDE": 1, "DIMENSIONAL DRIFT": 1.5,
+    "GravNet": 1, "Annihilation": 1, "Kill Contract": 1, "Double Tap": 1
+  },
+
+  "weapons": {
+    "Vandal": 10, "Phantom": 10, "Operator": 9, "Sheriff": 8, "Spectre": 7, "Classic": 7,
+    "Ghost": 6, "Melee": 6, "Marshal": 5, "Odin": 5, "Judge": 5, "Guardian": 5,
+    "Bulldog": 4, "Stinger": 4, "Shorty": 4, "Frenzy": 4, "Ares": 4, "Bucky": 4,
+    "Outlaw": 3, "Warden": 2, "Bandit": 2
+  },
+  "weapon_skin_bonus": {
+    "_about": "Added to a skin's collection rating: skins on popular guns get seen (and named) more.",
+    "Vandal": 1.5, "Phantom": 1.3, "Melee": 1.3, "Operator": 0.8, "Sheriff": 0.5,
+    "Spectre": 0.3, "Classic": 0.2, "Ghost": 0.2,
+    "Bucky": -0.5, "Ares": -0.5, "Shorty": -0.5, "Outlaw": -0.5, "Warden": -0.8, "Bandit": -0.8
+  },
+
+  "collections": {
+    "Prime": 10, "Reaver": 10, "Elderflame": 9, "Glitchpop": 9, "RGX 11z Pro": 9,
+    "Oni": 8, "Ion": 8, "Kuronami": 8, "Singularity": 8, "Prelude to Chaos": 8, "Araxys": 8,
+    "Champions 2021": 8, "VCT LOCK//IN": 7,
+    "Champions 2022": 7, "Champions 2023": 7, "Sovereign": 7, "Magepunk": 7,
+    "Sentinels of Light": 7, "Forsaken": 7, "Spectrum": 7, "Protocol 781-A": 7, "Arcane": 7,
+    "Champions 2024": 6, "Neptune": 6, "Gaia's Vengeance": 6, "Recon": 6, "Xenohunter": 6,
+    "BlastX": 6, "ChronoVoid": 6, "Mystbloom": 6, "Radiant Entertainment System": 6,
+    "Ruination": 6, "Prime//2.0": 6, "Black.Market": 5, "Valiant Hero": 5,
+    "Champions 2025": 5, "Imperium": 5, "Tethered Realms": 5, "Overdrive": 5,
+    "Gravitational Uranium Neuroblaster": 5, "Origin": 5, "Nebula": 5, "Neo Frontier": 5,
+    "Doombringer": 5, "Primordium": 5, "Sakura": 5, "Task Force 809": 5, "VCT x SEN": 5,
+    "Cryostasis": 4, "Celestial": 4, "VALORANT GO! Vol. 1": 4, "VALORANT GO! Vol. 2": 4,
+    "Galleria": 4, "Hivemind": 4, "EX.O": 4, "Kingdom": 4, "Minima": 4, "Wasteland": 4,
+    "Holomoku": 4, "Nunca Olvidados": 4, "Bubblegum Deathwish": 4, "Popmonz": 4,
+    "Champions 2026": 4, "Ruin": 4, "Soulstrife": 4, "Silhouette": 4, "Infinity": 4,
+    "Luxe": 4, "Aerosol": 4, "Sarmad": 4, "Snowfall": 4, "Rune Stone": 4, "Abyssal": 4,
+    "Smite": 4, "Spline": 4, "Monstrocity": 4, "Divergence": 4, "Altitude": 4,
+    "VCT x FNC": 4, "VCT x LOUD": 4, "VCT x PRX": 4, "VCT x DRX": 4, "VCT x NRG": 4,
+    "VCT x TL": 4, "VCT x 100T": 3, "VCT x G2": 3, "VCT x EDG": 3, "VCT x T1": 3,
+    "VCT x C9": 3, "VCT x NAVI": 3, "VCT x GEN": 3, "VCT x KC": 3, "VCT x LEV": 3,
+    "VCT 2025 Season": 3, "VCT 2026 Season": 3,
+    "Ego": 3, "Undercity": 3, "Byteshift": 3, "Gridcrash": 3, "Silvanus": 3, "Doodle Buds": 3,
+    "Team Ace": 3, "Infantry": 3, "Aristocrat": 3, "Sensation": 3, "Composite": 3,
+    "Endeavour": 3, "Horizon": 3, "Hue Shift": 3, "Coalition: Cobra": 3, "POLYfox": 3,
+    "POLYfrog": 3, "Retrowave": 3, "9 Lives": 3, "Spitfire": 3, "Topotek": 3, "Rush": 3,
+    "Tigris": 3, "Daydreams": 3, "Moondash": 3, "Iridian Thorn": 3, "Evori Dreamwings": 3,
+    "Crimsonbeast": 3, "Fortune's Hand": 3, "Emberclad": 3, "Lycan's Bane": 3,
+    "Tactiplay": 2, "Signature": 2, "Schema": 2, "Refractrix": 2, "Varnish": 2,
+    "Convergence": 2, "Storm Maw": 2, "Depths": 2, "Cloudweaver": 2, "Switchback": 2,
+    "Couture": 2, "Aquatica": 2, "Prism II": 2, "Prism III": 2, "Red Alert": 2,
+    "Crash Out": 2, "Surge": 2, "Shimmer": 2, "Celestia": 2, "Immortalized": 2, "Libretto": 2,
+    "Paceline": 2, "Cavalier": 2, "SilkLeaf": 2, "Transition": 2, "Nanomight": 2,
+    "Overlay": 2, "Verdant Cafe": 2, ".SYS": 2, ".EXE": 2
+  },
+
+  "maps": {
+    "Ascent": 10, "Bind": 10, "Haven": 9, "Split": 9, "Icebox": 8, "Lotus": 8,
+    "Breeze": 6, "Sunset": 6, "Pearl": 6, "Fracture": 6, "The Range": 6, "Abyss": 5,
+    "District": 4, "Kasbah": 3, "Drift": 3, "Piazza": 3, "Corrode": 3, "Glitch": 2,
+    "Basic Training": 2, "Summit": 2, "Skirmish A": 1, "Skirmish B": 1, "Skirmish C": 1,
+    "Skirmish D": 1, "Skirmish E": 1, "Gauntlet": 1
+  },
+
+  "callout_spots": {
+    "_about": "How iconic a spot name is. The map's own rating nudges it up or down.",
+    "Site": 9, "Main": 8, "Spawn": 7, "Long": 6, "Short": 6, "Lobby": 6, "Top": 6,
+    "Market": 7, "Teleporter": 7, "Tree": 6, "Garage": 6, "Window": 6, "Heaven": 6,
+    "Bottom": 5, "Link": 5, "Tower": 5, "Garden": 5, "Mail": 5, "Vent": 5, "Rafters": 5,
+    "Boat House": 5, "Kitchen": 5, "Yellow": 5, "Pyramids": 5, "Rope": 4, "Bath": 5,
+    "Hall": 4, "Back": 4, "Tunnel": 4, "Elbow": 4, "Courtyard": 4, "Catwalk": 4, "Cubby": 4,
+    "Waterfall": 4, "Snowman": 4, "Boba": 4, "Pizza": 4, "Wine": 4, "Fountain": 4,
+    "Lamps": 4, "Cannon": 4, "Screens": 4, "Sewer": 4, "Doors": 4, "Nest": 3, "Stairs": 3,
+    "Ramp": 3, "Ramps": 3, "Drop": 3, "Door": 3, "Hut": 3, "Exit": 3, "Alley": 3,
+    "Dish": 3, "Arcade": 3, "Canteen": 3, "Generator": 3, "Mound": 3, "Rubble": 3,
+    "Library": 3, "Danger": 3, "Boiler": 3, "Orange": 3, "Green": 3, "Blue": 3,
+    "Pipes": 3, "Belt": 3, "Screen": 3, "Snow Pile": 3, "Tube": 3, "Wood Doors": 3,
+    "Bridge": 3, "Restaurant": 3, "Dugout": 3, "Secret": 3, "Art": 3, "Plaza": 3,
+    "Shops": 3, "Club": 3, "Cave": 3, "Upper": 3, "Pillars": 3, "Bend": 3
+  },
+  "callout_aliases": {
+    "_about": "Community names that differ from the official in-game ones: map -> callout -> extra names.",
+    "Bind": {"B Window": ["Hookah"], "A Bath": ["Showers"], "A Teleporter": ["A TP"],
+             "B Teleporter": ["B TP"], "A Short": ["A Short"], "B Long": ["B Long"]},
+    "Split": {"A Rafters": ["A Heaven", "Heaven"], "B Rafters": ["B Heaven"], "Mid Vent": ["Vent"],
+              "Mid Mail": ["Mail"]},
+    "Haven": {"C Long": ["C Long"], "A Long": ["A Long"]},
+    "Icebox": {"A Belt": ["Belt"], "B Kitchen": ["Kitchen"], "B Yellow": ["Yellow"]}
+  }
+}

@@ -119,11 +119,25 @@ Decided by Richard (Nov 2026). Players see the rank names; the code keys
 Richard may rename these later, so keep the display names in one place (one
 map in the client, one in `admin.html`).
 
-Tiers are assigned by a fame score (see `fame()` in `pipeline/prompts.py`):
-most obvious 15% Silver, next 20% Platinum, 30% Diamond, 25% Immortal, last
-10% Radiant. Admin-page overrides win. Richard wants Claude to work out real
-common-vs-rare rankings later (for players and game content); until then the
-fame score is a placeholder.
+How rarity works (Richard chose this, Nov 2026; it mirrors Krillion, which
+pre-computes rarity from familiarity data + model judgment + manual review,
+NOT from live player answers):
+
+- Every answer has a fame rating, 1-10. `pipeline/familiarity.json` holds
+  Claude's hand estimates (notable players, agents, abilities, weapons, skin
+  collections, maps, callout spots). Unlisted items fall back to formulas in
+  `prompts.py` (players: stats; skins: edition).
+- Each step up is ~2x as likely to be named. Within a question, estimated share
+  of fans = 2**rating / sum over valid answers. Question context adjusts
+  ratings (e.g. share of a player's career spent on the team asked about).
+- Tiers by estimated share: Silver 10%+, Platinum 3-10%, Diamond 1-3%,
+  Immortal under 1%. Radiant = the single rarest answer (Krillion's designated
+  "One in a Krillion"). With 5+ answers every tier is used; under 5, answers
+  are spread out. Gold (Too Clever) is manual. Admin overrides win.
+- Richard does not want to estimate anything by hand. When new content appears
+  (new players, skins, agents, maps), Claude should update familiarity.json.
+- Later: blend in real player answer frequencies once the game is live, and
+  auto-detect Too Clever (estimated rare, actually common).
 
 Copy the mechanics, not Krillion's branding or assets.
 

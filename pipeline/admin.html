@@ -273,7 +273,7 @@ function renderPreview() {
         ${tiers.map(t => `<option value="${t}" ${t === a.tier ? "selected" : ""}>${TIER_LABEL[t]}</option>`).join("")}
       </select>${a.tier !== a.auto_tier ? `<span class="manual">manual</span>` : ""}</td>
       <td class="num">${a.points}</td>
-      <td class="num">${a.score}</td>
+      <td class="num" title="fame rating ${a.score} / 10">${a.share >= 1 ? a.share.toFixed(0) : a.share.toFixed(1)}%</td>
       <td><div class="why">${esc(whyText(a.evidence, pool))}</div></td>
     </tr>`).join("");
   box.innerHTML = `
@@ -283,10 +283,9 @@ function renderPreview() {
       <input class="text search" id="find" placeholder="Find an answer…" value="${esc(S.filter)}">
     </div>
     <div class="bar">${bar}</div><div class="legend">${legend}</div>
-    <table><thead><tr><th>Answer</th><th>Tier</th><th>Pts</th><th>Score</th><th>Why it counts (${isPlayers ? "Liquipedia" : "valorant-api.com"})</th></tr></thead>
+    <table><thead><tr><th>Answer</th><th>Tier</th><th>Pts</th><th title="Estimated share of fans who'd give this answer">Est. fans</th><th>Why it counts (${isPlayers ? "Liquipedia" : "valorant-api.com"})</th></tr></thead>
     <tbody>${rows}</tbody></table>
-    <div class="hint" style="margin-top:8px">Most obvious answers first. Change a tier to override it, set it back to remove the override.${
-      isPlayers ? "" : " Game-content tiers are rough guesses for now, so expect to adjust them."}</div>`;
+    <div class="hint" style="margin-top:8px">Most obvious answers first. "Est. fans" is Claude's estimate of how many players would give each answer (from familiarity.json); tiers follow it, and the rarest answer is Radiant. Change a tier to override it, set it back to remove the override.</div>`;
   const find = $("find");
   find.oninput = (e) => { S.filter = e.target.value; renderPreview(); const f = $("find"); f.focus(); f.setSelectionRange(f.value.length, f.value.length); };
   box.querySelectorAll("select.tier").forEach(sel => sel.onchange = (e) => {

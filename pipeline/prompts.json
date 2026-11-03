@@ -2,21 +2,49 @@
   {
     "id": "sentinels",
     "text": "Name a tier 1 player who has played for Sentinels",
-    "conditions": [{"type": "played_for", "value": "sentinels"}],
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "sentinels"
+      }
+    ],
     "overrides": {},
     "enabled": true
   },
   {
     "id": "intl_winner",
     "text": "Name a tier 1 player who has won an international event",
-    "conditions": [{"type": "won", "value": "any"}],
+    "conditions": [
+      {
+        "type": "won",
+        "value": "any"
+      }
+    ],
     "overrides": {},
     "enabled": true
   },
   {
     "id": "usa",
     "text": "Name a tier 1 player who is from the United States",
-    "conditions": [{"type": "country", "value": "United States"}],
+    "conditions": [
+      {
+        "type": "country",
+        "value": "United States"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "stinger_skin",
+    "text": "Name a stinger skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Stinger"
+      }
+    ],
     "overrides": {},
     "enabled": true
   }

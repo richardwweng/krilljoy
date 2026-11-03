@@ -11,132 +11,6 @@
       "pool": "players",
       "answers": [
         {
-          "id": "zekken",
-          "aliases": [
-            "zekken"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zekken",
-          "tier": "plankton",
-          "points": 10,
-          "score": 67,
-          "evidence": {
-            "tier1_events": 18,
-            "international_events": 8,
-            "international_wins": [
-              "Masters Madrid 2024"
-            ],
-            "Sentinels events": [
-              "Champions 2024",
-              "Champions 2025",
-              "LOCK//IN 2023",
-              "Masters Bangkok 2025",
-              "Masters Madrid 2024",
-              "Masters Toronto 2025",
-              "VCT '25 Americas Kickoff",
-              "VCT '25 Americas Stage 2",
-              "VCT 2023: Americas League",
-              "VCT 2024: Americas Kickoff",
-              "VCT 2024: Americas Stage 1",
-              "VCT 2024: Americas Stage 2",
-              "VCT 2025: Americas S1"
-            ]
-          }
-        },
-        {
-          "id": "Zellsis",
-          "aliases": [
-            "zellsis"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zellsis",
-          "tier": "plankton",
-          "points": 10,
-          "score": 60,
-          "evidence": {
-            "tier1_events": 17,
-            "international_events": 7,
-            "international_wins": [
-              "Masters Madrid 2024"
-            ],
-            "Sentinels events": [
-              "Champions 2024",
-              "Champions 2025",
-              "Masters Bangkok 2025",
-              "Masters Madrid 2024",
-              "Masters Toronto 2025",
-              "VCT '25 Americas Kickoff",
-              "VCT '25 Americas Stage 2",
-              "VCT 2024: Americas Kickoff",
-              "VCT 2024: Americas Stage 1",
-              "VCT 2024: Americas Stage 2",
-              "VCT 2025: Americas S1"
-            ]
-          }
-        },
-        {
-          "id": "johnqt",
-          "aliases": [
-            "johnqt"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Johnqt",
-          "tier": "plankton",
-          "points": 10,
-          "score": 59,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 5,
-            "international_wins": [
-              "Masters Madrid 2024"
-            ],
-            "Sentinels events": [
-              "Champions 2024",
-              "Champions 2025",
-              "Masters Bangkok 2025",
-              "Masters Madrid 2024",
-              "Masters Toronto 2025",
-              "VCT '25 Americas Kickoff",
-              "VCT '25 Americas Stage 2",
-              "VCT '26 Americas Kickoff",
-              "VCT '26 Americas Stage 1",
-              "VCT '26 Americas Stage 2",
-              "VCT 2024: Americas Kickoff",
-              "VCT 2024: Americas Stage 1",
-              "VCT 2024: Americas Stage 2",
-              "VCT 2025: Americas S1"
-            ]
-          }
-        },
-        {
-          "id": "Sacy",
-          "aliases": [
-            "sacy"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Sacy",
-          "tier": "schooler",
-          "points": 30,
-          "score": 50,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 8,
-            "international_wins": [
-              "Champions 2022",
-              "Masters Madrid 2024"
-            ],
-            "Sentinels events": [
-              "Champions 2024",
-              "LOCK//IN 2023",
-              "Masters Madrid 2024",
-              "VCT 2023: Americas League",
-              "VCT 2024: Americas Kickoff",
-              "VCT 2024: Americas Stage 1",
-              "VCT 2024: Americas Stage 2"
-            ]
-          }
-        },
-        {
           "id": "TenZ",
           "aliases": [
             "tenz",
@@ -144,9 +18,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/TenZ",
-          "tier": "schooler",
-          "points": 30,
-          "score": 50,
+          "tier": "plankton",
+          "points": 10,
+          "score": 10.0,
+          "share": 53.26,
           "evidence": {
             "tier1_events": 10,
             "international_events": 6,
@@ -169,15 +44,339 @@
           }
         },
         {
+          "id": "zekken",
+          "aliases": [
+            "zekken"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zekken",
+          "tier": "plankton",
+          "points": 10,
+          "score": 7.69,
+          "share": 10.73,
+          "evidence": {
+            "tier1_events": 18,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Champions 2024",
+              "Champions 2025",
+              "LOCK//IN 2023",
+              "Masters Bangkok 2025",
+              "Masters Madrid 2024",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2023: Americas League",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT 2025: Americas S1"
+            ]
+          }
+        },
+        {
+          "id": "Sacy",
+          "aliases": [
+            "sacy"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sacy",
+          "tier": "schooler",
+          "points": 30,
+          "score": 7.5,
+          "share": 9.43,
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Champions 2022",
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Champions 2024",
+              "LOCK//IN 2023",
+              "Masters Madrid 2024",
+              "VCT 2023: Americas League",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2"
+            ]
+          }
+        },
+        {
+          "id": "dapr",
+          "aliases": [
+            "dapr"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dapr",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.33,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Champions 2021",
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "johnqt",
+          "aliases": [
+            "johnqt"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Johnqt",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.33,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Champions 2024",
+              "Champions 2025",
+              "Masters Bangkok 2025",
+              "Masters Madrid 2024",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT '26 Americas Kickoff",
+              "VCT '26 Americas Stage 1",
+              "VCT '26 Americas Stage 2",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT 2025: Americas S1"
+            ]
+          }
+        },
+        {
+          "id": "SicK",
+          "aliases": [
+            "sick"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SicK",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.33,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Champions 2021",
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "pANcada",
+          "aliases": [
+            "pancada"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/PANcada",
+          "tier": "schooler",
+          "points": 30,
+          "score": 5.97,
+          "share": 3.27,
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 4,
+            "international_wins": [
+              "Champions 2022"
+            ],
+            "Sentinels events": [
+              "LOCK//IN 2023",
+              "VCT 2023: Americas League",
+              "VCT 2024: Americas Kickoff"
+            ]
+          }
+        },
+        {
+          "id": "ShahZaM",
+          "aliases": [
+            "shahzam"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.72,
+          "share": 2.75,
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Champions 2021",
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "Zellsis",
+          "aliases": [
+            "zellsis"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zellsis",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.59,
+          "share": 2.51,
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Champions 2024",
+              "Champions 2025",
+              "Masters Bangkok 2025",
+              "Masters Madrid 2024",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT 2025: Americas S1"
+            ]
+          }
+        },
+        {
+          "id": "zombs",
+          "aliases": [
+            "zombs"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zombs",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.66,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Champions 2021",
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "Marved",
+          "aliases": [
+            "jimzo",
+            "marved"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Marved",
+          "tier": "rare",
+          "points": 60,
+          "score": 4.87,
+          "share": 1.52,
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "Sentinels events": [
+              "VCT '26 Americas Stage 2",
+              "VCT 2023: Americas League"
+            ]
+          }
+        },
+        {
+          "id": "Victor",
+          "aliases": [
+            "food",
+            "victor"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Victor",
+          "tier": "rare",
+          "points": 60,
+          "score": 4.5,
+          "share": 1.18,
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "Sentinels events": [
+              "VCT '26 Americas Stage 1"
+            ]
+          }
+        },
+        {
+          "id": "N4RRATE",
+          "aliases": [
+            "n4rrate"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/N4RRATE",
+          "tier": "rare",
+          "points": 60,
+          "score": 4.38,
+          "share": 1.08,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 5,
+            "international_wins": [],
+            "Sentinels events": [
+              "Champions 2025",
+              "Masters Bangkok 2025",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT '26 Americas Kickoff",
+              "VCT 2025: Americas S1"
+            ]
+          }
+        },
+        {
           "id": "bang",
           "aliases": [
             "bang"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Bang",
-          "tier": "schooler",
-          "points": 30,
-          "score": 46,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.13,
+          "share": 0.91,
           "evidence": {
             "tier1_events": 17,
             "international_events": 7,
@@ -193,233 +392,6 @@
           }
         },
         {
-          "id": "N4RRATE",
-          "aliases": [
-            "n4rrate"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/N4RRATE",
-          "tier": "schooler",
-          "points": 30,
-          "score": 41,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 5,
-            "international_wins": [],
-            "Sentinels events": [
-              "Champions 2025",
-              "Masters Bangkok 2025",
-              "Masters Toronto 2025",
-              "VCT '25 Americas Kickoff",
-              "VCT '25 Americas Stage 2",
-              "VCT '26 Americas Kickoff",
-              "VCT 2025: Americas S1"
-            ]
-          }
-        },
-        {
-          "id": "Victor",
-          "aliases": [
-            "food",
-            "victor"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Victor",
-          "tier": "rare",
-          "points": 60,
-          "score": 38,
-          "evidence": {
-            "tier1_events": 13,
-            "international_events": 8,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ],
-            "Sentinels events": [
-              "VCT '26 Americas Stage 1"
-            ]
-          }
-        },
-        {
-          "id": "JonahP",
-          "aliases": [
-            "jonahp"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/JonahP",
-          "tier": "rare",
-          "points": 60,
-          "score": 33,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 6,
-            "international_wins": [],
-            "Sentinels events": [
-              "VCT '26 Americas Stage 1",
-              "VCT '26 Americas Stage 2"
-            ]
-          }
-        },
-        {
-          "id": "pANcada",
-          "aliases": [
-            "pancada"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/PANcada",
-          "tier": "rare",
-          "points": 60,
-          "score": 32,
-          "evidence": {
-            "tier1_events": 11,
-            "international_events": 4,
-            "international_wins": [
-              "Champions 2022"
-            ],
-            "Sentinels events": [
-              "LOCK//IN 2023",
-              "VCT 2023: Americas League",
-              "VCT 2024: Americas Kickoff"
-            ]
-          }
-        },
-        {
-          "id": "Marved",
-          "aliases": [
-            "jimzo",
-            "marved"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Marved",
-          "tier": "rare",
-          "points": 60,
-          "score": 30,
-          "evidence": {
-            "tier1_events": 9,
-            "international_events": 5,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ],
-            "Sentinels events": [
-              "VCT '26 Americas Stage 2",
-              "VCT 2023: Americas League"
-            ]
-          }
-        },
-        {
-          "id": "cortezia",
-          "aliases": [
-            "cortez",
-            "cortezia"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Cortezia",
-          "tier": "rare",
-          "points": 60,
-          "score": 21,
-          "evidence": {
-            "tier1_events": 8,
-            "international_events": 2,
-            "international_wins": [],
-            "Sentinels events": [
-              "VCT '26 Americas Kickoff",
-              "VCT '26 Americas Stage 1",
-              "VCT '26 Americas Stage 2"
-            ]
-          }
-        },
-        {
-          "id": "ShahZaM",
-          "aliases": [
-            "shahzam"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/ShahZaM",
-          "tier": "rare",
-          "points": 60,
-          "score": 20,
-          "evidence": {
-            "tier1_events": 4,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
-            "Sentinels events": [
-              "Champions 2021",
-              "Masters Berlin 2021",
-              "Masters Reykjavík 2021"
-            ]
-          }
-        },
-        {
-          "id": "dapr",
-          "aliases": [
-            "dapr"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Dapr",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 19,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
-            "Sentinels events": [
-              "Champions 2021",
-              "Masters Berlin 2021",
-              "Masters Reykjavík 2021"
-            ]
-          }
-        },
-        {
-          "id": "SicK",
-          "aliases": [
-            "sick"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/SicK",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 19,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
-            "Sentinels events": [
-              "Champions 2021",
-              "Masters Berlin 2021",
-              "Masters Reykjavík 2021"
-            ]
-          }
-        },
-        {
-          "id": "zombs",
-          "aliases": [
-            "zombs"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zombs",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 19,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
-            "Sentinels events": [
-              "Champions 2021",
-              "Masters Berlin 2021",
-              "Masters Reykjavík 2021"
-            ]
-          }
-        },
-        {
           "id": "curry",
           "aliases": [
             "curry"
@@ -428,7 +400,8 @@
           "source": "https://liquipedia.net/valorant/Curry",
           "tier": "deep_cut",
           "points": 85,
-          "score": 18,
+          "score": 4.0,
+          "share": 0.83,
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -444,6 +417,27 @@
           }
         },
         {
+          "id": "JonahP",
+          "aliases": [
+            "jonahp"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/JonahP",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.68,
+          "share": 0.33,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 6,
+            "international_wins": [],
+            "Sentinels events": [
+              "VCT '26 Americas Stage 1",
+              "VCT '26 Americas Stage 2"
+            ]
+          }
+        },
+        {
           "id": "reduxx",
           "aliases": [
             "reduxx"
@@ -452,7 +446,8 @@
           "source": "https://liquipedia.net/valorant/Reduxx",
           "tier": "deep_cut",
           "points": 85,
-          "score": 12,
+          "score": 1.4,
+          "share": 0.14,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -465,39 +460,44 @@
           }
         },
         {
-          "id": "dephh",
-          "aliases": [
-            "dephh"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Dephh",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 11,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [],
-            "Sentinels events": [
-              "LOCK//IN 2023"
-            ]
-          }
-        },
-        {
           "id": "Jerrwin",
           "aliases": [
             "jerrwin"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Jerrwin",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.33,
+          "share": 0.13,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
             "international_wins": [],
             "Sentinels events": [
+              "VCT '26 Americas Stage 1",
+              "VCT '26 Americas Stage 2"
+            ]
+          }
+        },
+        {
+          "id": "cortezia",
+          "aliases": [
+            "cortez",
+            "cortezia"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Cortezia",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.17,
+          "share": 0.12,
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 2,
+            "international_wins": [],
+            "Sentinels events": [
+              "VCT '26 Americas Kickoff",
               "VCT '26 Americas Stage 1",
               "VCT '26 Americas Stage 2"
             ]
@@ -510,15 +510,36 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Kyu",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 7,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 0.71,
+          "share": 0.09,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
             "international_wins": [],
             "Sentinels events": [
               "VCT '26 Americas Kickoff"
+            ]
+          }
+        },
+        {
+          "id": "dephh",
+          "aliases": [
+            "dephh"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dephh",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 0.69,
+          "share": 0.08,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [],
+            "Sentinels events": [
+              "LOCK//IN 2023"
             ]
           }
         }
@@ -530,77 +551,42 @@
       "pool": "players",
       "answers": [
         {
-          "id": "Chronicle",
+          "id": "TenZ",
           "aliases": [
-            "chronicle"
+            "tenz",
+            "tenzera"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Chronicle",
+          "source": "https://liquipedia.net/valorant/TenZ",
           "tier": "plankton",
           "points": 10,
-          "score": 67,
+          "score": 10.4,
+          "share": 16.05,
           "evidence": {
-            "tier1_events": 21,
-            "international_events": 11,
+            "tier1_events": 10,
+            "international_events": 6,
             "international_wins": [
-              "LOCK//IN 2023",
-              "Masters Berlin 2021",
-              "Masters Tokyo 2023"
+              "Masters Madrid 2024",
+              "Masters Reykjavík 2021"
             ]
           }
         },
         {
-          "id": "d4v41",
+          "id": "aspas",
           "aliases": [
-            "d4v41"
+            "aspas"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/D4v41",
+          "source": "https://liquipedia.net/valorant/Aspas",
           "tier": "plankton",
           "points": 10,
-          "score": 65,
+          "score": 10.0,
+          "share": 12.17,
           "evidence": {
-            "tier1_events": 25,
-            "international_events": 15,
+            "tier1_events": 20,
+            "international_events": 10,
             "international_wins": [
-              "Masters Toronto 2025"
-            ]
-          }
-        },
-        {
-          "id": "f0rsakeN",
-          "aliases": [
-            "f0rsaken"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/F0rsakeN",
-          "tier": "plankton",
-          "points": 10,
-          "score": 65,
-          "evidence": {
-            "tier1_events": 25,
-            "international_events": 15,
-            "international_wins": [
-              "Masters Toronto 2025"
-            ]
-          }
-        },
-        {
-          "id": "Boaster",
-          "aliases": [
-            "boaster"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Boaster",
-          "tier": "plankton",
-          "points": 10,
-          "score": 63,
-          "evidence": {
-            "tier1_events": 22,
-            "international_events": 12,
-            "international_wins": [
-              "LOCK//IN 2023",
-              "Masters Tokyo 2023"
+              "Champions 2022"
             ]
           }
         },
@@ -612,9 +598,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Derke",
-          "tier": "plankton",
-          "points": 10,
-          "score": 63,
+          "tier": "schooler",
+          "points": 30,
+          "score": 9.4,
+          "share": 8.03,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -625,151 +612,140 @@
           }
         },
         {
-          "id": "BuZz",
+          "id": "Chronicle",
           "aliases": [
-            "buzz"
+            "chronicle"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/BuZz",
-          "tier": "plankton",
-          "points": 10,
-          "score": 59,
+          "source": "https://liquipedia.net/valorant/Chronicle",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.8,
+          "share": 5.3,
           "evidence": {
-            "tier1_events": 23,
-            "international_events": 13,
+            "tier1_events": 21,
+            "international_events": 11,
             "international_wins": [
-              "Masters Bangkok 2025"
+              "LOCK//IN 2023",
+              "Masters Berlin 2021",
+              "Masters Tokyo 2023"
             ]
           }
         },
         {
-          "id": "Jinggg",
+          "id": "Boaster",
           "aliases": [
-            "jinggg"
+            "boaster"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Jinggg",
-          "tier": "plankton",
-          "points": 10,
-          "score": 59,
+          "source": "https://liquipedia.net/valorant/Boaster",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.4,
+          "share": 4.01,
           "evidence": {
-            "tier1_events": 23,
-            "international_events": 13,
+            "tier1_events": 22,
+            "international_events": 12,
+            "international_wins": [
+              "LOCK//IN 2023",
+              "Masters Tokyo 2023"
+            ]
+          }
+        },
+        {
+          "id": "Sacy",
+          "aliases": [
+            "sacy"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Sacy",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.4,
+          "share": 4.01,
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Champions 2022",
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "Demon1",
+          "aliases": [
+            "demon1"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Demon1",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.0,
+          "share": 3.04,
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 3,
+            "international_wins": [
+              "Champions 2023"
+            ]
+          }
+        },
+        {
+          "id": "f0rsakeN",
+          "aliases": [
+            "f0rsaken"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/F0rsakeN",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.0,
+          "share": 3.04,
+          "evidence": {
+            "tier1_events": 25,
+            "international_events": 15,
             "international_wins": [
               "Masters Toronto 2025"
             ]
           }
         },
         {
-          "id": "Munchkin",
+          "id": "yay",
           "aliases": [
-            "munchkin"
+            "yay",
+            "yayster"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Munchkin",
-          "tier": "plankton",
-          "points": 10,
-          "score": 56,
+          "source": "https://liquipedia.net/valorant/Yay",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.0,
+          "share": 3.04,
           "evidence": {
-            "tier1_events": 22,
-            "international_events": 12,
+            "tier1_events": 11,
+            "international_events": 6,
             "international_wins": [
-              "Masters Shanghai 2024"
+              "Masters Reykjavík 2022"
             ]
           }
         },
         {
-          "id": "stax",
+          "id": "zekken",
           "aliases": [
-            "stax"
+            "zekken"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Stax",
-          "tier": "plankton",
-          "points": 10,
-          "score": 56,
+          "source": "https://liquipedia.net/valorant/Zekken",
+          "tier": "schooler",
+          "points": 30,
+          "score": 8.0,
+          "share": 3.04,
           "evidence": {
-            "tier1_events": 22,
-            "international_events": 12,
+            "tier1_events": 18,
+            "international_events": 8,
             "international_wins": [
-              "Masters Bangkok 2025"
-            ]
-          }
-        },
-        {
-          "id": "CHICHOO",
-          "aliases": [
-            "chichoo",
-            "mengquan",
-            "taylor13"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/CHICHOO",
-          "tier": "plankton",
-          "points": 10,
-          "score": 55,
-          "evidence": {
-            "tier1_events": 21,
-            "international_events": 12,
-            "international_wins": [
-              "Champions 2024"
-            ]
-          }
-        },
-        {
-          "id": "nobody",
-          "aliases": [
-            "nobody"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Nobody",
-          "tier": "plankton",
-          "points": 10,
-          "score": 55,
-          "evidence": {
-            "tier1_events": 21,
-            "international_events": 12,
-            "international_wins": [
-              "Champions 2024"
-            ]
-          }
-        },
-        {
-          "id": "Smoggy",
-          "aliases": [
-            "mikasa",
-            "smoggy"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Smoggy",
-          "tier": "plankton",
-          "points": 10,
-          "score": 55,
-          "evidence": {
-            "tier1_events": 21,
-            "international_events": 12,
-            "international_wins": [
-              "Champions 2024"
-            ]
-          }
-        },
-        {
-          "id": "ZmjjKK",
-          "aliases": [
-            "kangkang",
-            "kk",
-            "zmjjkk"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/ZmjjKK",
-          "tier": "plankton",
-          "points": 10,
-          "score": 55,
-          "evidence": {
-            "tier1_events": 21,
-            "international_events": 12,
-            "international_wins": [
-              "Champions 2024"
+              "Masters Madrid 2024"
             ]
           }
         },
@@ -780,9 +756,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Alfajer",
-          "tier": "schooler",
-          "points": 30,
-          "score": 54,
+          "tier": "rare",
+          "points": 60,
+          "score": 7.4,
+          "share": 2.01,
           "evidence": {
             "tier1_events": 19,
             "international_events": 9,
@@ -793,76 +770,59 @@
           }
         },
         {
-          "id": "Meteor",
+          "id": "cNed",
           "aliases": [
-            "meteor"
+            "cned"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Meteor",
-          "tier": "schooler",
-          "points": 30,
-          "score": 54,
+          "source": "https://liquipedia.net/valorant/CNed",
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
           "evidence": {
-            "tier1_events": 19,
-            "international_events": 9,
+            "tier1_events": 14,
+            "international_events": 7,
             "international_wins": [
-              "Masters Bangkok 2025",
-              "Masters Shanghai 2024"
+              "Champions 2021"
             ]
           }
         },
         {
-          "id": "Ethan",
+          "id": "Jinggg",
           "aliases": [
-            "ethan"
+            "jinggg"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Ethan",
-          "tier": "schooler",
-          "points": 30,
-          "score": 51,
+          "source": "https://liquipedia.net/valorant/Jinggg",
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
           "evidence": {
-            "tier1_events": 18,
+            "tier1_events": 23,
+            "international_events": 13,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "Less",
+          "aliases": [
+            "less"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Less",
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
+          "evidence": {
+            "tier1_events": 17,
             "international_events": 8,
             "international_wins": [
-              "Champions 2023",
-              "Champions 2025"
-            ]
-          }
-        },
-        {
-          "id": "aspas",
-          "aliases": [
-            "aspas"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Aspas",
-          "tier": "schooler",
-          "points": 30,
-          "score": 50,
-          "evidence": {
-            "tier1_events": 20,
-            "international_events": 10,
-            "international_wins": [
               "Champions 2022"
-            ]
-          }
-        },
-        {
-          "id": "crashies",
-          "aliases": [
-            "crashies"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Crashies",
-          "tier": "schooler",
-          "points": 30,
-          "score": 50,
-          "evidence": {
-            "tier1_events": 20,
-            "international_events": 10,
-            "international_wins": [
-              "Masters Reykjavík 2022"
             ]
           }
         },
@@ -873,9 +833,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/NAts",
-          "tier": "schooler",
-          "points": 30,
-          "score": 50,
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -885,56 +846,21 @@
           }
         },
         {
-          "id": "Rb",
+          "id": "pANcada",
           "aliases": [
-            "rb"
+            "pancada"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Rb",
-          "tier": "schooler",
-          "points": 30,
-          "score": 50,
+          "source": "https://liquipedia.net/valorant/PANcada",
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
           "evidence": {
-            "tier1_events": 20,
-            "international_events": 10,
+            "tier1_events": 11,
+            "international_events": 4,
             "international_wins": [
-              "Masters Santiago 2026"
-            ]
-          }
-        },
-        {
-          "id": "mindfreak",
-          "aliases": [
-            "mindfreak"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Mindfreak_(Indonesian_player)",
-          "tier": "schooler",
-          "points": 30,
-          "score": 49,
-          "evidence": {
-            "tier1_events": 17,
-            "international_events": 11,
-            "international_wins": [
-              "Masters Toronto 2025"
-            ]
-          }
-        },
-        {
-          "id": "jawgemo",
-          "aliases": [
-            "jawgemo"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Jawgemo",
-          "tier": "schooler",
-          "points": 30,
-          "score": 47,
-          "evidence": {
-            "tier1_events": 19,
-            "international_events": 9,
-            "international_wins": [
-              "Champions 2023"
+              "Champions 2022"
             ]
           }
         },
@@ -945,9 +871,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Saadhak",
-          "tier": "schooler",
-          "points": 30,
-          "score": 46,
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -964,9 +891,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Something",
-          "tier": "schooler",
-          "points": 30,
-          "score": 46,
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -976,369 +904,43 @@
           }
         },
         {
-          "id": "zekken",
+          "id": "ZmjjKK",
           "aliases": [
-            "zekken"
+            "kangkang",
+            "kk",
+            "zmjjkk"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Zekken",
-          "tier": "schooler",
-          "points": 30,
-          "score": 44,
+          "source": "https://liquipedia.net/valorant/ZmjjKK",
+          "tier": "rare",
+          "points": 60,
+          "score": 7.0,
+          "share": 1.52,
+          "evidence": {
+            "tier1_events": 21,
+            "international_events": 12,
+            "international_wins": [
+              "Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "Ethan",
+          "aliases": [
+            "ethan"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ethan",
+          "tier": "rare",
+          "points": 60,
+          "score": 6.4,
+          "share": 1.0,
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
             "international_wins": [
-              "Masters Madrid 2024"
-            ]
-          }
-        },
-        {
-          "id": "Less",
-          "aliases": [
-            "less"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Less",
-          "tier": "schooler",
-          "points": 30,
-          "score": 43,
-          "evidence": {
-            "tier1_events": 17,
-            "international_events": 8,
-            "international_wins": [
-              "Champions 2022"
-            ]
-          }
-        },
-        {
-          "id": "Sacy",
-          "aliases": [
-            "sacy"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Sacy",
-          "tier": "schooler",
-          "points": 30,
-          "score": 42,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 8,
-            "international_wins": [
-              "Champions 2022",
-              "Masters Madrid 2024"
-            ]
-          }
-        },
-        {
-          "id": "SUYGETSU",
-          "aliases": [
-            "suygetsu"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/SUYGETSU",
-          "tier": "schooler",
-          "points": 30,
-          "score": 41,
-          "evidence": {
-            "tier1_events": 17,
-            "international_events": 7,
-            "international_wins": [
-              "Masters Copenhagen 2022"
-            ]
-          }
-        },
-        {
-          "id": "Zellsis",
-          "aliases": [
-            "zellsis"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zellsis",
-          "tier": "schooler",
-          "points": 30,
-          "score": 41,
-          "evidence": {
-            "tier1_events": 17,
-            "international_events": 7,
-            "international_wins": [
-              "Masters Madrid 2024"
-            ]
-          }
-        },
-        {
-          "id": "Victor",
-          "aliases": [
-            "food",
-            "victor"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Victor",
-          "tier": "schooler",
-          "points": 30,
-          "score": 39,
-          "evidence": {
-            "tier1_events": 13,
-            "international_events": 8,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ]
-          }
-        },
-        {
-          "id": "carpe",
-          "aliases": [
-            "carpe"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Carpe",
-          "tier": "rare",
-          "points": 60,
-          "score": 38,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 7,
-            "international_wins": [
-              "Masters Bangkok 2025"
-            ]
-          }
-        },
-        {
-          "id": "cNed",
-          "aliases": [
-            "cned"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/CNed",
-          "tier": "rare",
-          "points": 60,
-          "score": 38,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 7,
-            "international_wins": [
-              "Champions 2021"
-            ]
-          }
-        },
-        {
-          "id": "FNS",
-          "aliases": [
-            "finesse",
-            "fns"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/FNS",
-          "tier": "rare",
-          "points": 60,
-          "score": 38,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 8,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ]
-          }
-        },
-        {
-          "id": "kiNgg",
-          "aliases": [
-            "kingg"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/KiNgg",
-          "tier": "rare",
-          "points": 60,
-          "score": 38,
-          "evidence": {
-            "tier1_events": 16,
-            "international_events": 6,
-            "international_wins": [
-              "Masters London 2026"
-            ]
-          }
-        },
-        {
-          "id": "Shao",
-          "aliases": [
-            "shao"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Shao",
-          "tier": "rare",
-          "points": 60,
-          "score": 36,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Copenhagen 2022"
-            ]
-          }
-        },
-        {
-          "id": "TenZ",
-          "aliases": [
-            "tenz",
-            "tenzera"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/TenZ",
-          "tier": "rare",
-          "points": 60,
-          "score": 36,
-          "evidence": {
-            "tier1_events": 10,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Madrid 2024",
-              "Masters Reykjavík 2021"
-            ]
-          }
-        },
-        {
-          "id": "ANGE1",
-          "aliases": [
-            "ange1"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/ANGE1",
-          "tier": "rare",
-          "points": 60,
-          "score": 35,
-          "evidence": {
-            "tier1_events": 13,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Copenhagen 2022"
-            ]
-          }
-        },
-        {
-          "id": "C0M",
-          "aliases": [
-            "c0m"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/C0M",
-          "tier": "rare",
-          "points": 60,
-          "score": 35,
-          "evidence": {
-            "tier1_events": 15,
-            "international_events": 5,
-            "international_wins": [
-              "Champions 2023"
-            ]
-          }
-        },
-        {
-          "id": "t3xture",
-          "aliases": [
-            "s3xture",
-            "t3xture"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/T3xture",
-          "tier": "rare",
-          "points": 60,
-          "score": 35,
-          "evidence": {
-            "tier1_events": 15,
-            "international_events": 5,
-            "international_wins": [
-              "Masters Shanghai 2024"
-            ]
-          }
-        },
-        {
-          "id": "iZu",
-          "aliases": [
-            "izu"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/IZu",
-          "tier": "rare",
-          "points": 60,
-          "score": 34,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 5,
-            "international_wins": [
-              "Masters Bangkok 2025"
-            ]
-          }
-        },
-        {
-          "id": "johnqt",
-          "aliases": [
-            "johnqt"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Johnqt",
-          "tier": "rare",
-          "points": 60,
-          "score": 34,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 5,
-            "international_wins": [
-              "Masters Madrid 2024"
-            ]
-          }
-        },
-        {
-          "id": "Lakia",
-          "aliases": [
-            "lakia"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Lakia",
-          "tier": "rare",
-          "points": 60,
-          "score": 34,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Shanghai 2024"
-            ]
-          }
-        },
-        {
-          "id": "Zyppan",
-          "aliases": [
-            "zyppan"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zyppan",
-          "tier": "rare",
-          "points": 60,
-          "score": 34,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Copenhagen 2022"
-            ]
-          }
-        },
-        {
-          "id": "yay",
-          "aliases": [
-            "yay",
-            "yayster"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Yay",
-          "tier": "rare",
-          "points": 60,
-          "score": 33,
-          "evidence": {
-            "tier1_events": 11,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Reykjavík 2022"
+              "Champions 2023",
+              "Champions 2025"
             ]
           }
         },
@@ -1353,7 +955,8 @@
           "source": "https://liquipedia.net/valorant/Leo",
           "tier": "rare",
           "points": 60,
-          "score": 32,
+          "score": 6.4,
+          "share": 1.0,
           "evidence": {
             "tier1_events": 8,
             "international_events": 5,
@@ -1364,40 +967,156 @@
           }
         },
         {
-          "id": "Karon",
+          "id": "Meteor",
           "aliases": [
-            "hunter",
-            "karon"
+            "meteor"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Karon",
+          "source": "https://liquipedia.net/valorant/Meteor",
           "tier": "rare",
           "points": 60,
-          "score": 31,
+          "score": 6.4,
+          "share": 1.0,
           "evidence": {
-            "tier1_events": 13,
-            "international_events": 4,
+            "tier1_events": 19,
+            "international_events": 9,
             "international_wins": [
+              "Masters Bangkok 2025",
               "Masters Shanghai 2024"
             ]
           }
         },
         {
-          "id": "ardiis",
+          "id": "BuZz",
           "aliases": [
-            "ardiis",
-            "icepaperhands"
+            "buzz"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Ardiis",
-          "tier": "rare",
-          "points": 60,
-          "score": 29,
+          "source": "https://liquipedia.net/valorant/BuZz",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
           "evidence": {
-            "tier1_events": 10,
+            "tier1_events": 23,
+            "international_events": 13,
+            "international_wins": [
+              "Masters Bangkok 2025"
+            ]
+          }
+        },
+        {
+          "id": "crashies",
+          "aliases": [
+            "crashies"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Crashies",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 20,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "d4v41",
+          "aliases": [
+            "d4v41"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/D4v41",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 25,
+            "international_events": 15,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "dapr",
+          "aliases": [
+            "dapr"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dapr",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "FNS",
+          "aliases": [
+            "finesse",
+            "fns"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/FNS",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "johnqt",
+          "aliases": [
+            "johnqt"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Johnqt",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "kiNgg",
+          "aliases": [
+            "kingg"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/KiNgg",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 16,
             "international_events": 6,
             "international_wins": [
-              "Masters Copenhagen 2022"
+              "Masters London 2026"
             ]
           }
         },
@@ -1409,9 +1128,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Marved",
-          "tier": "rare",
-          "points": 60,
-          "score": 29,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
@@ -1421,38 +1141,175 @@
           }
         },
         {
-          "id": "pANcada",
+          "id": "mindfreak",
           "aliases": [
-            "pancada"
+            "mindfreak"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/PANcada",
-          "tier": "rare",
-          "points": 60,
-          "score": 29,
+          "source": "https://liquipedia.net/valorant/Mindfreak_(Indonesian_player)",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
           "evidence": {
-            "tier1_events": 11,
-            "international_events": 4,
+            "tier1_events": 17,
+            "international_events": 11,
             "international_wins": [
-              "Champions 2022"
+              "Masters Toronto 2025"
             ]
           }
         },
         {
-          "id": "starxo",
+          "id": "Munchkin",
           "aliases": [
-            "starxo"
+            "munchkin"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Starxo",
-          "tier": "rare",
-          "points": 60,
-          "score": 29,
+          "source": "https://liquipedia.net/valorant/Munchkin",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
           "evidence": {
-            "tier1_events": 11,
-            "international_events": 4,
+            "tier1_events": 22,
+            "international_events": 12,
             "international_wins": [
-              "Champions 2021"
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "ShahZaM",
+          "aliases": [
+            "shahzam"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "SicK",
+          "aliases": [
+            "sick"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SicK",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "stax",
+          "aliases": [
+            "stax"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Stax",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 22,
+            "international_events": 12,
+            "international_wins": [
+              "Masters Bangkok 2025"
+            ]
+          }
+        },
+        {
+          "id": "Victor",
+          "aliases": [
+            "food",
+            "victor"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Victor",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "Zellsis",
+          "aliases": [
+            "zellsis"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zellsis",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6.0,
+          "share": 0.76,
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "ANGE1",
+          "aliases": [
+            "ange1"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ANGE1",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "ardiis",
+          "aliases": [
+            "ardiis",
+            "icepaperhands"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ardiis",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
             ]
           }
         },
@@ -1463,50 +1320,15 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Boostio",
-          "tier": "rare",
-          "points": 60,
-          "score": 28,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
           "evidence": {
             "tier1_events": 10,
             "international_events": 4,
             "international_wins": [
               "Champions 2023"
-            ]
-          }
-        },
-        {
-          "id": "Demon1",
-          "aliases": [
-            "demon1"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Demon1",
-          "tier": "rare",
-          "points": 60,
-          "score": 28,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 3,
-            "international_wins": [
-              "Champions 2023"
-            ]
-          }
-        },
-        {
-          "id": "mada",
-          "aliases": [
-            "mada"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Mada",
-          "tier": "rare",
-          "points": 60,
-          "score": 28,
-          "evidence": {
-            "tier1_events": 10,
-            "international_events": 4,
-            "international_wins": [
-              "Champions 2025"
             ]
           }
         },
@@ -1517,9 +1339,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Brawk",
-          "tier": "rare",
-          "points": 60,
-          "score": 27,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -1529,20 +1352,195 @@
           }
         },
         {
-          "id": "PatMen",
+          "id": "C0M",
           "aliases": [
-            "patmen"
+            "c0m"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/PatMen",
-          "tier": "rare",
-          "points": 60,
-          "score": 27,
+          "source": "https://liquipedia.net/valorant/C0M",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
           "evidence": {
-            "tier1_events": 9,
+            "tier1_events": 15,
+            "international_events": 5,
+            "international_wins": [
+              "Champions 2023"
+            ]
+          }
+        },
+        {
+          "id": "carpe",
+          "aliases": [
+            "carpe"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Carpe",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Bangkok 2025"
+            ]
+          }
+        },
+        {
+          "id": "CHICHOO",
+          "aliases": [
+            "chichoo",
+            "mengquan",
+            "taylor13"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/CHICHOO",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 21,
+            "international_events": 12,
+            "international_wins": [
+              "Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "iZu",
+          "aliases": [
+            "izu"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/IZu",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Bangkok 2025"
+            ]
+          }
+        },
+        {
+          "id": "jawgemo",
+          "aliases": [
+            "jawgemo"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jawgemo",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 19,
+            "international_events": 9,
+            "international_wins": [
+              "Champions 2023"
+            ]
+          }
+        },
+        {
+          "id": "Karon",
+          "aliases": [
+            "hunter",
+            "karon"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Karon",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 13,
             "international_events": 4,
             "international_wins": [
-              "Masters Toronto 2025"
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "mada",
+          "aliases": [
+            "mada"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Mada",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "nobody",
+          "aliases": [
+            "nobody"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Nobody",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 21,
+            "international_events": 12,
+            "international_wins": [
+              "Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "Rb",
+          "aliases": [
+            "rb"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Rb",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 20,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Santiago 2026"
+            ]
+          }
+        },
+        {
+          "id": "Redgar",
+          "aliases": [
+            "redgar"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Redgar",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Berlin 2021"
             ]
           }
         },
@@ -1553,14 +1551,150 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/S0m",
-          "tier": "rare",
-          "points": 60,
-          "score": 27,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
             "international_wins": [
               "Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "Shao",
+          "aliases": [
+            "shao"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Shao",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "Smoggy",
+          "aliases": [
+            "mikasa",
+            "smoggy"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Smoggy",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 21,
+            "international_events": 12,
+            "international_wins": [
+              "Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "SUYGETSU",
+          "aliases": [
+            "suygetsu"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SUYGETSU",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "t3xture",
+          "aliases": [
+            "s3xture",
+            "t3xture"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/T3xture",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 15,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "zombs",
+          "aliases": [
+            "zombs"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zombs",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5.0,
+          "share": 0.38,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "curry",
+          "aliases": [
+            "curry"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Curry",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.0,
+          "share": 0.19,
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "Lakia",
+          "aliases": [
+            "lakia"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Lakia",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.0,
+          "share": 0.19,
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Shanghai 2024"
             ]
           }
         },
@@ -1573,7 +1707,8 @@
           "source": "https://liquipedia.net/valorant/Sheydos",
           "tier": "deep_cut",
           "points": 85,
-          "score": 26,
+          "score": 4.0,
+          "share": 0.19,
           "evidence": {
             "tier1_events": 10,
             "international_events": 3,
@@ -1591,7 +1726,8 @@
           "source": "https://liquipedia.net/valorant/Skuba",
           "tier": "deep_cut",
           "points": 85,
-          "score": 26,
+          "score": 4.0,
+          "share": 0.19,
           "evidence": {
             "tier1_events": 8,
             "international_events": 4,
@@ -1601,20 +1737,59 @@
           }
         },
         {
-          "id": "Redgar",
+          "id": "Zyppan",
           "aliases": [
-            "redgar"
+            "zyppan"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Redgar",
+          "source": "https://liquipedia.net/valorant/Zyppan",
           "tier": "deep_cut",
           "points": 85,
-          "score": 25,
+          "score": 4.0,
+          "share": 0.19,
           "evidence": {
-            "tier1_events": 8,
-            "international_events": 5,
+            "tier1_events": 12,
+            "international_events": 6,
             "international_wins": [
-              "Masters Berlin 2021"
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "starxo",
+          "aliases": [
+            "starxo"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Starxo",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.73,
+          "share": 0.08,
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 4,
+            "international_wins": [
+              "Champions 2021"
+            ]
+          }
+        },
+        {
+          "id": "PatMen",
+          "aliases": [
+            "patmen"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/PatMen",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.6,
+          "share": 0.07,
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 4,
+            "international_wins": [
+              "Masters Toronto 2025"
             ]
           }
         },
@@ -1627,7 +1802,8 @@
           "source": "https://liquipedia.net/valorant/Kamyk",
           "tier": "deep_cut",
           "points": 85,
-          "score": 23,
+          "score": 2.33,
+          "share": 0.06,
           "evidence": {
             "tier1_events": 7,
             "international_events": 3,
@@ -1645,7 +1821,8 @@
           "source": "https://liquipedia.net/valorant/Dambi",
           "tier": "deep_cut",
           "points": 85,
-          "score": 22,
+          "score": 2.27,
+          "share": 0.06,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -1664,7 +1841,8 @@
           "source": "https://liquipedia.net/valorant/Francis",
           "tier": "deep_cut",
           "points": 85,
-          "score": 22,
+          "score": 2.27,
+          "share": 0.06,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -1682,7 +1860,8 @@
           "source": "https://liquipedia.net/valorant/Ivy_(Korean_player)",
           "tier": "deep_cut",
           "points": 85,
-          "score": 22,
+          "score": 2.27,
+          "share": 0.06,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -1700,7 +1879,8 @@
           "source": "https://liquipedia.net/valorant/Lukxo",
           "tier": "deep_cut",
           "points": 85,
-          "score": 19,
+          "score": 2.07,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -1718,7 +1898,8 @@
           "source": "https://liquipedia.net/valorant/SpikeziN",
           "tier": "deep_cut",
           "points": 85,
-          "score": 19,
+          "score": 2.07,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -1736,7 +1917,8 @@
           "source": "https://liquipedia.net/valorant/Sylvan",
           "tier": "deep_cut",
           "points": 85,
-          "score": 19,
+          "score": 2.07,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -1754,7 +1936,8 @@
           "source": "https://liquipedia.net/valorant/Xross",
           "tier": "deep_cut",
           "points": 85,
-          "score": 19,
+          "score": 2.07,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 5,
             "international_events": 2,
@@ -1772,7 +1955,8 @@
           "source": "https://liquipedia.net/valorant/S1Mon",
           "tier": "deep_cut",
           "points": 85,
-          "score": 18,
+          "score": 2.0,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
@@ -1790,7 +1974,8 @@
           "source": "https://liquipedia.net/valorant/BONECOLD",
           "tier": "deep_cut",
           "points": 85,
-          "score": 17,
+          "score": 1.93,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 4,
             "international_events": 3,
@@ -1808,30 +1993,13 @@
           "source": "https://liquipedia.net/valorant/Sato",
           "tier": "deep_cut",
           "points": 85,
-          "score": 17,
+          "score": 1.93,
+          "share": 0.05,
           "evidence": {
             "tier1_events": 5,
             "international_events": 1,
             "international_wins": [
               "Masters London 2026"
-            ]
-          }
-        },
-        {
-          "id": "ShahZaM",
-          "aliases": [
-            "shahzam"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/ShahZaM",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 17,
-          "evidence": {
-            "tier1_events": 4,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
             ]
           }
         },
@@ -1845,30 +2013,13 @@
           "source": "https://liquipedia.net/valorant/Blowz",
           "tier": "deep_cut",
           "points": 85,
-          "score": 16,
+          "score": 1.87,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
             "international_wins": [
               "Masters London 2026"
-            ]
-          }
-        },
-        {
-          "id": "dapr",
-          "aliases": [
-            "dapr"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Dapr",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 16,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
             ]
           }
         },
@@ -1881,7 +2032,8 @@
           "source": "https://liquipedia.net/valorant/Darker",
           "tier": "deep_cut",
           "points": 85,
-          "score": 16,
+          "score": 1.87,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -1899,30 +2051,13 @@
           "source": "https://liquipedia.net/valorant/Neon_(Argentine_player)",
           "tier": "deep_cut",
           "points": 85,
-          "score": 16,
+          "score": 1.87,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
             "international_wins": [
               "Masters London 2026"
-            ]
-          }
-        },
-        {
-          "id": "SicK",
-          "aliases": [
-            "sick"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/SicK",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 16,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
             ]
           }
         },
@@ -1935,30 +2070,13 @@
           "source": "https://liquipedia.net/valorant/Zeek",
           "tier": "deep_cut",
           "points": 85,
-          "score": 16,
+          "score": 1.87,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
             "international_wins": [
               "Champions 2021"
-            ]
-          }
-        },
-        {
-          "id": "zombs",
-          "aliases": [
-            "zombs"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zombs",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 16,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
             ]
           }
         },
@@ -1969,9 +2087,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Erde",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 15,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.8,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 3,
             "international_events": 1,
@@ -1987,9 +2106,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/DaviH",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 14,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.73,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 2,
             "international_events": 1,
@@ -2005,32 +2125,15 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Tkzin",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 14,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.73,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 2,
             "international_events": 1,
             "international_wins": [
               "Champions 2026"
-            ]
-          }
-        },
-        {
-          "id": "curry",
-          "aliases": [
-            "curry"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Curry",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 13,
-          "evidence": {
-            "tier1_events": 4,
-            "international_events": 2,
-            "international_wins": [
-              "Masters Madrid 2024"
             ]
           }
         },
@@ -2041,9 +2144,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/D3ffo",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 13,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.67,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 2,
             "international_events": 2,
@@ -2059,9 +2163,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Kiles",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 13,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.67,
+          "share": 0.04,
           "evidence": {
             "tier1_events": 2,
             "international_events": 2,
@@ -2079,7 +2184,8 @@
           "source": "https://liquipedia.net/valorant/WoodAy1",
           "tier": "one_in_a_krillion",
           "points": 100,
-          "score": 9,
+          "score": 1.4,
+          "share": 0.03,
           "evidence": {
             "tier1_events": 2,
             "international_events": 1,
@@ -2096,83 +2202,46 @@
       "pool": "players",
       "answers": [
         {
-          "id": "crashies",
+          "id": "Demon1",
           "aliases": [
-            "crashies"
+            "demon1"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Crashies",
+          "source": "https://liquipedia.net/valorant/Demon1",
           "tier": "plankton",
           "points": 10,
-          "score": 47,
+          "score": 8.0,
+          "share": 12.6,
           "evidence": {
-            "tier1_events": 20,
-            "international_events": 10,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "Ethan",
-          "aliases": [
-            "ethan"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Ethan",
-          "tier": "plankton",
-          "points": 10,
-          "score": 45,
-          "evidence": {
-            "tier1_events": 18,
-            "international_events": 8,
-            "international_wins": [
-              "Champions 2023",
-              "Champions 2025"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "jawgemo",
-          "aliases": [
-            "jawgemo"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Jawgemo",
-          "tier": "plankton",
-          "points": 10,
-          "score": 44,
-          "evidence": {
-            "tier1_events": 19,
-            "international_events": 9,
+            "tier1_events": 12,
+            "international_events": 3,
             "international_wins": [
               "Champions 2023"
             ],
             "countries": [
-              "United States"
+              "United States",
+              "Russia"
             ]
           }
         },
         {
-          "id": "leaf",
+          "id": "yay",
           "aliases": [
-            "leaf"
+            "yay",
+            "yayster"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Leaf",
+          "source": "https://liquipedia.net/valorant/Yay",
           "tier": "plankton",
           "points": 10,
-          "score": 43,
+          "score": 8.0,
+          "share": 12.6,
           "evidence": {
-            "tier1_events": 20,
-            "international_events": 10,
-            "international_wins": [],
+            "tier1_events": 11,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
             "countries": [
               "United States"
             ]
@@ -2187,7 +2256,8 @@
           "source": "https://liquipedia.net/valorant/Zekken",
           "tier": "plankton",
           "points": 10,
-          "score": 41,
+          "score": 8.0,
+          "share": 12.6,
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -2201,6 +2271,435 @@
           }
         },
         {
+          "id": "Asuna",
+          "aliases": [
+            "asuna"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Asuna",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 15,
+            "international_events": 5,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "crashies",
+          "aliases": [
+            "crashies"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Crashies",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 20,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Cryocells",
+          "aliases": [
+            "cryo",
+            "cryocells"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Cryocells",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 15,
+            "international_events": 5,
+            "international_wins": [],
+            "countries": [
+              "United States",
+              "Philippines"
+            ]
+          }
+        },
+        {
+          "id": "dapr",
+          "aliases": [
+            "dapr"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Dapr",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Ethan",
+          "aliases": [
+            "ethan"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ethan",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 18,
+            "international_events": 8,
+            "international_wins": [
+              "Champions 2023",
+              "Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Hiko",
+          "aliases": [
+            "hiko"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Hiko",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "leaf",
+          "aliases": [
+            "leaf"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Leaf",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 20,
+            "international_events": 10,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "ShahZaM",
+          "aliases": [
+            "shahzam"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "SicK",
+          "aliases": [
+            "sick"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/SicK",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Victor",
+          "aliases": [
+            "food",
+            "victor"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Victor",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Zellsis",
+          "aliases": [
+            "zellsis"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Zellsis",
+          "tier": "schooler",
+          "points": 30,
+          "score": 6.0,
+          "share": 3.15,
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "bang",
+          "aliases": [
+            "bang"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Bang",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 7,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Boostio",
+          "aliases": [
+            "boostio"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Boostio",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "Champions 2023"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "brawk",
+          "aliases": [
+            "brawk"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Brawk",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 4,
+            "international_wins": [
+              "Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "C0M",
+          "aliases": [
+            "c0m"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/C0M",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 15,
+            "international_events": 5,
+            "international_wins": [
+              "Champions 2023"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "jawgemo",
+          "aliases": [
+            "jawgemo"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Jawgemo",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 19,
+            "international_events": 9,
+            "international_wins": [
+              "Champions 2023"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "N4RRATE",
+          "aliases": [
+            "n4rrate"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/N4RRATE",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 5,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "nitr0",
+          "aliases": [
+            "nitr0"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Nitr0",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "s0m",
+          "aliases": [
+            "s0m"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/S0m",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 4,
+            "international_wins": [
+              "Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "tex",
+          "aliases": [
+            "tex"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Tex",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States",
+              "Germany"
+            ]
+          }
+        },
+        {
           "id": "trent",
           "aliases": [
             "habib",
@@ -2208,9 +2707,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Trent",
-          "tier": "plankton",
-          "points": 10,
-          "score": 39,
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -2227,9 +2727,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Valyn",
-          "tier": "plankton",
-          "points": 10,
-          "score": 39,
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -2240,18 +2741,41 @@
           }
         },
         {
-          "id": "Zellsis",
+          "id": "zombs",
           "aliases": [
-            "zellsis"
+            "zombs"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Zellsis",
-          "tier": "plankton",
-          "points": 10,
-          "score": 38,
+          "source": "https://liquipedia.net/valorant/Zombs",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.0,
+          "share": 1.58,
           "evidence": {
-            "tier1_events": 17,
-            "international_events": 7,
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "curry",
+          "aliases": [
+            "curry"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Curry",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.0,
+          "share": 0.79,
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
             "international_wins": [
               "Masters Madrid 2024"
             ],
@@ -2261,228 +2785,20 @@
           }
         },
         {
-          "id": "Victor",
+          "id": "icy",
           "aliases": [
-            "food",
-            "victor"
+            "icy"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Victor",
-          "tier": "plankton",
-          "points": 10,
-          "score": 36,
+          "source": "https://liquipedia.net/valorant/Icy",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.0,
+          "share": 0.79,
           "evidence": {
-            "tier1_events": 13,
-            "international_events": 8,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "bang",
-          "aliases": [
-            "bang"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Bang",
-          "tier": "plankton",
-          "points": 10,
-          "score": 34,
-          "evidence": {
-            "tier1_events": 17,
-            "international_events": 7,
+            "tier1_events": 7,
+            "international_events": 2,
             "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "C0M",
-          "aliases": [
-            "c0m"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/C0M",
-          "tier": "schooler",
-          "points": 30,
-          "score": 32,
-          "evidence": {
-            "tier1_events": 15,
-            "international_events": 5,
-            "international_wins": [
-              "Champions 2023"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "yay",
-          "aliases": [
-            "yay",
-            "yayster"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Yay",
-          "tier": "schooler",
-          "points": 30,
-          "score": 30,
-          "evidence": {
-            "tier1_events": 11,
-            "international_events": 6,
-            "international_wins": [
-              "Masters Reykjavík 2022"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "Asuna",
-          "aliases": [
-            "asuna"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Asuna",
-          "tier": "schooler",
-          "points": 30,
-          "score": 28,
-          "evidence": {
-            "tier1_events": 15,
-            "international_events": 5,
-            "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "Cryocells",
-          "aliases": [
-            "cryo",
-            "cryocells"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Cryocells",
-          "tier": "schooler",
-          "points": 30,
-          "score": 28,
-          "evidence": {
-            "tier1_events": 15,
-            "international_events": 5,
-            "international_wins": [],
-            "countries": [
-              "United States",
-              "Philippines"
-            ]
-          }
-        },
-        {
-          "id": "N4RRATE",
-          "aliases": [
-            "n4rrate"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/N4RRATE",
-          "tier": "schooler",
-          "points": 30,
-          "score": 27,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 5,
-            "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "Boostio",
-          "aliases": [
-            "boostio"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Boostio",
-          "tier": "schooler",
-          "points": 30,
-          "score": 25,
-          "evidence": {
-            "tier1_events": 10,
-            "international_events": 4,
-            "international_wins": [
-              "Champions 2023"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "Demon1",
-          "aliases": [
-            "demon1"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Demon1",
-          "tier": "schooler",
-          "points": 30,
-          "score": 25,
-          "evidence": {
-            "tier1_events": 12,
-            "international_events": 3,
-            "international_wins": [
-              "Champions 2023"
-            ],
-            "countries": [
-              "United States",
-              "Russia"
-            ]
-          }
-        },
-        {
-          "id": "brawk",
-          "aliases": [
-            "brawk"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Brawk",
-          "tier": "schooler",
-          "points": 30,
-          "score": 24,
-          "evidence": {
-            "tier1_events": 9,
-            "international_events": 4,
-            "international_wins": [
-              "Champions 2025"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "s0m",
-          "aliases": [
-            "s0m"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/S0m",
-          "tier": "schooler",
-          "points": 30,
-          "score": 24,
-          "evidence": {
-            "tier1_events": 9,
-            "international_events": 4,
-            "international_wins": [
-              "Champions 2025"
-            ],
             "countries": [
               "United States"
             ]
@@ -2495,9 +2811,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Skuba",
-          "tier": "schooler",
-          "points": 30,
-          "score": 23,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.0,
+          "share": 0.79,
           "evidence": {
             "tier1_events": 8,
             "international_events": 4,
@@ -2510,18 +2827,19 @@
           }
         },
         {
-          "id": "babybay",
+          "id": "Xeppaa",
           "aliases": [
-            "babybay"
+            "xeppaa"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Babybay",
-          "tier": "schooler",
-          "points": 30,
-          "score": 19,
+          "source": "https://liquipedia.net/valorant/Xeppaa",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4.0,
+          "share": 0.79,
           "evidence": {
-            "tier1_events": 8,
-            "international_events": 4,
+            "tier1_events": 11,
+            "international_events": 2,
             "international_wins": [],
             "countries": [
               "United States"
@@ -2529,38 +2847,19 @@
           }
         },
         {
-          "id": "tex",
+          "id": "babybay",
           "aliases": [
-            "tex"
+            "babybay"
           ],
           "icon": null,
-          "source": "https://liquipedia.net/valorant/Tex",
-          "tier": "schooler",
-          "points": 30,
-          "score": 18,
+          "source": "https://liquipedia.net/valorant/Babybay",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.27,
+          "share": 0.24,
           "evidence": {
-            "tier1_events": 11,
-            "international_events": 2,
-            "international_wins": [],
-            "countries": [
-              "United States",
-              "Germany"
-            ]
-          }
-        },
-        {
-          "id": "Xeppaa",
-          "aliases": [
-            "xeppaa"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Xeppaa",
-          "tier": "schooler",
-          "points": 30,
-          "score": 18,
-          "evidence": {
-            "tier1_events": 11,
-            "international_events": 2,
+            "tier1_events": 8,
+            "international_events": 4,
             "international_wins": [],
             "countries": [
               "United States"
@@ -2574,9 +2873,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Derrek",
-          "tier": "schooler",
-          "points": 30,
-          "score": 16,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.07,
+          "share": 0.21,
           "evidence": {
             "tier1_events": 9,
             "international_events": 2,
@@ -2593,74 +2893,14 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Verno",
-          "tier": "rare",
-          "points": 60,
-          "score": 15,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.0,
+          "share": 0.2,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
             "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "icy",
-          "aliases": [
-            "icy"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Icy",
-          "tier": "rare",
-          "points": 60,
-          "score": 14,
-          "evidence": {
-            "tier1_events": 7,
-            "international_events": 2,
-            "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "ShahZaM",
-          "aliases": [
-            "shahzam"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/ShahZaM",
-          "tier": "rare",
-          "points": 60,
-          "score": 14,
-          "evidence": {
-            "tier1_events": 4,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "dapr",
-          "aliases": [
-            "dapr"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Dapr",
-          "tier": "rare",
-          "points": 60,
-          "score": 13,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
             "countries": [
               "United States"
             ]
@@ -2673,55 +2913,14 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Rossy",
-          "tier": "rare",
-          "points": 60,
-          "score": 13,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.87,
+          "share": 0.18,
           "evidence": {
             "tier1_events": 8,
             "international_events": 1,
             "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "SicK",
-          "aliases": [
-            "sick"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/SicK",
-          "tier": "rare",
-          "points": 60,
-          "score": 13,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "zombs",
-          "aliases": [
-            "zombs"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Zombs",
-          "tier": "rare",
-          "points": 60,
-          "score": 13,
-          "evidence": {
-            "tier1_events": 3,
-            "international_events": 3,
-            "international_wins": [
-              "Masters Reykjavík 2021"
-            ],
             "countries": [
               "United States"
             ]
@@ -2734,9 +2933,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Governor",
-          "tier": "rare",
-          "points": 60,
-          "score": 12,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.8,
+          "share": 0.17,
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -2753,9 +2953,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/OXY",
-          "tier": "rare",
-          "points": 60,
-          "score": 12,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.8,
+          "share": 0.17,
           "evidence": {
             "tier1_events": 9,
             "international_events": 0,
@@ -2772,9 +2973,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Supamen",
-          "tier": "rare",
-          "points": 60,
-          "score": 12,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.8,
+          "share": 0.17,
           "evidence": {
             "tier1_events": 9,
             "international_events": 0,
@@ -2791,9 +2993,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Vanity",
-          "tier": "rare",
-          "points": 60,
-          "score": 12,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.8,
+          "share": 0.17,
           "evidence": {
             "tier1_events": 6,
             "international_events": 3,
@@ -2810,9 +3013,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/NeT",
-          "tier": "rare",
-          "points": 60,
-          "score": 11,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.73,
+          "share": 0.16,
           "evidence": {
             "tier1_events": 6,
             "international_events": 1,
@@ -2829,34 +3033,14 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Stellar",
-          "tier": "rare",
-          "points": 60,
-          "score": 11,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.73,
+          "share": 0.16,
           "evidence": {
             "tier1_events": 4,
             "international_events": 2,
             "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "curry",
-          "aliases": [
-            "curry"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Curry",
-          "tier": "rare",
-          "points": 60,
-          "score": 10,
-          "evidence": {
-            "tier1_events": 4,
-            "international_events": 2,
-            "international_wins": [
-              "Masters Madrid 2024"
-            ],
             "countries": [
               "United States"
             ]
@@ -2869,9 +3053,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/BcJ",
-          "tier": "rare",
-          "points": 60,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.6,
+          "share": 0.15,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2888,9 +3073,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Dephh",
-          "tier": "rare",
-          "points": 60,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.6,
+          "share": 0.15,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2908,9 +3094,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/GLYPH",
-          "tier": "rare",
-          "points": 60,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.6,
+          "share": 0.15,
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -2928,9 +3115,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Mitch",
-          "tier": "rare",
-          "points": 60,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.6,
+          "share": 0.15,
           "evidence": {
             "tier1_events": 4,
             "international_events": 1,
@@ -2948,9 +3136,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/NaturE",
-          "tier": "rare",
-          "points": 60,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.6,
+          "share": 0.15,
           "evidence": {
             "tier1_events": 6,
             "international_events": 0,
@@ -2967,9 +3156,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/V1c",
-          "tier": "rare",
-          "points": 60,
-          "score": 9,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.6,
+          "share": 0.15,
           "evidence": {
             "tier1_events": 6,
             "international_events": 0,
@@ -2986,9 +3176,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Nerve",
-          "tier": "rare",
-          "points": 60,
-          "score": 8,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.53,
+          "share": 0.14,
           "evidence": {
             "tier1_events": 3,
             "international_events": 1,
@@ -3007,7 +3198,8 @@
           "source": "https://liquipedia.net/valorant/Eggsterr",
           "tier": "deep_cut",
           "points": 85,
-          "score": 6,
+          "score": 1.4,
+          "share": 0.13,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3026,7 +3218,8 @@
           "source": "https://liquipedia.net/valorant/Flyuh",
           "tier": "deep_cut",
           "points": 85,
-          "score": 6,
+          "score": 1.4,
+          "share": 0.13,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3046,7 +3239,8 @@
           "source": "https://liquipedia.net/valorant/Jakee",
           "tier": "deep_cut",
           "points": 85,
-          "score": 6,
+          "score": 1.4,
+          "share": 0.13,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3065,7 +3259,8 @@
           "source": "https://liquipedia.net/valorant/Juv3nile",
           "tier": "deep_cut",
           "points": 85,
-          "score": 6,
+          "score": 1.4,
+          "share": 0.13,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3084,7 +3279,8 @@
           "source": "https://liquipedia.net/valorant/Reduxx",
           "tier": "deep_cut",
           "points": 85,
-          "score": 6,
+          "score": 1.4,
+          "share": 0.13,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3104,7 +3300,8 @@
           "source": "https://liquipedia.net/valorant/Chloric",
           "tier": "deep_cut",
           "points": 85,
-          "score": 5,
+          "score": 1.33,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3123,7 +3320,8 @@
           "source": "https://liquipedia.net/valorant/Jackk",
           "tier": "deep_cut",
           "points": 85,
-          "score": 5,
+          "score": 1.33,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3142,7 +3340,8 @@
           "source": "https://liquipedia.net/valorant/P0PPIN",
           "tier": "deep_cut",
           "points": 85,
-          "score": 5,
+          "score": 1.33,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3162,7 +3361,8 @@
           "source": "https://liquipedia.net/valorant/Paincakes",
           "tier": "deep_cut",
           "points": 85,
-          "score": 5,
+          "score": 1.33,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3181,7 +3381,8 @@
           "source": "https://liquipedia.net/valorant/PxS",
           "tier": "deep_cut",
           "points": 85,
-          "score": 5,
+          "score": 1.33,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
@@ -3201,7 +3402,8 @@
           "source": "https://liquipedia.net/valorant/Boni",
           "tier": "deep_cut",
           "points": 85,
-          "score": 4,
+          "score": 1.27,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3221,7 +3423,8 @@
           "source": "https://liquipedia.net/valorant/FireBallOps",
           "tier": "deep_cut",
           "points": 85,
-          "score": 4,
+          "score": 1.27,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3240,7 +3443,8 @@
           "source": "https://liquipedia.net/valorant/Nightz",
           "tier": "deep_cut",
           "points": 85,
-          "score": 4,
+          "score": 1.27,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3259,7 +3463,8 @@
           "source": "https://liquipedia.net/valorant/Notexxd",
           "tier": "deep_cut",
           "points": 85,
-          "score": 4,
+          "score": 1.27,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3279,7 +3484,8 @@
           "source": "https://liquipedia.net/valorant/Spaz",
           "tier": "deep_cut",
           "points": 85,
-          "score": 4,
+          "score": 1.27,
+          "share": 0.12,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3298,31 +3504,13 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Canezerra",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 3,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.2,
+          "share": 0.11,
           "evidence": {
             "tier1_events": 2,
             "international_events": 0,
-            "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "Hiko",
-          "aliases": [
-            "hiko"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Hiko",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 3,
-          "evidence": {
-            "tier1_events": 1,
-            "international_events": 1,
             "international_wins": [],
             "countries": [
               "United States"
@@ -3337,28 +3525,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Jammyz",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 3,
-          "evidence": {
-            "tier1_events": 1,
-            "international_events": 1,
-            "international_wins": [],
-            "countries": [
-              "United States"
-            ]
-          }
-        },
-        {
-          "id": "nitr0",
-          "aliases": [
-            "nitr0"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/Nitr0",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 3,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.2,
+          "share": 0.11,
           "evidence": {
             "tier1_events": 1,
             "international_events": 1,
@@ -3375,9 +3545,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Runi",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 3,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.2,
+          "share": 0.11,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -3395,9 +3566,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Add3r",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 2,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.13,
+          "share": 0.11,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3414,9 +3586,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Bdog",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 2,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.13,
+          "share": 0.11,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3434,9 +3607,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Inspire",
-          "tier": "one_in_a_krillion",
-          "points": 100,
-          "score": 2,
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 1.13,
+          "share": 0.11,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3455,7 +3629,8 @@
           "source": "https://liquipedia.net/valorant/Pa1nt",
           "tier": "one_in_a_krillion",
           "points": 100,
-          "score": -1,
+          "score": 1.0,
+          "share": 0.1,
           "evidence": {
             "tier1_events": 1,
             "international_events": 0,
@@ -3463,6 +3638,947 @@
             "countries": [
               "United States"
             ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "stinger_skin",
+      "text": "Name a stinger skin",
+      "pool": "skins",
+      "answers": [
+        {
+          "id": "RGX 11z Pro Stinger",
+          "aliases": [
+            "rgx 11z pro",
+            "rgx 11z pro stinger",
+            "rgx11zpro",
+            "rgx11zprostinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/282c15e6-4372-2f18-9143-2d9cdd942c4c/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "plankton",
+          "points": 10,
+          "score": 9.19,
+          "share": 44.2,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Exclusive",
+            "collection": "RGX 11z Pro"
+          }
+        },
+        {
+          "id": "Prelude to Chaos Stinger",
+          "aliases": [
+            "prelude to chaos",
+            "prelude to chaos stinger",
+            "preludetochaos",
+            "preludetochaosstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/5a4a0ea0-4ac6-d130-c917-45a7bb89ae42/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "plankton",
+          "points": 10,
+          "score": 8.18,
+          "share": 21.87,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Exclusive",
+            "collection": "Prelude to Chaos"
+          }
+        },
+        {
+          "id": "Sovereign Stinger",
+          "aliases": [
+            "sovereign",
+            "sovereign stinger",
+            "sovereignstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/8fb27bb1-4080-581d-bcd3-53ae01861654/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "schooler",
+          "points": 30,
+          "score": 7.14,
+          "share": 10.71,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Premium",
+            "collection": "Sovereign"
+          }
+        },
+        {
+          "id": "Overdrive Stinger",
+          "aliases": [
+            "overdrive",
+            "overdrive stinger",
+            "overdrivestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/7fa8b218-4943-e745-f62f-a9b666bdc10b/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.16,
+          "share": 2.71,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Exclusive",
+            "collection": "Overdrive"
+          }
+        },
+        {
+          "id": "Sakura Stinger",
+          "aliases": [
+            "sakura",
+            "sakura stinger",
+            "sakurastinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/1cd6f578-483b-37a1-a7ef-9a907fac416a/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.06,
+          "share": 2.52,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Sakura"
+          }
+        },
+        {
+          "id": "Bubblegum Deathwish Stinger",
+          "aliases": [
+            "bubblegum deathwish",
+            "bubblegum deathwish stinger",
+            "bubblegumdeathwish",
+            "bubblegumdeathwishstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/a5df3dee-4303-5f1a-a5f9-60bd46e2390b/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 4.16,
+          "share": 1.36,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Exclusive",
+            "collection": "Bubblegum Deathwish"
+          }
+        },
+        {
+          "id": "Popmonz Stinger",
+          "aliases": [
+            "popmonz",
+            "popmonz stinger",
+            "popmonzstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/b1669f9e-4c41-2c5a-59b1-5eb558a670fa/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 4.16,
+          "share": 1.36,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Exclusive",
+            "collection": "Popmonz"
+          }
+        },
+        {
+          "id": "CYRAX Stinger",
+          "aliases": [
+            "cyrax",
+            "cyrax stinger",
+            "cyraxstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/b0d9088d-4a99-3dda-5b43-319e5fa9e66a/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.16,
+          "share": 0.68,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Exclusive",
+            "collection": "CYRAX"
+          }
+        },
+        {
+          "id": "Doodle Buds Stinger",
+          "aliases": [
+            "doodle buds",
+            "doodle buds stinger",
+            "doodlebuds",
+            "doodlebudsstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/9444ba80-4ae7-985d-40a2-2788f96dd544/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.11,
+          "share": 0.65,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Premium",
+            "collection": "Doodle Buds"
+          }
+        },
+        {
+          "id": "Ego Stinger",
+          "aliases": [
+            "ego",
+            "ego stinger",
+            "egostinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/8fe5ebbc-4ce7-a248-9766-288441706e0a/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.1,
+          "share": 0.65,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Premium",
+            "collection": "Ego"
+          }
+        },
+        {
+          "id": "Aristocrat Stinger",
+          "aliases": [
+            "aristocrat",
+            "aristocrat stinger",
+            "aristocratstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/c78e4616-4499-7926-0f1e-93977020063f/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.06,
+          "share": 0.63,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Aristocrat"
+          }
+        },
+        {
+          "id": "Composite Stinger",
+          "aliases": [
+            "composite",
+            "composite stinger",
+            "compositestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/cebd9a89-4ef1-48fa-6c4e-6bbc1cdd1be8/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.06,
+          "share": 0.63,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Composite"
+          }
+        },
+        {
+          "id": "Silvanus Stinger",
+          "aliases": [
+            "silvanus",
+            "silvanus stinger",
+            "silvanusstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/847fe9da-45cc-21d4-0138-7aa4d8b31d8e/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.06,
+          "share": 0.63,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Silvanus"
+          }
+        },
+        {
+          "id": "Lycan's Bane Stinger",
+          "aliases": [
+            "lycan's bane",
+            "lycan's bane stinger",
+            "lycans bane",
+            "lycans bane stinger",
+            "lycansbane",
+            "lycansbanestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/3d6eb464-4193-a8c6-5aff-d593520163b3/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.06,
+          "share": 0.63,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Lycan's Bane"
+          }
+        },
+        {
+          "id": "Sensation Stinger",
+          "aliases": [
+            "sensation",
+            "sensation stinger",
+            "sensationstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/9d7ed392-4c4c-b1c4-7232-3cbb07b2e133/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.03,
+          "share": 0.62,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Sensation"
+          }
+        },
+        {
+          "id": "Gridcrash Stinger",
+          "aliases": [
+            "gridcrash",
+            "gridcrash stinger",
+            "gridcrashstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/3760761d-4be6-bc25-d9a8-a0b9137651fd/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.02,
+          "share": 0.62,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Gridcrash"
+          }
+        },
+        {
+          "id": "Moondash Stinger",
+          "aliases": [
+            "moondash",
+            "moondash stinger",
+            "moondashstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/92f1dd4b-47f5-2088-9370-f89857962bc2/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3.02,
+          "share": 0.62,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Moondash"
+          }
+        },
+        {
+          "id": "Nanomight Stinger",
+          "aliases": [
+            "nanomight",
+            "nanomight stinger",
+            "nanomightstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/eee0304d-45f1-6c08-1a53-4e850f594f51/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.07,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Nanomight"
+          }
+        },
+        {
+          "id": "Overlay Stinger",
+          "aliases": [
+            "overlay",
+            "overlay stinger",
+            "overlaystinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/6da4c1ab-4c47-3ad9-39dd-f69aca9f9c8c/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.07,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Overlay"
+          }
+        },
+        {
+          "id": "Transition Stinger",
+          "aliases": [
+            "transition",
+            "transition stinger",
+            "transitionstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/7858961c-47ae-f109-2f70-f0b78ea99aaf/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.07,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Transition"
+          }
+        },
+        {
+          "id": "Verdant Cafe Stinger",
+          "aliases": [
+            "verdant cafe",
+            "verdant cafe stinger",
+            "verdantcafe",
+            "verdantcafestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/d83fecfa-41ff-9dce-0241-0980c6a087d7/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.07,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Verdant Cafe"
+          }
+        },
+        {
+          "id": ".SYS Stinger",
+          "aliases": [
+            ".sys",
+            ".sys stinger",
+            "sys",
+            "sys stinger",
+            "sysstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/bf7e260f-407e-9e16-e47e-ba921c10f046/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.06,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": ".SYS"
+          }
+        },
+        {
+          "id": "Cavalier Stinger",
+          "aliases": [
+            "cavalier",
+            "cavalier stinger",
+            "cavalierstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/51e2b876-4339-521d-8d68-9aaec119bc1f/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.06,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Cavalier"
+          }
+        },
+        {
+          "id": "Paceline Stinger",
+          "aliases": [
+            "paceline",
+            "paceline stinger",
+            "pacelinestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/21f25ca2-46e0-da6c-295c-f09d294b2d8d/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.06,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Paceline"
+          }
+        },
+        {
+          "id": "SilkLeaf Stinger",
+          "aliases": [
+            "silkleaf",
+            "silkleaf stinger",
+            "silkleafstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/8068c624-4e56-4360-abe4-eab38b43820d/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.06,
+          "share": 0.32,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "SilkLeaf"
+          }
+        },
+        {
+          "id": "Celestia Stinger",
+          "aliases": [
+            "celestia",
+            "celestia stinger",
+            "celestiastinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/b6c49f5e-409e-4e7c-223d-739ecc52a705/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.04,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Celestia"
+          }
+        },
+        {
+          "id": "Immortalized Stinger",
+          "aliases": [
+            "immortalized",
+            "immortalized stinger",
+            "immortalizedstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/66a6a6a1-44c7-beac-0b67-54aaa8243367/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.04,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Immortalized"
+          }
+        },
+        {
+          "id": "Shimmer Stinger",
+          "aliases": [
+            "shimmer",
+            "shimmer stinger",
+            "shimmerstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/3fc40900-4d9d-c22f-c0f6-e0b53827ef83/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.04,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Shimmer"
+          }
+        },
+        {
+          "id": "Surge Stinger",
+          "aliases": [
+            "surge",
+            "surge stinger",
+            "surgestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/0a128cb6-4bbb-f618-85cb-82bbd17bcbb1/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.04,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Surge"
+          }
+        },
+        {
+          "id": "Prism II Stinger",
+          "aliases": [
+            "prism ii",
+            "prism ii stinger",
+            "prismii",
+            "prismiistinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/338e3ee3-4927-733f-32b6-bcac795d23ac/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.03,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Prism II"
+          }
+        },
+        {
+          "id": "Storm Maw Stinger",
+          "aliases": [
+            "storm maw",
+            "storm maw stinger",
+            "stormmaw",
+            "stormmawstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/01f1f7d1-4290-b345-cb42-c3a2b4d811ee/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.03,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Storm Maw"
+          }
+        },
+        {
+          "id": "Switchback Stinger",
+          "aliases": [
+            "switchback",
+            "switchback stinger",
+            "switchbackstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/cfca617a-4240-377f-ed3f-778fa63729ed/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.03,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Switchback"
+          }
+        },
+        {
+          "id": "Aquatica Stinger",
+          "aliases": [
+            "aquatica",
+            "aquatica stinger",
+            "aquaticastinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/5740a0f6-4f9a-c38b-db63-1a935e4bad92/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Aquatica"
+          }
+        },
+        {
+          "id": "Cloudweaver Stinger",
+          "aliases": [
+            "cloudweaver",
+            "cloudweaver stinger",
+            "cloudweaverstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/86d41080-4b1f-046e-6736-148539e76df7/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Cloudweaver"
+          }
+        },
+        {
+          "id": "Convergence Stinger",
+          "aliases": [
+            "convergence",
+            "convergence stinger",
+            "convergencestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/e1888a19-4ad6-e406-0002-0bb1ad411168/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Convergence"
+          }
+        },
+        {
+          "id": "Couture Stinger",
+          "aliases": [
+            "couture",
+            "couture stinger",
+            "couturestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/802491b0-4a8b-f3d9-317f-088c5b0dedd6/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Couture"
+          }
+        },
+        {
+          "id": "Crash Out Stinger",
+          "aliases": [
+            "crash out",
+            "crash out stinger",
+            "crashout",
+            "crashoutstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/5e589d74-4b10-2a15-58b8-e5b8293f3b77/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Crash Out"
+          }
+        },
+        {
+          "id": "Depths Stinger",
+          "aliases": [
+            "depths",
+            "depths stinger",
+            "depthsstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/e1297b8f-4374-3131-27a9-38bb0eda1c0d/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Depths"
+          }
+        },
+        {
+          "id": "Libretto Stinger",
+          "aliases": [
+            "libretto",
+            "libretto stinger",
+            "librettostinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/2b7f65f7-4e85-becc-5f3d-39961f937b79/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Libretto"
+          }
+        },
+        {
+          "id": "Red Alert Stinger",
+          "aliases": [
+            "red alert",
+            "red alert stinger",
+            "redalert",
+            "redalertstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/0cf70376-4150-39aa-5657-8890617bc0d1/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Red Alert"
+          }
+        },
+        {
+          "id": "Schema Stinger",
+          "aliases": [
+            "schema",
+            "schema stinger",
+            "schemastinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/46c8b165-4ba5-d42c-79e9-4fba8951ca48/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Schema"
+          }
+        },
+        {
+          "id": "Signature Stinger",
+          "aliases": [
+            "signature",
+            "signature stinger",
+            "signaturestinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/cfbcbbcb-4d51-94cb-2efb-9fbb0d655b45/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Signature"
+          }
+        },
+        {
+          "id": "Tactiplay Stinger",
+          "aliases": [
+            "tactiplay",
+            "tactiplay stinger",
+            "tactiplaystinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/6e507ef4-4e78-e3ed-11c1-0397b94f4cfc/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Tactiplay"
+          }
+        },
+        {
+          "id": "Varnish Stinger",
+          "aliases": [
+            "varnish",
+            "varnish stinger",
+            "varnishstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/26fbcf26-4135-b8e3-277e-8a9c27e3d34d/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Varnish"
+          }
+        },
+        {
+          "id": "Refractrix Stinger",
+          "aliases": [
+            "refractrix",
+            "refractrix stinger",
+            "refractrixstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/389f8242-4dd0-6ff5-357d-6888f440647f/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 2.02,
+          "share": 0.31,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Refractrix"
+          }
+        },
+        {
+          "id": "Heartseeker Stinger",
+          "aliases": [
+            "heartseeker",
+            "heartseeker stinger",
+            "heartseekerstinger"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/fb899598-4b23-fe13-021f-ccb674d6b3f6/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 1.53,
+          "share": 0.22,
+          "evidence": {
+            "weapon": "Stinger",
+            "category": "SMG",
+            "edition": "Select",
+            "collection": "Heartseeker"
           }
         }
       ]

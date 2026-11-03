@@ -54,17 +54,18 @@ python pipeline/admin.py     # opens the question editor at http://localhost:876
 
 | Tier | Points |
 |---|---|
-| Plankton | 10 |
-| Schooler | 30 |
-| Rare | 60 |
-| Deep Cut | 85 |
-| One in a Krillion | 100 |
-| Too Clever | 15 |
+| Silver | 10 |
+| Gold (too clever) | 15 |
+| Platinum | 30 |
+| Diamond | 60 |
+| Immortal | 85 |
+| Radiant | 100 |
 
-Each player gets a fame score from tier 1 events played, international
-appearances and wins, and how recently they played. Answers are ranked and
-split into tiers: the most obvious 15% are Plankton, the last 10% are One in a
-Krillion.
+Like Krillion, rarity is estimated ahead of time, not from live answers. Every
+possible answer has a fame rating (`pipeline/familiarity.json`, estimated by
+Claude, with stat-based fallbacks). Within a question that becomes an estimated
+share of fans who'd give each answer: Silver 10%+, Platinum 3–10%, Diamond
+1–3%, Immortal under 1%, and the single rarest answer is Radiant.
 
 **Tier 1** means appearing on a roster at a VCT international event (Masters,
 Champions, LOCK//IN) or a franchised VCT league event (2023 onward).

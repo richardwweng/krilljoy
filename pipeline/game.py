@@ -17,6 +17,9 @@ from pathlib import Path
 import config
 
 GAME_FILE = Path(config.GAME_FILE)
+_FAM_FILE = Path(__file__).parent / "familiarity.json"
+COMMUNITY_CALLOUTS = (json.loads(_FAM_FILE.read_text(encoding="utf-8")).get("callout_aliases", {})
+                      if _FAM_FILE.exists() else {})
 
 # The 11 agents from VALORANT's June 2020 launch: the most familiar names
 LAUNCH_AGENTS = {"Brimstone", "Breach", "Cypher", "Jett", "Omen", "Phoenix",
@@ -27,6 +30,11 @@ SLOT_LABELS = {"Ability1": "Q", "Ability2": "E", "Grenade": "C",
 CATEGORY_LABELS = {"Sidearm": "Sidearm", "SMG": "SMG", "Shotgun": "Shotgun",
                    "Rifle": "Rifle", "Sniper": "Sniper", "Heavy": "Machine gun",
                    "Melee": "Melee"}
+# How much each gun gets used (placeholder): skins on popular guns are better known.
+# Only matters for questions that span several weapons ("Name a Reaver skin").
+WEAPON_POPULARITY = {"Vandal": 4, "Phantom": 4, "Operator": 3, "Melee": 3, "Sheriff": 2,
+                     "Spectre": 2, "Classic": 1, "Ghost": 1, "Guardian": 1, "Marshal": 1,
+                     "Outlaw": 1, "Judge": 1, "Odin": 1}
 # Callout words that show up on most maps, so they're the obvious answers
 GENERIC_CALLOUTS = {"Main", "Site", "Lobby", "Spawn", "Link", "Long", "Short",
                     "Top", "Bottom", "Mid", "Window", "Garden", "Back"}
@@ -107,7 +115,11 @@ def build_weapons(raw):
             short = clean(name[: -len(wname)]) if name.lower().endswith(" " + wname.lower()) else ""
             icon = s.get("displayIcon") or next(
                 (c.get("fullRender") for c in s.get("chromas", []) if c.get("fullRender")), None)
-            score = 3 * rank + min(collection_size[collection], 12) // 3
+            # Placeholder: pricier editions, more upgrade levels/colors and bigger
+            # collections are usually the better-known skins
+            score = round(3 * rank + len(s.get("levels") or []) + len(s.get("chromas") or []) / 2
+                          + min(collection_size[collection], 12) / 4
+                          + 2 * WEAPON_POPULARITY.get(wname, 0), 2)
             skins.append(item(name, {"weapon": wname, "category": cat, "edition": tier,
                                      "collection": collection},
                               score, icon, extra_aliases=[short, collection, wname if wname != "Melee" else ""]))
@@ -155,6 +167,7 @@ def build_maps(raw):
                     extra += [area, f"Site {area}"]
                 elif len(area) == 1:
                     extra.append(f"{region} {area}")  # "Main A"
+            extra += COMMUNITY_CALLOUTS.get(name, {}).get(cname, [])  # "Hookah", "Heaven"...
             if cname in names_here:
                 continue
             names_here.add(cname)

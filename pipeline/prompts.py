@@ -8,10 +8,16 @@ Pools:
   agents, abilities, weapons,
   skins, maps, callouts     game content from valorant-api.com (game.py)
 
+How rare an answer is: every answer has a fame rating (1-10, mostly from
+familiarity.json). Within a question, an answer's estimated share of fans is
+2**rating / sum of 2**rating over all valid answers, and tiers come from that
+share (TIER_THRESHOLDS), not from fixed proportions.
+
 Adding a condition for players = one check function + one entry in CONDITIONS.
 Adding a filter for a game pool = one attribute in game.py + one line in GAME_POOLS.
 """
 import json
+import math
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -19,16 +25,33 @@ from pathlib import Path
 import config
 
 PROMPTS_FILE = Path(__file__).parent / "prompts.json"
+FAMILIARITY_FILE = Path(__file__).parent / "familiarity.json"
 WIKI = "https://liquipedia.net/valorant/"
 
-TIERS = [  # (name, points, share of answers), most to least obvious
-    ("plankton", 10, 0.15),
-    ("schooler", 30, 0.20),
-    ("rare", 60, 0.30),
-    ("deep_cut", 85, 0.25),
-    ("one_in_a_krillion", 100, 0.10),
+# (code key, points, minimum estimated share of fans), most to least obvious.
+# Shown to players as Silver, Platinum, Diamond, Immortal, Radiant (Gold = too_clever).
+# Like Krillion's "One in a Krillion", Radiant is ONE answer per question: the
+# rarest valid answer. Everything else obscure is Immortal (Krillion's Deep Cut).
+TIERS = [
+    ("plankton", 10, 0.10),            # Silver:   10%+ of fans would say it
+    ("schooler", 30, 0.03),            # Platinum: 3-10%
+    ("rare", 60, 0.01),                # Diamond:  1-3%
+    ("deep_cut", 85, 0.0),             # Immortal: under 1%
+    ("one_in_a_krillion", 100, None),  # Radiant:  the single rarest answer
 ]
 POINTS = {name: pts for name, pts, _ in TIERS} | {"too_clever": 15}
+
+
+def _load_familiarity():
+    if not FAMILIARITY_FILE.exists():
+        return {}
+    data = json.loads(FAMILIARITY_FILE.read_text(encoding="utf-8"))
+    return {k: ({kk: vv for kk, vv in v.items() if not kk.startswith("_")} if isinstance(v, dict) else v)
+            for k, v in data.items() if not k.startswith("_")}
+
+
+FAM = _load_familiarity()
+EDITION_RANK = {"Select": 0, "Deluxe": 1, "Premium": 2, "Exclusive": 3, "Ultra": 4}
 KIND_LABELS = {"masters": "any Masters", "champions": "any Champions", "lockin": "LOCK//IN"}
 
 # Game pools and the attributes questions can filter on (attribute: label)
@@ -48,7 +71,9 @@ POOL_SUBJECTS = {"players": "tier 1 players who…"}
 
 
 # ---------- player conditions ----------
-# Each check returns (matches, score_bonus, evidence) for one player.
+# Each check returns (matches, rating_change, evidence) for one player.
+# rating_change adjusts fame for THIS question (e.g. TenZ is "a Sentinels player"
+# far more than someone who spent one split there).
 
 def _event_set(value, ctx, pool):
     """Events in `pool` selected by value: 'any', 'kind:masters', or an event page."""
@@ -66,7 +91,9 @@ def _names(pages, ctx):
 
 def check_played_for(p, value, ctx):
     evs = p["teams"].get(value, [])
-    return bool(evs), 2 * len(evs), {f"{ctx['teams'].get(value, value)} events": _names(evs, ctx)}
+    share_of_career = len(evs) / max(len(p["events"]), 1)
+    change = math.log2(0.3 + 0.7 * share_of_career) if evs else 0
+    return bool(evs), change, {f"{ctx['teams'].get(value, value)} events": _names(evs, ctx)}
 
 
 def check_country(p, value, ctx):
@@ -75,7 +102,7 @@ def check_country(p, value, ctx):
 
 def check_won(p, value, ctx):
     won = _event_set(value, ctx, p["wins"])
-    return bool(won), 3 * len(won), {}
+    return bool(won), 0.4 * max(len(won) - 1, 0), {}
 
 
 def check_played_at(p, value, ctx):
@@ -84,7 +111,7 @@ def check_played_at(p, value, ctx):
     else:
         pool = p["events"]
     hit = _event_set(value, ctx, pool)
-    return bool(hit), len(hit), {"matching events": _names(hit, ctx)}
+    return bool(hit), 0, {"matching events": _names(hit, ctx)}
 
 
 def check_not_played_for(p, value, ctx):
@@ -146,10 +173,10 @@ def options(ds, game=None):
     return {"pools": pools, "tiers": [{"name": n, "points": POINTS[n]} for n in POINTS]}
 
 
-# ---------- scoring ----------
+# ---------- fame ratings ----------
 
 def fame(p, ctx, today):
-    """PLACEHOLDER obviousness for players (higher = more obvious)."""
+    """Stat-based score for players nobody hand-rated (higher = more obvious)."""
     intl = sum(1 for e in p["events"] if ctx["events"].get(e, {}).get("international"))
     score = len(p["events"]) + 2 * intl + 4 * len(p["wins"])
     if p["last_year"] >= today.year - 1:
@@ -159,27 +186,76 @@ def fame(p, ctx, today):
     return score, intl
 
 
+def player_rating(p, stat_score):
+    """1-10. Hand ratings from familiarity.json win; others come from stats (1-5)."""
+    hand = FAM.get("players", {})
+    for key in (p["id"].lower(), p["page"].lower()):
+        if key in hand:
+            return float(hand[key])
+    return 1 + 4 * min(max(stat_score, 0), 60) / 60
+
+
+def game_rating(it, pool):
+    """1-10 fame for a game-content item, from familiarity.json (+ fallbacks)."""
+    a, name = it["attrs"], it["id"]
+    if pool == "agents":
+        return FAM.get("agents", {}).get(name, 3)
+    if pool == "abilities":
+        r = FAM.get("agents", {}).get(a.get("agent"), 3) + FAM.get("ability_bonus", {}).get(name, 0)
+        if a.get("slot", "").startswith("Ultimate"):
+            r += 0.5
+        if a.get("slot") == "Passive":
+            r -= 2
+        return r
+    if pool == "weapons":
+        return FAM.get("weapons", {}).get(name, 3)
+    if pool == "skins":
+        coll = FAM.get("collections", {}).get(a.get("collection"))
+        if coll is None:  # not rated: guess from the edition
+            coll = 1.5 + 0.5 * EDITION_RANK.get(a.get("edition"), 0)
+        return coll + FAM.get("weapon_skin_bonus", {}).get(a.get("weapon"), 0) + 0.01 * it.get("score", 0)
+    if pool == "maps":
+        return FAM.get("maps", {}).get(name, 2)
+    if pool == "callouts":
+        spot = FAM.get("callout_spots", {}).get(a.get("spot"), 2)
+        return spot + 0.4 * (FAM.get("maps", {}).get(a.get("map"), 5) - 5) + 0.01 * it.get("score", 0)
+    return it.get("score", 0)
+
+
+# ---------- tiers ----------
+
 def assign_tiers(scored):
-    """scored: [(score, item, extra)] -> [(tier, score, item, extra)], most obvious first."""
+    """scored: [(rating, item, extra)] -> [(tier, rating, share, item, extra)], most obvious first.
+
+    share = how many fans we estimate would give this answer (2**rating, normalized).
+    The rarest answer is Radiant; the rest get Silver/Platinum/Diamond/Immortal by
+    TIERS thresholds. With 5+ answers every tier is used: if one comes out empty,
+    the nearest answer next to it moves in. With fewer, answers are spread out.
+    """
     scored.sort(key=lambda x: (-x[0], x[1]["id"].lower()))
     n = len(scored)
-    bounds, acc = [], 0.0
-    for name, _, share in TIERS:
-        acc += share
-        bounds.append((acc, name))
-    # Tied scores share a tier, placed at the middle of the tie (so a pool with no
-    # popularity info yet lands in the middle tiers instead of all at the bottom)
-    tie_mid = {}
-    for rank, (score, _, _) in enumerate(scored):
-        lo, hi = tie_mid.get(score, (rank, rank))
-        tie_mid[score] = (lo, rank)
-    out = []
-    for score, p, extra in scored:
-        lo, hi = tie_mid[score]
-        pct = ((lo + hi) / 2 + 0.5) / n
-        tier = next(name for limit, name in bounds if pct <= limit + 1e-9)
-        out.append((tier, score, p, extra))
-    return out
+    if not n:
+        return []
+    top = max(r for r, _, _ in scored)
+    weights = [2 ** (r - top) for r, _, _ in scored]
+    total = sum(weights)
+    shares = [w / total for w in weights]
+    names = [name for name, _, _ in TIERS]
+    k = len(TIERS)
+
+    if n < k:  # too few answers for every tier: spread from Silver to Radiant
+        tiers = [names[round(i * (k - 1) / max(n - 1, 1))] for i in range(n)] if n > 1 else [names[0]]
+    else:
+        counts = [0] * (k - 1)
+        for sh in shares[:-1]:
+            counts[next(i for i, (_, _, low) in enumerate(TIERS[:-1]) if sh >= low)] += 1
+        while 0 in counts:
+            empty = counts.index(0)
+            donor = min((abs(j - empty), j) for j, c in enumerate(counts) if c >= 2)[1]
+            counts[donor] -= 1
+            counts[empty] += 1
+        tiers = [names[i] for i, c in enumerate(counts) for _ in range(c)] + [names[-1]]
+    return [(t, r, sh, it, ex) for t, sh, (r, it, ex) in zip(tiers, shares, scored)]
 
 
 def context(ds):
@@ -201,12 +277,12 @@ def _player_matches(prompt, ds, today, ctx):
             bonus += b
             extra.update(ev)
         if ok:
-            base, intl = fame(p, ctx, today)
+            stat_score, intl = fame(p, ctx, today)
             extra = {"tier1_events": len(p["events"]), "international_events": intl,
                      "international_wins": _names(p["wins"], ctx), **extra}
             item = {"id": p["id"], "aliases": p["aliases"], "icon": None,
                     "source": WIKI + p["page"].replace(" ", "_")}
-            scored.append((base + bonus, item, extra))
+            scored.append((player_rating(p, stat_score) + bonus, item, extra))
     return scored
 
 
@@ -230,12 +306,13 @@ def _game_matches(prompt, game):
         if not ok:
             continue
         key = it["id"].lower()
+        rating = game_rating(it, pool)
         if key not in merged:
             merged[key] = {"item": {"id": it["id"], "aliases": list(it["aliases"]),
                                     "icon": it.get("icon"), "source": "valorant-api.com"},
-                           "score": it["score"], "attrs": defaultdict(list)}
+                           "score": rating, "attrs": defaultdict(list)}
         m = merged[key]
-        m["score"] = max(m["score"], it["score"])
+        m["score"] = max(m["score"], rating)
         m["item"]["aliases"] = sorted(set(m["item"]["aliases"]) | set(it["aliases"]))
         for k, v in it["attrs"].items():
             if v not in m["attrs"][k]:
@@ -266,10 +343,11 @@ def evaluate(prompt, ds, today=None, ctx=None, game=None):
 
     overrides = prompt.get("overrides", {})
     answers = []
-    for tier, score, it, extra in assign_tiers(scored):
+    for tier, rating, share, it, extra in assign_tiers(scored):
         final = overrides.get(it["id"], tier)
         answers.append({**it, "tier": final, "auto_tier": tier, "points": POINTS[final],
-                        "score": score, "evidence": extra})
+                        "score": round(rating, 2), "share": round(100 * share, 2),
+                        "evidence": extra})
     _drop_ambiguous_aliases(answers)
     return answers
 
