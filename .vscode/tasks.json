@@ -1,0 +1,29 @@
+﻿{
+  // Press Ctrl+Shift+B to open the question editor,
+  // or use Terminal > Run Task... for the others.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Vallion: Edit questions (admin page)",
+      "type": "shell",
+      "command": "python pipeline/admin.py",
+      "problemMatcher": [],
+      "group": { "kind": "build", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "Vallion: Refresh data from Liquipedia",
+      "type": "shell",
+      "command": "python pipeline/build.py",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "Vallion: Rebuild answers (no download)",
+      "type": "shell",
+      "command": "python pipeline/build.py --offline",
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    }
+  ]
+}

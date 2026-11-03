@@ -10,8 +10,8 @@
     --bg: #0f1419; --panel: #171d24; --panel2: #1e252e; --line: #2a333e;
     --text: #e8edf2; --muted: #8b97a5; --accent: #ff4655; --accent2: #ff6b78;
     --ok: #3ddc97;
-    --t-plankton: #7b8794; --t-schooler: #2bb3a3; --t-rare: #3d8bfd;
-    --t-deep_cut: #9b6bff; --t-one_in_a_krillion: #f5b83d; --t-too_clever: #ff6fb1;
+    --t-plankton: #a9b4c2; --t-too_clever: #e3b341; --t-schooler: #3fb8b0; --t-rare: #b07cf5;
+    --t-deep_cut: #d9455f; --t-one_in_a_krillion: #f2e6a7;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text);
@@ -91,8 +91,9 @@
 </div>
 
 <script>
-const TIER_LABEL = { plankton: "Plankton", schooler: "Schooler", rare: "Rare", deep_cut: "Deep Cut",
-                     one_in_a_krillion: "One in a Krillion", too_clever: "Too Clever" };
+// What players see for each tier. Change the names here (and in the game) to rename a rank.
+const TIER_LABEL = { plankton: "Silver", too_clever: "Gold", schooler: "Platinum", rare: "Diamond",
+                     deep_cut: "Immortal", one_in_a_krillion: "Radiant" };
 let S = { prompts: [], options: null, current: 0, answers: {}, filter: "" };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -230,7 +231,7 @@ function renderPreview() {
   if (!(p.conditions || []).some(c => c.value)) { box.innerHTML = `<div class="hint">Add a condition to see answers.</div>`; return; }
   if (!answers.length) { box.innerHTML = `<h2>Preview</h2><div class="hint">No players match. Loosen a condition.</div>`; return; }
   const counts = {}; answers.forEach(a => counts[a.tier] = (counts[a.tier] || 0) + 1);
-  const tiers = S.options.tiers.map(t => t.name);
+  const tiers = [...S.options.tiers].sort((a, b) => a.points - b.points).map(t => t.name);  // Silver → Radiant
   const bar = tiers.filter(t => counts[t]).map(t =>
     `<div style="flex:${counts[t]};background:var(--t-${t})" title="${TIER_LABEL[t]}: ${counts[t]}"></div>`).join("");
   const legend = tiers.filter(t => counts[t]).map(t =>
