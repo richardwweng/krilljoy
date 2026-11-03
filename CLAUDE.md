@@ -11,17 +11,26 @@ a flash"). Every answer is backed by a data source, never invented.
 Every question draws its answers from one pool. The admin page picks the pool
 first, then shows conditions that make sense for it.
 
-| Pool | Source | Status |
-|---|---|---|
-| Pro players | Liquipedia API (`pipeline/data.py`) | done |
-| Game content: agents, abilities, weapons, weapon skins, maps, buddies, sprays, player cards | valorant-api.com (unofficial, free, no key; add `?language=en-US`) | to build |
-| Hand-written list | typed into the admin page, for anything no source covers | to build |
+| Pool id | What | Source | Status |
+|---|---|---|---|
+| `players` | Tier 1 pro players | Liquipedia API (`pipeline/data.py`) | done |
+| `agents`, `abilities`, `weapons`, `skins`, `maps`, `callouts` | Game content | valorant-api.com (`pipeline/valorant_api.py` + `pipeline/game.py`) | done |
+| hand-written list | Anything no source covers | typed into the admin page | to build |
+| more Liquipedia | Coaches, casters, agent picks per event, transfers | Liquipedia API | idea |
 
-Game-content rarity has no fame data, so start with a rough default (e.g. skin
-content tier, release order, how many weapons a collection has) and expect
-Richard to tune tiers with admin overrides until real answer frequencies exist.
-Cache valorant-api.com responses the same way as Liquipedia's and refresh after
-game patches.
+- Game data is saved to `pipeline/data/game.json`. Each item has `id` (display
+  name), `aliases`, `icon`, `attrs` (what questions filter on) and `score`.
+- Game-pool conditions are `is:<attr>` / `not:<attr>`; filters per pool are listed
+  in `GAME_POOLS` in `prompts.py`.
+- Aliases that point to more than one answer within a question (e.g. "main" on a
+  map with A Main and B Main) are dropped automatically.
+- Skipped on purpose: "Standard" and "Random Favorite" skins, duplicate maps.
+- VLR.gg is NOT a source: its terms ban scraping and republishing. Stats would
+  need written permission (community@vlr.gg).
+
+Game-content `score` is a placeholder (skin edition + collection size, launch
+agents/maps, how many maps share a callout name). Richard will tune tiers with
+admin overrides until real rarity data exists.
 
 Richard (repo owner) is a Mechanical Engineering grad, comfortable with code but
 not a web developer by trade. He works on Windows in VS Code with PowerShell.
@@ -130,9 +139,8 @@ Copy the mechanics, not Krillion's branding or assets.
      `source`), and a shareable emoji summary.
    - Progress saved locally so closing the tab mid-dive resumes it.
    - Pick the day's prompts deterministically from `dive.json` (seeded by date).
-2. **More answer pools:** game content from valorant-api.com and hand-written
-   lists (see "Answer pools"). Generalize `prompts.json` with a `pool` field;
-   existing questions default to `players`.
+2. **More answer pools:** game content is done (see "Answer pools"). Still to
+   build: hand-written answer lists, more Liquipedia data.
 3. **Treasure dive mode:** prompts back to back, each answer sinks you by its
    rarity, reach the chest at a fixed depth. Score = time to the chest. Wrong
    answers sink 0 (or add a time penalty) so spamming doesn't pay.

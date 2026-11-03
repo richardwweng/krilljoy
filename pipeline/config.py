@@ -19,6 +19,8 @@ CACHE_MAX_AGE_DAYS = 7
 
 # Every tier 1 player and their history (committed, so admin.py works right after cloning)
 DATASET_FILE = PIPELINE_DIR / "data" / "players.json"
+# Agents, skins, maps, callouts... from valorant-api.com (committed)
+GAME_FILE = PIPELINE_DIR / "data" / "game.json"
 # The answer banks the game reads (committed, deployed with the website)
 OUTPUT_FILE = REPO_DIR / "client" / "public" / "data" / "dive.json"
 

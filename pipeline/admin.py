@@ -15,21 +15,24 @@ from pathlib import Path
 import config
 import prompts as P
 from data import DATASET_FILE, load_dataset
+from game import GAME_FILE, load_game
 
 ROOT = Path(__file__).parent
 PORT = getattr(config, "ADMIN_PORT", 8765)
 
 
 class Data:
-    """Reloads out/players.json automatically when build.py rewrites it."""
+    """Reloads players.json / game.json automatically when build.py rewrites them."""
     def __init__(self):
-        self.mtime, self.ds, self.opts, self.ctx = None, None, None, None
+        self.mtime, self.ds, self.game, self.opts, self.ctx = None, None, None, None, None
 
     def get(self):
-        mtime = DATASET_FILE.stat().st_mtime
+        mtime = (DATASET_FILE.stat().st_mtime,
+                 GAME_FILE.stat().st_mtime if GAME_FILE.exists() else 0)
         if mtime != self.mtime:
             self.ds = load_dataset()
-            self.opts = P.options(self.ds)
+            self.game = load_game()
+            self.opts = P.options(self.ds, self.game)
             self.ctx = P.context(self.ds)
             self.mtime = mtime
         return self.ds
@@ -63,7 +66,8 @@ class Handler(BaseHTTPRequestHandler):
                 "prompts": P.load_prompts(),
                 "options": DATA.opts,
                 "dataset": {"generated": ds["generated"], "players": len(ds["players"]),
-                            "events": len(ds["events"])},
+                            "events": len(ds["events"]),
+                            "game_version": (DATA.game or {}).get("game_version")},
             })
         else:
             self._send(404, b"not found", "text/plain")
@@ -77,14 +81,14 @@ class Handler(BaseHTTPRequestHandler):
             body = json.loads(self.rfile.read(int(self.headers.get("Content-Length", 0))) or b"{}")
             ds = DATA.get()
             if self.path == "/api/preview":
-                answers = P.evaluate(body["prompt"], ds, date.today(), DATA.ctx)
+                answers = P.evaluate(body["prompt"], ds, date.today(), DATA.ctx, DATA.game)
                 self._json({"answers": answers})
             elif self.path == "/api/save":
                 P.save_prompts(body["prompts"])
                 self._json({"ok": True})
             elif self.path == "/api/publish":
                 P.save_prompts(body["prompts"])
-                path, built = P.publish(body["prompts"], ds)
+                path, built = P.publish(body["prompts"], ds, game=DATA.game)
                 self._json({"ok": True, "path": str(path),
                             "prompts": [{"id": b["id"], "answers": len(b["answers"])} for b in built]})
             else:

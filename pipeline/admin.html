@@ -65,6 +65,8 @@
   td a { color: var(--text); text-decoration: none; font-weight: 600; }
   td a:hover { color: var(--accent2); }
   td.num { color: var(--muted); font-variant-numeric: tabular-nums; }
+  td.who { white-space: nowrap; }
+  img.icon { height: 22px; max-width: 64px; object-fit: contain; vertical-align: middle; margin-right: 8px; }
   td .why { color: var(--muted); font-size: 12px; }
   select.tier { padding: 3px 6px; font-size: 12px; border-width: 1px 1px 1px 4px; }
   .manual { font-size: 10px; color: var(--t-too_clever); margin-left: 6px; }
@@ -143,7 +145,7 @@ const refreshPreview = debounce(async () => {
 function renderList() {
   $("list").innerHTML = S.prompts.map((p, i) => {
     const a = S.answers[p.id];
-    const m = a ? `${a.length} answers` : "…";
+    const m = (a ? `${a.length} answers` : "…") + ` · ${esc(poolOf(p).label)}`;
     return `<div class="q ${i === S.current ? "active" : ""} ${p.enabled === false ? "off" : ""}" data-i="${i}">
       <div class="t">${esc(p.text || "(untitled)")}</div><div class="m">${esc(p.id)} · ${m}</div></div>`;
   }).join("") || `<div class="hint">No questions yet.</div>`;
@@ -151,20 +153,25 @@ function renderList() {
 }
 
 // ---------- editor ----------
-function valueOptions(type, selected) {
-  const cond = S.options.conditions.find(c => c.type === type);
-  const kind = { played_for: "teams", not_played_for: "teams", country: "countries", won: "intl_events", played_at: "all_events" }[type];
-  const vals = S.options.values[kind] || [];
+// Each question draws its answers from one pool (pro players, skins, callouts...)
+function poolOf(p) {
+  return S.options.pools.find(x => x.id === (p.pool || "players")) ||
+         { id: p.pool, label: `${p.pool} (no data yet: run build.py)`, subject: "items where…", conditions: [], fields: {} };
+}
+function valueOptions(pool, type, selected) {
+  const cond = pool.conditions.find(c => c.type === type);
+  const vals = cond ? cond.values : [];
   return `<option value="">Choose…</option>` + vals.map(v =>
     `<option value="${esc(v.value)}" ${v.value === selected ? "selected" : ""}>${esc(v.label)}</option>`).join("");
 }
 function renderEditor() {
   const p = S.prompts[S.current];
   if (!p) { $("editor").innerHTML = `<div class="empty">Click “+ New question” to add one.</div>`; return; }
-  const types = S.options.conditions;
+  const pool = poolOf(p);
+  const types = pool.conditions;
   $("editor").innerHTML = `
     <label class="f">Question</label>
-    <input class="text question" id="q-text" value="${esc(p.text)}" placeholder="Name a tier 1 player who…">
+    <input class="text question" id="q-text" value="${esc(p.text)}" placeholder="Name a…">
     <div class="row">
       <div><label class="f">ID</label><input class="text" id="q-id" value="${esc(p.id)}" style="width:220px"></div>
       <label class="toggle"><input type="checkbox" id="q-on" ${p.enabled !== false ? "checked" : ""}> Include in game</label>
@@ -173,15 +180,19 @@ function renderEditor() {
       <button class="btn small danger" id="del">Delete</button>
     </div>
     <div class="card">
-      <h2>Valid answers are tier 1 players who…</h2>
+      <div class="row" style="margin:0 0 12px;align-items:center">
+        <label class="f" style="margin:0">Answers come from</label>
+        <select id="q-pool">${S.options.pools.map(x => `<option value="${x.id}" ${x.id === pool.id ? "selected" : ""}>${esc(x.label)}</option>`).join("")}</select>
+      </div>
+      <h2>Valid answers are ${esc(pool.subject)}</h2>
       <div id="conds">${(p.conditions || []).map((c, ci) => `
         <div class="cond" data-ci="${ci}">
           <select class="c-type">${types.map(t => `<option value="${t.type}" ${t.type === c.type ? "selected" : ""}>${esc(t.label)}</option>`).join("")}</select>
-          <select class="c-val">${valueOptions(c.type, c.value)}</select>
+          <select class="c-val">${valueOptions(pool, c.type, c.value)}</select>
           <button class="x c-del" title="Remove">×</button>
         </div>`).join("")}</div>
       <button class="btn small" id="add-cond">+ Add condition</button>
-      <span class="hint" style="margin-left:10px">Players must match every condition.</span>
+      <span class="hint" style="margin-left:10px">Answers must match every condition.</span>
     </div>
     <div class="card" id="preview"><div class="hint">Add a condition to see answers.</div></div>`;
 
@@ -196,7 +207,15 @@ function renderEditor() {
     S.answers[p.id] = S.answers[old]; changed({ preview: false });
   };
   $("q-on").onchange = (e) => { p.enabled = e.target.checked; changed({ preview: false }); };
-  $("add-cond").onclick = () => { (p.conditions ||= []).push({ type: "played_for", value: "" }); renderEditor(); changed(); };
+  $("add-cond").onclick = () => { (p.conditions ||= []).push({ type: types[0]?.type || "", value: "" }); renderEditor(); changed(); };
+  $("q-pool").onchange = (e) => {
+    const np = S.options.pools.find(x => x.id === e.target.value);
+    if (p.conditions?.some(c => c.value) && !confirm("Switching pools clears this question's conditions and tier overrides. Continue?")) {
+      e.target.value = pool.id; return;
+    }
+    p.pool = np.id; p.conditions = [{ type: np.conditions[0]?.type || "", value: "" }]; p.overrides = {};
+    renderEditor(); changed();
+  };
   $("dup").onclick = () => {
     const copy = structuredClone(p); copy.id = uniqueId(p.id + "_copy", -1); copy.text = p.text + " (copy)";
     S.prompts.splice(S.current + 1, 0, copy); S.current++; renderEditor(); changed();
@@ -214,8 +233,15 @@ function renderEditor() {
   refreshPreview();
 }
 
-function whyText(ev) {
+function whyText(ev, pool) {
   const parts = [];
+  if (pool.id !== "players") {  // game content: "Weapon: Stinger · Edition: Exclusive · ..."
+    for (const [k, v] of Object.entries(ev)) {
+      if (k === "map_type" || k === "spot") continue;
+      parts.push(`${pool.fields[k] || k}: ${Array.isArray(v) ? v.join(", ") : v}`);
+    }
+    return parts.join(" · ");
+  }
   if (ev.international_wins?.length) parts.push(`won ${ev.international_wins.join(", ")}`);
   parts.push(`${ev.international_events} intl · ${ev.tier1_events} tier 1 events`);
   for (const [k, v] of Object.entries(ev)) {
@@ -226,10 +252,12 @@ function whyText(ev) {
 }
 function renderPreview() {
   const p = S.prompts[S.current];
+  const pool = poolOf(p);
+  const isPlayers = pool.id === "players";
   const answers = S.answers[p.id] || [];
   const box = $("preview");
   if (!(p.conditions || []).some(c => c.value)) { box.innerHTML = `<div class="hint">Add a condition to see answers.</div>`; return; }
-  if (!answers.length) { box.innerHTML = `<h2>Preview</h2><div class="hint">No players match. Loosen a condition.</div>`; return; }
+  if (!answers.length) { box.innerHTML = `<h2>Preview</h2><div class="hint">Nothing matches. Loosen a condition.</div>`; return; }
   const counts = {}; answers.forEach(a => counts[a.tier] = (counts[a.tier] || 0) + 1);
   const tiers = [...S.options.tiers].sort((a, b) => a.points - b.points).map(t => t.name);  // Silver → Radiant
   const bar = tiers.filter(t => counts[t]).map(t =>
@@ -239,24 +267,26 @@ function renderPreview() {
   const q = S.filter.toLowerCase();
   const rows = answers.filter(a => !q || a.aliases.some(x => x.includes(q))).map(a => `
     <tr>
-      <td><a href="${esc(a.source)}" target="_blank" rel="noopener">${esc(a.id)}</a></td>
+      <td class="who">${a.icon ? `<img class="icon" src="${esc(a.icon)}" alt="" loading="lazy">` : ""}${
+        (a.source || "").startsWith("http") ? `<a href="${esc(a.source)}" target="_blank" rel="noopener">${esc(a.id)}</a>` : `<b>${esc(a.id)}</b>`}</td>
       <td><select class="tier" data-id="${esc(a.id)}" style="border-left-color:var(--t-${a.tier})">
         ${tiers.map(t => `<option value="${t}" ${t === a.tier ? "selected" : ""}>${TIER_LABEL[t]}</option>`).join("")}
       </select>${a.tier !== a.auto_tier ? `<span class="manual">manual</span>` : ""}</td>
       <td class="num">${a.points}</td>
       <td class="num">${a.score}</td>
-      <td><div class="why">${esc(whyText(a.evidence))}</div></td>
+      <td><div class="why">${esc(whyText(a.evidence, pool))}</div></td>
     </tr>`).join("");
   box.innerHTML = `
     <div class="row" style="margin:0;align-items:center">
       <h2 style="margin:0">Preview</h2><span class="count">${answers.length} valid answers</span>
       <div class="spacer"></div>
-      <input class="text search" id="find" placeholder="Find a player…" value="${esc(S.filter)}">
+      <input class="text search" id="find" placeholder="Find an answer…" value="${esc(S.filter)}">
     </div>
     <div class="bar">${bar}</div><div class="legend">${legend}</div>
-    <table><thead><tr><th>Player</th><th>Tier</th><th>Pts</th><th>Fame</th><th>Why it counts (Liquipedia)</th></tr></thead>
+    <table><thead><tr><th>Answer</th><th>Tier</th><th>Pts</th><th>Score</th><th>Why it counts (${isPlayers ? "Liquipedia" : "valorant-api.com"})</th></tr></thead>
     <tbody>${rows}</tbody></table>
-    <div class="hint" style="margin-top:8px">Most obvious answers first. Change a tier to override it, set it back to remove the override.</div>`;
+    <div class="hint" style="margin-top:8px">Most obvious answers first. Change a tier to override it, set it back to remove the override.${
+      isPlayers ? "" : " Game-content tiers are rough guesses for now, so expect to adjust them."}</div>`;
   const find = $("find");
   find.oninput = (e) => { S.filter = e.target.value; renderPreview(); const f = $("find"); f.focus(); f.setSelectionRange(f.value.length, f.value.length); };
   box.querySelectorAll("select.tier").forEach(sel => sel.onchange = (e) => {
@@ -269,7 +299,7 @@ function renderPreview() {
 
 // ---------- top buttons ----------
 $("new").onclick = () => {
-  S.prompts.push({ id: uniqueId("new_question", -1), text: "", conditions: [{ type: "played_for", value: "" }], overrides: {}, enabled: true });
+  S.prompts.push({ id: uniqueId("new_question", -1), text: "", pool: "players", conditions: [{ type: "played_for", value: "" }], overrides: {}, enabled: true });
   S.current = S.prompts.length - 1; S.filter = ""; renderEditor(); changed({ preview: false });
   $("q-text").focus();
 };
@@ -288,7 +318,8 @@ $("publish").onclick = async () => {
   try {
     const st = await api("/api/state");
     S.prompts = st.prompts; S.options = st.options;
-    $("meta").textContent = `${st.dataset.players} players · ${st.dataset.events} events · data from ${st.dataset.generated}`;
+    $("meta").textContent = `${st.dataset.players} players · ${st.dataset.events} events · data from ${st.dataset.generated}` +
+      (st.dataset.game_version ? ` · game ${st.dataset.game_version.split(".").slice(0, 2).join(".")}` : " · no game data yet");
     renderList(); renderEditor();
     for (let i = 0; i < S.prompts.length; i++) { await previewFor(i).catch(() => {}); renderList(); }
   } catch (e) {

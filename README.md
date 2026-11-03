@@ -3,8 +3,9 @@
 **A daily Valorant trivia game where the obvious answer loses.**
 Name a pro player, a Sheriff skin, an agent. The rarer your valid answer, the deeper you dive.
 
-Answers are backed by [Liquipedia](https://liquipedia.net/valorant/) data
-(CC BY-SA 3.0).
+Pro-scene answers are backed by [Liquipedia](https://liquipedia.net/valorant/)
+data (CC BY-SA 3.0); game-content answers (agents, skins, maps, callouts) come
+from [valorant-api.com](https://valorant-api.com).
 
 ## How it works
 
@@ -40,12 +41,14 @@ python pipeline/admin.py     # opens the question editor at http://localhost:876
 ## Writing questions
 
 1. Run `python pipeline/admin.py`.
-2. **+ New question**, type it, then add conditions: played for a team, never
-   played for a team, from a country, won an international event, played at an
-   event. Players must match all of them.
-3. The preview lists every valid answer, most obvious first, with its tier and
+2. **+ New question**, type it, and pick where answers come from: pro players,
+   agents, abilities, weapons, weapon skins, maps, or map callouts.
+3. Add conditions. Pro players: played for a team, from a country, won or played
+   at an event. Game content: e.g. weapon is Stinger, collection is Reaver, map is
+   Ascent, role is Controller. Answers must match all of them.
+4. The preview lists every valid answer, most obvious first, with its tier and
    the Liquipedia evidence. Change a tier to override it.
-4. **Publish to game** writes `client/public/data/dive.json`.
+5. **Publish to game** writes `client/public/data/dive.json`.
 
 ## Scoring
 
@@ -76,7 +79,9 @@ vallion/
 │   ├── prompts.json      The questions
 │   ├── data.py           Events, rosters, winners → data/players.json
 │   ├── prompts.py        Conditions, fame score, tiers
-│   ├── liquipedia.py     Rate-limited, cached API client
+│   ├── liquipedia.py     Rate-limited, cached Liquipedia client
+│   ├── game.py           Agents, skins, maps, callouts → data/game.json
+│   ├── valorant_api.py   Cached valorant-api.com client
 │   └── extract.py        Reads Liquipedia templates and HTML
 ├── client/               The game website (coming next)
 └── CLAUDE.md             Project brief for Claude Code
