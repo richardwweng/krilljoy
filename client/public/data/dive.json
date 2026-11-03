@@ -1,0 +1,2525 @@
+{
+  "generated": "2026-11-03",
+  "data_generated": "2026-11-03",
+  "attribution": "Data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0.",
+  "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
+  "prompts": [
+    {
+      "id": "sentinels",
+      "text": "Name a tier 1 player who has played for Sentinels",
+      "answers": [
+        {
+          "id": "zekken",
+          "aliases": [
+            "zekken"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 59,
+          "source": "https://liquipedia.net/valorant/Zekken",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Masters Madrid 2024",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2023: Americas League",
+              "VCT 2023: LOCK//IN",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT 2025: Americas S1",
+              "VCT Champions 2024",
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "Zellsis",
+          "aliases": [
+            "zellsis"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 52,
+          "source": "https://liquipedia.net/valorant/Zellsis",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Masters Madrid 2024",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT 2025: Americas S1",
+              "VCT Champions 2024",
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "Sacy",
+          "aliases": [
+            "sacy"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 50,
+          "source": "https://liquipedia.net/valorant/Sacy",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Madrid 2024",
+              "VCT 2022"
+            ],
+            "Sentinels events": [
+              "Masters Madrid 2024",
+              "VCT 2023: Americas League",
+              "VCT 2023: LOCK//IN",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "TenZ",
+          "aliases": [
+            "tenz",
+            "tenzera"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 50,
+          "source": "https://liquipedia.net/valorant/TenZ",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Madrid 2024",
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Masters Berlin 2021",
+              "Masters Madrid 2024",
+              "Masters Reykjavík 2021",
+              "VCT 2021",
+              "VCT 2023: Americas League",
+              "VCT 2023: LOCK//IN",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "johnqt",
+          "aliases": [
+            "johnqt"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 45,
+          "source": "https://liquipedia.net/valorant/Johnqt",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Masters Madrid 2024",
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2024: Americas Kickoff",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT 2025: Americas S1",
+              "VCT Champions 2024",
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "bang",
+          "aliases": [
+            "bang"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/Bang",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [],
+            "Sentinels events": [
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2025: Americas S1",
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "pANcada",
+          "aliases": [
+            "pancada"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 31,
+          "source": "https://liquipedia.net/valorant/PANcada",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "VCT 2022"
+            ],
+            "Sentinels events": [
+              "VCT 2023: Americas League",
+              "VCT 2023: LOCK//IN",
+              "VCT 2024: Americas Kickoff"
+            ]
+          }
+        },
+        {
+          "id": "N4RRATE",
+          "aliases": [
+            "n4rrate"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 28,
+          "source": "https://liquipedia.net/valorant/N4RRATE",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 3,
+            "international_wins": [],
+            "Sentinels events": [
+              "Masters Toronto 2025",
+              "VCT '25 Americas Kickoff",
+              "VCT '25 Americas Stage 2",
+              "VCT 2025: Americas S1",
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "Marved",
+          "aliases": [
+            "jimzo",
+            "marved"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 24,
+          "source": "https://liquipedia.net/valorant/Marved",
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "Sentinels events": [
+              "VCT 2023: Americas League"
+            ]
+          }
+        },
+        {
+          "id": "ShahZaM",
+          "aliases": [
+            "shahzam"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 20,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021",
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "dapr",
+          "aliases": [
+            "dapr"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
+          "source": "https://liquipedia.net/valorant/Dapr",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021",
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "SicK",
+          "aliases": [
+            "sick"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
+          "source": "https://liquipedia.net/valorant/SicK",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021",
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "zombs",
+          "aliases": [
+            "zombs"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
+          "source": "https://liquipedia.net/valorant/Zombs",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "Sentinels events": [
+              "Masters Berlin 2021",
+              "Masters Reykjavík 2021",
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "curry",
+          "aliases": [
+            "curry"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 18,
+          "source": "https://liquipedia.net/valorant/Curry",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "Sentinels events": [
+              "Masters Madrid 2024",
+              "VCT 2024: Americas Stage 1",
+              "VCT 2024: Americas Stage 2",
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "dephh",
+          "aliases": [
+            "dephh"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 11,
+          "source": "https://liquipedia.net/valorant/Dephh",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [],
+            "Sentinels events": [
+              "VCT 2023: LOCK//IN"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "intl_winner",
+      "text": "Name a tier 1 player who has won an international event",
+      "answers": [
+        {
+          "id": "Boaster",
+          "aliases": [
+            "boaster"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 60,
+          "source": "https://liquipedia.net/valorant/Boaster",
+          "evidence": {
+            "tier1_events": 19,
+            "international_events": 12,
+            "international_wins": [
+              "Masters Tokyo 2023",
+              "VCT 2023: LOCK//IN"
+            ]
+          }
+        },
+        {
+          "id": "Chronicle",
+          "aliases": [
+            "chronicle"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 58,
+          "source": "https://liquipedia.net/valorant/Chronicle",
+          "evidence": {
+            "tier1_events": 16,
+            "international_events": 9,
+            "international_wins": [
+              "Masters Berlin 2021",
+              "Masters Tokyo 2023",
+              "VCT 2023: LOCK//IN"
+            ]
+          }
+        },
+        {
+          "id": "d4v41",
+          "aliases": [
+            "d4v41"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 53,
+          "source": "https://liquipedia.net/valorant/D4v41",
+          "evidence": {
+            "tier1_events": 19,
+            "international_events": 12,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "f0rsakeN",
+          "aliases": [
+            "f0rsaken"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 53,
+          "source": "https://liquipedia.net/valorant/F0rsakeN",
+          "evidence": {
+            "tier1_events": 19,
+            "international_events": 12,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "Alfajer",
+          "aliases": [
+            "alfajer"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 51,
+          "source": "https://liquipedia.net/valorant/Alfajer",
+          "evidence": {
+            "tier1_events": 16,
+            "international_events": 9,
+            "international_wins": [
+              "Masters Tokyo 2023",
+              "VCT 2023: LOCK//IN"
+            ]
+          }
+        },
+        {
+          "id": "Derke",
+          "aliases": [
+            "derke",
+            "derkeps"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 51,
+          "source": "https://liquipedia.net/valorant/Derke",
+          "evidence": {
+            "tier1_events": 16,
+            "international_events": 9,
+            "international_wins": [
+              "Masters Tokyo 2023",
+              "VCT 2023: LOCK//IN"
+            ]
+          }
+        },
+        {
+          "id": "mindfreak",
+          "aliases": [
+            "mindfreak"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 49,
+          "source": "https://liquipedia.net/valorant/Mindfreak_(Indonesian_player)",
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 11,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "aspas",
+          "aliases": [
+            "aspas"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 47,
+          "source": "https://liquipedia.net/valorant/Aspas",
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 10,
+            "international_wins": [
+              "VCT 2022"
+            ]
+          }
+        },
+        {
+          "id": "crashies",
+          "aliases": [
+            "crashies"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 47,
+          "source": "https://liquipedia.net/valorant/Crashies",
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "Jinggg",
+          "aliases": [
+            "jinggg"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 47,
+          "source": "https://liquipedia.net/valorant/Jinggg",
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "Munchkin",
+          "aliases": [
+            "munchkin"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 47,
+          "source": "https://liquipedia.net/valorant/Munchkin",
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "Saadhak",
+          "aliases": [
+            "saadhak"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 44,
+          "source": "https://liquipedia.net/valorant/Saadhak",
+          "evidence": {
+            "tier1_events": 16,
+            "international_events": 9,
+            "international_wins": [
+              "VCT 2022"
+            ]
+          }
+        },
+        {
+          "id": "Sacy",
+          "aliases": [
+            "sacy"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 42,
+          "source": "https://liquipedia.net/valorant/Sacy",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Madrid 2024",
+              "VCT 2022"
+            ]
+          }
+        },
+        {
+          "id": "CHICHOO",
+          "aliases": [
+            "chichoo",
+            "mengquan",
+            "taylor13"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 40,
+          "source": "https://liquipedia.net/valorant/CHICHOO",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 8,
+            "international_wins": [
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "nobody",
+          "aliases": [
+            "nobody"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 40,
+          "source": "https://liquipedia.net/valorant/Nobody",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 8,
+            "international_wins": [
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "Smoggy",
+          "aliases": [
+            "mikasa",
+            "smoggy"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 40,
+          "source": "https://liquipedia.net/valorant/Smoggy",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 8,
+            "international_wins": [
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "ZmjjKK",
+          "aliases": [
+            "kangkang",
+            "kk",
+            "zmjjkk"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 40,
+          "source": "https://liquipedia.net/valorant/ZmjjKK",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 8,
+            "international_wins": [
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "Ethan",
+          "aliases": [
+            "ethan"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 39,
+          "source": "https://liquipedia.net/valorant/Ethan",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "VCT 2023",
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "FNS",
+          "aliases": [
+            "finesse",
+            "fns"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 38,
+          "source": "https://liquipedia.net/valorant/FNS",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "Less",
+          "aliases": [
+            "less"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 38,
+          "source": "https://liquipedia.net/valorant/Less",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 7,
+            "international_wins": [
+              "VCT 2022"
+            ]
+          }
+        },
+        {
+          "id": "nAts",
+          "aliases": [
+            "nats"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 38,
+          "source": "https://liquipedia.net/valorant/NAts",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Berlin 2021"
+            ]
+          }
+        },
+        {
+          "id": "zekken",
+          "aliases": [
+            "zekken"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 38,
+          "source": "https://liquipedia.net/valorant/Zekken",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "cNed",
+          "aliases": [
+            "cned"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 36,
+          "source": "https://liquipedia.net/valorant/CNed",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 7,
+            "international_wins": [
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "TenZ",
+          "aliases": [
+            "tenz",
+            "tenzera"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 36,
+          "source": "https://liquipedia.net/valorant/TenZ",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Madrid 2024",
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "ANGE1",
+          "aliases": [
+            "ange1"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/ANGE1",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "Meteor",
+          "aliases": [
+            "meteor"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/Meteor",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "Shao",
+          "aliases": [
+            "shao"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/Shao",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "SUYGETSU",
+          "aliases": [
+            "suygetsu"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/SUYGETSU",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "Victor",
+          "aliases": [
+            "food",
+            "victor"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/Victor",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "Zellsis",
+          "aliases": [
+            "zellsis"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/Zellsis",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "something",
+          "aliases": [
+            "smthlikeyou",
+            "something"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 34,
+          "source": "https://liquipedia.net/valorant/Something",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "Zyppan",
+          "aliases": [
+            "zyppan"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 34,
+          "source": "https://liquipedia.net/valorant/Zyppan",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "yay",
+          "aliases": [
+            "yay",
+            "yayster"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 33,
+          "source": "https://liquipedia.net/valorant/Yay",
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "C0M",
+          "aliases": [
+            "c0m"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/C0M",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "VCT 2023"
+            ]
+          }
+        },
+        {
+          "id": "jawgemo",
+          "aliases": [
+            "jawgemo"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/Jawgemo",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "VCT 2023"
+            ]
+          }
+        },
+        {
+          "id": "Lakia",
+          "aliases": [
+            "lakia"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/Lakia",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "Leo",
+          "aliases": [
+            "leo",
+            "leoo",
+            "ziz"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/Leo",
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Tokyo 2023",
+              "VCT 2023: LOCK//IN"
+            ]
+          }
+        },
+        {
+          "id": "t3xture",
+          "aliases": [
+            "s3xture",
+            "t3xture"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/T3xture",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "ardiis",
+          "aliases": [
+            "ardiis",
+            "icepaperhands"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 29,
+          "source": "https://liquipedia.net/valorant/Ardiis",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Copenhagen 2022"
+            ]
+          }
+        },
+        {
+          "id": "Boostio",
+          "aliases": [
+            "boostio"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 28,
+          "source": "https://liquipedia.net/valorant/Boostio",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "VCT 2023"
+            ]
+          }
+        },
+        {
+          "id": "johnqt",
+          "aliases": [
+            "johnqt"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 28,
+          "source": "https://liquipedia.net/valorant/Johnqt",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "Karon",
+          "aliases": [
+            "hunter",
+            "karon"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 28,
+          "source": "https://liquipedia.net/valorant/Karon",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "Masters Shanghai 2024"
+            ]
+          }
+        },
+        {
+          "id": "pANcada",
+          "aliases": [
+            "pancada"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 28,
+          "source": "https://liquipedia.net/valorant/PANcada",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "VCT 2022"
+            ]
+          }
+        },
+        {
+          "id": "s0m",
+          "aliases": [
+            "s0m"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 27,
+          "source": "https://liquipedia.net/valorant/S0m",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 4,
+            "international_wins": [
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "Demon1",
+          "aliases": [
+            "demon1"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 25,
+          "source": "https://liquipedia.net/valorant/Demon1",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 3,
+            "international_wins": [
+              "VCT 2023"
+            ]
+          }
+        },
+        {
+          "id": "Marved",
+          "aliases": [
+            "jimzo",
+            "marved"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 25,
+          "source": "https://liquipedia.net/valorant/Marved",
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ]
+          }
+        },
+        {
+          "id": "Redgar",
+          "aliases": [
+            "redgar"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 25,
+          "source": "https://liquipedia.net/valorant/Redgar",
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 5,
+            "international_wins": [
+              "Masters Berlin 2021"
+            ]
+          }
+        },
+        {
+          "id": "Sheydos",
+          "aliases": [
+            "sheydos"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 25,
+          "source": "https://liquipedia.net/valorant/Sheydos",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Berlin 2021"
+            ]
+          }
+        },
+        {
+          "id": "starxo",
+          "aliases": [
+            "starxo"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 20,
+          "source": "https://liquipedia.net/valorant/Starxo",
+          "evidence": {
+            "tier1_events": 7,
+            "international_events": 3,
+            "international_wins": [
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "kamyk",
+          "aliases": [
+            "kamyk"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 19,
+          "source": "https://liquipedia.net/valorant/Kamyk",
+          "evidence": {
+            "tier1_events": 5,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Tokyo 2023"
+            ]
+          }
+        },
+        {
+          "id": "PatMen",
+          "aliases": [
+            "patmen"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 18,
+          "source": "https://liquipedia.net/valorant/PatMen",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Toronto 2025"
+            ]
+          }
+        },
+        {
+          "id": "BONECOLD",
+          "aliases": [
+            "bonecold"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 17,
+          "source": "https://liquipedia.net/valorant/BONECOLD",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "ShahZaM",
+          "aliases": [
+            "shahzam"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 17,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "dapr",
+          "aliases": [
+            "dapr"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/Dapr",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "mada",
+          "aliases": [
+            "mada"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/Mada",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "SicK",
+          "aliases": [
+            "sick"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/SicK",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "zeek",
+          "aliases": [
+            "zeek"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/Zeek",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "zombs",
+          "aliases": [
+            "zombs"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/Zombs",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ]
+          }
+        },
+        {
+          "id": "brawk",
+          "aliases": [
+            "brawk"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 15,
+          "source": "https://liquipedia.net/valorant/Brawk",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "S1Mon",
+          "aliases": [
+            "s1mon"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 15,
+          "source": "https://liquipedia.net/valorant/S1Mon",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2024"
+            ]
+          }
+        },
+        {
+          "id": "skuba",
+          "aliases": [
+            "skuba"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 14,
+          "source": "https://liquipedia.net/valorant/Skuba",
+          "evidence": {
+            "tier1_events": 2,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2025"
+            ]
+          }
+        },
+        {
+          "id": "curry",
+          "aliases": [
+            "curry"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 13,
+          "source": "https://liquipedia.net/valorant/Curry",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ]
+          }
+        },
+        {
+          "id": "d3ffo",
+          "aliases": [
+            "d3ffo"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 13,
+          "source": "https://liquipedia.net/valorant/D3ffo",
+          "evidence": {
+            "tier1_events": 2,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Berlin 2021"
+            ]
+          }
+        },
+        {
+          "id": "Kiles",
+          "aliases": [
+            "kiles"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 13,
+          "source": "https://liquipedia.net/valorant/Kiles",
+          "evidence": {
+            "tier1_events": 2,
+            "international_events": 2,
+            "international_wins": [
+              "VCT 2021"
+            ]
+          }
+        },
+        {
+          "id": "WoodAy1",
+          "aliases": [
+            "wooday1"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/WoodAy1",
+          "evidence": {
+            "tier1_events": 2,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2024"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "usa",
+      "text": "Name a tier 1 player who is from the United States",
+      "answers": [
+        {
+          "id": "crashies",
+          "aliases": [
+            "crashies"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 44,
+          "source": "https://liquipedia.net/valorant/Crashies",
+          "evidence": {
+            "tier1_events": 17,
+            "international_events": 10,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "zekken",
+          "aliases": [
+            "zekken"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 35,
+          "source": "https://liquipedia.net/valorant/Zekken",
+          "evidence": {
+            "tier1_events": 14,
+            "international_events": 7,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "countries": [
+              "United States",
+              "Philippines"
+            ]
+          }
+        },
+        {
+          "id": "Ethan",
+          "aliases": [
+            "ethan"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 33,
+          "source": "https://liquipedia.net/valorant/Ethan",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "VCT 2023",
+              "VCT Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Victor",
+          "aliases": [
+            "food",
+            "victor"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/Victor",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 8,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Zellsis",
+          "aliases": [
+            "zellsis"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 32,
+          "source": "https://liquipedia.net/valorant/Zellsis",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "yay",
+          "aliases": [
+            "yay",
+            "yayster"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 30,
+          "source": "https://liquipedia.net/valorant/Yay",
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 6,
+            "international_wins": [
+              "Masters Reykjavík 2022"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "C0M",
+          "aliases": [
+            "c0m"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 29,
+          "source": "https://liquipedia.net/valorant/C0M",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "VCT 2023"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "jawgemo",
+          "aliases": [
+            "jawgemo"
+          ],
+          "tier": "plankton",
+          "points": 10,
+          "score": 29,
+          "source": "https://liquipedia.net/valorant/Jawgemo",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [
+              "VCT 2023"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "leaf",
+          "aliases": [
+            "leaf"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 28,
+          "source": "https://liquipedia.net/valorant/Leaf",
+          "evidence": {
+            "tier1_events": 13,
+            "international_events": 6,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "bang",
+          "aliases": [
+            "bang"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 25,
+          "source": "https://liquipedia.net/valorant/Bang",
+          "evidence": {
+            "tier1_events": 12,
+            "international_events": 5,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Boostio",
+          "aliases": [
+            "boostio"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 25,
+          "source": "https://liquipedia.net/valorant/Boostio",
+          "evidence": {
+            "tier1_events": 10,
+            "international_events": 4,
+            "international_wins": [
+              "VCT 2023"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "s0m",
+          "aliases": [
+            "s0m"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 24,
+          "source": "https://liquipedia.net/valorant/S0m",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 4,
+            "international_wins": [
+              "VCT Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "trent",
+          "aliases": [
+            "habib",
+            "trent"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 24,
+          "source": "https://liquipedia.net/valorant/Trent",
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 5,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "valyn",
+          "aliases": [
+            "valyn"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 24,
+          "source": "https://liquipedia.net/valorant/Valyn",
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 5,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Asuna",
+          "aliases": [
+            "asuna"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 22,
+          "source": "https://liquipedia.net/valorant/Asuna",
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 4,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Cryocells",
+          "aliases": [
+            "cryo",
+            "cryocells"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 22,
+          "source": "https://liquipedia.net/valorant/Cryocells",
+          "evidence": {
+            "tier1_events": 11,
+            "international_events": 4,
+            "international_wins": [],
+            "countries": [
+              "United States",
+              "Philippines"
+            ]
+          }
+        },
+        {
+          "id": "Demon1",
+          "aliases": [
+            "demon1"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 22,
+          "source": "https://liquipedia.net/valorant/Demon1",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 3,
+            "international_wins": [
+              "VCT 2023"
+            ],
+            "countries": [
+              "United States",
+              "Russia"
+            ]
+          }
+        },
+        {
+          "id": "N4RRATE",
+          "aliases": [
+            "n4rrate"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 18,
+          "source": "https://liquipedia.net/valorant/N4RRATE",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 3,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Derrek",
+          "aliases": [
+            "derrek"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/Derrek",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Xeppaa",
+          "aliases": [
+            "xeppaa"
+          ],
+          "tier": "schooler",
+          "points": 30,
+          "score": 16,
+          "source": "https://liquipedia.net/valorant/Xeppaa",
+          "evidence": {
+            "tier1_events": 9,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "tex",
+          "aliases": [
+            "tex"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 15,
+          "source": "https://liquipedia.net/valorant/Tex",
+          "evidence": {
+            "tier1_events": 8,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States",
+              "Germany"
+            ]
+          }
+        },
+        {
+          "id": "icy",
+          "aliases": [
+            "icy"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 14,
+          "source": "https://liquipedia.net/valorant/Icy",
+          "evidence": {
+            "tier1_events": 7,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "ShahZaM",
+          "aliases": [
+            "shahzam"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 14,
+          "source": "https://liquipedia.net/valorant/ShahZaM",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "dapr",
+          "aliases": [
+            "dapr"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 13,
+          "source": "https://liquipedia.net/valorant/Dapr",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "SicK",
+          "aliases": [
+            "sick"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 13,
+          "source": "https://liquipedia.net/valorant/SicK",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "zombs",
+          "aliases": [
+            "zombs"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 13,
+          "source": "https://liquipedia.net/valorant/Zombs",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [
+              "Masters Reykjavík 2021"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "brawk",
+          "aliases": [
+            "brawk"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 12,
+          "source": "https://liquipedia.net/valorant/Brawk",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "vanity",
+          "aliases": [
+            "vanity"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 12,
+          "source": "https://liquipedia.net/valorant/Vanity",
+          "evidence": {
+            "tier1_events": 6,
+            "international_events": 3,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Verno",
+          "aliases": [
+            "verno"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 12,
+          "source": "https://liquipedia.net/valorant/Verno",
+          "evidence": {
+            "tier1_events": 5,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Governor",
+          "aliases": [
+            "governor"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 11,
+          "source": "https://liquipedia.net/valorant/Governor",
+          "evidence": {
+            "tier1_events": 6,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "skuba",
+          "aliases": [
+            "skuba"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 11,
+          "source": "https://liquipedia.net/valorant/Skuba",
+          "evidence": {
+            "tier1_events": 2,
+            "international_events": 1,
+            "international_wins": [
+              "VCT Champions 2025"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "stellar",
+          "aliases": [
+            "stellar"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 11,
+          "source": "https://liquipedia.net/valorant/Stellar",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "curry",
+          "aliases": [
+            "curry"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 10,
+          "source": "https://liquipedia.net/valorant/Curry",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 2,
+            "international_wins": [
+              "Masters Madrid 2024"
+            ],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "neT",
+          "aliases": [
+            "net"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 10,
+          "source": "https://liquipedia.net/valorant/NeT",
+          "evidence": {
+            "tier1_events": 5,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Rossy",
+          "aliases": [
+            "rossy"
+          ],
+          "tier": "rare",
+          "points": 60,
+          "score": 10,
+          "source": "https://liquipedia.net/valorant/Rossy",
+          "evidence": {
+            "tier1_events": 5,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "BcJ",
+          "aliases": [
+            "bcj"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/BcJ",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "dephh",
+          "aliases": [
+            "dephh"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/Dephh",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 3,
+            "international_wins": [],
+            "countries": [
+              "United Kingdom",
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "mitch",
+          "aliases": [
+            "mitch"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/Mitch",
+          "evidence": {
+            "tier1_events": 4,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "NaturE",
+          "aliases": [
+            "csnature",
+            "nature"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/NaturE",
+          "evidence": {
+            "tier1_events": 6,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "OXY",
+          "aliases": [
+            "oxy"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/OXY",
+          "evidence": {
+            "tier1_events": 6,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "supamen",
+          "aliases": [
+            "supamen"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 9,
+          "source": "https://liquipedia.net/valorant/Supamen",
+          "evidence": {
+            "tier1_events": 6,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "flyuh",
+          "aliases": [
+            "flyuh"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6,
+          "source": "https://liquipedia.net/valorant/Flyuh",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "jakee",
+          "aliases": [
+            "big bean",
+            "jakee"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6,
+          "source": "https://liquipedia.net/valorant/Jakee",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "v1c",
+          "aliases": [
+            "v1c"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 6,
+          "source": "https://liquipedia.net/valorant/V1c",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "babybay",
+          "aliases": [
+            "babybay"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 5,
+          "source": "https://liquipedia.net/valorant/Babybay",
+          "evidence": {
+            "tier1_events": 2,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "PxS",
+          "aliases": [
+            "pxs"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 4,
+          "source": "https://liquipedia.net/valorant/PxS",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States",
+              "Brazil"
+            ]
+          }
+        },
+        {
+          "id": "Hiko",
+          "aliases": [
+            "hiko"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3,
+          "source": "https://liquipedia.net/valorant/Hiko",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "jammyz",
+          "aliases": [
+            "jammy",
+            "jammyz"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3,
+          "source": "https://liquipedia.net/valorant/Jammyz",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "nitr0",
+          "aliases": [
+            "nitr0"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3,
+          "source": "https://liquipedia.net/valorant/Nitr0",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 1,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "runi",
+          "aliases": [
+            "runi"
+          ],
+          "tier": "deep_cut",
+          "points": 85,
+          "score": 3,
+          "source": "https://liquipedia.net/valorant/Runi",
+          "evidence": {
+            "tier1_events": 3,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "add3r",
+          "aliases": [
+            "add3r",
+            "add3r2k"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 2,
+          "source": "https://liquipedia.net/valorant/Add3r",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "bdog",
+          "aliases": [
+            "bdog"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": 2,
+          "source": "https://liquipedia.net/valorant/Bdog",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "Pa1nt",
+          "aliases": [
+            "pa1nt"
+          ],
+          "tier": "one_in_a_krillion",
+          "points": 100,
+          "score": -1,
+          "source": "https://liquipedia.net/valorant/Pa1nt",
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

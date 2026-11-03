@@ -10,6 +10,7 @@ from pathlib import Path
 import config
 from extract import (
     league_info, navbox_event_links, norm, player_info, prize_pool_winner, team_cards,
+    team_participants, team_participants_html,
 )
 
 DATASET_FILE = Path(config.DATASET_FILE)
@@ -40,20 +41,34 @@ def collect_events(lp, today):
         info = league_info(text) or {}
         if info.get("start_date") and info["start_date"] > today:
             continue  # hasn't started yet
-        cards = team_cards(text)
+        cards = team_cards(text)  # pages up to 2024 use {{TeamCard}}
         if not cards:
+            # 2025+ pages use {{TeamParticipants}}; teams marked import=true only
+            # appear on the rendered page (action=parse, 30 s each, cached)
+            cards, needs_html = team_participants(text)
+            if needs_html:
+                cards = team_participants_html(lp.html(title))
+        cards = [c for c in cards if c["players"]]
+        if not cards:
+            print(f"  ! no rosters found on {title}")
             continue
+        year = int(re.search(r"/(\d{4})/", title)[1])
+        last = title.rsplit("/", 1)[-1].lower()  # 2021 Masters live under "VALORANT Champions Tour/..."
+        kind = ("masters" if last == "masters" else
+                "champions" if last == "champions" else
+                "lockin" if "lock" in last else "league")
         name = info.get("name") or title
-        kind = ("champions" if "champions" in title.lower() else
-                "masters" if "masters" in title.lower() else
-                "lockin" if "lock" in title.lower() else "league")
+        if title in intl and kind == "champions":
+            name = f"Champions {year}"  # some infoboxes just say "VCT 2021"
+        elif title in intl and kind == "lockin":
+            name = f"LOCK//IN {year}"
         events.append({
             "page": title,
             "name": name,
             "kind": kind if title in intl else "league",
             "international": title in intl,
             "finished": bool(info.get("end_date") and info["end_date"] < today),
-            "year": int(re.search(r"/(\d{4})/", title)[1]),
+            "year": year,
             "cards": cards,
         })
     return events

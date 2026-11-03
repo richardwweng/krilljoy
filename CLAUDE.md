@@ -65,8 +65,12 @@ python pipeline/admin.py           # question editor at http://localhost:8765
 How the data is sourced (confirmed against the live wiki, Nov 2026):
 - Tier 1 = on a roster at a VCT international (Masters, Champions, LOCK//IN)
   or a franchised VCT league event (2023+).
-- Rosters come from `{{TeamCard}}` templates on tournament pages. Team pages'
-  former rosters are auto-generated (`{{FormerSquadAuto}}`) and not in wikicode.
+- Rosters come from tournament pages. Up to 2024 they use `{{TeamCard}}`;
+  from 2025 they use `{{TeamParticipants}}` with `{{Opponent}}`/`{{Person}}`.
+  Teams marked `import=true` don't list players in wikicode, so those pages are
+  read from the rendered HTML (`.team-participant-card`, Main/Subs/Staff tabs).
+  Team pages' former rosters are auto-generated (`{{FormerSquadAuto}}`) and not
+  in wikicode, so they're not used.
 - International events come from `Template:VCT Masters Navbox` and
   `Template:VCT Champions Navbox`.
 - Countries come from `{{Infobox player}}` `country=`.
@@ -88,25 +92,31 @@ From https://liquipedia.net/api-terms-of-use:
 VLR.gg has no official API. If stat-based prompts are added later, use a
 self-hosted scraper with heavy caching and low request rates.
 
-## Scoring (matches Krillion)
+## Scoring (same points as Krillion, Valorant rank names)
 
-| Tier | Points |
-|---|---|
-| Plankton | 10 |
-| Schooler | 30 |
-| Rare | 60 |
-| Deep Cut | 85 |
-| One in a Krillion | 100 |
-| Too Clever (the famous "obscure" pick, set by hand) | 15 |
-| Wrong or no answer | 0 |
+Decided by Richard (Nov 2026). Players see the rank names; the code keys
+(`plankton`, `schooler`, ...) stay as they are in `prompts.py` and `dive.json`.
+
+| Code key | Shown as | Points | Meaning |
+|---|---|---|---|
+| `plankton` | Silver | 10 | The answer everyone blurts out |
+| `too_clever` | Gold | 15 | The predictable "obscure" pick (set by hand) |
+| `schooler` | Platinum | 30 | Common, but not the first thought |
+| `rare` | Diamond | 60 | Most people won't think of it |
+| `deep_cut` | Immortal | 85 | Real knowledge |
+| `one_in_a_krillion` | Radiant | 100 | The best answer, very few find it |
+| (wrong / no answer) | not named yet | 0 | |
+
+Richard may rename these later, so keep the display names in one place (one
+map in the client, one in `admin.html`).
 
 Tiers are assigned by a fame score (see `fame()` in `pipeline/prompts.py`):
-most obvious 15% Plankton, next 20% Schooler, 30% Rare, 25% Deep Cut, last 10%
-One in a Krillion. Admin-page overrides win. Later, recalibrate from real
-answer frequencies once people play.
+most obvious 15% Silver, next 20% Platinum, 30% Diamond, 25% Immortal, last
+10% Radiant. Admin-page overrides win. Richard wants Claude to work out real
+common-vs-rare rankings later (for players and game content); until then the
+fame score is a placeholder.
 
-Use our own name, look, and (optionally) Valorant-flavored tier names. Copy
-the mechanics, not Krillion's branding or assets.
+Copy the mechanics, not Krillion's branding or assets.
 
 ## Roadmap
 

@@ -56,6 +56,79 @@ def team_cards(wikitext):
     return cards
 
 
+def team_participants(wikitext):
+    """Rosters from the newer {{TeamParticipants}} template (2025+ pages).
+
+    Returns (cards, needs_html). Teams marked import=true don't list their
+    players in the wikicode (they're filled in when the page renders), so
+    needs_html=True means the rendered page must be read instead.
+    """
+    cards, needs_html = [], False
+    for block in _templates(wikitext, "teamparticipants"):
+        for param in block.params:
+            for opp in param.value.filter_templates(recursive=False):
+                if opp.name.strip().lower() != "opponent":
+                    continue
+                if _val(opp, "import").lower() in ("true", "1", "yes"):
+                    needs_html = True
+                team = _val(opp, "1")
+                players = []
+                if opp.has("players"):
+                    for person in opp.get("players").value.filter_templates():
+                        if person.name.strip().lower() != "person":
+                            continue
+                        if _val(person, "type").lower() == "staff":
+                            continue
+                        pid = _val(person, "1")
+                        if not pid:
+                            continue
+                        page = _val(person, "link") or pid
+                        sub = _val(person, "status").lower() == "sub"
+                        players.append({"id": pid, "page": page, "sub": sub})
+                if team:
+                    cards.append({"team": team, "players": players})
+    return cards, needs_html
+
+
+def team_participants_html(html):
+    """Rosters from the rendered TeamParticipants cards (handles import=true)."""
+    if not html:
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    cards = []
+    for card in soup.select(".team-participant-card"):
+        a = (card.select_one(".team-participant-card__opponent-full .name a[title]")
+             or card.select_one(".team-participant-card__opponent .name a[title]"))
+        if not a:
+            continue
+        team = a.get("title", "").replace(" (page does not exist)", "")
+        # Tabs are labeled Main / Subs / Staff; map each content area to its label
+        labels = {opt.get("data-toggle-area-btn"): opt.get_text(strip=True).lower()
+                  for opt in card.select(".switch-pill-option[data-toggle-area-btn]")}
+        areas = card.select("[data-toggle-area-content]") or [card]
+        players, seen = [], set()
+        for area in areas:
+            label = labels.get(area.get("data-toggle-area-content"), "main")
+            if label.startswith("staff"):
+                continue
+            for member in area.select(".team-participant-card__member"):
+                link = member.select_one(".team-participant-card__member-name .name a")
+                if not link:
+                    continue
+                roles = " ".join(r.get_text(" ", strip=True).lower()
+                                 for r in member.select("[class*='member-role']"))
+                if "coach" in roles or "analyst" in roles or "manager" in roles:
+                    continue
+                page = (link.get("title") or link.get_text(strip=True)).replace(" (page does not exist)", "")
+                if page in seen:
+                    continue
+                seen.add(page)
+                players.append({"id": link.get_text(strip=True), "page": page,
+                                "sub": label.startswith("sub") or "substitute" in roles})
+        cards.append({"team": team, "players": players})
+    return cards
+
+
 def league_info(wikitext):
     """{tier, name, start_date, end_date} from {{Infobox league}}."""
     def _date(s):
