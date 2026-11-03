@@ -84,7 +84,8 @@ def team_participants(wikitext):
                             continue
                         page = _val(person, "link") or pid
                         sub = _val(person, "status").lower() == "sub"
-                        players.append({"id": pid, "page": page, "sub": sub})
+                        captain = _val(person, "role").lower() in ("captain", "igl")
+                        players.append({"id": pid, "page": page, "sub": sub, "captain": captain})
                 if team:
                     cards.append({"team": team, "players": players})
     return cards, needs_html
@@ -124,7 +125,8 @@ def team_participants_html(html):
                     continue
                 seen.add(page)
                 players.append({"id": link.get_text(strip=True), "page": page,
-                                "sub": label.startswith("sub") or "substitute" in roles})
+                                "sub": label.startswith("sub") or "substitute" in roles,
+                                "captain": "captain" in roles or "igl" in roles})
         cards.append({"team": team, "players": players})
     return cards
 
@@ -183,3 +185,18 @@ def prize_pool_winner(html):
         ".prizepooltable-col-team a[title]"
     )
     return a.get("title") if a else None
+
+
+def prize_pool_mvp(html):
+    """Player page title in the rendered 'Award | MVP' table, if the event has one."""
+    if not html:
+        return None
+    soup = BeautifulSoup(html, "html.parser")
+    for table in soup.select("table.prizepooltable-award"):
+        for row in table.select("tr"):
+            place = row.select_one(".prizepooltable-place")
+            if place and place.get_text(strip=True).upper() == "MVP":
+                a = row.select_one(".block-player .name a[title]")
+                if a:
+                    return a.get("title").replace(" (page does not exist)", "")
+    return None

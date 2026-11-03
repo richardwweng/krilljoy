@@ -9,8 +9,8 @@ from pathlib import Path
 
 import config
 from extract import (
-    league_info, navbox_event_links, norm, player_info, prize_pool_winner, team_cards,
-    team_participants, team_participants_html,
+    league_info, navbox_event_links, norm, player_info, prize_pool_mvp, prize_pool_winner,
+    team_cards, team_participants, team_participants_html,
 )
 
 DATASET_FILE = Path(config.DATASET_FILE)
@@ -75,27 +75,55 @@ def collect_events(lp, today):
 
 
 def find_winners(lp, events):
+    """Winner and MVP of each finished international event (rendered prize pool)."""
     for ev in events:
-        ev["winner"] = None
-        if not (ev["international"] and ev["finished"]):
+        ev["winner"] = ev["mvp"] = None
+        if not ev["finished"]:
             continue
-        winner = config.WINNER_OVERRIDES.get(ev["page"]) or prize_pool_winner(lp.html(ev["page"]))
+        if not ev["international"]:
+            # league events: only read for their MVP (one slow request each, cached)
+            if getattr(config, "MVP_FROM_LEAGUES", True) and ev["year"] >= 2022:
+                ev["mvp"] = prize_pool_mvp(lp.html(ev["page"]))
+            continue
+        html = lp.html(ev["page"])
+        winner = config.WINNER_OVERRIDES.get(ev["page"]) or prize_pool_winner(html)
         ev["winner"] = winner
+        ev["mvp"] = prize_pool_mvp(html)  # awarded from 2022 on
         if not winner:
             print(f"  ! no winner found for {ev['page']} (add it to WINNER_OVERRIDES)")
         elif not any(norm(c["team"]) == norm(winner) for c in ev["cards"]):
             print(f"  ! winner '{winner}' of {ev['page']} doesn't match a TeamCard team name")
 
 
+def _team_root(key):
+    """'furiaesports' and 'furia', 'geng' and 'gengesports' -> the same root."""
+    return re.sub(r"(esports?|gaming|esportsclub|club|team)$", "", re.sub(r"^team", "", key))
+
+
+def team_key_map(events):
+    """Liquipedia names some teams differently across years ('Gen.G' / 'Gen.G Esports').
+    Map every variant to the variant used most often, so rosters aren't split."""
+    uses = Counter(norm(c["team"]) for ev in events for c in ev["cards"])
+    groups = defaultdict(list)
+    for k in uses:
+        groups[_team_root(k)].append(k)
+    out = {}
+    for keys in groups.values():
+        main = max(keys, key=lambda k: (uses[k], len(k)))
+        out.update({k: main for k in keys})
+    return out
+
+
 def build_players(lp, events):
-    raw = defaultdict(lambda: {"ids": set(), "events": set(), "wins": set(),
+    raw = defaultdict(lambda: {"ids": set(), "events": set(), "wins": set(), "captain": set(),
                                "teams": defaultdict(set), "last_year": 0, "starter": False})
     team_names = defaultdict(Counter)
+    canon = team_key_map(events)
     for ev in events:
         for card in ev["cards"]:
-            tkey = norm(card["team"])
+            tkey = canon.get(norm(card["team"]), norm(card["team"]))
             team_names[tkey][card["team"]] += 1
-            won = bool(ev["winner"]) and tkey == norm(ev["winner"])
+            won = bool(ev["winner"]) and tkey == canon.get(norm(ev["winner"]), norm(ev["winner"]))
             for pl in card["players"]:
                 p = raw[pl["page"]]
                 p["ids"].add(pl["id"])
@@ -103,6 +131,8 @@ def build_players(lp, events):
                 p["teams"][tkey].add(ev["page"])
                 p["last_year"] = max(p["last_year"], ev["year"])
                 p["starter"] |= not pl["sub"]
+                if pl.get("captain"):
+                    p["captain"].add(ev["page"])
                 if won:
                     p["wins"].add(ev["page"])
 
@@ -118,16 +148,31 @@ def build_players(lp, events):
             "id": info["id"] or re.sub(r"\s*\(.*\)$", "", final),
             "countries": info["countries"],
             "ids": set(info["alt_ids"]),
-            "events": set(), "wins": set(), "teams": defaultdict(set),
+            "events": set(), "wins": set(), "captain": set(), "mvps": set(),
+            "teams": defaultdict(set),
             "last_year": 0, "starter": False, "has_page": text is not None,
         })
         m["ids"] |= p["ids"]
         m["events"] |= p["events"]
         m["wins"] |= p["wins"]
+        m["captain"] |= p["captain"]
         for team, evs in p["teams"].items():
             m["teams"][team] |= evs
         m["last_year"] = max(m["last_year"], p["last_year"])
         m["starter"] |= p["starter"]
+
+    # Event MVPs -> the player they name
+    by_name = {}
+    for m in merged.values():
+        for name in {m["page"], m["id"], *m["ids"]}:
+            by_name.setdefault(norm(name), m)
+    for ev in events:
+        if ev.get("mvp"):
+            m = by_name.get(norm(ev["mvp"])) or by_name.get(norm(re.sub(r"\s*\(.*\)$", "", ev["mvp"])))
+            if m:
+                m["mvps"].add(ev["page"])
+            else:
+                print(f"  ! MVP '{ev['mvp']}' of {ev['page']} isn't on any roster we have")
 
     players = []
     for m in merged.values():
@@ -139,6 +184,8 @@ def build_players(lp, events):
             "countries": m["countries"],
             "events": sorted(m["events"]),
             "wins": sorted(m["wins"]),
+            "captain": sorted(m["captain"]),  # events where Liquipedia marks them Captain (IGL), 2025+
+            "mvps": sorted(m["mvps"]),
             "teams": {t: sorted(e) for t, e in m["teams"].items()},
             "last_year": m["last_year"],
             "starter": m["starter"],
@@ -146,6 +193,24 @@ def build_players(lp, events):
         })
     teams = {k: c.most_common(1)[0][0] for k, c in team_names.items()}
     return players, teams
+
+
+def build_team_info(events, teams):
+    """Every team that appears on a tier 1 roster: events, wins, last year seen."""
+    info = {}
+    canon = team_key_map(events)
+    key = lambda name: canon.get(norm(name), norm(name))
+    for ev in events:
+        for card in ev["cards"]:
+            k = key(card["team"])
+            t = info.setdefault(k, {"key": k, "name": teams.get(k, card["team"]), "events": [],
+                                    "wins": [], "last_year": 0})
+            if ev["page"] not in t["events"]:
+                t["events"].append(ev["page"])
+            if ev.get("winner") and key(ev["winner"]) == k and ev["page"] not in t["wins"]:
+                t["wins"].append(ev["page"])
+            t["last_year"] = max(t["last_year"], ev["year"])
+    return sorted(info.values(), key=lambda t: t["name"].lower())
 
 
 def build_dataset(lp, today):
@@ -164,9 +229,10 @@ def build_dataset(lp, today):
 
     dataset = {
         "generated": today.isoformat(),
-        "events": [{k: ev[k] for k in ("page", "name", "kind", "international", "finished",
-                                       "year", "winner")} for ev in events],
+        "events": [{k: ev.get(k) for k in ("page", "name", "kind", "international", "finished",
+                                           "year", "winner", "mvp")} for ev in events],
         "teams": teams,
+        "team_info": build_team_info(events, teams),
         "players": players,
     }
     DATASET_FILE.parent.mkdir(parents=True, exist_ok=True)

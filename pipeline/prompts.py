@@ -28,17 +28,19 @@ PROMPTS_FILE = Path(__file__).parent / "prompts.json"
 FAMILIARITY_FILE = Path(__file__).parent / "familiarity.json"
 WIKI = "https://liquipedia.net/valorant/"
 
-# (code key, points, minimum estimated share of fans), most to least obvious.
+# (code key, points, target share of a question's answers), most to least obvious.
 # Shown to players as Silver, Platinum, Diamond, Immortal, Radiant (Gold = too_clever).
-# Like Krillion's "One in a Krillion", Radiant is ONE answer per question: the
-# rarest valid answer. Everything else obscure is Immortal (Krillion's Deep Cut).
+# Answers are ORDERED by estimated fame (familiarity.json); tier sizes lean slightly
+# toward the common/middle tiers (Richard's call, Nov 2026). Like Krillion's
+# "One in a Krillion", Radiant is ONE answer per question: the rarest valid one.
 TIERS = [
-    ("plankton", 10, 0.10),            # Silver:   10%+ of fans would say it
-    ("schooler", 30, 0.03),            # Platinum: 3-10%
-    ("rare", 60, 0.01),                # Diamond:  1-3%
-    ("deep_cut", 85, 0.0),             # Immortal: under 1%
-    ("one_in_a_krillion", 100, None),  # Radiant:  the single rarest answer
+    ("plankton", 10, 0.22),            # Silver
+    ("schooler", 30, 0.30),            # Platinum
+    ("rare", 60, 0.28),                # Diamond
+    ("deep_cut", 85, 0.20),            # Immortal
+    ("one_in_a_krillion", 100, None),  # Radiant: the single rarest answer
 ]
+MIN_ANSWERS = 20  # questions with fewer valid answers are flagged in the admin page
 POINTS = {name: pts for name, pts, _ in TIERS} | {"too_clever": 15}
 
 
@@ -58,16 +60,19 @@ KIND_LABELS = {"masters": "any Masters", "champions": "any Champions", "lockin":
 GAME_POOLS = {
     "agents":    {"label": "Agents", "fields": {"role": "Role"}},
     "abilities": {"label": "Agent abilities",
-                  "fields": {"agent": "Agent", "role": "Agent role", "slot": "Ability key"}},
+                  "fields": {"effects": "Effect", "agent": "Agent", "role": "Agent role",
+                             "slot": "Ability key"}},
     "weapons":   {"label": "Weapons", "fields": {"category": "Weapon type"}},
     "skins":     {"label": "Weapon skins",
                   "fields": {"weapon": "Weapon", "category": "Weapon type",
-                             "edition": "Edition", "collection": "Collection"}},
+                             "edition": "Edition", "collection": "Collection",
+                             "obtained": "How you get it"}},
     "maps":      {"label": "Maps", "fields": {"type": "Map type"}},
     "callouts":  {"label": "Map callouts",
                   "fields": {"map": "Map", "map_type": "Map type", "area": "Area"}},
 }
-POOL_SUBJECTS = {"players": "tier 1 players who…"}
+POOL_SUBJECTS = {"players": "tier 1 players who…", "teams": "teams that…",
+                 "list": "the answers you list below"}
 
 
 # ---------- player conditions ----------
@@ -89,10 +94,18 @@ def _names(pages, ctx):
     return sorted(ctx["events"][p]["name"] for p in pages if p in ctx["events"])
 
 
+# How recently a player was on the team asked about (years ago -> rating change):
+# today's roster is what people remember.
+TEAM_RECENCY = {0: 1.2, 1: 0.6, 2: 0.0, 3: -0.3}
+
+
 def check_played_for(p, value, ctx):
     evs = p["teams"].get(value, [])
     share_of_career = len(evs) / max(len(p["events"]), 1)
     change = math.log2(0.3 + 0.7 * share_of_career) if evs else 0
+    if evs:
+        last = max(ctx["events"][e]["year"] for e in evs if e in ctx["events"])
+        change += TEAM_RECENCY.get(ctx["today"].year - last, -0.6)
     return bool(evs), change, {f"{ctx['teams'].get(value, value)} events": _names(evs, ctx)}
 
 
@@ -118,12 +131,47 @@ def check_not_played_for(p, value, ctx):
     return value not in p["teams"], 0, {}
 
 
+def check_captain_at(p, value, ctx):
+    """Liquipedia marks the in-game leader as Captain on 2025+ rosters."""
+    # 'any' = any VCT event, leagues included (one event alone has <20 IGLs)
+    hit = _event_set(value, ctx, p.get("captain", []))
+    return bool(hit), 0, {"IGL at": _names(hit, ctx)}
+
+
+def check_mvp(p, value, ctx):
+    # 'any' = any VCT event, league finals included
+    hit = _event_set(value, ctx, p.get("mvps", []))
+    return bool(hit), 0.5 * max(len(hit) - 1, 0), {"MVP at": _names(hit, ctx)}
+
+
+# Teams pool: each check gets a team from team_info
+def team_played_at(t, value, ctx):
+    pool = t["events"]
+    if value == "any" or value.startswith("kind:"):
+        pool = [e for e in pool if ctx["events"].get(e, {}).get("international")]
+    hit = _event_set(value, ctx, pool)
+    return bool(hit), 0, {"matching events": _names(hit, ctx)}
+
+
+def team_won(t, value, ctx):
+    won = _event_set(value, ctx, t["wins"])
+    return bool(won), 0.4 * max(len(won) - 1, 0), {}
+
+
+TEAM_CONDITIONS = {
+    "played_at": {"label": "Played at event", "values": "all_events", "check": team_played_at},
+    "won":       {"label": "Won international event", "values": "intl_events", "check": team_won},
+}
+
+
 CONDITIONS = {
     "played_for":     {"label": "Played for team",          "values": "teams",       "check": check_played_for},
     "not_played_for": {"label": "Never played for team",    "values": "teams",       "check": check_not_played_for},
     "country":        {"label": "Is from country",          "values": "countries",   "check": check_country},
     "won":            {"label": "Won international event",  "values": "intl_events", "check": check_won},
     "played_at":      {"label": "Played at event",          "values": "all_events",  "check": check_played_at},
+    "captain_at":     {"label": "Was IGL at event (2025+)", "values": "captain_events", "check": check_captain_at},
+    "mvp":            {"label": "Was finals MVP (2022+)",   "values": "mvp_events",  "check": check_mvp},
 }
 
 
@@ -145,6 +193,12 @@ def _player_values(ds):
                         for e in by_year([e for e in intl if e["finished"]])],
         "all_events": [{"value": "any", "label": "any international"}] + kinds +
                       [{"value": e["page"], "label": e["name"]} for e in by_year(events)],
+        "captain_events": [{"value": "any", "label": "any VCT event"}] + kinds +
+                          [{"value": e["page"], "label": e["name"]}
+                           for e in by_year([e for e in events if e["year"] >= 2025])],
+        "mvp_events": [{"value": "any", "label": "any VCT event"}] + kinds +
+                      [{"value": e["page"], "label": e["name"]}
+                       for e in by_year([e for e in events if e.get("mvp")])],
     }
 
 
@@ -155,6 +209,11 @@ def options(ds, game=None):
         "conditions": [{"type": k, "label": v["label"], "values": pv[v["values"]]}
                        for k, v in CONDITIONS.items()],
         "fields": {},
+    }, {
+        "id": "teams", "label": "Teams (Liquipedia)", "subject": POOL_SUBJECTS["teams"],
+        "conditions": [{"type": k, "label": v["label"], "values": pv[v["values"]]}
+                       for k, v in TEAM_CONDITIONS.items()],
+        "fields": {},
     }]
     for pid, spec in GAME_POOLS.items():
         items = (game or {}).get("pools", {}).get(pid)
@@ -162,14 +221,19 @@ def options(ds, game=None):
             continue
         conds = []
         for field, label in spec["fields"].items():
-            vals = sorted({i["attrs"].get(field) for i in items if i["attrs"].get(field)},
-                          key=str.lower)
+            vals = set()
+            for i in items:
+                v = i["attrs"].get(field)
+                vals.update(v if isinstance(v, list) else [v] if v else [])
+            vals = sorted(vals, key=str.lower)
             values = [{"value": v, "label": v} for v in vals]
             conds.append({"type": f"is:{field}", "label": f"{label} is", "values": values})
             conds.append({"type": f"not:{field}", "label": f"{label} is not", "values": values})
         pools.append({"id": pid, "label": spec["label"],
                       "subject": f"{spec['label'].lower()} where…",
                       "conditions": conds, "fields": spec["fields"]})
+    pools.append({"id": "list", "label": "Hand-written list", "subject": POOL_SUBJECTS["list"],
+                  "conditions": [], "fields": {}})
     return {"pools": pools, "tiers": [{"name": n, "points": POINTS[n]} for n in POINTS]}
 
 
@@ -179,8 +243,6 @@ def fame(p, ctx, today):
     """Stat-based score for players nobody hand-rated (higher = more obvious)."""
     intl = sum(1 for e in p["events"] if ctx["events"].get(e, {}).get("international"))
     score = len(p["events"]) + 2 * intl + 4 * len(p["wins"])
-    if p["last_year"] >= today.year - 1:
-        score += 3
     if not p["starter"]:
         score -= 2
     return score, intl
@@ -195,8 +257,75 @@ def player_rating(p, stat_score):
     return 1 + 4 * min(max(stat_score, 0), 60) / 60
 
 
+# Recency (Richard, Nov 2026): fresh winners are on everyone's mind, long-gone
+# players fade a little. Added to every player's rating, hand-rated or not.
+RECENT_WIN = {"champions": 4.0, "masters": 2.0, "lockin": 1.5}   # this year's win
+WIN_DECAY = {0: 1.0, 1: 0.5, 2: 0.2}                             # by years ago
+ACTIVE = {0: 0.8, 1: 0.3, 2: 0.0, 3: -0.4}                       # last played, years ago
+
+
+# A fresh winner is famous right now however little career data they have:
+# their rating can't drop below this floor. (kind, years ago) -> minimum rating
+WIN_FLOOR = {("champions", 0): 7.5, ("champions", 1): 6.0,
+             ("masters", 0): 6.0, ("masters", 1): 5.0, ("lockin", 0): 6.0}
+
+
+def recency_floor(p, ctx, today):
+    floor = 0.0
+    for page in p["wins"]:
+        e = ctx["events"].get(page)
+        if e:
+            floor = max(floor, WIN_FLOOR.get((e["kind"], today.year - e["year"]), 0.0))
+    return floor
+
+
+def recency_bonus(p, ctx, today):
+    years_away = today.year - p["last_year"]
+    bonus = ACTIVE.get(years_away, -0.8)
+    wins = 0.0
+    for page in p["wins"]:
+        e = ctx["events"].get(page)
+        if e:
+            wins += RECENT_WIN.get(e["kind"], 1.0) * WIN_DECAY.get(today.year - e["year"], 0)
+    return bonus + min(wins, 4.5)
+
+
+# Recency for game content: released N years ago -> rating boost (newer = more remembered)
+GAME_RECENCY = {0: 1.5, 1: 0.8, 2: 0.3}
+
+
+def release_year(it, pool):
+    """Best known release year of a game item, or None."""
+    ry, a = FAM.get("release_year", {}), it["attrs"]
+    agents, maps = ry.get("agents", {}), ry.get("maps", {})
+    if pool in ("agents", "abilities"):
+        return agents.get(a.get("agent", it["id"]))
+    if pool in ("maps", "callouts"):
+        return maps.get(a.get("map", it["id"]))
+    if pool == "weapons":
+        w = ry.get("weapons", {})
+        return w.get(it["id"], w.get("_default"))
+    if pool == "skins":
+        coll, years = a.get("collection", ""), ry.get("collections", {})
+        if coll in years:
+            return years[coll]
+        if coll.startswith("VCT x "):
+            return years.get("_vct_team_bundles")
+        if coll in agents:  # agent-themed sets came out with the agent
+            return agents[coll]
+        if coll and coll not in FAM.get("collections", {}):
+            return date.today().year  # unknown to Claude = released after its knowledge
+    return None
+
+
 def game_rating(it, pool):
-    """1-10 fame for a game-content item, from familiarity.json (+ fallbacks)."""
+    """1-10 fame for a game-content item (familiarity.json) plus a recency boost."""
+    year = release_year(it, pool)
+    boost = GAME_RECENCY.get(date.today().year - year, 0) if year else 0
+    return _base_game_rating(it, pool) + boost
+
+
+def _base_game_rating(it, pool):
     a, name = it["attrs"], it["id"]
     if pool == "agents":
         return FAM.get("agents", {}).get(name, 3)
@@ -224,20 +353,37 @@ def game_rating(it, pool):
 
 # ---------- tiers ----------
 
+def _snap(cut, ratings, lo, hi, max_shift):
+    """Move a tier boundary so answers rated the same aren't split, if it's a small move.
+
+    A big group of equal ratings (e.g. 80 forgettable skins) gets split instead,
+    since there's no information to tell them apart anyway."""
+    if cut <= lo or cut >= hi or abs(ratings[cut - 1] - ratings[cut]) > 1e-9:
+        return cut
+    start = cut
+    while start > lo and abs(ratings[start - 1] - ratings[cut]) <= 1e-9:
+        start -= 1
+    end = cut
+    while end < hi and abs(ratings[end] - ratings[cut - 1]) <= 1e-9:
+        end += 1
+    options = [c for c in (start, end) if lo < c < hi and abs(c - cut) <= max_shift]
+    return min(options, key=lambda c: abs(c - cut)) if options else cut
+
+
 def assign_tiers(scored):
     """scored: [(rating, item, extra)] -> [(tier, rating, share, item, extra)], most obvious first.
 
-    share = how many fans we estimate would give this answer (2**rating, normalized).
-    The rarest answer is Radiant; the rest get Silver/Platinum/Diamond/Immortal by
-    TIERS thresholds. With 5+ answers every tier is used: if one comes out empty,
-    the nearest answer next to it moves in. With fewer, answers are spread out.
+    share = estimated share of fans who'd give the answer (2**rating, normalized);
+    it sets the ORDER. The rarest answer is Radiant; the rest are cut into
+    Silver/Platinum/Diamond/Immortal by the TIERS target sizes, every tier used.
     """
     scored.sort(key=lambda x: (-x[0], x[1]["id"].lower()))
     n = len(scored)
     if not n:
         return []
-    top = max(r for r, _, _ in scored)
-    weights = [2 ** (r - top) for r, _, _ in scored]
+    ratings = [r for r, _, _ in scored]
+    top = max(ratings)
+    weights = [2 ** (r - top) for r in ratings]
     total = sum(weights)
     shares = [w / total for w in weights]
     names = [name for name, _, _ in TIERS]
@@ -246,20 +392,26 @@ def assign_tiers(scored):
     if n < k:  # too few answers for every tier: spread from Silver to Radiant
         tiers = [names[round(i * (k - 1) / max(n - 1, 1))] for i in range(n)] if n > 1 else [names[0]]
     else:
-        counts = [0] * (k - 1)
-        for sh in shares[:-1]:
-            counts[next(i for i, (_, _, low) in enumerate(TIERS[:-1]) if sh >= low)] += 1
-        while 0 in counts:
-            empty = counts.index(0)
-            donor = min((abs(j - empty), j) for j, c in enumerate(counts) if c >= 2)[1]
-            counts[donor] -= 1
-            counts[empty] += 1
-        tiers = [names[i] for i, c in enumerate(counts) for _ in range(c)] + [names[-1]]
+        m = n - 1  # everyone but the Radiant gem
+        cuts, acc = [], 0.0
+        for _, _, part in TIERS[:-2]:
+            acc += part
+            cuts.append(round(acc * m))
+        # every tier at least one answer, then avoid splitting equal ratings
+        fixed, prev = [], 0
+        for i, c in enumerate(cuts):
+            c = max(prev + 1, min(c, m - (len(cuts) - i)))
+            c = _snap(c, ratings, prev, m - (len(cuts) - i) + 1, max(1, round(0.06 * m)))
+            fixed.append(c)
+            prev = c
+        bounds = [0] + fixed + [m]
+        tiers = [names[i] for i in range(k - 1) for _ in range(bounds[i + 1] - bounds[i])] + [names[-1]]
     return [(t, r, sh, it, ex) for t, sh, (r, it, ex) in zip(tiers, shares, scored)]
 
 
-def context(ds):
-    return {"events": {e["page"]: e for e in ds["events"]}, "teams": ds["teams"]}
+def context(ds, today=None):
+    return {"events": {e["page"]: e for e in ds["events"]}, "teams": ds["teams"],
+            "today": today or date.today()}
 
 
 def _player_matches(prompt, ds, today, ctx):
@@ -282,7 +434,9 @@ def _player_matches(prompt, ds, today, ctx):
                      "international_wins": _names(p["wins"], ctx), **extra}
             item = {"id": p["id"], "aliases": p["aliases"], "icon": None,
                     "source": WIKI + p["page"].replace(" ", "_")}
-            scored.append((player_rating(p, stat_score) + bonus, item, extra))
+            rating = max(player_rating(p, stat_score) + recency_bonus(p, ctx, today),
+                         recency_floor(p, ctx, today))
+            scored.append((rating + bonus, item, extra))
     return scored
 
 
@@ -291,15 +445,15 @@ def _game_matches(prompt, game):
     items = (game or {}).get("pools", {}).get(pool, [])
     conds = [c for c in prompt.get("conditions", [])
              if c.get("value") and ":" in c.get("type", "")]
-    if not conds:
-        return []
+    # no condition = every item in the pool ("Name any agent")
     # Same name in several places (e.g. "A Main" on many maps) = one answer
     merged = {}
     for it in items:
         ok = True
         for c in conds:
             op, field = c["type"].split(":", 1)
-            has = it["attrs"].get(field) == c["value"]
+            v = it["attrs"].get(field)
+            has = c["value"] in v if isinstance(v, list) else v == c["value"]
             if (op == "is" and not has) or (op == "not" and has):
                 ok = False
                 break
@@ -322,6 +476,53 @@ def _game_matches(prompt, game):
             for m in merged.values()]
 
 
+def team_rating(t, ctx, today):
+    """Fame for a team: familiarity.json rating (or stats), plus recency like players."""
+    hand = {k.lower(): v for k, v in FAM.get("teams", {}).items()}
+    intl = sum(1 for e in t["events"] if ctx["events"].get(e, {}).get("international"))
+    base = hand.get(t["name"].lower())
+    if base is None:
+        base = 1 + 4 * min(len(t["events"]) + 2 * intl + 4 * len(t["wins"]), 40) / 40
+    return max(base + recency_bonus(t, ctx, today), recency_floor(t, ctx, today)), intl
+
+
+def _team_matches(prompt, ds, today, ctx):
+    conds = [c for c in prompt.get("conditions", []) if c.get("type") in TEAM_CONDITIONS and c.get("value")]
+    if not conds:
+        return []
+    scored = []
+    for t in ds.get("team_info", []):
+        bonus, extra, ok = 0, {}, True
+        for c in conds:
+            hit, b, ev = TEAM_CONDITIONS[c["type"]]["check"](t, c["value"], ctx)
+            if not hit:
+                ok = False
+                break
+            bonus += b
+            extra.update(ev)
+        if ok:
+            rating, intl = team_rating(t, ctx, today)
+            extra = {"international_events": intl, "international_wins": _names(t["wins"], ctx), **extra}
+            item = {"id": t["name"], "aliases": sorted({t["name"].lower(), t["key"]}), "icon": None,
+                    "source": WIKI + t["name"].replace(" ", "_")}
+            scored.append((rating + bonus, item, extra))
+    return scored
+
+
+def _list_matches(prompt):
+    """Hand-written answers, most obvious first. Each line may add '| other spelling'."""
+    items = [a for a in prompt.get("answers", []) if a.get("text", "").strip()]
+    n = len(items)
+    scored = []
+    for i, a in enumerate(items):
+        text = a["text"].strip()
+        rating = a.get("rating", 9 - 7 * i / max(n - 1, 1))  # list order = obviousness
+        aliases = {text.lower(), *[x.strip().lower() for x in a.get("aliases", []) if x.strip()]}
+        scored.append((rating, {"id": text, "aliases": sorted(aliases), "icon": None, "source": ""},
+                       {"listed": f"#{i + 1} of {n}"}))
+    return scored
+
+
 def _drop_ambiguous_aliases(answers):
     """An alias like 'main' or 'reaver' only counts if it points to ONE answer."""
     owners = defaultdict(set)
@@ -336,8 +537,13 @@ def _drop_ambiguous_aliases(answers):
 def evaluate(prompt, ds, today=None, ctx=None, game=None):
     """All valid answers for one prompt, most obvious first."""
     today = today or date.today()
-    if prompt.get("pool", "players") == "players":
-        scored = _player_matches(prompt, ds, today, ctx or context(ds))
+    pool = prompt.get("pool", "players")
+    if pool == "players":
+        scored = _player_matches(prompt, ds, today, ctx or context(ds, today))
+    elif pool == "teams":
+        scored = _team_matches(prompt, ds, today, ctx or context(ds, today))
+    elif pool == "list":
+        scored = _list_matches(prompt)
     else:
         scored = _game_matches(prompt, game)
 
@@ -367,7 +573,7 @@ def save_prompts(prompts):
 def publish(prompts, ds, today=None, game=None):
     """Write every enabled prompt's answer bank to dive.json."""
     today = today or date.today()
-    ctx = context(ds)
+    ctx = context(ds, today)
     built = []
     for pr in prompts:
         if not pr.get("enabled", True):

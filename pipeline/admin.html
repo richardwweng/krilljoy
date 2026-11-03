@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vallion Admin</title>
+<title>Krilljoy Admin</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23ff4655'/%3E%3C/svg%3E">
 <style>
   :root {
@@ -70,6 +70,7 @@
   td .why { color: var(--muted); font-size: 12px; }
   select.tier { padding: 3px 6px; font-size: 12px; border-width: 1px 1px 1px 4px; }
   .manual { font-size: 10px; color: var(--t-too_clever); margin-left: 6px; }
+  .few { color: #ff8a95; font-weight: 600; }
   .search { width: 220px; }
   .count { font-size: 13px; }
   .toggle { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13px; padding-bottom: 8px; }
@@ -94,6 +95,7 @@
 
 <script>
 // What players see for each tier. Change the names here (and in the game) to rename a rank.
+const MIN_ANSWERS = 20;  // every question needs at least this many valid answers
 const TIER_LABEL = { plankton: "Silver", too_clever: "Gold", schooler: "Platinum", rare: "Diamond",
                      deep_cut: "Immortal", one_in_a_krillion: "Radiant" };
 let S = { prompts: [], options: null, current: 0, answers: {}, filter: "" };
@@ -105,8 +107,23 @@ async function api(path, body) {
   const r = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" },
                                        body: JSON.stringify(body) } : {});
   const j = await r.json();
+  if (j.error === "stale") { staleBanner(); throw new Error(j.message); }
   if (j.error) throw new Error(j.error);
   return j;
+}
+// Another tab (or Claude) changed the questions: stop saving and ask for a reload
+function staleBanner() {
+  S.stale = true;
+  if ($("stale")) return;
+  const b = document.createElement("div");
+  b.id = "stale";
+  b.setAttribute("role", "alert");
+  b.style.cssText = "position:sticky;top:57px;z-index:6;background:#5c1f27;color:#fff;padding:12px 20px;display:flex;gap:16px;align-items:center";
+  b.innerHTML = `<span style="flex:1">The question list changed since this page loaded, so your last change was <b>not</b> saved. Reload to get the latest.</span>`;
+  const btn = document.createElement("button");
+  btn.className = "btn"; btn.textContent = "Reload"; btn.onclick = () => location.reload();
+  b.appendChild(btn);
+  document.querySelector("header").after(b);
 }
 function status(msg, cls = "") { const s = $("status"); s.textContent = msg; s.className = "status " + cls; }
 
@@ -119,8 +136,12 @@ function uniqueId(base, skip) {
 
 // ---------- saving ----------
 const save = debounce(async () => {
-  try { await api("/api/save", { prompts: S.prompts }); status("Saved", "ok"); }
-  catch (e) { status("Save failed", "err"); console.error(e); }
+  // one save at a time, so each carries the version the previous one returned
+  S.saving = (S.saving || Promise.resolve()).then(async () => {
+    if (S.stale) return;
+    try { const r = await api("/api/save", { prompts: S.prompts, version: S.version }); S.version = r.version; status("Saved", "ok"); }
+    catch (e) { status("Not saved", "err"); console.error(e); }
+  });
 }, 500);
 function changed({ preview = true } = {}) {
   status("Saving…");
@@ -145,7 +166,8 @@ const refreshPreview = debounce(async () => {
 function renderList() {
   $("list").innerHTML = S.prompts.map((p, i) => {
     const a = S.answers[p.id];
-    const m = (a ? `${a.length} answers` : "…") + ` · ${esc(poolOf(p).label)}`;
+    const few = a && a.length < MIN_ANSWERS;
+    const m = (a ? (few ? `<span class="few">${a.length} answers (needs ${MIN_ANSWERS}+)</span>` : `${a.length} answers`) : "…") + ` · ${esc(poolOf(p).label)}`;
     return `<div class="q ${i === S.current ? "active" : ""} ${p.enabled === false ? "off" : ""}" data-i="${i}">
       <div class="t">${esc(p.text || "(untitled)")}</div><div class="m">${esc(p.id)} · ${m}</div></div>`;
   }).join("") || `<div class="hint">No questions yet.</div>`;
@@ -154,6 +176,14 @@ function renderList() {
 
 // ---------- editor ----------
 // Each question draws its answers from one pool (pro players, skins, callouts...)
+function isPlayersPool(pool) { return pool.id === "players"; }
+function needsCondition(pool) { return pool.id === "players" || pool.id === "teams"; }
+// Hand-written lists: one answer per line, most obvious first, "| other spelling" optional
+function listToText(p) { return (p.answers || []).map(a => [a.text, ...(a.aliases || [])].join(" | ")).join("\n"); }
+function textToList(s) {
+  return s.split("\n").map(l => l.split("|").map(x => x.trim())).filter(x => x[0])
+          .map(([text, ...aliases]) => ({ text, aliases: aliases.filter(Boolean) }));
+}
 function poolOf(p) {
   return S.options.pools.find(x => x.id === (p.pool || "players")) ||
          { id: p.pool, label: `${p.pool} (no data yet: run build.py)`, subject: "items where…", conditions: [], fields: {} };
@@ -185,6 +215,11 @@ function renderEditor() {
         <select id="q-pool">${S.options.pools.map(x => `<option value="${x.id}" ${x.id === pool.id ? "selected" : ""}>${esc(x.label)}</option>`).join("")}</select>
       </div>
       <h2>Valid answers are ${esc(pool.subject)}</h2>
+      ${pool.id === "list" ? `
+      <label class="f" for="q-list">One answer per line, most obvious first. Add other accepted spellings after a |</label>
+      <textarea id="q-list" class="text" rows="12" style="width:100%;box-sizing:border-box;font:inherit;resize:vertical" placeholder="TenZ&#10;tarik&#10;Kyedae | kyedae shymko">${esc(listToText(p))}</textarea>
+      <div class="hint" style="margin-top:6px">Tiers follow the order you list them in. Ask Claude to estimate them instead if you'd rather not order them.</div>
+      ` : `
       <div id="conds">${(p.conditions || []).map((c, ci) => `
         <div class="cond" data-ci="${ci}">
           <select class="c-type">${types.map(t => `<option value="${t.type}" ${t.type === c.type ? "selected" : ""}>${esc(t.label)}</option>`).join("")}</select>
@@ -192,7 +227,7 @@ function renderEditor() {
           <button class="x c-del" title="Remove">×</button>
         </div>`).join("")}</div>
       <button class="btn small" id="add-cond">+ Add condition</button>
-      <span class="hint" style="margin-left:10px">Answers must match every condition.</span>
+      <span class="hint" style="margin-left:10px">${needsCondition(pool) ? "Answers must match every condition." : "Answers must match every condition. No condition = the whole pool."}</span>`}
     </div>
     <div class="card" id="preview"><div class="hint">Add a condition to see answers.</div></div>`;
 
@@ -207,13 +242,15 @@ function renderEditor() {
     S.answers[p.id] = S.answers[old]; changed({ preview: false });
   };
   $("q-on").onchange = (e) => { p.enabled = e.target.checked; changed({ preview: false }); };
-  $("add-cond").onclick = () => { (p.conditions ||= []).push({ type: types[0]?.type || "", value: "" }); renderEditor(); changed(); };
+  if ($("q-list")) $("q-list").oninput = (e) => { p.answers = textToList(e.target.value); changed(); };
+  if ($("add-cond")) $("add-cond").onclick = () => { (p.conditions ||= []).push({ type: types[0]?.type || "", value: "" }); renderEditor(); changed(); };
   $("q-pool").onchange = (e) => {
     const np = S.options.pools.find(x => x.id === e.target.value);
-    if (p.conditions?.some(c => c.value) && !confirm("Switching pools clears this question's conditions and tier overrides. Continue?")) {
+    if ((p.conditions?.some(c => c.value) || p.answers?.length) && !confirm("Switching pools clears this question's conditions, answers and tier overrides. Continue?")) {
       e.target.value = pool.id; return;
     }
-    p.pool = np.id; p.conditions = [{ type: np.conditions[0]?.type || "", value: "" }]; p.overrides = {};
+    p.pool = np.id; p.overrides = {}; delete p.answers;
+    p.conditions = np.id === "list" ? [] : [{ type: np.conditions[0]?.type || "", value: "" }];
     renderEditor(); changed();
   };
   $("dup").onclick = () => {
@@ -224,7 +261,7 @@ function renderEditor() {
     if (!confirm(`Delete “${p.text}”?`)) return;
     S.prompts.splice(S.current, 1); S.current = Math.max(0, S.current - 1); renderEditor(); changed();
   };
-  $("conds").querySelectorAll(".cond").forEach(row => {
+  if ($("conds")) $("conds").querySelectorAll(".cond").forEach(row => {
     const c = p.conditions[+row.dataset.ci];
     row.querySelector(".c-type").onchange = (e) => { c.type = e.target.value; c.value = ""; renderEditor(); changed(); };
     row.querySelector(".c-val").onchange = (e) => { c.value = e.target.value; changed(); };
@@ -235,6 +272,12 @@ function renderEditor() {
 
 function whyText(ev, pool) {
   const parts = [];
+  if (pool.id === "teams") {
+    if (ev.international_wins?.length) parts.push(`won ${ev.international_wins.join(", ")}`);
+    parts.push(`${ev.international_events} international events`);
+    if (ev["matching events"]?.length) parts.push(`matching: ${ev["matching events"].join(", ")}`);
+    return parts.join(" · ");
+  }
   if (pool.id !== "players") {  // game content: "Weapon: Stinger · Edition: Exclusive · ..."
     for (const [k, v] of Object.entries(ev)) {
       if (k === "map_type" || k === "spot") continue;
@@ -256,7 +299,8 @@ function renderPreview() {
   const isPlayers = pool.id === "players";
   const answers = S.answers[p.id] || [];
   const box = $("preview");
-  if (!(p.conditions || []).some(c => c.value)) { box.innerHTML = `<div class="hint">Add a condition to see answers.</div>`; return; }
+  if (needsCondition(pool) && !(p.conditions || []).some(c => c.value)) { box.innerHTML = `<div class="hint">Add a condition to see answers.</div>`; return; }
+  if (pool.id === "list" && !(p.answers || []).length) { box.innerHTML = `<div class="hint">Type the answers above to see their tiers.</div>`; return; }
   if (!answers.length) { box.innerHTML = `<h2>Preview</h2><div class="hint">Nothing matches. Loosen a condition.</div>`; return; }
   const counts = {}; answers.forEach(a => counts[a.tier] = (counts[a.tier] || 0) + 1);
   const tiers = [...S.options.tiers].sort((a, b) => a.points - b.points).map(t => t.name);  // Silver → Radiant
@@ -278,12 +322,13 @@ function renderPreview() {
     </tr>`).join("");
   box.innerHTML = `
     <div class="row" style="margin:0;align-items:center">
-      <h2 style="margin:0">Preview</h2><span class="count">${answers.length} valid answers</span>
+      <h2 style="margin:0">Preview</h2><span class="count">${answers.length} valid answers${
+        answers.length < MIN_ANSWERS ? ` <span class="few">· needs at least ${MIN_ANSWERS}, ${pool.id === "list" ? "add more answers" : "loosen a condition"}</span>` : ""}</span>
       <div class="spacer"></div>
       <input class="text search" id="find" placeholder="Find an answer…" value="${esc(S.filter)}">
     </div>
     <div class="bar">${bar}</div><div class="legend">${legend}</div>
-    <table><thead><tr><th>Answer</th><th>Tier</th><th>Pts</th><th title="Estimated share of fans who'd give this answer">Est. fans</th><th>Why it counts (${isPlayers ? "Liquipedia" : "valorant-api.com"})</th></tr></thead>
+    <table><thead><tr><th>Answer</th><th>Tier</th><th>Pts</th><th title="Estimated share of fans who'd give this answer">Est. fans</th><th>Why it counts (${pool.id === "list" ? "your list" : (isPlayers || pool.id === "teams") ? "Liquipedia" : "valorant-api.com"})</th></tr></thead>
     <tbody>${rows}</tbody></table>
     <div class="hint" style="margin-top:8px">Most obvious answers first. "Est. fans" is Claude's estimate of how many players would give each answer (from familiarity.json); tiers follow it, and the rarest answer is Radiant. Change a tier to override it, set it back to remove the override.</div>`;
   const find = $("find");
@@ -305,7 +350,8 @@ $("new").onclick = () => {
 $("publish").onclick = async () => {
   status("Publishing…");
   try {
-    const r = await api("/api/publish", { prompts: S.prompts });
+    const r = await api("/api/publish", { prompts: S.prompts, version: S.version });
+    S.version = r.version;
     const empty = r.prompts.filter(x => !x.answers).map(x => x.id);
     status(`Published ${r.prompts.length} questions`, "ok");
     if (empty.length) alert(`Published, but these have no answers yet: ${empty.join(", ")}`);
@@ -316,7 +362,7 @@ $("publish").onclick = async () => {
 (async () => {
   try {
     const st = await api("/api/state");
-    S.prompts = st.prompts; S.options = st.options;
+    S.prompts = st.prompts; S.options = st.options; S.version = st.version;
     $("meta").textContent = `${st.dataset.players} players · ${st.dataset.events} events · data from ${st.dataset.generated}` +
       (st.dataset.game_version ? ` · game ${st.dataset.game_version.split(".").slice(0, 2).join(".")}` : " · no game data yet");
     renderList(); renderEditor();

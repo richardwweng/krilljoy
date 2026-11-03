@@ -18,8 +18,14 @@ import config
 
 GAME_FILE = Path(config.GAME_FILE)
 _FAM_FILE = Path(__file__).parent / "familiarity.json"
-COMMUNITY_CALLOUTS = (json.loads(_FAM_FILE.read_text(encoding="utf-8")).get("callout_aliases", {})
-                      if _FAM_FILE.exists() else {})
+_FAM = json.loads(_FAM_FILE.read_text(encoding="utf-8")) if _FAM_FILE.exists() else {}
+COMMUNITY_CALLOUTS = _FAM.get("callout_aliases", {})
+# ability name -> effects ("damage", "flash", ...), hand-tagged in familiarity.json
+ABILITY_EFFECTS = {}
+for _effect, _names in _FAM.get("ability_tags", {}).items():
+    if not _effect.startswith("_"):
+        for _n in _names:
+            ABILITY_EFFECTS.setdefault(_n.lower(), []).append(_effect)
 
 # The 11 agents from VALORANT's June 2020 launch: the most familiar names
 LAUNCH_AGENTS = {"Brimstone", "Breach", "Cypher", "Jett", "Omen", "Phoenix",
@@ -84,13 +90,30 @@ def build_agents(raw):
                 continue
             slot = SLOT_LABELS.get(ab.get("slot"), ab.get("slot") or "Other")
             score = 2 * launch + (1 if slot.startswith("Ultimate") else 0)
-            abilities.append(item(ab_name, {"agent": name, "role": role, "slot": slot},
+            effects = ABILITY_EFFECTS.get(ab_name.lower(), [])
+            abilities.append(item(ab_name, {"agent": name, "role": role, "slot": slot,
+                                            "effects": effects or ["other"]},
                                   score, ab.get("displayIcon")))
     return agents, abilities
 
 
+def contract_skins(raw):
+    """skin level uuid -> how you get it, for skins that come from contracts."""
+    kinds = {"Season": "Battle pass", "Agent": "Agent contract", "Event": "Event pass"}
+    out = {}
+    for c in raw.get("contracts") or []:
+        content = c.get("content") or {}
+        kind = kinds.get(content.get("relationType"), "Battle pass")
+        for ch in content.get("chapters") or []:
+            for r in [lv.get("reward") for lv in ch.get("levels") or []] + (ch.get("freeRewards") or []):
+                if r and r.get("type") == "EquippableSkinLevel":
+                    out[r.get("uuid")] = kind
+    return out
+
+
 def build_weapons(raw):
     themes = {t["uuid"]: clean(t["displayName"]) for t in raw["themes"]}
+    from_contract = contract_skins(raw)
     tiers = {t["uuid"]: (t.get("devName") or t["displayName"].replace(" Edition", ""), t.get("rank", 0))
              for t in raw["contenttiers"]}
     weapons, skins = [], []
@@ -120,8 +143,10 @@ def build_weapons(raw):
             score = round(3 * rank + len(s.get("levels") or []) + len(s.get("chromas") or []) / 2
                           + min(collection_size[collection], 12) / 4
                           + 2 * WEAPON_POPULARITY.get(wname, 0), 2)
+            obtained = next((from_contract[lv.get("uuid")] for lv in s.get("levels") or []
+                             if lv.get("uuid") in from_contract), "Store (VP)")
             skins.append(item(name, {"weapon": wname, "category": cat, "edition": tier,
-                                     "collection": collection},
+                                     "collection": collection, "obtained": obtained},
                               score, icon, extra_aliases=[short, collection, wname if wname != "Melee" else ""]))
             # Aliases like "reaver" or "vandal" only count when they point to one
             # answer in a question; prompts.py drops them when they're ambiguous.

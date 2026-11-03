@@ -5,6 +5,7 @@
 Opens http://localhost:8765 in your browser. Only reachable from this computer.
 Uses the data saved by build.py (out/players.json), so it never calls Liquipedia.
 """
+import hashlib
 import json
 import threading
 import webbrowser
@@ -41,6 +42,12 @@ class Data:
 DATA = Data()
 
 
+def prompts_version():
+    """Fingerprint of prompts.json, so a stale tab can't save over newer questions."""
+    f = P.PROMPTS_FILE
+    return hashlib.sha1(f.read_bytes()).hexdigest()[:12] if f.exists() else "none"
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *args):  # keep the terminal quiet
         pass
@@ -64,6 +71,7 @@ class Handler(BaseHTTPRequestHandler):
             ds = DATA.get()
             self._json({
                 "prompts": P.load_prompts(),
+                "version": prompts_version(),
                 "options": DATA.opts,
                 "dataset": {"generated": ds["generated"], "players": len(ds["players"]),
                             "events": len(ds["events"]),
@@ -83,13 +91,18 @@ class Handler(BaseHTTPRequestHandler):
             if self.path == "/api/preview":
                 answers = P.evaluate(body["prompt"], ds, date.today(), DATA.ctx, DATA.game)
                 self._json({"answers": answers})
+            elif self.path in ("/api/save", "/api/publish") and body.get("version") != prompts_version():
+                # prompts.json changed since this tab loaded it (another tab, or Claude added
+                # questions): refuse instead of overwriting, and ask the page to reload
+                self._json({"error": "stale", "message": "The question list changed since this "
+                            "page loaded. Reload the page to get the latest."}, 409)
             elif self.path == "/api/save":
                 P.save_prompts(body["prompts"])
-                self._json({"ok": True})
+                self._json({"ok": True, "version": prompts_version()})
             elif self.path == "/api/publish":
                 P.save_prompts(body["prompts"])
                 path, built = P.publish(body["prompts"], ds, game=DATA.game)
-                self._json({"ok": True, "path": str(path),
+                self._json({"ok": True, "path": str(path), "version": prompts_version(),
                             "prompts": [{"id": b["id"], "answers": len(b["answers"])} for b in built]})
             else:
                 self._json({"error": "unknown endpoint"}, 404)

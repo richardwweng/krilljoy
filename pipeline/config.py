@@ -36,6 +36,10 @@ LEAGUE_STAGES = ["", "Kickoff", "Stage_1", "Stage_2"]  # "" = e.g. VCT/2023/Amer
 # Other pages to count as tier 1, e.g. "VCT/2022/North_America/Stage_1/Challengers"
 EXTRA_TIER1_EVENTS = []
 
+# Read finals MVPs from league events too (not just internationals). Costs one
+# slow request per league event the first time, then it's cached.
+MVP_FROM_LEAGUES = True
+
 # If an event's winner can't be read from its prize pool: {"page": "Team"}
 WINNER_OVERRIDES = {}
 

@@ -1,4 +1,8 @@
-# Vallion: project brief for Claude Code
+# Krilljoy: project brief for Claude Code
+
+The game is called **Krilljoy** (renamed from Vallion, Nov 2026). The repo and
+folder are still `vallion`; internal names (browser storage keys, share text,
+seed) use `krilljoy`.
 
 A Valorant version of the "rare answer" daily trivia game Krillion. Players get
 open-ended prompts and score more for valid answers that fewer people would
@@ -14,8 +18,9 @@ first, then shows conditions that make sense for it.
 | Pool id | What | Source | Status |
 |---|---|---|---|
 | `players` | Tier 1 pro players | Liquipedia API (`pipeline/data.py`) | done |
+| `teams` | Teams on tier 1 rosters (`team_info` in players.json) | Liquipedia API | done |
 | `agents`, `abilities`, `weapons`, `skins`, `maps`, `callouts` | Game content | valorant-api.com (`pipeline/valorant_api.py` + `pipeline/game.py`) | done |
-| hand-written list | Anything no source covers | typed into the admin page | to build |
+| `list` | Anything no source covers (e.g. content creators) | typed into the admin page, one per line, most obvious first; rating = list order | done |
 | more Liquipedia | Coaches, casters, agent picks per event, transfers | Liquipedia API | idea |
 
 - Game data is saved to `pipeline/data/game.json`. Each item has `id` (display
@@ -24,6 +29,15 @@ first, then shows conditions that make sense for it.
   in `GAME_POOLS` in `prompts.py`.
 - Aliases that point to more than one answer within a question (e.g. "main" on a
   map with A Main and B Main) are dropped automatically.
+- Player extras: `captain` = events where Liquipedia marks them Captain (IGL;
+  only on 2025+ `{{TeamParticipants}}` rosters). `mvps` = events where the
+  rendered prize pool's award table names them MVP (2022+, internationals and
+  league finals; `MVP_FROM_LEAGUES` in config.py).
+- Team name variants (Gen.G / Gen.G Esports) are merged by `team_key_map`.
+- Ability `effects` (damage, flash, smoke, wall, heal, info) are hand tagged in
+  `ability_tags` in familiarity.json; untagged = "other". Add new agents' abilities there.
+- Skin `obtained`: "Battle pass" / "Agent contract" / "Event pass" from the
+  `contracts` endpoint, otherwise "Store (VP)".
 - Skipped on purpose: "Standard" and "Random Favorite" skins, duplicate maps.
 - VLR.gg is NOT a source: its terms ban scraping and republishing. Stats would
   need written permission (community@vlr.gg).
@@ -47,7 +61,7 @@ multiplayer needs it), plain-language README, small focused files.
 ```
 vallion/
 ├── pipeline/   Python: pulls Liquipedia data, builds answer banks, admin page
-├── client/     (to build) the game website, React + TS + Vite
+├── client/     the game website, React + TS + Vite (daily mode)
 ├── server/     (later) real-time multiplayer server, Node + Socket.IO
 └── docs/       README images
 ```
@@ -72,6 +86,8 @@ python pipeline/admin.py           # question editor at http://localhost:8765
   build takes about 10–15 minutes again.
 
 How the data is sourced (confirmed against the live wiki, Nov 2026):
+- Tier 1 stays 2023+ leagues + internationals; 2021–22 regional leagues are
+  NOT tier 1 (Richard, Nov 2026).
 - Tier 1 = on a roster at a VCT international (Masters, Champions, LOCK//IN)
   or a franchised VCT league event (2023+).
 - Rosters come from tournament pages. Up to 2024 they use `{{TeamCard}}`;
@@ -130,10 +146,24 @@ NOT from live player answers):
 - Each step up is ~2x as likely to be named. Within a question, estimated share
   of fans = 2**rating / sum over valid answers. Question context adjusts
   ratings (e.g. share of a player's career spent on the team asked about).
-- Tiers by estimated share: Silver 10%+, Platinum 3-10%, Diamond 1-3%,
-  Immortal under 1%. Radiant = the single rarest answer (Krillion's designated
-  "One in a Krillion"). With 5+ answers every tier is used; under 5, answers
-  are spread out. Gold (Too Clever) is manual. Admin overrides win.
+- Recency applies to EVERYTHING (Richard, Nov 2026): newer = more remembered.
+  Players: `recency_bonus()` (wins this year +4 Champions / +2 Masters, halving
+  each year; active this year +0.8; 3+ years away fades) and `recency_floor()`
+  (this year's Champions winners rated at least 7.5, Masters 6). Team questions:
+  `TEAM_RECENCY` favors the current roster. Game content: `GAME_RECENCY` from
+  `release_year` in familiarity.json (+1.5 this year, +0.8 last year, +0.3 two
+  years ago). Base ratings in familiarity.json are age-independent. A skin
+  collection Claude doesn't know is treated as released this year. When new
+  content ships, add its release year.
+- Estimated share sets the ORDER of answers. Tier SIZES lean slightly to the
+  common/middle tiers (Richard, Nov 2026): Silver 22%, Platinum 30%, Diamond
+  28%, Immortal 20% of the non-Radiant answers. Radiant = the single rarest
+  answer (Krillion's designated "One in a Krillion"). Boundaries don't split
+  answers with equal ratings unless that would shift a boundary by >6%.
+  Gold (Too Clever) is manual. Admin overrides win.
+- Every question needs at least 20 valid answers (`MIN_ANSWERS` in
+  prompts.py); the admin page flags ones below that. A game-pool question
+  with no condition means the whole pool ("Name any agent").
 - Richard does not want to estimate anything by hand. When new content appears
   (new players, skins, agents, maps), Claude should update familiarity.json.
 - Later: blend in real player answer frequencies once the game is live, and
@@ -141,21 +171,47 @@ NOT from live player answers):
 
 Copy the mechanics, not Krillion's branding or assets.
 
+## Client (daily mode) notes
+
+- `src/game/daily.ts`: `LAUNCH_DATE` = Dive #1 (change at public launch).
+  `pickDaily` seeds by Eastern date, picks 3–4 pro-scene + 3–4 game prompts.
+  Adding/removing prompts changes future picks; a started dive keeps its prompts.
+- `src/game/match.ts`: exact match on id/aliases (normalized: lowercase,
+  accents folded, non-alphanumerics removed), then typo tolerance (1 typo for
+  5+ letters, 2 for 9+, none below 5). A name that is a valid answer to ANY
+  other prompt is rejected outright; ties between two answers are rejected.
+- `src/game/storage.ts`: localStorage, per date. `roundStartedAt` is saved so
+  reloading doesn't reset the 25 s clock. Time out = submit whatever is typed.
+- `src/components/Ocean.tsx`: one 500vh strip (sky top 12%), slid up by depth;
+  the home screen's two rows line up with the 60vh horizon (`.home` in index.css).
+- Answers are all in dive.json (like Krillion): fine for daily mode; the
+  multiplayer modes need a server that holds the answers.
+
 ## Roadmap
 
-1. **Daily mode** (`client/`, next): same as Krillion today.
+1. **Daily mode** (`client/`, built Nov 2026, not deployed yet): same as Krillion today.
+   - Look: the "Pixel blend" style (Richard, Nov 2026): retro pixel ocean
+     that darkens with depth, Valorant red (#ff4655) + navy, notched LOCK IN
+     buttons, pixel gems in rank colors, Silkscreen + VT323 fonts, depth gauge
+     on the right. All sprites are original; never use Krillion's art.
+     Desktop layout mirrors Krillion's: home masthead, HUD (depth / round
+     squares / score), centered question card, reveal card + DESCEND, results
+     log with an expandable answer list per question.
    - 7 prompts per day, same for everyone, new set at midnight Eastern.
    - 25 seconds per prompt, one answer each.
    - Matching: case-insensitive against `aliases`, forgiving small typos
      (fuzzy match), never accept a different real player.
    - Each point = 10 m of depth; a perfect 700-point dive = 7,000 m.
+   - No treasure chest in daily mode (Richard, Nov 2026): a perfect dive is
+     basically unreachable. The depth gauge just ends at 7,000 m. The chest is
+     only for the treasure dive / multiplayer mode.
    - Results screen: tier per answer, the Liquipedia evidence (`evidence`,
      `source`), and a shareable emoji summary.
    - Progress saved locally so closing the tab mid-dive resumes it.
    - Pick the day's prompts deterministically from `dive.json` (seeded by date).
 2. **More answer pools:** game content is done (see "Answer pools"). Still to
    build: hand-written answer lists, more Liquipedia data.
-3. **Treasure dive mode:** prompts back to back, each answer sinks you by its
+3. **Treasure dive mode:** (the only mode with the chest) prompts back to back, each answer sinks you by its
    rarity, reach the chest at a fixed depth. Score = time to the chest. Wrong
    answers sink 0 (or add a time penalty) so spamming doesn't pay.
 4. **Async multiplayer:** same seeded prompt order for everyone, shared

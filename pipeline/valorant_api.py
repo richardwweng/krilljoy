@@ -18,6 +18,7 @@ ENDPOINTS = {
     "maps": "maps?language=en-US",
     "themes": "themes?language=en-US",
     "contenttiers": "contenttiers?language=en-US",
+    "contracts": "contracts?language=en-US",  # battle passes + agent gear: skins you can't buy
 }
 
 
