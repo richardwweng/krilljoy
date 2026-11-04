@@ -55,14 +55,15 @@ testing, open the browser console (F12) and run `localStorage.clear()`.
 
 ### Putting it online (Cloudflare Pages, like ERS)
 
-Create a Pages project from the GitHub repo with:
+Live at **https://krilljoy.pages.dev**. The Pages project was created from the
+GitHub repo with:
 
 | Setting | Value |
 |---|---|
 | Root directory | `client` |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
-| Environment variable | `NODE_VERSION` = `22` |
+| Environment variables | `NODE_VERSION` = `22`, `VITE_SERVER_URL` = `https://krilljoy-race.onrender.com` |
 
 Every push to `main` then updates the site, including new questions.
 
@@ -123,18 +124,25 @@ player on localhost) to race yourself.
 
 ### Putting the server online (Render, like ERS)
 
+Live at **https://krilljoy-race.onrender.com** (`/health` says if it's up).
+
 1. Render → **New → Web Service** → connect the `krilljoy` repo.
-2. Root Directory: `server` · Build Command: `npm install` · Start Command:
-   `npm start` · Instance type: Free.
-3. Environment variables: `NODE_VERSION` = `22`, and `CLIENT_ORIGIN` = your
-   game's address (e.g. `https://krilljoy.pages.dev`).
-4. In Cloudflare Pages, add `VITE_SERVER_URL` = the Render address (e.g.
-   `https://krilljoy-server.onrender.com`) and redeploy.
-5. Optional, like ERS: an UptimeRobot check on `https://…onrender.com/health`
-   every 5 minutes keeps the free server awake.
+2. Root Directory: **leave empty** · Build Command: `cd server && npm install` ·
+   Start Command: `cd server && npm start` · Instance type: Free.
+   (With Root Directory set to `server`, Render would only redeploy when server
+   code changes and would miss the nightly answer updates.)
+3. Environment variables: `NODE_VERSION` = `22`, and `CLIENT_ORIGIN` =
+   `https://krilljoy.pages.dev` (only the game's own site may connect).
+4. In Cloudflare Pages → Settings → Variables, add `VITE_SERVER_URL` = the
+   Render address, then Deployments → Retry deployment (the address is built
+   into the site, so it needs a rebuild).
+5. Optional, like ERS: an UptimeRobot check on
+   `https://krilljoy-race.onrender.com/health` every 5 minutes keeps the free
+   server awake.
 
 Every push (including the nightly rebuild) redeploys the server too, so it
-always has the latest questions.
+always has the latest questions. A redeploy ends any race in progress; the
+nightly one runs around 3 AM Eastern.
 
 ## Which questions play on which day
 
