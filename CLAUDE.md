@@ -1,8 +1,8 @@
 # Krilljoy: project brief for Claude Code
 
-The game is called **Krilljoy** (renamed from Vallion, Nov 2026). The repo and
-folder are still `vallion`; internal names (browser storage keys, share text,
-seed) use `krilljoy`.
+The game is called **Krilljoy** (renamed from Vallion, Nov 2026). Repo:
+`richardwweng/krilljoy`; Richard's local folder: `C:\Users\richa\Documents\krilljoy`.
+Internal names (browser storage keys, share text, seed) use `krilljoy`.
 
 A Valorant version of the "rare answer" daily trivia game Krillion. Players get
 open-ended prompts and score more for valid answers that fewer people would
@@ -63,7 +63,7 @@ multiplayer needs it), plain-language README, small focused files.
 ## Repo layout
 
 ```
-vallion/
+krilljoy/
 ├── pipeline/   Python: pulls Liquipedia data, builds answer banks, admin page
 ├── client/     the game website, React + TS + Vite (daily mode)
 ├── server/     (later) real-time multiplayer server, Node + Socket.IO
@@ -84,6 +84,7 @@ python pipeline/admin.py           # question editor at http://localhost:8765
 - `pipeline/data/players.json`: every tier 1 player with teams, events, wins,
   countries. Committed.
 - `pipeline/prompts.json`: the questions. Edited through the admin page.
+- `pipeline/schedule.json`: which questions play on which day (see below).
 - `client/public/data/dive.json`: answer banks the game reads. Written by
   "Publish to game" in the admin page or by `build.py`. Committed and deployed.
 - `pipeline/cache/`: raw API responses. Git-ignored. Deleting it means the next
@@ -165,7 +166,7 @@ NOT from live player answers):
   answer (Krillion's designated "One in a Krillion"). Boundaries don't split
   answers with equal ratings unless that would shift a boundary by >6%.
   Gold (Too Clever) is manual. Admin overrides win.
-- Every question needs at least 12 valid answers (`MIN_ANSWERS` in
+- Every question needs at least 8 valid answers (`MIN_ANSWERS` in
   prompts.py); the admin page flags ones below that. A game-pool question
   with no condition means the whole pool ("Name any agent").
 - Richard does not want to estimate anything by hand. When new content appears
@@ -175,10 +176,39 @@ NOT from live player answers):
 
 Copy the mechanics, not Krillion's branding or assets.
 
+## Schedule and nightly rebuild
+
+- `pipeline/schedule.py` + `pipeline/schedule.json` (committed): 7 prompt ids per
+  date. `plan()` runs on every publish: fills today..+29 days; past days are
+  history, today never changes once set, valid auto days stay stable, pinned
+  (hand-picked in the admin Schedule view) days keep their picks and only get
+  disabled/deleted ids replaced. Auto picks: least recently used, no repeat
+  within min(21, enabled/7 - 1) days, 3–4 pro (players/teams pools), max 2 per
+  game pool. dive.json gets `schedule` (yesterday onward); the client uses
+  `schedule[date]` and falls back to its seeded random pick if missing.
+- Admin: Questions | Schedule tabs; `/api/schedule`, `/api/schedule/day`
+  (also patches dive.json's schedule directly). Sidebar shows last/next use.
+- `.github/workflows/nightly.yml`: daily 08:17 UTC, runs build.py with the
+  `LIQUIPEDIA_USER_AGENT` repo secret (config.py reads `KRILLJOY_USER_AGENT`
+  env when local_settings.py is absent), caches `pipeline/cache` with
+  actions/cache, commits data/schedule/dive.json if changed. Richard must
+  `git pull` before working; `Edit questions.bat` does `git pull --ff-only`.
+
+## Questions by region (IGLs)
+
+- `igl_region` (players): Captain at a region's league event, Captain at an
+  international for a team from that league (`team_regions()`), or listed in
+  `known_igls` in familiarity.json (pre-2026 IGLs by Liquipedia PAGE name;
+  Liquipedia only marks Captain on 2026 rosters). `captain_at: any` also
+  includes the hand list. `played_region`: played a league event of that region.
+- Only add hand-listed IGLs you're certain of; use the exact page name
+  ("Laz" is ZETA's; "Laz (Thai player)" is someone else).
+
 ## Client (daily mode) notes
 
 - `src/game/daily.ts`: `LAUNCH_DATE` = Dive #1 (change at public launch).
-  `pickDaily` seeds by Eastern date, picks 3–4 pro-scene + 3–4 game prompts.
+  `pickDaily` uses dive.json's schedule for the date; without one it seeds by
+  Eastern date and picks 3–4 pro-scene + 3–4 game prompts.
   Adding/removing prompts changes future picks; a started dive keeps its prompts.
 - `src/game/match.ts`: exact match on id/aliases (normalized: lowercase,
   accents folded, non-alphanumerics removed), then autocorrect (1 typo for
@@ -238,7 +268,7 @@ Copy the mechanics, not Krillion's branding or assets.
      every answer rarest first (yours highlighted, Liquipedia link ↗).
      No "better than X% of players" curve yet: needs real player data (server).
    - Progress saved locally so closing the tab mid-dive resumes it.
-   - Pick the day's prompts deterministically from `dive.json` (seeded by date).
+   - The day's prompts come from the schedule in `dive.json` (see above).
 2. **More answer pools:** game content is done (see "Answer pools"). Still to
    build: hand-written answer lists, more Liquipedia data.
 3. **Treasure dive mode:** (the only mode with the chest) prompts back to back, each answer sinks you by its

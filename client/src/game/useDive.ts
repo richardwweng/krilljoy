@@ -15,7 +15,7 @@ export function useDive(data: DiveData | null, date: string) {
 
   const prompts: Prompt[] = useMemo(() => {
     if (!data) return [];
-    const picked = pickDaily(data.prompts, date);
+    const picked = pickDaily(data.prompts, date, data.schedule);
     if (!saved) return picked;
     // Keep the prompts the player started with, even if the question list changed since
     const byId = new Map(data.prompts.map((p) => [p.id, p]));

@@ -1,0 +1,364 @@
+{
+ "days": {
+  "2026-11-04": {
+   "prompts": [
+    "sunset_callout",
+    "any_ability",
+    "damage_ability",
+    "lotus_callout",
+    "taiwan",
+    "turkey",
+    "canada"
+   ],
+   "pinned": false
+  },
+  "2026-11-05": {
+   "prompts": [
+    "initiator_ability",
+    "igl_china",
+    "sentinels",
+    "judge_skin",
+    "haven_callout",
+    "kru",
+    "usa_intl"
+   ],
+   "pinned": false
+  },
+  "2026-11-06": {
+   "prompts": [
+    "ghost_skin",
+    "shorty_skin",
+    "masters_winner",
+    "abyss_callout",
+    "champions_2026",
+    "usa",
+    "played_emea"
+   ],
+   "pinned": false
+  },
+  "2026-11-07": {
+   "prompts": [
+    "contract_skin",
+    "operator_skin",
+    "fpx",
+    "a_callout",
+    "brazil",
+    "thailand",
+    "champions_2024"
+   ],
+   "pinned": false
+  },
+  "2026-11-08": {
+   "prompts": [
+    "toronto_2025",
+    "controller_ability",
+    "b_callout",
+    "vct_igl",
+    "played_americas",
+    "japan",
+    "outlaw_skin"
+   ],
+   "pinned": false
+  },
+  "2026-11-09": {
+   "prompts": [
+    "any_map",
+    "bind_callout",
+    "korea_masters",
+    "bbl",
+    "played_china",
+    "mid_callout",
+    "phantom_skin"
+   ],
+   "pinned": false
+  },
+  "2026-11-10": {
+   "prompts": [
+    "icebox_callout",
+    "champions_winner",
+    "frenzy_skin",
+    "ascent_callout",
+    "team_secret",
+    "bucky_skin",
+    "champions_2022"
+   ],
+   "pinned": false
+  },
+  "2026-11-11": {
+   "prompts": [
+    "melee_skin",
+    "played_pacific",
+    "igl_americas",
+    "summit_callout",
+    "global_esports",
+    "sentinel_ability",
+    "ultimate"
+   ],
+   "pinned": false
+  },
+  "2026-11-12": {
+   "prompts": [
+    "vct_mvp",
+    "furia",
+    "guardian_skin",
+    "exclusive_skin",
+    "lockin",
+    "intl_team",
+    "any_weapon"
+   ],
+   "pinned": false
+  },
+  "2026-11-13": {
+   "prompts": [
+    "spectre_skin",
+    "intl_winner",
+    "russia",
+    "fracture_callout",
+    "val_creator",
+    "classic_skin",
+    "team_liquid"
+   ],
+   "pinned": false
+  },
+  "2026-11-14": {
+   "prompts": [
+    "odin_skin",
+    "vandal_skin",
+    "brazil_champions",
+    "igl_pacific",
+    "duelist_ability",
+    "igl_emea",
+    "pearl_callout"
+   ],
+   "pinned": false
+  },
+  "2026-11-15": {
+   "prompts": [
+    "stinger_skin",
+    "bulldog_skin",
+    "champions_2021",
+    "breeze_callout",
+    "madrid_2024",
+    "corrode_callout",
+    "china"
+   ],
+   "pinned": false
+  },
+  "2026-11-16": {
+   "prompts": [
+    "ares_skin",
+    "philippines",
+    "korea",
+    "sheriff_skin",
+    "split_callout",
+    "mibr",
+    "canada"
+   ],
+   "pinned": false
+  },
+  "2026-11-17": {
+   "prompts": [
+    "ultra_skin",
+    "premium_skin",
+    "any_agent",
+    "turkey",
+    "taiwan",
+    "igl_china",
+    "sentinels"
+   ],
+   "pinned": false
+  },
+  "2026-11-18": {
+   "prompts": [
+    "marshal_skin",
+    "sheriff_vp",
+    "sunset_callout",
+    "kru",
+    "usa_intl",
+    "masters_winner",
+    "champions_2026"
+   ],
+   "pinned": false
+  },
+  "2026-11-19": {
+   "prompts": [
+    "lotus_callout",
+    "damage_ability",
+    "any_ability",
+    "haven_callout",
+    "usa",
+    "played_emea",
+    "fpx"
+   ],
+   "pinned": false
+  },
+  "2026-11-20": {
+   "prompts": [
+    "initiator_ability",
+    "judge_skin",
+    "abyss_callout",
+    "brazil",
+    "thailand",
+    "champions_2024",
+    "toronto_2025"
+   ],
+   "pinned": false
+  },
+  "2026-11-21": {
+   "prompts": [
+    "ghost_skin",
+    "shorty_skin",
+    "a_callout",
+    "vct_igl",
+    "played_americas",
+    "japan",
+    "bbl"
+   ],
+   "pinned": false
+  },
+  "2026-11-22": {
+   "prompts": [
+    "contract_skin",
+    "operator_skin",
+    "controller_ability",
+    "korea_masters",
+    "played_china",
+    "champions_winner",
+    "champions_2022"
+   ],
+   "pinned": false
+  },
+  "2026-11-23": {
+   "prompts": [
+    "outlaw_skin",
+    "b_callout",
+    "phantom_skin",
+    "any_map",
+    "team_secret",
+    "played_pacific",
+    "igl_americas"
+   ],
+   "pinned": false
+  },
+  "2026-11-24": {
+   "prompts": [
+    "bind_callout",
+    "mid_callout",
+    "frenzy_skin",
+    "bucky_skin",
+    "global_esports",
+    "furia",
+    "vct_mvp"
+   ],
+   "pinned": false
+  },
+  "2026-11-25": {
+   "prompts": [
+    "ascent_callout",
+    "icebox_callout",
+    "ultimate",
+    "melee_skin",
+    "intl_team",
+    "lockin",
+    "russia"
+   ],
+   "pinned": false
+  },
+  "2026-11-26": {
+   "prompts": [
+    "summit_callout",
+    "sentinel_ability",
+    "exclusive_skin",
+    "guardian_skin",
+    "team_liquid",
+    "intl_winner",
+    "igl_emea"
+   ],
+   "pinned": false
+  },
+  "2026-11-27": {
+   "prompts": [
+    "any_weapon",
+    "val_creator",
+    "fracture_callout",
+    "igl_pacific",
+    "brazil_champions",
+    "champions_2021",
+    "china"
+   ],
+   "pinned": false
+  },
+  "2026-11-28": {
+   "prompts": [
+    "classic_skin",
+    "spectre_skin",
+    "duelist_ability",
+    "pearl_callout",
+    "madrid_2024",
+    "korea",
+    "canada"
+   ],
+   "pinned": false
+  },
+  "2026-11-29": {
+   "prompts": [
+    "odin_skin",
+    "vandal_skin",
+    "breeze_callout",
+    "corrode_callout",
+    "mibr",
+    "philippines",
+    "turkey"
+   ],
+   "pinned": false
+  },
+  "2026-11-30": {
+   "prompts": [
+    "bulldog_skin",
+    "stinger_skin",
+    "split_callout",
+    "igl_china",
+    "sentinels",
+    "taiwan",
+    "usa_intl"
+   ],
+   "pinned": false
+  },
+  "2026-12-01": {
+   "prompts": [
+    "sheriff_skin",
+    "ares_skin",
+    "any_agent",
+    "champions_2026",
+    "kru",
+    "masters_winner",
+    "fpx"
+   ],
+   "pinned": false
+  },
+  "2026-12-02": {
+   "prompts": [
+    "ultra_skin",
+    "premium_skin",
+    "sunset_callout",
+    "played_emea",
+    "usa",
+    "champions_2024",
+    "brazil"
+   ],
+   "pinned": false
+  },
+  "2026-12-03": {
+   "prompts": [
+    "marshal_skin",
+    "sheriff_vp",
+    "any_ability",
+    "damage_ability",
+    "thailand",
+    "toronto_2025",
+    "bbl"
+   ],
+   "pinned": false
+  }
+ }
+}

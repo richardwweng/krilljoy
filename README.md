@@ -82,6 +82,33 @@ Every push to `main` then updates the site, including new questions.
    the Liquipedia evidence. Change a tier to override it.
 5. **Publish to game** writes `client/public/data/dive.json`.
 
+## Which questions play on which day
+
+`pipeline/schedule.json` holds the 7 questions for each day. Every build or
+**Publish to game** plans the next 30 days automatically: 3–4 pro-scene
+questions a day, the least recently used first, no repeats for about two weeks.
+Past days and today never change.
+
+In the admin page, switch to **Schedule** to see the plan, and use **Pick
+questions** on any future day to choose its questions yourself (that day is
+then "hand-picked" and stays as you set it). The question list shows when each
+question was last used and when it's next planned.
+
+## Nightly rebuild (GitHub Actions)
+
+`.github/workflows/nightly.yml` runs `build.py` on GitHub every night: fresh
+Liquipedia and game data, ranks recalculated for the new date, the schedule
+extended, and the result pushed. Cloudflare then updates the live game.
+
+One-time setup: on GitHub open the repo's **Settings → Secrets and variables →
+Actions → New repository secret**, name it `LIQUIPEDIA_USER_AGENT`, and paste
+the same text as `USER_AGENT` in your `pipeline/local_settings.py`. To run it
+right away: **Actions → Nightly rebuild → Run workflow**.
+
+Because GitHub now commits too, run `git pull` before you start working
+(`Edit questions.bat` does it for you). If `git push` ever says "rejected",
+run `git pull`, then push again.
+
 ## Scoring
 
 | Tier | Points |
@@ -98,7 +125,7 @@ possible answer has a fame rating (`pipeline/familiarity.json`, estimated by
 Claude, with stat-based fallbacks). Newer things count as better known. Within a question,
 answers are sorted from most to least obvious, then split: Silver 22%,
 Platinum 30%, Diamond 28%, Immortal 20%, and the single rarest answer is
-Radiant. Every question needs at least 20 valid answers.
+Radiant. Every question needs at least 8 valid answers.
 
 **Tier 1** means appearing on a roster at a VCT international event (Masters,
 Champions, LOCK//IN) or a franchised VCT league event (2023 onward).
@@ -106,7 +133,7 @@ Champions, LOCK//IN) or a franchised VCT league event (2023 onward).
 ## Project structure
 
 ```
-vallion/              (repo folder; the game is called Krilljoy)
+krilljoy/
 ├── pipeline/
 │   ├── build.py          Fetch data and rebuild answer banks
 │   ├── admin.py/.html    Question editor

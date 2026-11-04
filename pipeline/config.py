@@ -7,10 +7,13 @@ REPO_DIR = PIPELINE_DIR.parent
 # contact you. It lives in local_settings.py, which git ignores, so your contact
 # info never ends up in the public repo. Copy local_settings.example.py to
 # local_settings.py and fill it in.
+# On GitHub (the nightly rebuild) it comes from the KRILLJOY_USER_AGENT secret instead.
+import os
+
 try:
     from local_settings import USER_AGENT
 except ImportError:
-    USER_AGENT = ""
+    USER_AGENT = os.environ.get("KRILLJOY_USER_AGENT", "")
 
 # Cached Liquipedia responses (ignored by git, safe to delete)
 CACHE_DIR = PIPELINE_DIR / "cache"

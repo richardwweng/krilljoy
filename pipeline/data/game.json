@@ -486,7 +486,8 @@
      "role": "Initiator",
      "slot": "Ultimate (X)",
      "effects": [
-      "damage"
+      "damage",
+      "info"
      ]
     },
     "score": 1
@@ -801,7 +802,7 @@
      "role": "Sentinel",
      "slot": "C",
      "effects": [
-      "other"
+      "info"
      ]
     },
     "score": 0
@@ -885,7 +886,7 @@
      "role": "Initiator",
      "slot": "E",
      "effects": [
-      "other"
+      "info"
      ]
     },
     "score": 0
@@ -918,7 +919,8 @@
      "role": "Initiator",
      "slot": "Q",
      "effects": [
-      "damage"
+      "damage",
+      "info"
      ]
     },
     "score": 0
@@ -1102,7 +1104,8 @@
      "role": "Initiator",
      "slot": "Ultimate (X)",
      "effects": [
-      "damage"
+      "damage",
+      "info"
      ]
     },
     "score": 3
@@ -1313,7 +1316,7 @@
      "role": "Sentinel",
      "slot": "Q",
      "effects": [
-      "other"
+      "wall"
      ]
     },
     "score": 0
@@ -1399,6 +1402,7 @@
      "slot": "E",
      "effects": [
       "damage",
+      "smoke",
       "wall"
      ]
     },
@@ -1434,7 +1438,8 @@
      "role": "Controller",
      "slot": "Ultimate (X)",
      "effects": [
-      "damage"
+      "damage",
+      "smoke"
      ]
     },
     "score": 3
@@ -1897,7 +1902,7 @@
      "role": "Duelist",
      "slot": "C",
      "effects": [
-      "other"
+      "wall"
      ]
     },
     "score": 0
@@ -2454,7 +2459,7 @@
      "role": "Duelist",
      "slot": "C",
      "effects": [
-      "other"
+      "smoke"
      ]
     },
     "score": 2

@@ -1,1175 +1,1375 @@
 [
- {
-  "id": "sentinels",
-  "text": "Name a tier 1 player who has played for Sentinels",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "sentinels"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "intl_winner",
-  "text": "Name a tier 1 player who has won an international event",
-  "conditions": [
-   {
-    "type": "won",
-    "value": "any"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "usa",
-  "text": "Name a tier 1 player who is from the United States",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "United States"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "stinger_skin",
-  "text": "Name a stinger skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Stinger"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "team_liquid",
-  "text": "Name a tier 1 player who has played for Team Liquid",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "teamliquid"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "brazil",
-  "text": "Name a tier 1 player from Brazil",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Brazil"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "korea",
-  "text": "Name a tier 1 player from South Korea",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "South Korea"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "japan",
-  "text": "Name a tier 1 player from Japan",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Japan"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "turkey",
-  "text": "Name a tier 1 player from Turkey",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Turkey"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "canada",
-  "text": "Name a tier 1 player from Canada",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Canada"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "china",
-  "text": "Name a tier 1 player from China",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "China"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "masters_winner",
-  "text": "Name a player who has won a VCT Masters",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "won",
-    "value": "kind:masters"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "champions_winner",
-  "text": "Name a player who has won VALORANT Champions",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "won",
-    "value": "kind:champions"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "champions_2021",
-  "text": "Name a player who played at Champions 2021",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VALORANT Champions Tour/2021/Champions"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "lockin",
-  "text": "Name a player who played at LOCK//IN 2023",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VCT/2023/LOCK_IN_São_Paulo"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "champions_2026",
-  "text": "Name a player who played at Champions 2026",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VCT/2026/Champions"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "vandal_skin",
-  "text": "Name a Vandal skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Vandal"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "phantom_skin",
-  "text": "Name a Phantom skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Phantom"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "operator_skin",
-  "text": "Name an Operator skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Operator"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "sheriff_skin",
-  "text": "Name a Sheriff skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Sheriff"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "melee_skin",
-  "text": "Name a melee (knife) skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Melee"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "ghost_skin",
-  "text": "Name a Ghost skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Ghost"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "spectre_skin",
-  "text": "Name a Spectre skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Spectre"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "ultra_skin",
-  "text": "Name an Ultra Edition skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:edition",
-    "value": "Ultra"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "ascent_callout",
-  "text": "Name a callout on Ascent",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Ascent"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "bind_callout",
-  "text": "Name a callout on Bind",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Bind"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "haven_callout",
-  "text": "Name a callout on Haven",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Haven"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "split_callout",
-  "text": "Name a callout on Split",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Split"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "icebox_callout",
-  "text": "Name a callout on Icebox",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Icebox"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "lotus_callout",
-  "text": "Name a callout on Lotus",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Lotus"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "breeze_callout",
-  "text": "Name a callout on Breeze",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Breeze"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "mid_callout",
-  "text": "Name a Mid callout on any map",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:area",
-    "value": "Mid"
-   },
-   {
-    "type": "is:map_type",
-    "value": "Standard"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "ultimate",
-  "text": "Name an agent's ultimate ability",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "is:slot",
-    "value": "Ultimate (X)"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "duelist_ability",
-  "text": "Name a Duelist ability (not an ultimate)",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "is:role",
-    "value": "Duelist"
-   },
-   {
-    "type": "not:slot",
-    "value": "Ultimate (X)"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "controller_ability",
-  "text": "Name a Controller ability",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "is:role",
-    "value": "Controller"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "initiator_ability",
-  "text": "Name an Initiator ability",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "is:role",
-    "value": "Initiator"
-   }
-  ],
-  "overrides": {
-   "Globule": "one_in_a_krillion",
-   "Terror Trails": "deep_cut"
+  {
+    "id": "sentinels",
+    "text": "Name a tier 1 player who has played for Sentinels",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "sentinels"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
   },
-  "enabled": true
- },
- {
-  "id": "furia",
-  "text": "Name a tier 1 player who has played for FURIA",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "furia"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "kru",
-  "text": "Name a tier 1 player who has played for KRÜ Esports",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "kruesports"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "fpx",
-  "text": "Name a tier 1 player who has played for FunPlus Phoenix",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "funplusphoenix"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "mibr",
-  "text": "Name a tier 1 player who has played for MIBR",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "mibr"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "bbl",
-  "text": "Name a tier 1 player who has played for BBL Esports",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "bblesports"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "global_esports",
-  "text": "Name a tier 1 player who has played for Global Esports",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "globalesports"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "team_secret",
-  "text": "Name a tier 1 player who has played for Team Secret",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_for",
-    "value": "teamsecret"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "russia",
-  "text": "Name a tier 1 player from Russia",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Russia"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "philippines",
-  "text": "Name a tier 1 player from the Philippines",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Philippines"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "thailand",
-  "text": "Name a tier 1 player from Thailand",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Thailand"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "taiwan",
-  "text": "Name a tier 1 player from Taiwan",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Taiwan"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "champions_2024",
-  "text": "Name a player who played at Champions 2024",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VCT/2024/Champions"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "madrid_2024",
-  "text": "Name a player who played at Masters Madrid 2024",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VCT/2024/Stage 1/Masters"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "toronto_2025",
-  "text": "Name a player who played at Masters Toronto 2025",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VCT/2025/Stage 2/Masters"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "champions_2022",
-  "text": "Name a player who played at Champions 2022",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "VCT/2022/Champions"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "brazil_champions",
-  "text": "Name a Brazilian player who played at a Champions event",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "Brazil"
-   },
-   {
-    "type": "played_at",
-    "value": "kind:champions"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "korea_masters",
-  "text": "Name a Korean player who played at a Masters event",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "South Korea"
-   },
-   {
-    "type": "played_at",
-    "value": "kind:masters"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "usa_intl",
-  "text": "Name an American player who played at an international event",
-  "pool": "players",
-  "conditions": [
-   {
-    "type": "country",
-    "value": "United States"
-   },
-   {
-    "type": "played_at",
-    "value": "any"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "any_agent",
-  "text": "Name any Valorant agent",
-  "pool": "agents",
-  "conditions": [
-   {
-    "type": "",
-    "value": ""
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "any_ability",
-  "text": "Name any agent ability",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "",
-    "value": ""
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "sentinel_ability",
-  "text": "Name a Sentinel ability",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "is:role",
-    "value": "Sentinel"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "any_weapon",
-  "text": "Name any weapon in Valorant",
-  "pool": "weapons",
-  "conditions": [
-   {
-    "type": "",
-    "value": ""
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "any_map",
-  "text": "Name any Valorant map (any mode)",
-  "pool": "maps",
-  "conditions": [
-   {
-    "type": "",
-    "value": ""
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "classic_skin",
-  "text": "Name a Classic skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Classic"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "guardian_skin",
-  "text": "Name a Guardian skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Guardian"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "marshal_skin",
-  "text": "Name a Marshal skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Marshal"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "bulldog_skin",
-  "text": "Name a Bulldog skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Bulldog"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "judge_skin",
-  "text": "Name a Judge skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Judge"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "odin_skin",
-  "text": "Name an Odin skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Odin"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "exclusive_skin",
-  "text": "Name an Exclusive Edition skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:edition",
-    "value": "Exclusive"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "premium_skin",
-  "text": "Name a Premium Edition skin",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:edition",
-    "value": "Premium"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "fracture_callout",
-  "text": "Name a callout on Fracture",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Fracture"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "pearl_callout",
-  "text": "Name a callout on Pearl",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Pearl"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "abyss_callout",
-  "text": "Name a callout on Abyss",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Abyss"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "corrode_callout",
-  "text": "Name a callout on Corrode",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:map",
-    "value": "Corrode"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "a_callout",
-  "text": "Name an A-site callout on any map",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:area",
-    "value": "A"
-   },
-   {
-    "type": "is:map_type",
-    "value": "Standard"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "b_callout",
-  "text": "Name a B-site callout on any map",
-  "pool": "callouts",
-  "conditions": [
-   {
-    "type": "is:area",
-    "value": "B"
-   },
-   {
-    "type": "is:map_type",
-    "value": "Standard"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "damage_ability",
-  "text": "Name an ability that does damage",
-  "pool": "abilities",
-  "conditions": [
-   {
-    "type": "is:effects",
-    "value": "damage"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "vct_igl",
-  "text": "Name a VCT IGL (2025 or later)",
-  "conditions": [
-   {
-    "type": "captain_at",
-    "value": "any"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "vct_mvp",
-  "text": "Name a VCT finals MVP (2022 or later)",
-  "conditions": [
-   {
-    "type": "mvp",
-    "value": "any"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "sheriff_vp",
-  "text": "Name a Sheriff skin you can buy with VP",
-  "pool": "skins",
-  "conditions": [
-   {
-    "type": "is:weapon",
-    "value": "Sheriff"
-   },
-   {
-    "type": "is:obtained",
-    "value": "Store (VP)"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "intl_team",
-  "text": "Name a team that has played at an international VCT event",
-  "pool": "teams",
-  "conditions": [
-   {
-    "type": "played_at",
-    "value": "any"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- },
- {
-  "id": "val_creator",
-  "text": "Name a Valorant content creator",
-  "pool": "list",
-  "conditions": [],
-  "answers": [
-   {
-    "text": "tarik"
-   },
-   {
-    "text": "TenZ",
-    "aliases": [
-     "tyson ngo"
-    ]
-   },
-   {
-    "text": "Kyedae",
-    "aliases": [
-     "kyedae shymko"
-    ]
-   },
-   {
-    "text": "Shroud"
-   },
-   {
-    "text": "Sinatraa",
-    "aliases": [
-     "sinatra"
-    ]
-   },
-   {
-    "text": "Hiko"
-   },
-   {
-    "text": "ShahZaM",
-    "aliases": [
-     "shahzam"
-    ]
-   },
-   {
-    "text": "Subroza"
-   },
-   {
-    "text": "iiTzTimmy",
-    "aliases": [
-     "timmy",
-     "itztimmy"
-    ]
-   },
-   {
-    "text": "Myth",
-    "aliases": [
-     "tfue myth"
-    ]
-   },
-   {
-    "text": "Pokimane",
-    "aliases": [
-     "poki"
-    ]
-   },
-   {
-    "text": "Wardell"
-   },
-   {
-    "text": "ScreaM",
-    "aliases": [
-     "scream"
-    ]
-   },
-   {
-    "text": "FNS",
-    "aliases": [
-     "fns"
-    ]
-   },
-   {
-    "text": "yay",
-    "aliases": [
-     "el diablo"
-    ]
-   },
-   {
-    "text": "Asuna"
-   },
-   {
-    "text": "Grim"
-   },
-   {
-    "text": "Woohoojin",
-    "aliases": [
-     "hoojin"
-    ]
-   },
-   {
-    "text": "Average Jonas",
-    "aliases": [
-     "averagejonas"
-    ]
-   },
-   {
-    "text": "Mixwell"
-   },
-   {
-    "text": "Ploo"
-   },
-   {
-    "text": "Thinking Man's Valorant",
-    "aliases": [
-     "tmv",
-     "thinking mans valorant"
-    ]
-   },
-   {
-    "text": "Sean Gares",
-    "aliases": [
-     "sgares"
-    ]
-   },
-   {
-    "text": "Flexinja"
-   },
-   {
-    "text": "Dittozkul"
-   }
-  ],
-  "overrides": {},
-  "enabled": true
- }
+  {
+    "id": "intl_winner",
+    "text": "Name a tier 1 player who has won an international event",
+    "conditions": [
+      {
+        "type": "won",
+        "value": "any"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "usa",
+    "text": "Name a tier 1 player who is from the United States",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "United States"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "stinger_skin",
+    "text": "Name a stinger skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Stinger"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "team_liquid",
+    "text": "Name a tier 1 player who has played for Team Liquid",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "teamliquid"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "brazil",
+    "text": "Name a tier 1 player from Brazil",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Brazil"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "korea",
+    "text": "Name a tier 1 player from South Korea",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "South Korea"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "japan",
+    "text": "Name a tier 1 player from Japan",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Japan"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "turkey",
+    "text": "Name a tier 1 player from Turkey",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Turkey"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "canada",
+    "text": "Name a tier 1 player from Canada",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Canada"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "china",
+    "text": "Name a tier 1 player from China",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "China"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "masters_winner",
+    "text": "Name a player who has won a VCT Masters",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "won",
+        "value": "kind:masters"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "champions_winner",
+    "text": "Name a player who has won VALORANT Champions",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "won",
+        "value": "kind:champions"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "champions_2021",
+    "text": "Name a player who played at Champions 2021",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VALORANT Champions Tour/2021/Champions"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "lockin",
+    "text": "Name a player who played at LOCK//IN 2023",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VCT/2023/LOCK_IN_São_Paulo"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "champions_2026",
+    "text": "Name a player who played at Champions 2026",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VCT/2026/Champions"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "vandal_skin",
+    "text": "Name a Vandal skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Vandal"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "phantom_skin",
+    "text": "Name a Phantom skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Phantom"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "operator_skin",
+    "text": "Name an Operator skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Operator"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "sheriff_skin",
+    "text": "Name a Sheriff skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Sheriff"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "melee_skin",
+    "text": "Name a melee (knife) skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Melee"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "ghost_skin",
+    "text": "Name a Ghost skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Ghost"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "spectre_skin",
+    "text": "Name a Spectre skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Spectre"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "ultra_skin",
+    "text": "Name an Ultra Edition skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:edition",
+        "value": "Ultra"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "ascent_callout",
+    "text": "Name a callout on Ascent",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Ascent"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "bind_callout",
+    "text": "Name a callout on Bind",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Bind"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "haven_callout",
+    "text": "Name a callout on Haven",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Haven"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "split_callout",
+    "text": "Name a callout on Split",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Split"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "icebox_callout",
+    "text": "Name a callout on Icebox",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Icebox"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "lotus_callout",
+    "text": "Name a callout on Lotus",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Lotus"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "breeze_callout",
+    "text": "Name a callout on Breeze",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Breeze"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "mid_callout",
+    "text": "Name a Mid callout on any map",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:area",
+        "value": "Mid"
+      },
+      {
+        "type": "is:map_type",
+        "value": "Standard"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "ultimate",
+    "text": "Name an agent's ultimate ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:slot",
+        "value": "Ultimate (X)"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "duelist_ability",
+    "text": "Name a Duelist ability (not an ultimate)",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:role",
+        "value": "Duelist"
+      },
+      {
+        "type": "not:slot",
+        "value": "Ultimate (X)"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "controller_ability",
+    "text": "Name a Controller ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:role",
+        "value": "Controller"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "initiator_ability",
+    "text": "Name an Initiator ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:role",
+        "value": "Initiator"
+      }
+    ],
+    "overrides": {
+      "Globule": "one_in_a_krillion",
+      "Terror Trails": "deep_cut"
+    },
+    "enabled": true
+  },
+  {
+    "id": "furia",
+    "text": "Name a tier 1 player who has played for FURIA",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "furia"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "kru",
+    "text": "Name a tier 1 player who has played for KRÜ Esports",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "kruesports"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "fpx",
+    "text": "Name a tier 1 player who has played for FunPlus Phoenix",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "funplusphoenix"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "mibr",
+    "text": "Name a tier 1 player who has played for MIBR",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "mibr"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "bbl",
+    "text": "Name a tier 1 player who has played for BBL Esports",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "bblesports"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "global_esports",
+    "text": "Name a tier 1 player who has played for Global Esports",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "globalesports"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "team_secret",
+    "text": "Name a tier 1 player who has played for Team Secret",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_for",
+        "value": "teamsecret"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "russia",
+    "text": "Name a tier 1 player from Russia",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Russia"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "philippines",
+    "text": "Name a tier 1 player from the Philippines",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Philippines"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "thailand",
+    "text": "Name a tier 1 player from Thailand",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Thailand"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "taiwan",
+    "text": "Name a tier 1 player from Taiwan",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Taiwan"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "champions_2024",
+    "text": "Name a player who played at Champions 2024",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VCT/2024/Champions"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "madrid_2024",
+    "text": "Name a player who played at Masters Madrid 2024",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VCT/2024/Stage 1/Masters"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "toronto_2025",
+    "text": "Name a player who played at Masters Toronto 2025",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VCT/2025/Stage 2/Masters"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "champions_2022",
+    "text": "Name a player who played at Champions 2022",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "VCT/2022/Champions"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "brazil_champions",
+    "text": "Name a Brazilian player who played at a Champions event",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "Brazil"
+      },
+      {
+        "type": "played_at",
+        "value": "kind:champions"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "korea_masters",
+    "text": "Name a Korean player who played at a Masters event",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "South Korea"
+      },
+      {
+        "type": "played_at",
+        "value": "kind:masters"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "usa_intl",
+    "text": "Name an American player who played at an international event",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "country",
+        "value": "United States"
+      },
+      {
+        "type": "played_at",
+        "value": "any"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "any_agent",
+    "text": "Name any Valorant agent",
+    "pool": "agents",
+    "conditions": [
+      {
+        "type": "",
+        "value": ""
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "any_ability",
+    "text": "Name any agent ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "",
+        "value": ""
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "sentinel_ability",
+    "text": "Name a Sentinel ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:role",
+        "value": "Sentinel"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "any_weapon",
+    "text": "Name any weapon in Valorant",
+    "pool": "weapons",
+    "conditions": [
+      {
+        "type": "",
+        "value": ""
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "any_map",
+    "text": "Name any Valorant map (any mode)",
+    "pool": "maps",
+    "conditions": [
+      {
+        "type": "",
+        "value": ""
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "classic_skin",
+    "text": "Name a Classic skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Classic"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "guardian_skin",
+    "text": "Name a Guardian skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Guardian"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "marshal_skin",
+    "text": "Name a Marshal skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Marshal"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "bulldog_skin",
+    "text": "Name a Bulldog skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Bulldog"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "judge_skin",
+    "text": "Name a Judge skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Judge"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "odin_skin",
+    "text": "Name an Odin skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Odin"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "exclusive_skin",
+    "text": "Name an Exclusive Edition skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:edition",
+        "value": "Exclusive"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "premium_skin",
+    "text": "Name a Premium Edition skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:edition",
+        "value": "Premium"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "fracture_callout",
+    "text": "Name a callout on Fracture",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Fracture"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "pearl_callout",
+    "text": "Name a callout on Pearl",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Pearl"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "abyss_callout",
+    "text": "Name a callout on Abyss",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Abyss"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "corrode_callout",
+    "text": "Name a callout on Corrode",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Corrode"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "a_callout",
+    "text": "Name an A-site callout on any map",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:area",
+        "value": "A"
+      },
+      {
+        "type": "is:map_type",
+        "value": "Standard"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "b_callout",
+    "text": "Name a B-site callout on any map",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:area",
+        "value": "B"
+      },
+      {
+        "type": "is:map_type",
+        "value": "Standard"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "damage_ability",
+    "text": "Name an ability that does damage",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "damage"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "vct_igl",
+    "text": "Name a VCT IGL",
+    "conditions": [
+      {
+        "type": "captain_at",
+        "value": "any"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "vct_mvp",
+    "text": "Name a VCT finals MVP (2022 or later)",
+    "conditions": [
+      {
+        "type": "mvp",
+        "value": "any"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "sheriff_vp",
+    "text": "Name a Sheriff skin you can buy with VP",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Sheriff"
+      },
+      {
+        "type": "is:obtained",
+        "value": "Store (VP)"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "intl_team",
+    "text": "Name a team that has played at an international VCT event",
+    "pool": "teams",
+    "conditions": [
+      {
+        "type": "played_at",
+        "value": "any"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "val_creator",
+    "text": "Name a Valorant content creator",
+    "pool": "list",
+    "conditions": [],
+    "answers": [
+      {
+        "text": "tarik"
+      },
+      {
+        "text": "TenZ",
+        "aliases": [
+          "tyson ngo"
+        ]
+      },
+      {
+        "text": "Kyedae",
+        "aliases": [
+          "kyedae shymko"
+        ]
+      },
+      {
+        "text": "Shroud"
+      },
+      {
+        "text": "Sinatraa",
+        "aliases": [
+          "sinatra"
+        ]
+      },
+      {
+        "text": "Hiko"
+      },
+      {
+        "text": "ShahZaM",
+        "aliases": [
+          "shahzam"
+        ]
+      },
+      {
+        "text": "Subroza"
+      },
+      {
+        "text": "iiTzTimmy",
+        "aliases": [
+          "timmy",
+          "itztimmy"
+        ]
+      },
+      {
+        "text": "Myth",
+        "aliases": [
+          "tfue myth"
+        ]
+      },
+      {
+        "text": "Pokimane",
+        "aliases": [
+          "poki"
+        ]
+      },
+      {
+        "text": "Wardell"
+      },
+      {
+        "text": "ScreaM",
+        "aliases": [
+          "scream"
+        ]
+      },
+      {
+        "text": "FNS",
+        "aliases": [
+          "fns"
+        ]
+      },
+      {
+        "text": "yay",
+        "aliases": [
+          "el diablo"
+        ]
+      },
+      {
+        "text": "Asuna"
+      },
+      {
+        "text": "Grim"
+      },
+      {
+        "text": "Woohoojin",
+        "aliases": [
+          "hoojin"
+        ]
+      },
+      {
+        "text": "Average Jonas",
+        "aliases": [
+          "averagejonas"
+        ]
+      },
+      {
+        "text": "Mixwell"
+      },
+      {
+        "text": "Ploo"
+      },
+      {
+        "text": "Thinking Man's Valorant",
+        "aliases": [
+          "tmv",
+          "thinking mans valorant"
+        ]
+      },
+      {
+        "text": "Sean Gares",
+        "aliases": [
+          "sgares"
+        ]
+      },
+      {
+        "text": "Flexinja"
+      },
+      {
+        "text": "Dittozkul"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "igl_pacific",
+    "text": "Name an IGL from VCT Pacific",
+    "conditions": [
+      {
+        "type": "igl_region",
+        "value": "Pacific"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "igl_americas",
+    "text": "Name an IGL from VCT Americas",
+    "conditions": [
+      {
+        "type": "igl_region",
+        "value": "Americas"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "igl_emea",
+    "text": "Name an IGL from VCT EMEA",
+    "conditions": [
+      {
+        "type": "igl_region",
+        "value": "EMEA"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "igl_china",
+    "text": "Name an IGL from VCT China",
+    "conditions": [
+      {
+        "type": "igl_region",
+        "value": "China"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "played_pacific",
+    "text": "Name a player who has played in VCT Pacific",
+    "conditions": [
+      {
+        "type": "played_region",
+        "value": "Pacific"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "played_americas",
+    "text": "Name a player who has played in VCT Americas",
+    "conditions": [
+      {
+        "type": "played_region",
+        "value": "Americas"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "played_emea",
+    "text": "Name a player who has played in VCT EMEA",
+    "conditions": [
+      {
+        "type": "played_region",
+        "value": "EMEA"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "played_china",
+    "text": "Name a player who has played in VCT China",
+    "conditions": [
+      {
+        "type": "played_region",
+        "value": "China"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "contract_skin",
+    "text": "Name a skin from an agent contract",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:obtained",
+        "value": "Agent contract"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "frenzy_skin",
+    "text": "Name a Frenzy skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Frenzy"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "shorty_skin",
+    "text": "Name a Shorty skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Shorty"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "bucky_skin",
+    "text": "Name a Bucky skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Bucky"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "ares_skin",
+    "text": "Name an Ares skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Ares"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "outlaw_skin",
+    "text": "Name an Outlaw skin",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Outlaw"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "sunset_callout",
+    "text": "Name a callout on Sunset",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Sunset"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "summit_callout",
+    "text": "Name a callout on Summit",
+    "pool": "callouts",
+    "conditions": [
+      {
+        "type": "is:map",
+        "value": "Summit"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  }
 ]

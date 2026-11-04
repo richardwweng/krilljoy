@@ -25,6 +25,7 @@ export interface DiveData {
   attribution: string;
   tier1_definition?: string;
   prompts: Prompt[];
+  schedule?: Record<string, string[]>; // date -> the day's prompt ids (planned by the pipeline)
 }
 
 // One answered round, saved in the browser

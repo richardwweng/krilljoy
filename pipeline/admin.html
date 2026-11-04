@@ -14,6 +14,7 @@
     --t-deep_cut: #d9455f; --t-one_in_a_krillion: #f2e6a7;
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body { margin: 0; background: var(--bg); color: var(--text);
          font: 14px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif; }
   button, input, select { font: inherit; color: inherit; }
@@ -74,12 +75,37 @@
   .search { width: 220px; }
   .count { font-size: 13px; }
   .toggle { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13px; padding-bottom: 8px; }
+  .tabs { display: flex; gap: 4px; background: var(--panel2); border-radius: 8px; padding: 3px; }
+  .tabs button { border: 0; background: none; padding: 5px 12px; border-radius: 6px; cursor: pointer; color: var(--muted); }
+  .tabs button[aria-pressed="true"] { background: var(--bg); color: var(--text); }
+  #schedule { padding: 20px 28px; max-width: 1200px; }
+  .day { display: grid; grid-template-columns: 120px 1fr auto; gap: 14px; align-items: start; padding: 12px 14px;
+         border: 1px solid var(--line); border-radius: 8px; background: var(--panel); margin-bottom: 8px; }
+  .day.past { opacity: .55; }
+  .day.today { border-color: var(--accent); }
+  .day .when b { display: block; font-size: 14px; }
+  .badge { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 10px; background: var(--panel2); color: var(--muted); margin-top: 4px; }
+  .badge.pin { background: #3a2e12; color: var(--t-too_clever); }
+  .badge.live { background: #4a1820; color: #ffb3ba; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 12px; padding: 3px 8px; border-radius: 5px; background: var(--panel2); border-left: 3px solid var(--t-schooler); }
+  .chip.pro { border-left-color: var(--accent); }
+  .chip.gone { text-decoration: line-through; color: var(--muted); }
+  .day-edit { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .day-edit select { width: 100%; font-size: 13px; padding: 6px 8px; }
+  @media (max-width: 1100px) { .day-edit { grid-template-columns: 1fr; } }
+  .legend-row { display: flex; gap: 16px; align-items: center; margin: 4px 0 16px; color: var(--muted); font-size: 12px; flex-wrap: wrap; }
+  @media (max-width: 820px) { .day { grid-template-columns: 1fr; } }
   @media (max-width: 820px) { .layout { grid-template-columns: 1fr; } aside { border-right: none; border-bottom: 1px solid var(--line); } }
 </style>
 </head>
 <body>
 <header>
-  <h1>Val<span>lion</span> · Questions</h1>
+  <h1>Krill<span>joy</span> · Admin</h1>
+  <div class="tabs" role="group" aria-label="View">
+    <button id="tab-q" aria-pressed="true">Questions</button>
+    <button id="tab-s" aria-pressed="false">Schedule</button>
+  </div>
   <div class="meta" id="meta"></div>
   <div class="spacer"></div>
   <div class="status" id="status"></div>
@@ -92,13 +118,14 @@
   </aside>
   <main id="editor"><div class="empty">Loading…</div></main>
 </div>
+<section id="schedule" hidden></section>
 
 <script>
 // What players see for each tier. Change the names here (and in the game) to rename a rank.
-const MIN_ANSWERS = 20;  // every question needs at least this many valid answers
+const MIN_ANSWERS = 12;  // every question needs at least this many valid answers
 const TIER_LABEL = { plankton: "Silver", too_clever: "Gold", schooler: "Platinum", rare: "Diamond",
                      deep_cut: "Immortal", one_in_a_krillion: "Radiant" };
-let S = { prompts: [], options: null, current: 0, answers: {}, filter: "" };
+let S = { prompts: [], options: null, current: 0, answers: {}, filter: "", usage: {}, sched: null, editing: null };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
@@ -167,7 +194,9 @@ function renderList() {
   $("list").innerHTML = S.prompts.map((p, i) => {
     const a = S.answers[p.id];
     const few = a && a.length < MIN_ANSWERS;
-    const m = (a ? (few ? `<span class="few">${a.length} answers (needs ${MIN_ANSWERS}+)</span>` : `${a.length} answers`) : "…") + ` · ${esc(poolOf(p).label)}`;
+    const u = S.usage[p.id];
+    const used = u ? ` · last ${u.last ? shortDate(u.last) : "never"}${u.next ? `, next ${shortDate(u.next)}` : ""}` : (p.enabled === false ? "" : " · not scheduled yet");
+    const m = (a ? (few ? `<span class="few">${a.length} answers (needs ${MIN_ANSWERS}+)</span>` : `${a.length} answers`) : "…") + ` · ${esc(poolOf(p).label)}${used}`;
     return `<div class="q ${i === S.current ? "active" : ""} ${p.enabled === false ? "off" : ""}" data-i="${i}">
       <div class="t">${esc(p.text || "(untitled)")}</div><div class="m">${esc(p.id)} · ${m}</div></div>`;
   }).join("") || `<div class="hint">No questions yet.</div>`;
@@ -341,6 +370,70 @@ function renderPreview() {
   });
 }
 
+// ---------- schedule ----------
+// Which 7 questions each day gets. Planned automatically (pipeline/schedule.py) 30 days ahead;
+// pick a future day by hand to pin it. Today and past days can't change.
+const shortDate = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const longDate = (d) => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", timeZone: "UTC" });
+const isPro = (p) => ["players", "teams"].includes(p?.pool || "players");
+function showView(which) {
+  $("tab-q").setAttribute("aria-pressed", which === "q");
+  $("tab-s").setAttribute("aria-pressed", which === "s");
+  document.querySelector(".layout").hidden = which !== "q";
+  $("schedule").hidden = which !== "s";
+  if (which === "s") loadSchedule();
+}
+async function loadSchedule() {
+  try { setSchedule(await api("/api/schedule")); }
+  catch (e) { $("schedule").innerHTML = `<div class="empty">Couldn't load the schedule: ${esc(e.message)}</div>`; }
+}
+function setSchedule(s) { S.sched = s; S.usage = s.usage; renderSchedule(); renderList(); }
+function renderSchedule() {
+  const s = S.sched; if (!s) return;
+  const byId = Object.fromEntries(S.prompts.map(p => [p.id, p]));
+  const enabled = S.prompts.filter(p => p.enabled !== false).sort((a, b) => a.text.localeCompare(b.text));
+  const optionLabel = (p) => { const u = s.usage[p.id]; return `${p.text}  (last ${u?.last ? shortDate(u.last) : "never"})`; };
+  $("schedule").innerHTML = `
+    <div class="legend-row">
+      <span><span class="dot" style="background:var(--accent)"></span>Pro scene</span>
+      <span><span class="dot" style="background:var(--t-schooler)"></span>Game content</span>
+      <span>Days are planned automatically, 3–4 pro questions each, no repeats for about two weeks. Pick a day by hand to pin it.
+      Changes are saved to the game's file straight away; push to put them online.</span>
+    </div>
+    ${s.days.map(d => {
+      const editing = S.editing === d.date;
+      const badge = d.today ? `<span class="badge live">Today · live</span>` : d.past ? `<span class="badge">Played</span>`
+                  : d.pinned ? `<span class="badge pin">Hand-picked</span>` : `<span class="badge">Automatic</span>`;
+      const chips = d.prompts.map(id => byId[id]
+        ? `<span class="chip ${isPro(byId[id]) ? "pro" : ""}">${esc(byId[id].text)}</span>`
+        : `<span class="chip gone" title="This question was deleted">${esc(id)}</span>`).join("");
+      const editor = editing ? `<div class="day-edit">${Array.from({ length: 7 }, (_, k) => `
+          <select class="slot" aria-label="Question ${k + 1}"><option value="">(fill automatically)</option>${enabled.map(p =>
+            `<option value="${esc(p.id)}" ${d.prompts[k] === p.id ? "selected" : ""}>${esc(optionLabel(p))}</option>`).join("")}</select>`).join("")}
+        </div>` : `<div class="chips">${chips}</div>`;
+      const actions = d.past || d.today ? "" : editing
+        ? `<div class="row" style="margin:0"><button class="btn small primary" data-save="${d.date}">Save day</button><button class="btn small" data-cancel>Cancel</button></div>`
+        : `<div class="row" style="margin:0"><button class="btn small" data-edit="${d.date}">Pick questions</button>${
+            d.pinned ? `<button class="btn small" data-auto="${d.date}" title="Let the planner choose this day again">Back to automatic</button>` : ""}</div>`;
+      return `<div class="day ${d.past ? "past" : ""} ${d.today ? "today" : ""}">
+        <div class="when"><b>${longDate(d.date)}</b>${badge}</div>${editor}${actions}</div>`;
+    }).join("")}`;
+  const sec = $("schedule");
+  sec.querySelectorAll("[data-edit]").forEach(b => b.onclick = () => { S.editing = b.dataset.edit; renderSchedule(); });
+  sec.querySelectorAll("[data-cancel]").forEach(b => b.onclick = () => { S.editing = null; renderSchedule(); });
+  sec.querySelectorAll("[data-save]").forEach(b => b.onclick = async () => {
+    const ids = [...sec.querySelectorAll(".slot")].map(x => x.value).filter(Boolean);
+    try { S.editing = null; setSchedule(await api("/api/schedule/day", { date: b.dataset.save, prompts: ids })); status("Day saved", "ok"); }
+    catch (e) { status("Not saved", "err"); alert(e.message); }
+  });
+  sec.querySelectorAll("[data-auto]").forEach(b => b.onclick = async () => {
+    try { setSchedule(await api("/api/schedule/day", { date: b.dataset.auto, prompts: null })); status("Back to automatic", "ok"); }
+    catch (e) { status("Not saved", "err"); alert(e.message); }
+  });
+}
+$("tab-q").onclick = () => showView("q");
+$("tab-s").onclick = () => showView("s");
+
 // ---------- top buttons ----------
 $("new").onclick = () => {
   S.prompts.push({ id: uniqueId("new_question", -1), text: "", pool: "players", conditions: [{ type: "played_for", value: "" }], overrides: {}, enabled: true });
@@ -354,6 +447,7 @@ $("publish").onclick = async () => {
     S.version = r.version;
     const empty = r.prompts.filter(x => !x.answers).map(x => x.id);
     status(`Published ${r.prompts.length} questions`, "ok");
+    loadSchedule();  // publishing re-plans the coming days
     if (empty.length) alert(`Published, but these have no answers yet: ${empty.join(", ")}`);
   } catch (e) { status("Publish failed", "err"); alert(e.message); }
 };
@@ -362,7 +456,7 @@ $("publish").onclick = async () => {
 (async () => {
   try {
     const st = await api("/api/state");
-    S.prompts = st.prompts; S.options = st.options; S.version = st.version;
+    S.prompts = st.prompts; S.options = st.options; S.version = st.version; S.usage = st.usage || {};
     $("meta").textContent = `${st.dataset.players} players · ${st.dataset.events} events · data from ${st.dataset.generated}` +
       (st.dataset.game_version ? ` · game ${st.dataset.game_version.split(".").slice(0, 2).join(".")}` : " · no game data yet");
     renderList(); renderEditor();

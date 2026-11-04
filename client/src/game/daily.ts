@@ -46,8 +46,23 @@ function mulberry32(seed: number) {
 
 export const isProScene = (p: Prompt) => p.pool === "players" || p.pool === "teams";
 
-/** The day's prompts: a mix of 3–4 pro-scene and 3–4 game-content prompts, in a shuffled order. */
-export function pickDaily(prompts: Prompt[], date: string): Prompt[] {
+/** The day's prompts. Normally the schedule planned by the pipeline (pipeline/schedule.py);
+ *  if a day has no schedule (nobody published for weeks), a random but repeatable pick. */
+export function pickDaily(prompts: Prompt[], date: string, schedule?: Record<string, string[]>): Prompt[] {
+  const planned = schedule?.[date];
+  if (planned?.length) {
+    const byId = new Map(prompts.map((p) => [p.id, p]));
+    const chosen = planned.map((id) => byId.get(id)).filter((p): p is Prompt => !!p);
+    if (chosen.length >= Math.min(PROMPTS_PER_DIVE, prompts.length)) return chosen.slice(0, PROMPTS_PER_DIVE);
+    // A planned question went missing: top up with the random pick
+    const extra = randomPick(prompts.filter((p) => !chosen.includes(p)), date);
+    return [...chosen, ...extra].slice(0, PROMPTS_PER_DIVE);
+  }
+  return randomPick(prompts, date);
+}
+
+/** A mix of 3–4 pro-scene and 3–4 game-content prompts, in a shuffled order, seeded by date. */
+function randomPick(prompts: Prompt[], date: string): Prompt[] {
   const rand = mulberry32(seedFrom("krilljoy:" + date));
   const shuffled = [...prompts].sort((a, b) => a.id.localeCompare(b.id));
   for (let i = shuffled.length - 1; i > 0; i--) {

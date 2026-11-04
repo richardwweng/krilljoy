@@ -15,6 +15,7 @@ from pathlib import Path
 
 import config
 import prompts as P
+import schedule as S
 from data import DATASET_FILE, load_dataset
 from game import GAME_FILE, load_game
 
@@ -42,6 +43,27 @@ class Data:
 DATA = Data()
 
 
+def schedule_state():
+    """Days from two weeks ago to the end of the plan, plus when each question was/will be used."""
+    data = S.plan(P.load_prompts(), S.load_schedule())
+    S.save_schedule(data)
+    today = S.eastern_today()
+    start = (today - S.timedelta(days=14)).isoformat()
+    days = [{"date": k, "prompts": v["prompts"], "pinned": v.get("pinned", False),
+             "past": k < today.isoformat(), "today": k == today.isoformat()}
+            for k, v in sorted(data["days"].items()) if k >= start]
+    return {"today": today.isoformat(), "days": days, "usage": S.usage(data, today)}
+
+
+def send_schedule_to_game(data):
+    """Update the schedule inside dive.json without rebuilding every answer."""
+    path = Path(config.OUTPUT_FILE)
+    if path.exists():
+        dive = json.loads(path.read_text(encoding="utf-8"))
+        dive["schedule"] = S.for_game(data)
+        path.write_text(json.dumps(dive, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
 def prompts_version():
     """Fingerprint of prompts.json, so a stale tab can't save over newer questions."""
     f = P.PROMPTS_FILE
@@ -67,9 +89,12 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path in ("/", "/index.html"):
             self._send(200, (ROOT / "admin.html").read_bytes(), "text/html; charset=utf-8")
+        elif self.path == "/api/schedule":
+            self._json(schedule_state())
         elif self.path == "/api/state":
             ds = DATA.get()
             self._json({
+                "usage": schedule_state()["usage"],
                 "prompts": P.load_prompts(),
                 "version": prompts_version(),
                 "options": DATA.opts,
@@ -96,6 +121,12 @@ class Handler(BaseHTTPRequestHandler):
                 # questions): refuse instead of overwriting, and ask the page to reload
                 self._json({"error": "stale", "message": "The question list changed since this "
                             "page loaded. Reload the page to get the latest."}, 409)
+            elif self.path == "/api/schedule/day":
+                # Hand-pick a future day (prompts = list of ids) or unpin it (prompts = null)
+                data = S.set_day(P.load_prompts(), S.load_schedule(), body["date"], body.get("prompts"))
+                S.save_schedule(data)
+                send_schedule_to_game(data)
+                self._json(schedule_state())
             elif self.path == "/api/save":
                 P.save_prompts(body["prompts"])
                 self._json({"ok": True, "version": prompts_version()})

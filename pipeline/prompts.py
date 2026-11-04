@@ -132,11 +132,57 @@ def check_not_played_for(p, value, ctx):
     return value not in p["teams"], 0, {}
 
 
+REGIONS = ["Americas", "EMEA", "Pacific", "China"]
+KNOWN_IGLS = {r: set(pages) for r, pages in FAM.get("known_igls", {}).items()}  # pre-2026 IGLs, by hand
+KNOWN_IGL_PAGES = set().union(*KNOWN_IGLS.values()) if KNOWN_IGLS else set()
+
+
+def event_region(page):
+    """'VCT/2026/Pacific_League/Stage_1' -> 'Pacific'; internationals -> None"""
+    m = re.search(r"/(Americas|EMEA|Pacific|China)_League", page)
+    return m[1] if m else None
+
+
+def team_regions(ds):
+    """Which league(s) each team plays in, from the league events its players were at."""
+    out = defaultdict(set)
+    for p in ds["players"]:
+        for team, evs in p["teams"].items():
+            out[team].update(r for r in map(event_region, evs) if r)
+    return out
+
+
+def igl_regions(p, ctx):
+    """Regions a player was IGL in: Captain at a league event, Captain at an international
+    for a team from that league, or on the hand list of earlier IGLs."""
+    regs = set()
+    for e in p.get("captain", []):
+        r = event_region(e)
+        if r:
+            regs.add(r)
+        else:
+            for team, evs in p["teams"].items():
+                if e in evs:
+                    regs |= ctx["team_region"].get(team, set())
+    regs |= {r for r, pages in KNOWN_IGLS.items() if p["page"] in pages}
+    return regs
+
+
 def check_captain_at(p, value, ctx):
-    """Liquipedia marks the in-game leader as Captain on 2025+ rosters."""
-    # 'any' = any VCT event, leagues included (one event alone has <20 IGLs)
+    """Liquipedia marks the in-game leader as Captain on 2026 rosters (not earlier)."""
+    # 'any' = any VCT event, leagues included, plus the hand list of earlier IGLs
     hit = _event_set(value, ctx, p.get("captain", []))
-    return bool(hit), 0, {"IGL at": _names(hit, ctx)}
+    known = value == "any" and p["page"] in KNOWN_IGL_PAGES
+    return bool(hit) or known, 0, {"IGL at": _names(hit, ctx) or ["(earlier years)"]}
+
+
+def check_igl_region(p, value, ctx):
+    return value in igl_regions(p, ctx), 0, {"IGL in": f"VCT {value}"}
+
+
+def check_played_region(p, value, ctx):
+    evs = [e for e in p["events"] if event_region(e) == value]
+    return bool(evs), 0.3 * min(len(evs), 6) / 6, {f"VCT {value} events": _names(evs, ctx)}
 
 
 def check_mvp(p, value, ctx):
@@ -173,6 +219,8 @@ CONDITIONS = {
     "played_at":      {"label": "Played at event",          "values": "all_events",  "check": check_played_at},
     "captain_at":     {"label": "Was IGL at event (2025+)", "values": "captain_events", "check": check_captain_at},
     "mvp":            {"label": "Was finals MVP (2022+)",   "values": "mvp_events",  "check": check_mvp},
+    "igl_region":     {"label": "Was IGL in league",        "values": "regions",     "check": check_igl_region},
+    "played_region":  {"label": "Played in league",         "values": "regions",     "check": check_played_region},
 }
 
 
@@ -197,6 +245,7 @@ def _player_values(ds):
         "captain_events": [{"value": "any", "label": "any VCT event"}] + kinds +
                           [{"value": e["page"], "label": e["name"]}
                            for e in by_year([e for e in events if e["year"] >= 2025])],
+        "regions": [{"value": r, "label": f"VCT {r}"} for r in REGIONS],
         "mvp_events": [{"value": "any", "label": "any VCT event"}] + kinds +
                       [{"value": e["page"], "label": e["name"]}
                        for e in by_year([e for e in events if e.get("mvp")])],
@@ -412,7 +461,7 @@ def assign_tiers(scored):
 
 def context(ds, today=None):
     return {"events": {e["page"]: e for e in ds["events"]}, "teams": ds["teams"],
-            "today": today or date.today()}
+            "team_region": team_regions(ds), "today": today or date.today()}
 
 
 def _player_matches(prompt, ds, today, ctx):
@@ -586,7 +635,8 @@ def save_prompts(prompts):
 
 
 def publish(prompts, ds, today=None, game=None):
-    """Write every enabled prompt's answer bank to dive.json."""
+    """Write every enabled prompt's answer bank to dive.json, plus the day-by-day schedule."""
+    import schedule as S
     today = today or date.today()
     ctx = context(ds, today)
     built = []
@@ -608,6 +658,10 @@ def publish(prompts, ds, today=None, game=None):
                             f"franchised VCT league event ({config.FIRST_LEAGUE_YEAR}+).",
         "prompts": built,
     }
+    # Plan the next weeks of daily sets and send them with the answers
+    plan = S.plan(prompts, S.load_schedule())
+    S.save_schedule(plan)
+    out["schedule"] = S.for_game(plan)
     path = Path(config.OUTPUT_FILE)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
