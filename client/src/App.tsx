@@ -140,6 +140,7 @@ export default function App() {
         )}
         {!playing && (
           <footer className="footer">
+            <span className="footer-credit">Made by <b>BionicLettuce</b></span>
             Pro data: <a href="https://liquipedia.net/valorant/" target="_blank" rel="noreferrer">Liquipedia</a> (CC BY-SA 3.0) ·
             Game data: valorant-api.com
             <small>Krilljoy was created under Riot Games’ “Legal Jibber Jabber” policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</small>

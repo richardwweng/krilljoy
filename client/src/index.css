@@ -113,6 +113,8 @@ h1, h2, p { margin: 0; }
 .btn-ghost { background: none; border: 0; padding: 4px 0; color: var(--muted); font: 21px var(--body); }
 .btn-ghost:hover { color: var(--bright); }
 .footer { text-align: center; font-size: 19px; color: var(--dim); padding: 22px 0 26px; }
+.footer-credit { display: block; margin-bottom: 6px; color: var(--muted); }
+.footer-credit b { color: var(--bright); font-weight: 400; }
 .footer small { display: block; margin-top: 6px; font-size: 15px; opacity: 0.8; }
 
 /* ---------- home ---------- */
