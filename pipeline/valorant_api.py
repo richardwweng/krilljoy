@@ -27,7 +27,7 @@ class ValorantAPI:
 
     def __init__(self, user_agent, cache_dir, max_age_days=7, verbose=True):
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": user_agent or "Vallion/0.1"})
+        self.session.headers.update({"User-Agent": user_agent or "Krilljoy/0.1"})
         self.cache = Path(cache_dir) / "valorant-api"
         self.cache.mkdir(parents=True, exist_ok=True)
         self.max_age = None if max_age_days is None else max_age_days * 86400
