@@ -274,7 +274,10 @@ Copy the mechanics, not Krillion's branding or assets.
    build: hand-written answer lists, more Liquipedia data.
 3. **Treasure race** (built and live Nov 2026). Richard's rules:
    - Lobbies like ERS / Krillion's Puffer Party: Quick play (public lobby,
-     auto-starts 30 s after a 2nd player joins, 5 s when full), Host a room
+     auto-starts 30 s after it FILLS UP, Richard's call; the countdown is
+     cancelled if someone leaves or the host makes it private, and starts over
+     from 30 s when it's a full public lobby again; private rooms never
+     auto-start; the host can always press Start), Host a room
      (4-letter code, invite link /race/CODE, private unless listed), Join by
      code, public room list. Max 2–10 players (default 8). Host can start solo.
    - Everyone gets the same shuffled question order (no two same-pool questions

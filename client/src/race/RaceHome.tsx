@@ -67,7 +67,7 @@ export default function RaceHome() {
           <section className="panel race-box">
             <h2 className="section-title">Play now</h2>
             <button type="button" className="btn-red btn-big" disabled={!connected || busy} onClick={() => go("quickplay", {})}>Quick play</button>
-            <p className="race-note">Joins a public lobby (or opens one). Races start when 2+ divers are in. Normal length, 3,000 m.</p>
+            <p className="race-note">Joins a public lobby (or opens one). Races start 30 s after the lobby fills up, or when the host presses Start. Normal length, 3,000 m.</p>
           </section>
 
           <section className="panel race-box">

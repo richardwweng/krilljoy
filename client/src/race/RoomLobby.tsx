@@ -88,7 +88,7 @@ export default function RoomLobby({ room, serverNow }: { room: RoomView; serverN
             <li>First to the chest wins; everyone else gets 30 seconds to make it too.</li>
           </ul>
           {room.isPublic && (
-            <p className="race-note big">{startsIn !== null ? <>Starting in <b>{startsIn}s</b></> : "Waiting for one more diver…"}</p>
+            <p className="race-note big">{startsIn !== null ? <>Lobby full! Starting in <b>{startsIn}s</b></> : <>Starts 30 s after the lobby fills up ({seated.length}/{room.maxPlayers}){isHost ? ", or press Start" : ""}</>}</p>
           )}
           {isHost && (
             <button type="button" className="btn-red btn-big" onClick={() => { sound.splash(); s.emit("start"); }}>

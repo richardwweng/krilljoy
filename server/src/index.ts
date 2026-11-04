@@ -39,6 +39,7 @@ type Room = {
   autoStartAt: number | null; // public rooms start on their own
   returnAt: number | null; // public rooms go back to the lobby after the results
   timers: ReturnType<typeof setTimeout>[];
+  autoTimer: ReturnType<typeof setTimeout> | null; // the public auto-start, kept apart so it can be cancelled alone
   createdAt: number;
 };
 
@@ -46,8 +47,8 @@ const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ"; // 4 letters like ABCD; no I/L/O t
 const MAX_PLAYERS = 10;
 const DEFAULT_PLAYERS = 8;
 const COUNTDOWN_MS = 3_000; // "3, 2, 1, dive!"
-const PUBLIC_START_MS = 30_000; // public lobby: starts 30 s after the 2nd player joins...
-const PUBLIC_FULL_START_MS = 5_000; // ...or 5 s after it fills up
+const PUBLIC_START_MS = 30_000; // public lobby: starts 30 s after it fills up (Richard's call);
+                                // before that, the host can press Start any time
 const PUBLIC_RESULTS_MS = 45_000; // public rooms show the results, then go back to the lobby
 const LOBBY_GRACE_MS = 30_000; // how long a lobby seat is held after disconnecting
 const RACE_GRACE_MS = 90_000; // mid-race you have longer to reconnect and keep your progress
@@ -69,7 +70,7 @@ function makeCode(): string {
 function makeRoom(isPublic: boolean, length: RaceLength = "normal", maxPlayers = DEFAULT_PLAYERS): Room {
   const room: Room = {
     code: makeCode(), phase: "lobby", isPublic, hostId: null, length, maxPlayers, players: [], race: null,
-    kicked: new Set(), countdownEndsAt: null, autoStartAt: null, returnAt: null, timers: [], createdAt: Date.now(),
+    kicked: new Set(), countdownEndsAt: null, autoStartAt: null, returnAt: null, timers: [], autoTimer: null, createdAt: Date.now(),
   };
   rooms.set(room.code, room);
   later(room, () => { if (!room.players.length) closeRoom(room); }, 5 * 60_000); // nobody came
@@ -83,6 +84,7 @@ function later(room: Room, fn: () => void, ms: number) {
 function clearTimers(room: Room) {
   room.timers.forEach(clearTimeout);
   room.timers = [];
+  cancelAutoStart(room);
 }
 function closeRoom(room: Room) {
   clearTimers(room);
@@ -166,21 +168,27 @@ function seated(room: Room) {
   return room.players.filter((p) => !p.left);
 }
 
-/** Public lobbies start by themselves once there are at least 2 players. */
+function cancelAutoStart(room: Room) {
+  if (room.autoTimer) clearTimeout(room.autoTimer);
+  room.autoTimer = null;
+  room.autoStartAt = null;
+}
+
+/** Public lobbies start by themselves 30 s after they fill up. Call this whenever the
+ *  room changes (someone joins or leaves, public/private, max players): the countdown
+ *  runs only while the room is a FULL PUBLIC lobby, and starts again from 30 s each
+ *  time it becomes one. A private room never starts on its own. */
 function scheduleAutoStart(room: Room) {
-  if (!room.isPublic || room.phase !== "lobby") return;
-  const n = seated(room).length;
-  const wanted = n >= room.maxPlayers ? PUBLIC_FULL_START_MS : n >= 2 ? PUBLIC_START_MS : null;
-  if (wanted === null) {
+  const full = seated(room).length >= room.maxPlayers;
+  if (!room.isPublic || room.phase !== "lobby" || !full) return cancelAutoStart(room);
+  if (room.autoTimer) return; // already counting down
+  room.autoStartAt = Date.now() + PUBLIC_START_MS;
+  room.autoTimer = setTimeout(() => {
+    room.autoTimer = null;
     room.autoStartAt = null;
-    return;
-  }
-  const at = Date.now() + wanted;
-  if (room.autoStartAt && room.autoStartAt <= at) return; // already starting sooner
-  room.autoStartAt = at;
-  later(room, () => {
-    if (room.phase === "lobby" && room.autoStartAt === at && seated(room).length >= 2) beginCountdown(room);
-  }, wanted);
+    // double-check: still a full public lobby
+    if (room.isPublic && room.phase === "lobby" && seated(room).length >= room.maxPlayers) beginCountdown(room);
+  }, PUBLIC_START_MS);
 }
 
 function beginCountdown(room: Room) {
@@ -252,7 +260,7 @@ function removePlayer(room: Room, p: Person) {
   }
   if (room.hostId === p.id) room.hostId = seated(room)[0]?.id ?? null;
   if (!seated(room).length) return closeRoom(room);
-  if (room.phase === "lobby" && seated(room).length < 2) room.autoStartAt = null;
+  scheduleAutoStart(room); // someone left: a full lobby isn't full any more
   if (!checkOver(room)) sendRoom(room);
   sendRoomList();
 }
@@ -364,7 +372,11 @@ io.on("connection", (socket) => {
     const room = at.room;
     if (msg.length && msg.length in RACE_LENGTHS) room.length = msg.length;
     if (msg.maxPlayers) room.maxPlayers = Math.min(MAX_PLAYERS, Math.max(Math.max(2, seated(room).length), Number(msg.maxPlayers)));
-    if (typeof msg.isPublic === "boolean") room.isPublic = msg.isPublic;
+    if (typeof msg.isPublic === "boolean" && msg.isPublic !== room.isPublic) {
+      room.isPublic = msg.isPublic;
+      cancelAutoStart(room); // private: no countdown; public again: it starts over from 30 s
+    }
+    scheduleAutoStart(room); // also covers max players changing so the room is (not) full
     sendRoom(room);
     sendRoomList();
   });
