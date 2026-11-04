@@ -114,6 +114,7 @@ h1, h2, p { margin: 0; }
 .btn-ghost:hover { color: var(--bright); }
 .footer { text-align: center; font-size: 19px; color: var(--dim); padding: 22px 0 26px; }
 .footer-credit { display: block; margin-bottom: 6px; color: var(--muted); }
+.footer .footer-thanks { margin-top: 10px; }
 .footer-credit b { color: var(--bright); font-weight: 400; }
 .footer small { display: block; margin-top: 6px; font-size: 15px; opacity: 0.8; }
 
