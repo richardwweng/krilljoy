@@ -32,24 +32,50 @@ function distance(a: string, b: string, max: number): number {
   return d[a.length][b.length];
 }
 
-// How many typos a name forgives: none for short names (too easy to hit another name)
-const allowedTypos = (len: number) => (len >= 9 ? 2 : len >= 5 ? 1 : 0);
+// How many typos a name forgives. Short names forgive less, or "sen" would match too much.
+const allowedTypos = (len: number) => (len >= 10 ? 3 : len >= 6 ? 2 : len >= 4 ? 1 : 0);
+
+export interface Match {
+  answer: Answer;
+  corrected: boolean; // true when we guessed what they meant ("jet" -> "Jett"); the player confirms
+}
+
+/** Words of a name, for "the start of a word" matching: "Prelude to Chaos Stinger" -> prelude, to, chaos, stinger */
+const words = (text: string) =>
+  text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").split(/[^a-z0-9]+/).filter(Boolean);
+
+/** Answers whose name (or a word in it) starts with what was typed: "brim" -> Brimstone, "prelude" -> Prelude to Chaos */
+function startsWithMatches(prompt: Prompt, t: string): Answer[] {
+  if (t.length < 3) return [];
+  return prompt.answers.filter((a) =>
+    [a.id, ...a.aliases].some((name) => norm(name).startsWith(t) || words(name).some((w) => w.length > 2 && w.startsWith(t))),
+  );
+}
 
 /** The answer this text counts as, or null if it isn't a valid answer. */
-export function matchAnswer(prompt: Prompt, typed: string, known: Set<string>): Answer | null {
+export function matchAnswer(prompt: Prompt, typed: string, known: Set<string>): Match | null {
   const t = norm(typed);
   if (!t) return null;
   for (const a of prompt.answers) {
-    if (norm(a.id) === t || a.aliases.some((x) => norm(x) === t)) return a;
+    if (norm(a.id) === t || a.aliases.some((x) => norm(x) === t)) return { answer: a, corrected: false };
   }
   if (known.has(t)) return null; // it's a real name, just not a right one here
 
+  // 1) Shorthand: the start of an answer's name or word ("brim", "rgx", "prelude").
+  //    If it fits several answers ("reaver"), don't guess: the game asks "which one?"
+  const starts = startsWithMatches(prompt, t);
+  if (starts.length === 1) return { answer: starts[0], corrected: true };
+  if (starts.length > 1) return null;
+
+  // 2) Typos: closest answer within a few letters
   let best: Answer | null = null;
   let bestDist = Infinity;
   let tie = false;
+  const mine = new Set<string>();
   for (const a of prompt.answers) {
     for (const name of new Set([a.id, ...a.aliases].map(norm))) {
-      const allowed = allowedTypos(name.length);
+      mine.add(name);
+      const allowed = allowedTypos(Math.min(name.length, t.length));
       if (!allowed) continue;
       const dist = distance(t, name, allowed);
       if (dist > allowed) continue;
@@ -57,5 +83,20 @@ export function matchAnswer(prompt: Prompt, typed: string, known: Set<string>): 
       else if (dist === bestDist && best !== a) tie = true;
     }
   }
-  return tie ? null : best; // two answers equally close: don't guess
+  if (best && !tie) {
+    // If the text is even closer to a real name that ISN'T valid here, it was probably that one
+    for (const name of known) {
+      if (!mine.has(name) && Math.abs(name.length - t.length) < bestDist && distance(t, name, bestDist - 1) < bestDist) return null;
+    }
+    return { answer: best, corrected: true };
+  }
+
+  return null;
+}
+
+/** When a short name fits several answers ("reaver" in a question about many guns), a few of them, to ask "which one?" */
+export function ambiguousOptions(prompt: Prompt, typed: string): string[] {
+  const t = norm(typed);
+  const hits = startsWithMatches(prompt, t);
+  return hits.length > 1 ? hits.slice(0, 3).map((a) => a.id) : [];
 }

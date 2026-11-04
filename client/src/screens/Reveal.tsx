@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { sound } from "../game/sound";
 import type { Prompt, RoundResult } from "../types";
 import { MISS, METRES_PER_POINT, TIERS } from "../game/tiers";
 import TierGem from "../components/TierGem";
@@ -22,18 +23,18 @@ function rarityLine(share: number | undefined, tier: string) {
 export default function Reveal({ prompt, result, last, onDescend }: Props) {
   const button = useRef<HTMLButtonElement>(null);
   useEffect(() => button.current?.focus(), []);
+  // The rank chime (or the buzz for no answer) when the result appears, once
+  const chimed = useRef(false);
+  useEffect(() => {
+    if (chimed.current) return;
+    chimed.current = true;
+    if (result.tier) sound.rank(result.tier);
+    else sound.wrong();
+  }, [result.tier]);
 
   const answer = prompt.answers.find((a) => a.id === result.answerId);
   const tier = result.tier ? TIERS[result.tier] : MISS;
-  const n = prompt.answers.length;
-  // A few other valid answers, from obvious to rare
-  const sample = [0, 1, Math.floor(n / 2), n - 2, n - 1]
-    .filter((i, k, all) => i >= 0 && i < n && all.indexOf(i) === k)
-    .map((i) => prompt.answers[i])
-    .filter((a) => a.id !== result.answerId)
-    .slice(0, 5);
-
-  const title = result.tier ? tier.name : result.timedOut && !result.typed ? "Time's up" : !result.typed ? "Skipped" : "Not valid";
+  const title = result.tier ? tier.name : result.timedOut ? "Time’s up" : "Gave up";
   return (
     <>
       <section className="card reveal-card panel" aria-live="polite" style={{ ["--tier" as string]: tier.color }}>
@@ -45,7 +46,7 @@ export default function Reveal({ prompt, result, last, onDescend }: Props) {
         <div className="reveal-tier">{title}</div>
         {result.typed && (
           <>
-            <div className="muted">You said</div>
+            <div className="muted">{result.tier ? "You said" : "Last guess"}</div>
             <div className="reveal-answer">{answer?.id ?? result.typed}</div>
           </>
         )}
@@ -55,17 +56,9 @@ export default function Reveal({ prompt, result, last, onDescend }: Props) {
         {result.tier ? (
           <p className="muted">{rarityLine(answer?.share, result.tier)}</p>
         ) : (
-          result.typed && <p className="muted">That isn’t one of the valid answers for this prompt.</p>
+          <p className="muted">{result.timedOut ? "The clock ran out before a valid answer." : "No answer this round."}</p>
         )}
-        <div className="others">
-          <div className="label">Other valid answers</div>
-          <div className="chips">
-            {sample.map((a) => (
-              <span key={a.id} className="chip" style={{ color: TIERS[a.tier].color, borderColor: TIERS[a.tier].color + "66" }}>{a.id}</span>
-            ))}
-            {n - sample.length - (answer ? 1 : 0) > 0 && <span className="chip more">+{n - sample.length - (answer ? 1 : 0)} more</span>}
-          </div>
-        </div>
+        {!!result.misses && <p className="misses">{result.misses} wrong guess{result.misses > 1 ? "es" : ""} first</p>}
       </section>
       <div className="controls">
         <button ref={button} type="button" className="btn-red btn-big" onClick={onDescend}>

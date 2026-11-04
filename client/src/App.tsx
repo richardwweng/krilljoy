@@ -3,6 +3,9 @@ import type { DiveData } from "./types";
 import { easternDate } from "./game/daily";
 import { MAX_DEPTH } from "./game/tiers";
 import { useDive } from "./game/useDive";
+import { isMuted, setMuted, sound } from "./game/sound";
+import Sprite from "./components/Sprite";
+import { SPEAKER_OFF, SPEAKER_ON } from "./components/sprites";
 import Ocean from "./components/Ocean";
 import Hud from "./components/Hud";
 import DepthGauge from "./components/DepthGauge";
@@ -23,6 +26,7 @@ export default function App() {
   const [screen, setScreen] = useState<Screen>("home");
   const [popup, setPopup] = useState<Popup>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [muted, setMutedState] = useState(isMuted());
   const dive = useDive(data, date);
 
   // Load the answer banks (published by the pipeline)
@@ -45,7 +49,15 @@ export default function App() {
     return () => clearTimeout(id);
   }, [toast]);
 
+  const toggleSound = () => {
+    setMuted(!muted);
+    setMutedState(!muted);
+    if (muted) sound.click(); // just turned on: a tap so you hear it worked
+  };
+
   const begin = () => {
+    if (!dive.started) sound.splash();
+    else sound.click();
     dive.start();
     setScreen("dive");
   };
@@ -71,10 +83,10 @@ export default function App() {
         <div className="stage">
           {dive.awaitingDescend ? (
             <Reveal key={`r${roundNo}`} prompt={dive.prompts[roundNo - 1]} result={dive.rounds[roundNo - 1]}
-              last={roundNo === dive.prompts.length} onDescend={dive.descend} />
+              last={roundNo === dive.prompts.length} onDescend={() => { if (roundNo < dive.prompts.length) sound.descend(); dive.descend(); }} />
           ) : (
             <Question key={`q${roundNo}`} prompt={dive.prompts[roundNo - 1]} round={roundNo}
-              startedAt={dive.roundStartedAt ?? Date.now()} onSubmit={dive.submit} />
+              startedAt={dive.roundStartedAt ?? Date.now()} check={dive.check} options={dive.options} onSubmit={dive.submit} />
           )}
         </div>
       </main>
@@ -91,8 +103,12 @@ export default function App() {
             Krill<span>joy</span>
           </button>
           <nav className="topbar-tools">
-            <button type="button" className="btn-small" onClick={() => setPopup("howto")}>How to play</button>
-            <button type="button" className="btn-small" onClick={() => setPopup("stats")}>Stats</button>
+            <button type="button" className="btn-small" onClick={() => { sound.click(); setPopup("howto"); }} aria-label="How to play"><span className="wide-only">How to play</span><span className="narrow-only">?</span></button>
+            <button type="button" className="btn-small" onClick={() => { sound.click(); setPopup("stats"); }}>Stats</button>
+            <button type="button" className="btn-small btn-icon" onClick={toggleSound} aria-pressed={!muted}
+              aria-label={muted ? "Sound is off. Turn sound on" : "Sound is on. Turn sound off"} title={muted ? "Sound off" : "Sound on"}>
+              <Sprite rows={muted ? SPEAKER_OFF : SPEAKER_ON} colors={{ W: "#b9c9df", S: "#5de3f9", M: "#ff4655" }} scale={2} />
+            </button>
           </nav>
         </header>
         {error ? (
@@ -103,7 +119,8 @@ export default function App() {
         {!playing && (
           <footer className="footer">
             Pro data: <a href="https://liquipedia.net/valorant/" target="_blank" rel="noreferrer">Liquipedia</a> (CC BY-SA 3.0) ·
-            Game data: valorant-api.com · Not affiliated with Riot Games
+            Game data: valorant-api.com
+            <small>Krilljoy was created under Riot Games’ “Legal Jibber Jabber” policy using assets owned by Riot Games. Riot Games does not endorse or sponsor this project.</small>
           </footer>
         )}
       </div>

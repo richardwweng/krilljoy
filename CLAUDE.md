@@ -34,6 +34,10 @@ first, then shows conditions that make sense for it.
   rendered prize pool's award table names them MVP (2022+, internationals and
   league finals; `MVP_FROM_LEAGUES` in config.py).
 - Team name variants (Gen.G / Gen.G Esports) are merged by `team_key_map`.
+- Short names players type: `team_aliases` (prx, fnc, navi…) and `agent_aliases`
+  (kj, brim…) in familiarity.json. Team names also get "Team"/"Esports"/"Gaming"
+  dropped automatically (`team_aliases()` in prompts.py). Skins already accept
+  the name without the gun ("Reaver" for Reaver Vandal) when that's unambiguous.
 - Ability `effects` (damage, flash, smoke, wall, heal, info) are hand tagged in
   `ability_tags` in familiarity.json; untagged = "other". Add new agents' abilities there.
 - Skin `obtained`: "Battle pass" / "Agent contract" / "Event pass" from the
@@ -161,7 +165,7 @@ NOT from live player answers):
   answer (Krillion's designated "One in a Krillion"). Boundaries don't split
   answers with equal ratings unless that would shift a boundary by >6%.
   Gold (Too Clever) is manual. Admin overrides win.
-- Every question needs at least 20 valid answers (`MIN_ANSWERS` in
+- Every question needs at least 12 valid answers (`MIN_ANSWERS` in
   prompts.py); the admin page flags ones below that. A game-pool question
   with no condition means the whole pool ("Name any agent").
 - Richard does not want to estimate anything by hand. When new content appears
@@ -177,11 +181,18 @@ Copy the mechanics, not Krillion's branding or assets.
   `pickDaily` seeds by Eastern date, picks 3–4 pro-scene + 3–4 game prompts.
   Adding/removing prompts changes future picks; a started dive keeps its prompts.
 - `src/game/match.ts`: exact match on id/aliases (normalized: lowercase,
-  accents folded, non-alphanumerics removed), then typo tolerance (1 typo for
-  5+ letters, 2 for 9+, none below 5). A name that is a valid answer to ANY
-  other prompt is rejected outright; ties between two answers are rejected.
+  accents folded, non-alphanumerics removed), then autocorrect (1 typo for
+  4+ letters, 2 for 7+, 3 for 12+). A name that is a valid answer to ANY
+  other prompt is rejected outright, as is text closer to such a name than to
+  a valid one; ties between two answers are rejected. Before typos, a
+  "shorthand" step: text that starts exactly one answer's name or one of its
+  words ("brim", "rgx", "prelude", "karambit") is suggested; if it starts
+  several ("reaver" in a many-gun question), the game says "Which one? e.g. …"
+  (not counted as a wrong guess). A fixed typo does NOT
+  lock in: like Krillion, the box fills with the real name and a bubble says
+  "“typed” → “Name” · submit again to confirm · or edit".
 - `src/game/storage.ts`: localStorage, per date. `roundStartedAt` is saved so
-  reloading doesn't reset the 25 s clock. Time out = submit whatever is typed.
+  reloading doesn't reset the 25 s clock. Time out = whatever is in the box counts if valid, else 0.
 - `src/components/Ocean.tsx`: one 500vh strip (sky top 12%), slid up by depth;
   the home screen's two rows line up with the 60vh horizon (`.home` in index.css).
 - Answers are all in dive.json (like Krillion): fine for daily mode; the
@@ -190,23 +201,42 @@ Copy the mechanics, not Krillion's branding or assets.
 ## Roadmap
 
 1. **Daily mode** (`client/`, built Nov 2026, not deployed yet): same as Krillion today.
+   - Sound: 8-bit effects synthesized with Web Audio in `src/game/sound.ts`
+     (no audio files; never use Krillion's). Approved set: rank chimes (rarer =
+     sparklier), wrong-guess buzz, autocorrect "hm?", last-5-seconds ticks,
+     button click, splash on BEGIN DIVE, whoosh on DESCEND, sonar ping on the
+     end screen + fanfare for 351+. NO background ocean hum (Richard said no).
+     Speaker button in the top bar mutes; remembered in localStorage.
+   - Rank icons: Valorant's real rank icons (Richard supplied the files),
+     `client/public/ranks/*.png`, 128px. Allowed by Riot's "Legal Jibber
+     Jabber" fan policy (free, non-commercial, with the disclaimer that's in the
+     footer). Share text emoji (Richard's picks): ⬜ Silver, 🟨 Gold, ✅ Platinum,
+     🔷 Diamond, 🔥 Immortal, ⭐ Radiant, ❔ no answer.
    - Look: the "Pixel blend" style (Richard, Nov 2026): retro pixel ocean
      that darkens with depth, Valorant red (#ff4655) + navy, notched LOCK IN
-     buttons, pixel gems in rank colors, Silkscreen + VT323 fonts, depth gauge
-     on the right. All sprites are original; never use Krillion's art.
+     buttons, pixel gems in rank colors, VT323 font everywhere (what Krillion
+     uses; headings bold), depth gauge on the right. Background is animated:
+     waves, bobbing boat, fish schools, plankton, light rays, kelp, and an
+     original glowing red jellyfish (not Krillion's shrimp). All sprites are original; never use Krillion's art.
      Desktop layout mirrors Krillion's: home masthead, HUD (depth / round
      squares / score), centered question card, reveal card + DESCEND, results
      log with an expandable answer list per question.
    - 7 prompts per day, same for everyone, new set at midnight Eastern.
-   - 25 seconds per prompt, one answer each.
+   - 25 seconds per prompt. Wrong guesses don't end the round (like Krillion):
+     keep guessing until one is valid or the clock runs out (then 0).
+     "Give up" ends it with 0.
    - Matching: case-insensitive against `aliases`, forgiving small typos
      (fuzzy match), never accept a different real player.
    - Each point = 10 m of depth; a perfect 700-point dive = 7,000 m.
    - No treasure chest in daily mode (Richard, Nov 2026): a perfect dive is
      basically unreachable. The depth gauge just ends at 7,000 m. The chest is
      only for the treasure dive / multiplayer mode.
-   - Results screen: tier per answer, the Liquipedia evidence (`evidence`,
-     `source`), and a shareable emoji summary.
+   - During the dive, the reveal shows only your rank/points (no other
+     answers). The end screen copies Krillion's: big score + depth, dive-log
+     chart (one line per round, depth = points), "the bearing" score bands,
+     share, and "the catch": tap a round for rank filter chips, search, and
+     every answer rarest first (yours highlighted, Liquipedia link ↗).
+     No "better than X% of players" curve yet: needs real player data (server).
    - Progress saved locally so closing the tab mid-dive resumes it.
    - Pick the day's prompts deterministically from `dive.json` (seeded by date).
 2. **More answer pools:** game content is done (see "Answer pools"). Still to

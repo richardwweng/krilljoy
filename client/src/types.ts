@@ -35,4 +35,6 @@ export interface RoundResult {
   tier: TierKey | null;
   points: number;
   timedOut: boolean;
+  corrected?: boolean;       // a typo was fixed to reach the answer
+  misses?: number;           // wrong guesses before this answer
 }

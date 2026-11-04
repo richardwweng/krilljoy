@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-03",
-  "data_generated": "2026-11-03",
+  "generated": "2026-11-04",
+  "data_generated": "2026-11-04",
   "game_version": "13.09.00.5777412",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -56357,7 +56357,8 @@
         {
           "id": "Phoenix",
           "aliases": [
-            "phoenix"
+            "phoenix",
+            "phx"
           ],
           "icon": "https://media.valorant-api.com/agents/eb93336a-449b-9c1b-0a54-a891f7921d69/displayicon.png",
           "source": "valorant-api.com",
@@ -56387,6 +56388,7 @@
         {
           "id": "Sova",
           "aliases": [
+            "sov",
             "sova"
           ],
           "icon": "https://media.valorant-api.com/agents/320b2a48-4d9b-a075-30f1-1f93a9b638fa/displayicon.png",
@@ -56402,6 +56404,7 @@
         {
           "id": "Brimstone",
           "aliases": [
+            "brim",
             "brimstone"
           ],
           "icon": "https://media.valorant-api.com/agents/9f0d8ba9-4140-b941-57d3-a7ad57c6b417/displayicon.png",
@@ -56417,6 +56420,7 @@
         {
           "id": "Cypher",
           "aliases": [
+            "cipher",
             "cypher"
           ],
           "icon": "https://media.valorant-api.com/agents/117ed9e3-49f3-6512-3ccf-0cada7e3823b/displayicon.png",
@@ -56432,7 +56436,8 @@
         {
           "id": "Killjoy",
           "aliases": [
-            "killjoy"
+            "killjoy",
+            "kj"
           ],
           "icon": "https://media.valorant-api.com/agents/1e58de9c-4950-5125-93e9-a0aee9f98746/displayicon.png",
           "source": "valorant-api.com",
@@ -56462,7 +56467,8 @@
         {
           "id": "Chamber",
           "aliases": [
-            "chamber"
+            "chamber",
+            "champ"
           ],
           "icon": "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
           "source": "valorant-api.com",
@@ -56582,6 +56588,7 @@
         {
           "id": "Gekko",
           "aliases": [
+            "gecko",
             "gekko"
           ],
           "icon": "https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/displayicon.png",
@@ -56597,6 +56604,7 @@
         {
           "id": "KAY/O",
           "aliases": [
+            "kay o",
             "kay/o",
             "kayo"
           ],
@@ -56703,7 +56711,8 @@
         {
           "id": "Harbor",
           "aliases": [
-            "harbor"
+            "harbor",
+            "harbour"
           ],
           "icon": "https://media.valorant-api.com/agents/95b78ed7-4637-86d9-7e41-71ba8c293152/displayicon.png",
           "source": "valorant-api.com",
@@ -56733,7 +56742,8 @@
         {
           "id": "Deadlock",
           "aliases": [
-            "deadlock"
+            "deadlock",
+            "dl"
           ],
           "icon": "https://media.valorant-api.com/agents/cc8b64c8-4b25-4ff9-6e7f-37b4da43d235/displayicon.png",
           "source": "valorant-api.com",
@@ -91440,6 +91450,8 @@
         {
           "id": "Sentinels",
           "aliases": [
+            "sen",
+            "sens",
             "sentinels"
           ],
           "icon": null,
@@ -91498,7 +91510,8 @@
           "id": "Paper Rex",
           "aliases": [
             "paper rex",
-            "paperrex"
+            "paperrex",
+            "prx"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Paper_Rex",
@@ -91533,7 +91546,8 @@
         {
           "id": "Fnatic",
           "aliases": [
-            "fnatic"
+            "fnatic",
+            "fnc"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Fnatic",
@@ -91566,6 +91580,7 @@
         {
           "id": "Leviatán",
           "aliases": [
+            "lev",
             "leviatan",
             "leviatán"
           ],
@@ -91593,6 +91608,8 @@
         {
           "id": "EDward Gaming",
           "aliases": [
+            "edg",
+            "edward",
             "edward gaming",
             "edwardgaming"
           ],
@@ -91653,7 +91670,10 @@
         {
           "id": "Gen.G Esports",
           "aliases": [
+            "gen g",
+            "gen.g",
             "gen.g esports",
+            "geng",
             "gengesports"
           ],
           "icon": null,
@@ -91680,6 +91700,7 @@
           "id": "100 Thieves",
           "aliases": [
             "100 thieves",
+            "100t",
             "100thieves"
           ],
           "icon": null,
@@ -91703,6 +91724,8 @@
         {
           "id": "Cloud9",
           "aliases": [
+            "c9",
+            "cloud 9",
             "cloud9"
           ],
           "icon": null,
@@ -91723,6 +91746,7 @@
         {
           "id": "G2 Esports",
           "aliases": [
+            "g2",
             "g2 esports",
             "g2esports"
           ],
@@ -91752,8 +91776,10 @@
         {
           "id": "Nongshim RedForce",
           "aliases": [
+            "nongshim",
             "nongshim redforce",
-            "nongshimredforce"
+            "nongshimredforce",
+            "ns"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Nongshim_RedForce",
@@ -91803,8 +91829,10 @@
         {
           "id": "Team Heretics",
           "aliases": [
+            "heretics",
             "team heretics",
-            "teamheretics"
+            "teamheretics",
+            "th"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Team_Heretics",
@@ -91829,8 +91857,10 @@
         {
           "id": "Team Liquid",
           "aliases": [
+            "liquid",
             "team liquid",
-            "teamliquid"
+            "teamliquid",
+            "tl"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Team_Liquid",
@@ -91860,6 +91890,7 @@
         {
           "id": "OpTic Gaming",
           "aliases": [
+            "optic",
             "optic gaming",
             "opticgaming"
           ],
@@ -91884,6 +91915,7 @@
         {
           "id": "Evil Geniuses",
           "aliases": [
+            "eg",
             "evil geniuses",
             "evilgeniuses"
           ],
@@ -91908,6 +91940,7 @@
         {
           "id": "FunPlus Phoenix",
           "aliases": [
+            "fpx",
             "funplus phoenix",
             "funplusphoenix"
           ],
@@ -91938,7 +91971,8 @@
           "id": "Karmine Corp",
           "aliases": [
             "karmine corp",
-            "karminecorp"
+            "karminecorp",
+            "kc"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Karmine_Corp",
@@ -91959,7 +91993,9 @@
         {
           "id": "KRÜ Esports",
           "aliases": [
+            "kru",
             "kruesports",
+            "krü",
             "krü esports"
           ],
           "icon": null,
@@ -91988,7 +92024,8 @@
           "id": "Natus Vincere",
           "aliases": [
             "natus vincere",
-            "natusvincere"
+            "natusvincere",
+            "navi"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Natus_Vincere",
@@ -92009,6 +92046,7 @@
         {
           "id": "ZETA DIVISION",
           "aliases": [
+            "zeta",
             "zeta division",
             "zetadivision"
           ],
@@ -92033,6 +92071,7 @@
         {
           "id": "BBL Esports",
           "aliases": [
+            "bbl",
             "bbl esports",
             "bblesports"
           ],
@@ -92098,7 +92137,9 @@
           "id": "Team Vitality",
           "aliases": [
             "team vitality",
-            "teamvitality"
+            "teamvitality",
+            "vit",
+            "vitality"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Team_Vitality",
@@ -92121,6 +92162,7 @@
         {
           "id": "Gambit Esports",
           "aliases": [
+            "gambit",
             "gambit esports",
             "gambitesports"
           ],
@@ -92144,8 +92186,10 @@
         {
           "id": "Bilibili Gaming",
           "aliases": [
+            "bilibili",
             "bilibili gaming",
-            "bilibiligaming"
+            "bilibiligaming",
+            "blg"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Bilibili_Gaming",
@@ -92168,7 +92212,8 @@
           "id": "DetonatioN FocusMe",
           "aliases": [
             "detonation focusme",
-            "detonationfocusme"
+            "detonationfocusme",
+            "dfm"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/DetonatioN_FocusMe",
@@ -92187,8 +92232,10 @@
         {
           "id": "Dragon Ranger Gaming",
           "aliases": [
+            "dragon ranger",
             "dragon ranger gaming",
-            "dragonrangergaming"
+            "dragonrangergaming",
+            "drg"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Dragon_Ranger_Gaming",
@@ -92209,6 +92256,7 @@
         {
           "id": "FUT Esports",
           "aliases": [
+            "fut",
             "fut esports",
             "futesports"
           ],
@@ -92236,7 +92284,8 @@
           "id": "Gentle Mates",
           "aliases": [
             "gentle mates",
-            "gentlemates"
+            "gentlemates",
+            "m8"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Gentle_Mates",
@@ -92255,7 +92304,8 @@
         {
           "id": "GIANTX",
           "aliases": [
-            "giantx"
+            "giantx",
+            "gx"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/GIANTX",
@@ -92274,6 +92324,8 @@
         {
           "id": "Global Esports",
           "aliases": [
+            "ge",
+            "global",
             "global esports",
             "globalesports"
           ],
@@ -92297,7 +92349,8 @@
           "id": "Rex Regum Qeon",
           "aliases": [
             "rex regum qeon",
-            "rexregumqeon"
+            "rexregumqeon",
+            "rrq"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Rex_Regum_Qeon",
@@ -92318,8 +92371,10 @@
         {
           "id": "Team Secret",
           "aliases": [
+            "secret",
             "team secret",
-            "teamsecret"
+            "teamsecret",
+            "ts"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Team_Secret",
@@ -92339,6 +92394,8 @@
         {
           "id": "Trace Esports",
           "aliases": [
+            "te",
+            "trace",
             "trace esports",
             "traceesports"
           ],
@@ -92421,7 +92478,8 @@
           "id": "Vision Strikers",
           "aliases": [
             "vision strikers",
-            "visionstrikers"
+            "visionstrikers",
+            "vs"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Vision_Strikers",
@@ -92441,6 +92499,7 @@
         {
           "id": "XLG Esports",
           "aliases": [
+            "xlg",
             "xlg esports",
             "xlgesports"
           ],
@@ -92465,6 +92524,7 @@
         {
           "id": "All Gamers",
           "aliases": [
+            "ag",
             "all gamers",
             "allgamers"
           ],
@@ -92485,6 +92545,7 @@
         {
           "id": "FULL SENSE",
           "aliases": [
+            "fs",
             "full sense",
             "fullsense"
           ],
@@ -92506,7 +92567,9 @@
         {
           "id": "JD Gaming",
           "aliases": [
+            "jd",
             "jd gaming",
+            "jdg",
             "jdgaming"
           ],
           "icon": null,
@@ -92526,6 +92589,8 @@
         {
           "id": "Wolves Esports",
           "aliases": [
+            "wol",
+            "wolves",
             "wolves esports",
             "wolvesesports"
           ],
@@ -92546,6 +92611,7 @@
         {
           "id": "BOOM Esports",
           "aliases": [
+            "boom",
             "boom esports",
             "boomesports"
           ],
@@ -92566,6 +92632,7 @@
         {
           "id": "Guild Esports",
           "aliases": [
+            "guild",
             "guild esports",
             "guildesports"
           ],
@@ -92587,7 +92654,8 @@
           "id": "Ninjas in Pyjamas",
           "aliases": [
             "ninjas in pyjamas",
-            "ninjasinpyjamas"
+            "ninjasinpyjamas",
+            "nip"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Ninjas_in_Pyjamas",
@@ -92606,6 +92674,7 @@
         {
           "id": "Version1",
           "aliases": [
+            "v1",
             "version1"
           ],
           "icon": null,
@@ -92685,6 +92754,7 @@
         {
           "id": "Crazy Raccoon",
           "aliases": [
+            "cr",
             "crazy raccoon",
             "crazyraccoon"
           ],
@@ -92726,6 +92796,7 @@
         {
           "id": "NUTURN Gaming",
           "aliases": [
+            "nuturn",
             "nuturn gaming",
             "nuturngaming"
           ],
@@ -92746,6 +92817,7 @@
         {
           "id": "Sharks Esports",
           "aliases": [
+            "sharks",
             "sharks esports",
             "sharksesports"
           ],
@@ -92766,6 +92838,7 @@
         {
           "id": "SuperMassive Blaze",
           "aliases": [
+            "smb",
             "supermassive blaze",
             "supermassiveblaze"
           ],
@@ -92787,7 +92860,8 @@
           "id": "Team Vikings",
           "aliases": [
             "team vikings",
-            "teamvikings"
+            "teamvikings",
+            "vikings"
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Team_Vikings",
@@ -92807,6 +92881,7 @@
         {
           "id": "X10 Esports",
           "aliases": [
+            "x10",
             "x10 esports",
             "x10esports"
           ],
@@ -92887,6 +92962,8 @@
         {
           "id": "Attacking Soul Esports",
           "aliases": [
+            "ase",
+            "attacking soul",
             "attacking soul esports",
             "attackingsoulesports"
           ],
@@ -92907,6 +92984,7 @@
         {
           "id": "Keyd Stars",
           "aliases": [
+            "keyd",
             "keyd stars",
             "keydstars"
           ],
@@ -92928,6 +93006,7 @@
         {
           "id": "Bren Esports",
           "aliases": [
+            "bren",
             "bren esports",
             "brenesports"
           ],
@@ -92948,6 +93027,7 @@
         {
           "id": "Havan Liberty",
           "aliases": [
+            "havan",
             "havan liberty",
             "havanliberty"
           ],

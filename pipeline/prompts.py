@@ -18,6 +18,7 @@ Adding a filter for a game pool = one attribute in game.py + one line in GAME_PO
 """
 import json
 import math
+import re
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -40,7 +41,7 @@ TIERS = [
     ("deep_cut", 85, 0.20),            # Immortal
     ("one_in_a_krillion", 100, None),  # Radiant: the single rarest answer
 ]
-MIN_ANSWERS = 20  # questions with fewer valid answers are flagged in the admin page
+MIN_ANSWERS = 12  # questions with fewer valid answers are flagged in the admin page
 POINTS = {name: pts for name, pts, _ in TIERS} | {"too_clever": 15}
 
 
@@ -486,6 +487,20 @@ def team_rating(t, ctx, today):
     return max(base + recency_bonus(t, ctx, today), recency_floor(t, ctx, today)), intl
 
 
+TEAM_ALIASES = FAM.get("team_aliases", {})  # tags like "prx", from familiarity.json
+
+
+def team_aliases(t):
+    """'Team Heretics' -> also 'heretics'; 'G2 Esports' -> 'g2'; plus tags like 'prx' from familiarity.json."""
+    name = t["name"]
+    out = {name.lower(), t["key"]}
+    short = re.sub(r"^(team)\s+|\s+(esports club|esports|gaming|club)$", "", name, flags=re.I).strip()
+    if short and short.lower() != name.lower():
+        out.add(short.lower())
+    out.update(a.lower() for a in TEAM_ALIASES.get(name, []))
+    return sorted(out)
+
+
 def _team_matches(prompt, ds, today, ctx):
     conds = [c for c in prompt.get("conditions", []) if c.get("type") in TEAM_CONDITIONS and c.get("value")]
     if not conds:
@@ -503,7 +518,7 @@ def _team_matches(prompt, ds, today, ctx):
         if ok:
             rating, intl = team_rating(t, ctx, today)
             extra = {"international_events": intl, "international_wins": _names(t["wins"], ctx), **extra}
-            item = {"id": t["name"], "aliases": sorted({t["name"].lower(), t["key"]}), "icon": None,
+            item = {"id": t["name"], "aliases": team_aliases(t), "icon": None,
                     "source": WIKI + t["name"].replace(" ", "_")}
             scored.append((rating + bonus, item, extra))
     return scored

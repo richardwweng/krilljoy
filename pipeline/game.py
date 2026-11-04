@@ -20,6 +20,7 @@ GAME_FILE = Path(config.GAME_FILE)
 _FAM_FILE = Path(__file__).parent / "familiarity.json"
 _FAM = json.loads(_FAM_FILE.read_text(encoding="utf-8")) if _FAM_FILE.exists() else {}
 COMMUNITY_CALLOUTS = _FAM.get("callout_aliases", {})
+AGENT_NICKNAMES = {k: v for k, v in _FAM.get("agent_aliases", {}).items() if not k.startswith("_")}
 # ability name -> effects ("damage", "flash", ...), hand-tagged in familiarity.json
 ABILITY_EFFECTS = {}
 for _effect, _names in _FAM.get("ability_tags", {}).items():
@@ -83,7 +84,7 @@ def build_agents(raw):
         role = a["role"]["displayName"] if a.get("role") else "Unknown"
         launch = name in LAUNCH_AGENTS
         agents.append(item(name, {"role": role}, 3 * launch + (1 if a.get("isBaseContent") else 0),
-                           a.get("displayIcon")))
+                           a.get("displayIcon"), extra_aliases=AGENT_NICKNAMES.get(name, [])))
         for ab in a.get("abilities", []):
             ab_name = clean(ab.get("displayName"))
             if not ab_name:

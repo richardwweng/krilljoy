@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { DiveData, Prompt, RoundResult } from "../types";
 import { pickDaily } from "./daily";
-import { knownNames, matchAnswer } from "./match";
+import { ambiguousOptions, knownNames, matchAnswer } from "./match";
 import { loadDive, recordHistory, saveDive, type SavedDive } from "./storage";
 import { METRES_PER_POINT } from "./tiers";
 
@@ -37,19 +37,40 @@ export function useDive(data: DiveData | null, date: string) {
     update({ date, promptIds: prompts.map((p) => p.id), rounds: [], awaitingDescend: false, roundStartedAt: Date.now() });
   }, [saved, date, prompts, update]);
 
+  /** Is this text a valid answer to the current prompt? (Doesn't end the round.) */
+  const check = useCallback(
+    (typed: string) => {
+      const prompt = prompts[saved?.rounds.length ?? 0];
+      return prompt ? matchAnswer(prompt, typed, known) : null;
+    },
+    [prompts, saved, known],
+  );
+
+  /** "reaver" could be Reaver Vandal or Reaver Phantom: a few options to suggest, or [] */
+  const options = useCallback(
+    (typed: string) => {
+      const prompt = prompts[saved?.rounds.length ?? 0];
+      return prompt ? ambiguousOptions(prompt, typed) : [];
+    },
+    [prompts, saved],
+  );
+
+  /** End the round: with a valid answer, or with whatever was typed when time ran out / they gave up. */
   const submit = useCallback(
-    (typed: string, timedOut = false) => {
+    (typed: string, opts: { timedOut?: boolean; misses?: number } = {}) => {
       if (!saved || saved.awaitingDescend) return;
       const prompt = prompts[saved.rounds.length];
       if (!prompt) return;
-      const answer = matchAnswer(prompt, typed, known);
+      const match = matchAnswer(prompt, typed, known);
       const result: RoundResult = {
         promptId: prompt.id,
         typed: typed.trim(),
-        answerId: answer?.id ?? null,
-        tier: answer?.tier ?? null,
-        points: answer?.points ?? 0,
-        timedOut,
+        answerId: match?.answer.id ?? null,
+        tier: match?.answer.tier ?? null,
+        points: match?.answer.points ?? 0,
+        timedOut: !!opts.timedOut,
+        corrected: !!match?.corrected,
+        misses: opts.misses ?? 0,
       };
       update({ ...saved, rounds: [...saved.rounds, result], awaitingDescend: true, roundStartedAt: null });
     },
@@ -76,6 +97,8 @@ export function useDive(data: DiveData | null, date: string) {
     points,
     depth: points * METRES_PER_POINT,
     start,
+    check,
+    options,
     submit,
     descend,
   };

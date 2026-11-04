@@ -19,3 +19,12 @@ export const SUN = (() => {
     return Array.from({ length: 2 * r }, (_, x) => (Math.abs(x - r + 0.5) < half ? "X" : ".")).join("");
   });
 })();
+
+// Speaker for the sound button (W), sound waves (S), mute cross (M)
+export const SPEAKER_ON = ["...W.....", "..WW..S..", "WWWW...S.", "WWWW.S.S.", "WWWW.S.S.", "WWWW...S.", "..WW..S..", "...W....."];
+export const SPEAKER_OFF = ["...W.....", "..WW.....", "WWWW.M.M.", "WWWW..M..", "WWWW..M..", "WWWW.M.M.", "..WW.....", "...W....."];
+
+export const MINNOW = [".XX.X", "XXXXX", ".XX.X"];
+// Original glowing jellyfish (Krilljoy's sea creature)
+export const JELLY = ["...RRRR...", ".RRRRRRRR.", "RRPRRRRRRR", "RRRRRRRRRR", "RRRRRRRRRR",
+  ".R.R..R.R.", ".R.R..R.R.", "R..R..R..R", "..R....R..", ".R......R."];
