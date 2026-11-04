@@ -1,33 +1,133 @@
 # Krilljoy
 
 **A daily Valorant trivia game where the obvious answer loses.**
-Name a pro player, a Sheriff skin, an agent. The rarer your valid answer, the deeper you dive.
+Name a pro player, a Sheriff skin, a callout on Lotus. Any valid answer
+counts, but the rarer it is, the deeper you dive.
 
-Pro-scene answers are backed by [Liquipedia](https://liquipedia.net/valorant/)
-data (CC BY-SA 3.0); game-content answers (agents, skins, maps, callouts) come
-from [valorant-api.com](https://valorant-api.com).
+### ▶ Play at **[krilljoy.pages.dev](https://krilljoy.pages.dev)**
+
+![A full daily dive: seven prompts, a typo getting fixed, a wrong guess, and the end screen](docs/daily-dive.gif)
+
+---
+
+## Two ways to play
+
+### Daily dive (solo)
+
+- **7 prompts a day**, the same for everyone, new at midnight Eastern. A mix
+  of the pro scene ("Name a tier 1 player from Canada") and the game itself
+  ("Name an ability that does damage").
+- **25 seconds each.** Wrong guesses are free: keep typing until one is valid.
+- **Rarer answers sink deeper.** Every answer has a rank, from Silver (the one
+  everybody says) up to Radiant (the single rarest answer).
+- **Typos get fixed**, Krillion-style: the box fills in the real name and you
+  press Enter again to confirm.
+- **The end screen** shows your dive log, how you did, a shareable emoji grid,
+  and "the catch": every valid answer for each prompt, rarest first.
+
+| Typo? It asks first | Every answer, rarest first | On a phone |
+|---|---|---|
+| ![The autocorrect bubble](docs/typo-fix.png) | ![The catch: every answer for a prompt](docs/the-catch.png) | ![Home and a question on a phone](docs/phone.png) |
+
+### Treasure race (multiplayer)
+
+![A three-player treasure race from the countdown to the podium](docs/treasure-race.gif)
+
+- **Same questions, same order** for everyone in the room, back to back.
+  **No timer**: lock in a valid answer and the next one appears.
+- **Rarer answers sink you faster.** First diver to reach the treasure chest
+  wins. Everyone else gets a **30-second last call**; after that, places go by
+  depth.
+- **Stuck?** Skip unlocks after 25 seconds (0 m).
+- **Watch everyone dive live** on the shared gauge and leaderboard.
+- **Getting in:** Quick play (a public lobby that starts 30 seconds after it
+  fills up), Host a room (4-letter code + invite link), or join by code. The
+  host picks the length: Short 1,500 m, Normal 3,000 m, Long 5,000 m.
+
+| Lobby | Last call | Podium |
+|---|---|---|
+| ![Race lobby with a room code](docs/race-lobby.png) | ![Last call after someone reached the chest](docs/race-last-call.png) | ![Race results podium](docs/race-results.png) |
+
+## Ranks
+
+| Rank | Points (daily) | Depth (race) | Meaning |
+|---|---|---|---|
+| Silver | 10 | 100 m | The answer everyone blurts out |
+| Gold | 15 | 150 m | The "obscure" pick everyone thinks of (set by hand) |
+| Platinum | 30 | 300 m | Common, but not the first thought |
+| Diamond | 60 | 600 m | Most people won't think of it |
+| Immortal | 85 | 850 m | Real knowledge |
+| Radiant | 100 | 1,000 m | The rarest answer. Almost nobody finds it |
+
+Like Krillion, rarity is estimated ahead of time, not from live answers. Every
+possible answer has a fame rating (`pipeline/familiarity.json`, with stat-based
+fallbacks), and newer things count as better known. Within a question the
+answers are sorted from most to least obvious, then split: Silver 22%,
+Platinum 30%, Diamond 28%, Immortal 20%, and the single rarest is Radiant.
+Every question needs at least 8 valid answers.
+
+**Tier 1** means appearing on a roster at a VCT international (Masters,
+Champions, LOCK//IN) or a franchised VCT league event (2023 onward).
+
+---
 
 ## How it works
 
 ```mermaid
 flowchart LR
-  L["Liquipedia API"] -- "rate-limited, cached" --> P["pipeline/<br/>Python"]
-  P -- "players.json" --> A["Admin page<br/>(write questions)"]
-  A -- "Publish" --> D["client/public/data/dive.json"]
-  D --> C["client/<br/>the game website"]
+  L["Liquipedia API"] -- "rate-limited, cached" --> P["pipeline/ (Python)"]
+  V["valorant-api.com"] -- "cached" --> P
+  P --> A["Admin page<br/>(write questions)"]
+  A -- "Publish" --> D["dive.json<br/>(answers + schedule)"]
+  N["Nightly GitHub run"] -- "rebuilds" --> D
+  D --> C["client/<br/>game website<br/>(Cloudflare Pages)"]
+  D --> S["server/<br/>race referee<br/>(Render)"]
+  C <-- "Socket.IO" --> S
 ```
 
-- **The pipeline** (`pipeline/`) pulls tier 1 rosters, countries, and
-  international winners from Liquipedia's API, following its rate limits and
-  caching every response.
-- **The admin page** (`pipeline/admin.py`) is a local page for writing questions
-  from dropdowns, with a live preview of every valid answer and its rarity tier.
-- **The game** (`client/`) only reads the published `dive.json`. It never
-  calls Liquipedia.
+- **The pipeline** (`pipeline/`) pulls tier 1 rosters, countries, winners, IGLs
+  and MVPs from Liquipedia's API (following its rate limits and caching every
+  response), plus agents, abilities, weapons, skins, maps and callouts from
+  valorant-api.com.
+- **The admin page** (`pipeline/admin.py`) is a local page for writing
+  questions from dropdowns, with a live preview of every valid answer and its
+  rank, and a 30-day schedule.
+- **The game** (`client/`) reads the published `dive.json`. It never calls
+  Liquipedia.
+- **The race server** (`server/`) runs the rooms and checks every race answer
+  with the same matching rules as the daily game (`shared/match.ts`).
+- **Every night** a GitHub Action rebuilds the data and pushes it; Cloudflare
+  and Render then redeploy on their own. New skins, maps and pro players show
+  up within about a week without anyone touching anything.
+
+## Day to day
+
+**Adding or changing questions:** double-click `Edit questions.bat` (it pulls
+the latest first and opens the editor at http://localhost:8765). Add or edit
+questions, press **Publish to game**, close the tab, then push:
+
+```powershell
+git add -A
+git commit -m "Update questions"
+git push
+```
+
+Treasure race uses new questions right away. The daily dive plans 30 days
+ahead, so to see a new question sooner, put it on a day in the **Schedule** tab.
+
+**Always `git pull` before starting work**: the nightly run pushes to the same
+repo. If `git push` ever says "rejected", run `git pull`, then push again.
+
+**When a new agent comes out**, its abilities need tagging (flash, smoke, wall,
+heal, info, damage) in `ability_tags` in `pipeline/familiarity.json`, or they
+won't count for "Name a flash ability"-style questions. Everything else updates
+by itself.
 
 ## Running it on your computer
 
-You need [Python 3.10+](https://python.org).
+You need [Python 3.10+](https://python.org) and [Node.js 22+](https://nodejs.org).
+
+**The pipeline and question editor** (from the `krilljoy` folder):
 
 ```powershell
 pip install -r pipeline/requirements.txt
@@ -35,162 +135,62 @@ copy pipeline\local_settings.example.py pipeline\local_settings.py
 # edit pipeline/local_settings.py: replace CHANGE_ME with your contact
 
 python pipeline/build.py     # first run ~10–15 min (Liquipedia rate limits), then seconds
-python pipeline/admin.py     # opens the question editor at http://localhost:8765
+python pipeline/admin.py     # question editor at http://localhost:8765
 ```
 
-## Playing the game on your computer
-
-You need [Node.js 22+](https://nodejs.org) (the same one ERS uses).
+**The game and the race server**, each in its own terminal:
 
 ```powershell
-cd client
-npm install        # first time only
-npm run dev        # opens the game at http://localhost:5173
+cd server            # terminal 1: race server on http://localhost:3001
+npm install
+npm run dev
 ```
-
-The game reads `client/public/data/dive.json`, so publish questions first
-(`python pipeline/build.py`, or **Publish to game** in the admin page).
-Progress and stats are saved in your browser. To replay today's dive while
-testing, open the browser console (F12) and run `localStorage.clear()`.
-
-### Putting it online (Cloudflare Pages, like ERS)
-
-Live at **https://krilljoy.pages.dev**. The Pages project was created from the
-GitHub repo with:
-
-| Setting | Value |
-|---|---|
-| Root directory | `client` |
-| Build command | `npm run build` |
-| Build output directory | `dist` |
-| Environment variables | `NODE_VERSION` = `22`, `VITE_SERVER_URL` = `https://krilljoy-race.onrender.com` |
-
-Every push to `main` then updates the site, including new questions.
-
-## Writing questions
-
-1. Run `python pipeline/admin.py`.
-2. **+ New question**, type it, and pick where answers come from: pro players,
-   pro teams, agents, abilities, weapons, weapon skins, maps, map callouts, or a
-   hand-written list.
-3. Add conditions. Pro players: played for a team, from a country, won or played
-   at an event, was IGL, was finals MVP. Teams: played at or won an event. Game
-   content: e.g. weapon is Stinger, collection is Reaver, map is Ascent, role is
-   Controller, ability does damage, skin is bought with VP. Answers must match all
-   of them. For a hand-written list, type one answer per line, most obvious
-   first (add other spellings after a `|`).
-4. The preview lists every valid answer, most obvious first, with its tier and
-   the Liquipedia evidence. Change a tier to override it.
-5. **Publish to game** writes `client/public/data/dive.json`.
-
-## Treasure race (multiplayer)
-
-Everyone in a room gets the same questions in the same order, back to back,
-with no timer. Rarer answers sink you faster. The first diver to reach the
-treasure chest wins; everyone else then gets 30 seconds to make it too, and
-the rest are ranked by depth. Skip unlocks 25 seconds into a question (0 m).
-The host picks the length: Short 1,500 m, Normal 3,000 m, Long 5,000 m.
-
-- **Quick play** joins (or opens) a public lobby, which starts by itself 30
-  seconds after a second diver joins.
-- **Host a room** gives you a 4-letter code and an invite link. Private unless
-  you list it publicly.
-- **Join by code**, or pick a room from the public list.
-
-The race needs the server in `server/` (Node + Socket.IO, like ERS). It's
-the referee: it checks every answer with the same rules as the daily game
-(`shared/match.ts`), using the same `dive.json`.
-
-### Running a race on your computer
-
-Three terminals, all starting in the `krilljoy` folder:
 
 ```powershell
-# 1) the race server (first time: npm install)
-cd server
+cd client            # terminal 2: the game on http://localhost:5173
 npm install
-npm run dev          # http://localhost:3001
-
-# 2) the game
-cd client
-npm install
-npm run dev          # http://localhost:5173
-
-# 3) everything else (build, admin, git) stays at the krilljoy folder
+npm run dev
 ```
 
-Open http://localhost:5173/race in two browser tabs (each tab is its own
-player on localhost) to race yourself.
+Open http://localhost:5173/race in two tabs to race yourself: on localhost
+each tab is its own player. To replay today's dive while testing, open the
+browser console (F12) and run `localStorage.clear()`.
 
-### Putting the server online (Render, like ERS)
+## Hosting
 
-Live at **https://krilljoy-race.onrender.com** (`/health` says if it's up).
+| | Where | Settings |
+|---|---|---|
+| Game | Cloudflare Pages, **https://krilljoy.pages.dev** | Root directory `client` · build `npm run build` · output `dist` · env `NODE_VERSION=22`, `VITE_SERVER_URL=https://krilljoy-race.onrender.com` |
+| Race server | Render (free), **https://krilljoy-race.onrender.com** | Root Directory **empty** · build `cd server && npm install` · start `cd server && npm start` · env `NODE_VERSION=22`, `CLIENT_ORIGIN=https://krilljoy.pages.dev` |
+| Keep-awake | UptimeRobot | HTTP check on `https://krilljoy-race.onrender.com/health` every 5 minutes |
 
-1. Render → **New → Web Service** → connect the `krilljoy` repo.
-2. Root Directory: **leave empty** · Build Command: `cd server && npm install` ·
-   Start Command: `cd server && npm start` · Instance type: Free.
-   (With Root Directory set to `server`, Render would only redeploy when server
-   code changes and would miss the nightly answer updates.)
-3. Environment variables: `NODE_VERSION` = `22`, and `CLIENT_ORIGIN` =
-   `https://krilljoy.pages.dev` (only the game's own site may connect).
-4. In Cloudflare Pages → Settings → Variables, add `VITE_SERVER_URL` = the
-   Render address, then Deployments → Retry deployment (the address is built
-   into the site, so it needs a rebuild).
-5. Optional, like ERS: an UptimeRobot check on
-   `https://krilljoy-race.onrender.com/health` every 5 minutes keeps the free
-   server awake.
-
-Every push (including the nightly rebuild) redeploys the server too, so it
-always has the latest questions. A redeploy ends any race in progress; the
-nightly one runs around 3 AM Eastern.
+- Every push to `main` (including the nightly one) redeploys both. A server
+  redeploy ends any race in progress; the nightly one runs around 3 AM Eastern.
+- Render's Root Directory stays empty on purpose: set to `server`, Render would
+  only redeploy when server code changes and would miss the nightly answers.
+- `VITE_SERVER_URL` is built into the site, so after changing it, use
+  **Deployments → Retry deployment** in Cloudflare.
+- The link preview (Discord, iMessage…) is `client/public/og.png` plus the
+  `og:` tags in `client/index.html`.
 
 ## Which questions play on which day
 
 `pipeline/schedule.json` holds the 7 questions for each day. Every build or
-**Publish to game** plans the next 30 days automatically: 3–4 pro-scene
-questions a day, the least recently used first, no repeats for about two weeks.
-Past days and today never change.
-
-In the admin page, switch to **Schedule** to see the plan, and use **Pick
-questions** on any future day to choose its questions yourself (that day is
-then "hand-picked" and stays as you set it). The question list shows when each
-question was last used and when it's next planned.
+**Publish to game** plans the next 30 days: 3–4 pro-scene questions a day, at
+most 2 of the same kind (skins, callouts…), the least recently used first, and
+no repeats for about two weeks. Past days and today never change; days you
+pick by hand in the **Schedule** tab stay as you set them.
 
 ## Nightly rebuild (GitHub Actions)
 
-`.github/workflows/nightly.yml` runs `build.py` on GitHub every night: fresh
-Liquipedia and game data, ranks recalculated for the new date, the schedule
-extended, and the result pushed. Cloudflare then updates the live game.
+`.github/workflows/nightly.yml` runs `build.py` every night: fresh Liquipedia
+and game data (anything older than a week is re-downloaded), ranks recalculated
+for the new date, the schedule extended, and the result pushed.
 
-One-time setup: on GitHub open the repo's **Settings → Secrets and variables →
-Actions → New repository secret**, name it `LIQUIPEDIA_USER_AGENT`, and paste
-the same text as `USER_AGENT` in your `pipeline/local_settings.py`. To run it
-right away: **Actions → Nightly rebuild → Run workflow**.
-
-Because GitHub now commits too, run `git pull` before you start working
-(`Edit questions.bat` does it for you). If `git push` ever says "rejected",
-run `git pull`, then push again.
-
-## Scoring
-
-| Tier | Points |
-|---|---|
-| Silver | 10 |
-| Gold (too clever) | 15 |
-| Platinum | 30 |
-| Diamond | 60 |
-| Immortal | 85 |
-| Radiant | 100 |
-
-Like Krillion, rarity is estimated ahead of time, not from live answers. Every
-possible answer has a fame rating (`pipeline/familiarity.json`, estimated by
-Claude, with stat-based fallbacks). Newer things count as better known. Within a question,
-answers are sorted from most to least obvious, then split: Silver 22%,
-Platinum 30%, Diamond 28%, Immortal 20%, and the single rarest answer is
-Radiant. Every question needs at least 8 valid answers.
-
-**Tier 1** means appearing on a roster at a VCT international event (Masters,
-Champions, LOCK//IN) or a franchised VCT league event (2023 onward).
+One-time setup: the repo's **Settings → Secrets and variables → Actions** needs
+a secret named `LIQUIPEDIA_USER_AGENT` with the same text as `USER_AGENT` in
+`pipeline/local_settings.py`. To run it right away: **Actions → Nightly
+rebuild → Run workflow**.
 
 ## Project structure
 
@@ -198,33 +198,42 @@ Champions, LOCK//IN) or a franchised VCT league event (2023 onward).
 krilljoy/
 ├── pipeline/
 │   ├── build.py          Fetch data and rebuild answer banks
-│   ├── admin.py/.html    Question editor
+│   ├── admin.py/.html    Question editor + schedule
 │   ├── prompts.json      The questions
+│   ├── schedule.json     Which questions play on which day
+│   ├── familiarity.json  Fame ratings, nicknames, ability tags, known IGLs
+│   ├── prompts.py        Conditions, fame score, ranks
+│   ├── schedule.py       30-day planner
 │   ├── data.py           Events, rosters, winners → data/players.json
-│   ├── prompts.py        Conditions, fame score, tiers
 │   ├── liquipedia.py     Rate-limited, cached Liquipedia client
 │   ├── game.py           Agents, skins, maps, callouts → data/game.json
 │   ├── valorant_api.py   Cached valorant-api.com client
 │   └── extract.py        Reads Liquipedia templates and HTML
-├── server/               Race server (Node + Socket.IO): rooms, referee
-├── shared/               Answer matching used by both the game and the server
 ├── client/               The game website (React + TypeScript + Vite)
 │   ├── public/data/dive.json   Answer banks, written by the pipeline
 │   └── src/
-│       ├── game/         Rules: daily pick, answer matching, saving, sharing
-│       ├── race/         Treasure race: lobby page, rooms, race, results
+│       ├── game/         Daily rules: picking, saving, sharing, sounds
+│       ├── race/         Treasure race: lobby, rooms, race, results, rules
 │       ├── components/   Ocean, depth gauge, HUD, pixel sprites
 │       └── screens/      Home, question, reveal, results, pop-ups
+├── server/               Race server (Node + Socket.IO): rooms and referee
+│   └── src/              index.ts (rooms), race.ts (rules), data.ts (answers)
+├── shared/match.ts       Answer matching used by both the game and the server
+├── docs/                 README images
 └── CLAUDE.md             Project brief for Claude Code
 ```
 
-## Data and credit
+## Data and credits
 
-Data from Liquipedia, licensed CC BY-SA 3.0. All requests follow the
-[Liquipedia API Terms of Use](https://liquipedia.net/api-terms-of-use).
-Inspired by the daily rare-answer game Krillion.
+Made by **Raspberri** ([Richard Weng](https://linkedin.com/in/richardwweng)).
+Thanks to BionicLettuce.
 
-## Author
+- Pro-scene data from [Liquipedia](https://liquipedia.net/valorant/), licensed
+  CC BY-SA 3.0. All requests follow the
+  [Liquipedia API Terms of Use](https://liquipedia.net/api-terms-of-use).
+- Game data from [valorant-api.com](https://valorant-api.com).
+- Inspired by the daily rare-answer game Krillion. All art and sounds here are
+  original.
 
-**Richard Weng**: Mechanical Engineering, Georgia Tech
-[LinkedIn](https://linkedin.com/in/richardwweng)
+Krilljoy was created under Riot Games' "Legal Jibber Jabber" policy using
+assets owned by Riot Games. Riot Games does not endorse or sponsor this project.

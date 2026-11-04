@@ -170,7 +170,7 @@ h1, h2, p { margin: 0; }
   border-radius: 0; color: var(--bright); font: 34px var(--body); outline: none; }
 .answer-input:focus { border-color: var(--cyan); border-left-color: var(--red); }
 .answer-input::placeholder { color: #4d6585; }
-.input-row .btn-red { width: 100%; padding: 0; }
+.input-row .btn-red { width: 100%; padding: 0 0 0 3px; white-space: nowrap; letter-spacing: 3px; font-size: 25px; }
 .time-bar { display: flex; gap: 2px; margin: 10px 164px 0 78px; }
 .time-bar i { flex: 1; height: 6px; background: #14263b; }
 .time-bar i.on { background: var(--cyan); }
