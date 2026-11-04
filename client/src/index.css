@@ -276,7 +276,7 @@ h1, h2, p { margin: 0; }
   .btn-icon { width: 32px; padding: 0; }
   .wide-only { display: none; }
   .narrow-only { display: inline; font-size: 20px; }
-  .topbar-tools .btn-small:first-child { width: 32px; padding: 0; }
+  .topbar-tools .howto-btn { width: 32px; padding: 0; }
   .topbar-tools { gap: 6px; }
   .gauge { right: 10px; width: 18px; top: 120px; bottom: 40px; }
   .gauge .tick.long { width: 12px; }
@@ -328,6 +328,8 @@ h1, h2, p { margin: 0; }
 .race-cta { width: 100%; margin-top: 10px; height: 52px; border-color: #f2c14e88; color: #f7dc8c; font-size: 20px; }
 .race-cta:hover { border-color: #f2c14e; }
 .race-home, .race-lobby { width: min(1000px, 100%); margin: 8px auto 30px; }
+.race-back { flex: none; display: block; width: auto; max-width: 100%; white-space: nowrap; height: 44px; margin: 0 0 10px; padding: 0 16px; border-color: #5de3f988; color: #bdf3fc; font-size: 19px; }
+.race-back:hover { border-color: var(--cyan); color: var(--bright); }
 .race-title { text-align: center; margin-bottom: 18px; }
 .race-title h1 { font: 700 clamp(48px, 7vw, 80px)/1 var(--pixel); letter-spacing: 0.06em; text-transform: uppercase; color: #f4ede0;
   text-shadow: -0.04em 0.03em 0 var(--red), 0.04em -0.03em 0 var(--cyan); }

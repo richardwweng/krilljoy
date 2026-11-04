@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { navigate, usePath } from "./nav";
 import RacePage from "./race/RacePage";
+import { getSocket } from "./race/socket";
 import type { DiveData } from "./types";
 import { easternDate } from "./game/daily";
 import { MAX_DEPTH } from "./game/tiers";
@@ -33,6 +34,18 @@ export default function App() {
   const path = usePath();
   const inRace = path.startsWith("/race");
   const [raceOcean, setRaceOcean] = useState({ offset: 0, chest: false });
+  // Back to the daily dive. Inside a race room this leaves the room (after asking,
+  // so a stray tap mid-race doesn't throw the race away).
+  const goDaily = () => {
+    const inRoom = path.split("/")[2];
+    if (inRoom) {
+      if (!window.confirm("Leave this race room and go back to the daily dive?")) return;
+      getSocket().emit("leave");
+    }
+    sound.click();
+    setScreen("home");
+    navigate("/");
+  };
   const onOcean = useCallback((offset: number, chest: boolean) => setRaceOcean({ offset, chest }), []);
 
   // Load the answer banks (published by the pipeline)
@@ -108,11 +121,11 @@ export default function App() {
       {playing && <DepthGauge depth={dive.depth} />}
       <div className={`shell${playing ? " with-gauge" : ""}`}>
         <header className="topbar">
-          <button type="button" className="brand" onClick={() => { setScreen("home"); navigate("/"); }} aria-label="Krilljoy home">
+          <button type="button" className="brand" onClick={goDaily} aria-label="Krilljoy home">
             Krill<span>joy</span>
           </button>
           <nav className="topbar-tools">
-            <button type="button" className="btn-small" onClick={() => { sound.click(); setPopup("howto"); }} aria-label="How to play"><span className="wide-only">How to play</span><span className="narrow-only">?</span></button>
+            <button type="button" className="btn-small howto-btn" onClick={() => { sound.click(); setPopup("howto"); }} aria-label="How to play"><span className="wide-only">How to play</span><span className="narrow-only">?</span></button>
             <button type="button" className="btn-small" onClick={() => { sound.click(); setPopup("stats"); }}>Stats</button>
             <button type="button" className="btn-small btn-icon" onClick={toggleSound} aria-pressed={!muted}
               aria-label={muted ? "Sound is off. Turn sound on" : "Sound is on. Turn sound off"} title={muted ? "Sound off" : "Sound on"}>

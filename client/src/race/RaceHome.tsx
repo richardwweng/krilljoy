@@ -47,6 +47,7 @@ export default function RaceHome() {
 
   return (
     <main className="race-home">
+      <button type="button" className="btn-dark race-back" onClick={() => { sound.click(); navigate("/"); }}><span className="wide-only">◂ Daily dive · play solo</span><span className="narrow-only">◂ Daily dive</span></button>
       <div className="race-title">
         <h1>Treasure race</h1>
         <p className="muted">Everyone gets the same questions, back to back. Rarer answers sink you faster. First to the chest wins; everyone else gets 30 seconds to make it too.</p>
