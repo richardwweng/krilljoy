@@ -3,6 +3,7 @@ import { navigate } from "../nav";
 import { sound } from "../game/sound";
 import { ask, getSocket, playerToken, saveName, savedName, useConnected } from "./socket";
 import { LENGTHS, type PublicRoom, type RaceLength } from "./types";
+import RaceHowTo from "./RaceHowTo";
 
 /** The race page: your name, Quick play, Host a room, Join by code, and the public rooms. */
 export default function RaceHome() {
@@ -15,6 +16,7 @@ export default function RaceHome() {
   const [rooms, setRooms] = useState<PublicRoom[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [rules, setRules] = useState(false);
 
   useEffect(() => {
     const s = getSocket();
@@ -47,7 +49,11 @@ export default function RaceHome() {
 
   return (
     <main className="race-home">
-      <button type="button" className="btn-dark race-back" onClick={() => { sound.click(); navigate("/"); }}><span className="wide-only">◂ Daily dive · play solo</span><span className="narrow-only">◂ Daily dive</span></button>
+      <div className="race-top">
+        <button type="button" className="btn-dark race-back" onClick={() => { sound.click(); navigate("/"); }}><span className="wide-only">◂ Daily dive · play solo</span><span className="narrow-only">◂ Daily dive</span></button>
+        <button type="button" className="btn-dark race-rules-btn" onClick={() => { sound.click(); setRules(true); }}><span className="wide-only">? How it works</span><span className="narrow-only">? Rules</span></button>
+      </div>
+      {rules && <RaceHowTo onClose={() => setRules(false)} />}
       <div className="race-title">
         <h1>Treasure race</h1>
         <p className="muted">Everyone gets the same questions, back to back. Rarer answers sink you faster. First to the chest wins; everyone else gets 30 seconds to make it too.</p>

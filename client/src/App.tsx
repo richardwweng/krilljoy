@@ -17,6 +17,7 @@ import Question from "./screens/Question";
 import Reveal from "./screens/Reveal";
 import Results from "./screens/Results";
 import HowTo from "./screens/HowTo";
+import RaceHowTo from "./race/RaceHowTo";
 import Stats from "./screens/Stats";
 
 type Screen = "home" | "dive";
@@ -148,7 +149,7 @@ export default function App() {
           </footer>
         )}
       </div>
-      {popup === "howto" && <HowTo onClose={() => setPopup(null)} />}
+      {popup === "howto" && (inRace ? <RaceHowTo onClose={() => setPopup(null)} /> : <HowTo onClose={() => setPopup(null)} />)}
       {popup === "stats" && <Stats today={date} onClose={() => setPopup(null)} />}
       {toast && <div className="toast" role="status">{toast}</div>}
     </>
