@@ -1,0 +1,46 @@
+﻿# Nightly rebuild: refreshes data, recalculates ranks, plans the coming days, pushes.
+# Needs the LIQUIPEDIA_USER_AGENT secret (repo Settings > Secrets and variables > Actions).
+name: Nightly rebuild
+
+on:
+  schedule:
+    - cron: "17 8 * * *"   # 3:17 AM Eastern (4:17 AM in summer)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: nightly-rebuild
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -r pipeline/requirements.txt
+      - name: Restore Liquipedia cache
+        uses: actions/cache@v4
+        with:
+          path: pipeline/cache
+          key: liquipedia-${{ github.run_id }}
+          restore-keys: liquipedia-
+      - name: Build
+        env:
+          KRILLJOY_USER_AGENT: ${{ secrets.LIQUIPEDIA_USER_AGENT }}
+        run: python pipeline/build.py
+      - name: Push if anything changed
+        run: |
+          git config user.name "krilljoy-nightly"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pipeline/data pipeline/schedule.json client/public/data/dive.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed tonight."
+          else
+            git commit -m "Nightly rebuild $(date -u +%F)"
+            git push
+          fi
