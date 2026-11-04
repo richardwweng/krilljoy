@@ -231,7 +231,7 @@ Copy the mechanics, not Krillion's branding or assets.
 
 ## Roadmap
 
-1. **Daily mode** (`client/`, built Nov 2026, not deployed yet): same as Krillion today.
+1. **Daily mode** (`client/`, built Nov 2026, live at krilljoy.pages.dev): same as Krillion today.
    - Sound: 8-bit effects synthesized with Web Audio in `src/game/sound.ts`
      (no audio files; never use Krillion's). Approved set: rank chimes (rarer =
      sparklier), wrong-guess buzz, autocorrect "hm?", last-5-seconds ticks,
@@ -272,7 +272,7 @@ Copy the mechanics, not Krillion's branding or assets.
    - The day's prompts come from the schedule in `dive.json` (see above).
 2. **More answer pools:** game content is done (see "Answer pools"). Still to
    build: hand-written answer lists, more Liquipedia data.
-3. **Treasure race** (built Nov 2026, not deployed yet). Richard's rules:
+3. **Treasure race** (built and live Nov 2026). Richard's rules:
    - Lobbies like ERS / Krillion's Puffer Party: Quick play (public lobby,
      auto-starts 30 s after a 2nd player joins, 5 s when full), Host a room
      (4-letter code, invite link /race/CODE, private unless listed), Join by
@@ -288,11 +288,20 @@ Copy the mechanics, not Krillion's branding or assets.
      live leaderboard. Results: podium, standings, your answers. Public rooms
      return to the lobby after 45 s; private hosts press "Race again".
    - Server: server/src/index.ts (rooms, sockets, reconnect by token: 30 s grace
-     in lobby, 90 s mid-race), race.ts (pure rules), data.ts (reads
-     client/public/data/dive.json, reloads on change). Deploy on Render (root
-     `server`, `npm start`, env CLIENT_ORIGIN); client env VITE_SERVER_URL.
-   - Client: /race routes via src/nav.ts + public/_redirects (Cloudflare SPA);
-     src/race/*. Each localhost tab is its own player (sessionStorage token).
+     in lobby, 90 s mid-race; empty rooms are deleted), race.ts (pure rules;
+     a race ends after 15 min with no guesses or skips from anyone,
+     `IDLE_END_MS`, Richard's call), data.ts (reads client/public/data/dive.json,
+     reloads on change).
+   - Live: game https://krilljoy.pages.dev (Cloudflare Pages, root `client`,
+     env NODE_VERSION=22 + VITE_SERVER_URL); server
+     https://krilljoy-race.onrender.com (Render free, Root Directory EMPTY,
+     build `cd server && npm install`, start `cd server && npm start`, env
+     NODE_VERSION=22 + CLIENT_ORIGIN=https://krilljoy.pages.dev). UptimeRobot
+     pings it every 5 min. Pushes (incl. nightly) redeploy both; a server
+     redeploy ends races in progress.
+   - Client: /race routes via src/nav.ts (Cloudflare Pages serves index.html for
+     unknown paths by itself; no _redirects file). src/race/*. "◂ Daily dive"
+     button on the race home. Each localhost tab is its own player (sessionStorage token).
    - Note: dive.json is public, so a determined cheater could look answers up.
      Fine for friends; a ranked mode would need the server to hold answers privately.
 4. **Later:** rated matchmaking, leaderboards, "better than X%" curve, real

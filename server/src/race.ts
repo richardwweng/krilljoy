@@ -9,6 +9,7 @@ export type RaceLength = keyof typeof RACE_LENGTHS;
 export const METRES_PER_POINT = 10;
 export const SKIP_AFTER_MS = 25_000; // Skip unlocks 25 s into a question (Richard's call); skipping = 0 m
 export const LAST_CALL_MS = 30_000; // after the first player opens the chest, everyone else gets 30 s
+export const IDLE_END_MS = 15 * 60_000; // nobody answers, guesses or skips for 15 min: end the race (Richard's call)
 
 export interface RoundLog {
   promptId: string;
@@ -37,6 +38,8 @@ export interface Race {
   lastCallEndsAt: number | null;
   firstFinisher: string | null;
   endedAt: number | null;
+  endReason: "chest" | "idle" | null; // "idle" = ended because nobody played for IDLE_END_MS
+  lastActivityAt: number; // last answer, guess or skip by anyone
   racers: Map<string, Racer>;
 }
 
@@ -62,7 +65,7 @@ export function startRace(playerIds: string[], length: RaceLength, startAt: numb
   for (const id of playerIds) {
     racers.set(id, { id, depth: 0, index: 0, shownAt: startAt, finishedAt: null, misses: 0, skips: 0, history: [] });
   }
-  return { order: makeOrder(), target: RACE_LENGTHS[length], startAt, lastCallEndsAt: null, firstFinisher: null, endedAt: null, racers };
+  return { order: makeOrder(), target: RACE_LENGTHS[length], startAt, lastCallEndsAt: null, firstFinisher: null, endedAt: null, endReason: null, lastActivityAt: startAt, racers };
 }
 
 /** The question a racer is looking at now (null when finished, or out of questions). */
@@ -87,6 +90,7 @@ export function submitAnswer(race: Race, r: Racer, typed: string, now: number): 
   const prompt = currentPrompt(race, r);
   if (!prompt || now < race.startAt) return { kind: "closed" };
   const text = typed.trim().slice(0, 60);
+  race.lastActivityAt = now; // any guess counts as someone still playing
   const match = matchAnswer(prompt, text, knownAnswerNames());
   if (!match) {
     const options = ambiguousOptions(prompt, text);
@@ -108,6 +112,7 @@ export function skip(race: Race, r: Racer, now: number): boolean {
   if (!prompt || now - r.shownAt < SKIP_AFTER_MS) return false;
   r.history.push({ promptId: prompt.id, typed: "", answerId: null, tier: null, points: 0, ms: now - r.shownAt });
   r.skips++;
+  race.lastActivityAt = now;
   advance(race, r, now);
   return true;
 }
@@ -124,10 +129,15 @@ function advance(race: Race, r: Racer, now: number) {
   }
 }
 
-/** Is the race over? Everyone finished, the last call ran out, or nobody can continue. */
+/** Is the race over? Everyone finished, the last call ran out, nobody can continue,
+ *  or nobody has played for IDLE_END_MS (a forgotten tab shouldn't keep a room open forever). */
 export function isOver(race: Race, now: number, activeIds: Set<string>): boolean {
   if (race.endedAt !== null) return true;
   if (race.lastCallEndsAt !== null && now >= race.lastCallEndsAt) return true;
+  if (now - race.lastActivityAt >= IDLE_END_MS) {
+    race.endReason = "idle";
+    return true;
+  }
   const stillRacing = [...race.racers.values()].filter((r) => activeIds.has(r.id) && r.finishedAt === null && currentPrompt(race, r));
   return stillRacing.length === 0;
 }

@@ -56,6 +56,7 @@ export interface RoomView {
   autoStartAt: number | null;
   returnAt: number | null;
   lastCallEndsAt: number | null;
+  endReason: "chest" | "idle" | null;
   firstFinisher: string | null;
   players: RacePlayer[];
   question: { n: number; promptId: string; text: string; pool: string; shownAt: number; skipAt: number } | null;

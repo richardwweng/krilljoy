@@ -31,6 +31,7 @@ export default function RaceResults({ room, serverNow }: { room: RoomView; serve
     <main className="results race-results">
       <div className="results-head">
         <div className="label accent">Race over · room {room.code}</div>
+        {room.endReason === "idle" && <p className="race-idle-note">Nobody answered for 15 minutes, so the race ended here.</p>}
         <div className="podium">
           {[1, 0, 2].map((i) => rows[i] && (
             <div key={rows[i].id} className={`podium-step p${i + 1}`}>

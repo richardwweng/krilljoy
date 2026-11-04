@@ -118,6 +118,7 @@ function view(room: Room, me: Person) {
     length: room.length, target: RACE_LENGTHS[room.length], maxPlayers: room.maxPlayers, now,
     countdownEndsAt: room.countdownEndsAt, autoStartAt: room.autoStartAt, returnAt: room.returnAt,
     lastCallEndsAt: race?.lastCallEndsAt ?? null,
+    endReason: race?.endReason ?? null,
     firstFinisher: race?.firstFinisher ? room.players.find((p) => p.id === race.firstFinisher)?.name ?? null : null,
     players,
     question: prompt && mine ? {
