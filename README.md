@@ -226,7 +226,6 @@ krilljoy/
 ## Data and credits
 
 Made by **Raspberri** ([Richard Weng](https://linkedin.com/in/richardwweng)).
-Thanks to BionicLettuce.
 
 - Pro-scene data from [Liquipedia](https://liquipedia.net/valorant/), licensed
   CC BY-SA 3.0. All requests follow the
