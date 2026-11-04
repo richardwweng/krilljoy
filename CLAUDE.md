@@ -65,8 +65,9 @@ multiplayer needs it), plain-language README, small focused files.
 ```
 krilljoy/
 ├── pipeline/   Python: pulls Liquipedia data, builds answer banks, admin page
-├── client/     the game website, React + TS + Vite (daily mode)
-├── server/     (later) real-time multiplayer server, Node + Socket.IO
+├── client/     the game website, React + TS + Vite (daily mode + /race)
+├── server/     treasure race server, Node + TS + Socket.IO (run with tsx)
+├── shared/     match.ts: answer matching used by client AND server
 └── docs/       README images
 ```
 
@@ -271,14 +272,31 @@ Copy the mechanics, not Krillion's branding or assets.
    - The day's prompts come from the schedule in `dive.json` (see above).
 2. **More answer pools:** game content is done (see "Answer pools"). Still to
    build: hand-written answer lists, more Liquipedia data.
-3. **Treasure dive mode:** (the only mode with the chest) prompts back to back, each answer sinks you by its
-   rarity, reach the chest at a fixed depth. Score = time to the chest. Wrong
-   answers sink 0 (or add a time penalty) so spamming doesn't pay.
-4. **Async multiplayer:** same seeded prompt order for everyone, shared
-   leaderboard of finish times. Needs a small backend.
-5. **Live races (maybe):** `server/` with Socket.IO, players see each other's
-   depth. The server is the referee and holds the answers, like ERS, so
-   answers can't be read from the browser.
+3. **Treasure race** (built Nov 2026, not deployed yet). Richard's rules:
+   - Lobbies like ERS / Krillion's Puffer Party: Quick play (public lobby,
+     auto-starts 30 s after a 2nd player joins, 5 s when full), Host a room
+     (4-letter code, invite link /race/CODE, private unless listed), Join by
+     code, public room list. Max 2–10 players (default 8). Host can start solo.
+   - Everyone gets the same shuffled question order (no two same-pool questions
+     in a row), back to back, NO timer. Answers checked on the server with
+     shared/match.ts (typo -> "suggest" -> player confirms; "which one?" for
+     ambiguous; wrong guesses free). Skip unlocks after 25 s (0 m).
+   - Host picks length: Short 1,500 / Normal 3,000 / Long 5,000 m (quick play =
+     Normal). First to the treasure chest wins; then a 30 s LAST CALL for the
+     rest; placings = finish order, then depth (ties: fewer skips).
+   - Live depths: shared gauge (every diver's marker, chest at the bottom) +
+     live leaderboard. Results: podium, standings, your answers. Public rooms
+     return to the lobby after 45 s; private hosts press "Race again".
+   - Server: server/src/index.ts (rooms, sockets, reconnect by token: 30 s grace
+     in lobby, 90 s mid-race), race.ts (pure rules), data.ts (reads
+     client/public/data/dive.json, reloads on change). Deploy on Render (root
+     `server`, `npm start`, env CLIENT_ORIGIN); client env VITE_SERVER_URL.
+   - Client: /race routes via src/nav.ts + public/_redirects (Cloudflare SPA);
+     src/race/*. Each localhost tab is its own player (sessionStorage token).
+   - Note: dive.json is public, so a determined cheater could look answers up.
+     Fine for friends; a ranked mode would need the server to hold answers privately.
+4. **Later:** rated matchmaking, leaderboards, "better than X%" curve, real
+   answer counts ("N players chose this").
 
 ## Conventions
 

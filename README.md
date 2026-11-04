@@ -82,6 +82,60 @@ Every push to `main` then updates the site, including new questions.
    the Liquipedia evidence. Change a tier to override it.
 5. **Publish to game** writes `client/public/data/dive.json`.
 
+## Treasure race (multiplayer)
+
+Everyone in a room gets the same questions in the same order, back to back,
+with no timer. Rarer answers sink you faster. The first diver to reach the
+treasure chest wins; everyone else then gets 30 seconds to make it too, and
+the rest are ranked by depth. Skip unlocks 25 seconds into a question (0 m).
+The host picks the length: Short 1,500 m, Normal 3,000 m, Long 5,000 m.
+
+- **Quick play** joins (or opens) a public lobby, which starts by itself 30
+  seconds after a second diver joins.
+- **Host a room** gives you a 4-letter code and an invite link. Private unless
+  you list it publicly.
+- **Join by code**, or pick a room from the public list.
+
+The race needs the server in `server/` (Node + Socket.IO, like ERS). It's
+the referee: it checks every answer with the same rules as the daily game
+(`shared/match.ts`), using the same `dive.json`.
+
+### Running a race on your computer
+
+Three terminals, all starting in the `krilljoy` folder:
+
+```powershell
+# 1) the race server (first time: npm install)
+cd server
+npm install
+npm run dev          # http://localhost:3001
+
+# 2) the game
+cd client
+npm install
+npm run dev          # http://localhost:5173
+
+# 3) everything else (build, admin, git) stays at the krilljoy folder
+```
+
+Open http://localhost:5173/race in two browser tabs (each tab is its own
+player on localhost) to race yourself.
+
+### Putting the server online (Render, like ERS)
+
+1. Render → **New → Web Service** → connect the `krilljoy` repo.
+2. Root Directory: `server` · Build Command: `npm install` · Start Command:
+   `npm start` · Instance type: Free.
+3. Environment variables: `NODE_VERSION` = `22`, and `CLIENT_ORIGIN` = your
+   game's address (e.g. `https://krilljoy.pages.dev`).
+4. In Cloudflare Pages, add `VITE_SERVER_URL` = the Render address (e.g.
+   `https://krilljoy-server.onrender.com`) and redeploy.
+5. Optional, like ERS: an UptimeRobot check on `https://…onrender.com/health`
+   every 5 minutes keeps the free server awake.
+
+Every push (including the nightly rebuild) redeploys the server too, so it
+always has the latest questions.
+
 ## Which questions play on which day
 
 `pipeline/schedule.json` holds the 7 questions for each day. Every build or
@@ -144,10 +198,13 @@ krilljoy/
 │   ├── game.py           Agents, skins, maps, callouts → data/game.json
 │   ├── valorant_api.py   Cached valorant-api.com client
 │   └── extract.py        Reads Liquipedia templates and HTML
+├── server/               Race server (Node + Socket.IO): rooms, referee
+├── shared/               Answer matching used by both the game and the server
 ├── client/               The game website (React + TypeScript + Vite)
 │   ├── public/data/dive.json   Answer banks, written by the pipeline
 │   └── src/
 │       ├── game/         Rules: daily pick, answer matching, saving, sharing
+│       ├── race/         Treasure race: lobby page, rooms, race, results
 │       ├── components/   Ocean, depth gauge, HUD, pixel sprites
 │       └── screens/      Home, question, reveal, results, pop-ups
 └── CLAUDE.md             Project brief for Claude Code

@@ -1,0 +1,21 @@
+{
+  "name": "krilljoy-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Krilljoy race server: lobbies, the shared question order, and the referee that checks answers",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "obscenity": "^0.4.6",
+    "socket.io": "^4.8.4",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "~6.0.2"
+  }
+}

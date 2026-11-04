@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { BOAT, JELLY, KELP, MINNOW, SUN } from "./sprites";
+import { BOAT, CHEST, CHEST_COLORS, JELLY, KELP, MINNOW, SUN } from "./sprites";
 import Sprite from "./Sprite";
 
 // The whole sea is one tall strip (sky at the top, seabed at the bottom).
@@ -50,7 +50,7 @@ function makePlankton() {
 }
 
 /** offset: how far down we are, 0 = surface with sky, 1 = seabed */
-export default function Ocean({ offset }: { offset: number }) {
+export default function Ocean({ offset, chest = false }: { offset: number; chest?: boolean }) {
   const START = 75; // just under the surface when the dive starts
   const shift = offset <= 0 ? 0 : START + Math.min(offset, 1) * (TRACK_VH - 100 - START);
   const schools = useMemo(makeSchools, []);
@@ -77,6 +77,9 @@ export default function Ocean({ offset }: { offset: number }) {
         <div className="rays" style={{ top: `${SURFACE}%` }}>
           {[12, 30, 52, 74, 88].map((x, i) => <span key={i} style={{ left: `${x}%`, width: 40 + (i % 3) * 25, animationDelay: `${-i * 1.7}s` }} />)}
         </div>
+        {chest && (
+          <div className="seabed-chest" aria-hidden="true"><Sprite rows={CHEST} colors={CHEST_COLORS} scale={8} /></div>
+        )}
         {[[5, "#1f6b5a", 7], [9, "#174f45", 6], [90, "#1f6b5a", 7], [95, "#174f45", 5]].map(([x, c, s], i) => (
           <div key={i} className="kelp" style={{ left: `${x}%`, animationDelay: `${-i * 1.3}s` }}>
             <Sprite rows={KELP} colors={{ G: c as string }} scale={s as number} />

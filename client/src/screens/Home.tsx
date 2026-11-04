@@ -8,9 +8,10 @@ interface Props {
   onBegin: () => void;
   onHowTo: () => void;
   onStats: () => void;
+  onRace: () => void;
 }
 
-export default function Home({ date, started, finished, ready, onBegin, onHowTo, onStats }: Props) {
+export default function Home({ date, started, finished, ready, onBegin, onHowTo, onStats, onRace }: Props) {
   const label = finished ? "See your dive" : started ? "Continue dive" : "Begin dive";
   return (
     <main className="home">
@@ -29,6 +30,7 @@ export default function Home({ date, started, finished, ready, onBegin, onHowTo,
           <button type="button" className="btn-dark" onClick={onHowTo}>How to play</button>
           <button type="button" className="btn-dark" onClick={onStats}>Stats</button>
         </div>
+        <button type="button" className="btn-dark race-cta" onClick={onRace}>⚑ Treasure race · play with friends</button>
       </div>
     </main>
   );

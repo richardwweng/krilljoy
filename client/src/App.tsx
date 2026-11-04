@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { navigate, usePath } from "./nav";
+import RacePage from "./race/RacePage";
 import type { DiveData } from "./types";
 import { easternDate } from "./game/daily";
 import { MAX_DEPTH } from "./game/tiers";
@@ -28,6 +30,10 @@ export default function App() {
   const [toast, setToast] = useState<string | null>(null);
   const [muted, setMutedState] = useState(isMuted());
   const dive = useDive(data, date);
+  const path = usePath();
+  const inRace = path.startsWith("/race");
+  const [raceOcean, setRaceOcean] = useState({ offset: 0, chest: false });
+  const onOcean = useCallback((offset: number, chest: boolean) => setRaceOcean({ offset, chest }), []);
 
   // Load the answer banks (published by the pipeline)
   useEffect(() => {
@@ -62,15 +68,18 @@ export default function App() {
     setScreen("dive");
   };
 
-  const inDive = screen === "dive" && dive.started;
+  const inDive = !inRace && screen === "dive" && dive.started;
   const playing = inDive && !dive.finished;
   const offset = inDive ? Math.max(dive.depth / MAX_DEPTH, 0.001) : 0;
 
   let body;
-  if (!inDive) {
+  if (inRace) {
+    body = <RacePage path={path} onOcean={onOcean} />;
+  } else if (!inDive) {
     body = (
       <Home date={date} started={dive.started} finished={dive.finished} ready={!!data && dive.prompts.length > 0}
-        onBegin={begin} onHowTo={() => setPopup("howto")} onStats={() => setPopup("stats")} />
+        onBegin={begin} onHowTo={() => setPopup("howto")} onStats={() => setPopup("stats")}
+        onRace={() => { sound.click(); navigate("/race"); }} />
     );
   } else if (dive.finished) {
     body = <Results date={date} prompts={dive.prompts} rounds={dive.rounds} onToast={setToast} />;
@@ -95,11 +104,11 @@ export default function App() {
 
   return (
     <>
-      <Ocean offset={offset} />
+      <Ocean offset={inRace ? raceOcean.offset : offset} chest={inRace && raceOcean.chest} />
       {playing && <DepthGauge depth={dive.depth} />}
       <div className={`shell${playing ? " with-gauge" : ""}`}>
         <header className="topbar">
-          <button type="button" className="brand" onClick={() => setScreen("home")} aria-label="Krilljoy home">
+          <button type="button" className="brand" onClick={() => { setScreen("home"); navigate("/"); }} aria-label="Krilljoy home">
             Krill<span>joy</span>
           </button>
           <nav className="topbar-tools">

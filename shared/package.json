@@ -1,0 +1,4 @@
+{
+  "type": "module",
+  "description": "Code shared by the game (client/) and the race server (server/)"
+}

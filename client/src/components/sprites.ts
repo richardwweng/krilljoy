@@ -28,3 +28,8 @@ export const MINNOW = [".XX.X", "XXXXX", ".XX.X"];
 // Original glowing jellyfish (Krilljoy's sea creature)
 export const JELLY = ["...RRRR...", ".RRRRRRRR.", "RRPRRRRRRR", "RRRRRRRRRR", "RRRRRRRRRR",
   ".R.R..R.R.", ".R.R..R.R.", "R..R..R..R", "..R....R..", ".R......R."];
+
+// Treasure chest for the race finish line (closed, and opened)
+export const CHEST = [".OOOOOOO.", "OYYYYYYYO", "OOOOOOOOO", "OYYYKYYYO", "OYYYYYYYO", "OOOOOOOOO"];
+export const OPEN_CHEST = [".OOOOOOOOO.", "O.........O", "OYYYYYYYYYO", "OOOOOOOOOOO", "OYYYYKYYYYO", "OYYYYYYYYYO", "OOOOOOOOOOO"];
+export const CHEST_COLORS = { O: "#7a4a1e", Y: "#f2c14e", K: "#06101c" };
