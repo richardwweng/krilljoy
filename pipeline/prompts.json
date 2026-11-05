@@ -1371,5 +1371,251 @@
     ],
     "overrides": {},
     "enabled": true
+  },
+  {
+    "id": "info_ability",
+    "text": "Name an ability that gives info",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "info"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "flash_ability",
+    "text": "Name a flash",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "flash"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "smoke_ability",
+    "text": "Name a smoke",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "smoke"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "wall_ability",
+    "text": "Name an ability that makes a wall",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "wall"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "heal_ability",
+    "text": "Name an ability that heals",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "heal"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "earn_player_100k",
+    "text": "Name a tier 1 player who has won $100,000+ in VCT prize money",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "earnings",
+        "value": "100000"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "earn_player_250k",
+    "text": "Name a tier 1 player who has won $250,000+ in VCT prize money",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "earnings",
+        "value": "250000"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "earn_team_500k",
+    "text": "Name a team that has won $500,000+ in VCT prize money",
+    "pool": "teams",
+    "conditions": [
+      {
+        "type": "earnings",
+        "value": "500000"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "name_z",
+    "text": "Name a tier 1 player with a Z in their name",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "name_has",
+        "value": "z"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "name_x",
+    "text": "Name a tier 1 player with an X in their name",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "name_has",
+        "value": "x"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "name_q",
+    "text": "Name a tier 1 player with a Q in their name",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "name_has",
+        "value": "q"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "name_digit",
+    "text": "Name a tier 1 player with a number in their name",
+    "pool": "players",
+    "conditions": [
+      {
+        "type": "name_has",
+        "value": "digit"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "team_digit",
+    "text": "Name a tier 1 team with a number in its name",
+    "pool": "teams",
+    "conditions": [
+      {
+        "type": "name_has",
+        "value": "digit"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "pink_skin",
+    "text": "Name a skin with a pink variant",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:colors",
+        "value": "Pink"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "gold_skin",
+    "text": "Name a skin with a gold variant",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:colors",
+        "value": "Gold"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "red_vandal",
+    "text": "Name a Vandal skin with a red variant",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Vandal"
+      },
+      {
+        "type": "is:colors",
+        "value": "Red"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "purple_phantom",
+    "text": "Name a Phantom skin with a purple variant",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Phantom"
+      },
+      {
+        "type": "is:colors",
+        "value": "Purple"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "pink_knife",
+    "text": "Name a knife with a pink variant",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Melee"
+      },
+      {
+        "type": "is:colors",
+        "value": "Pink"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
   }
 ]

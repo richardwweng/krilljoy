@@ -5,11 +5,13 @@ Everything here is cached by liquipedia.py, so after the first run this is fast.
 import json
 import re
 from collections import Counter, defaultdict
+from difflib import SequenceMatcher
 from pathlib import Path
 
 import config
 from extract import (
-    league_info, navbox_event_links, norm, player_info, prize_pool_mvp, prize_pool_winner,
+    league_info, navbox_event_links, norm, player_info, prize_pool_mvp, prize_pool_placements,
+    prize_pool_winner,
     team_cards, team_participants, team_participants_html,
 )
 
@@ -78,14 +80,18 @@ def find_winners(lp, events):
     """Winner and MVP of each finished international event (rendered prize pool)."""
     for ev in events:
         ev["winner"] = ev["mvp"] = None
+        ev["prizes"] = []
         if not ev["finished"]:
             continue
         if not ev["international"]:
-            # league events: only read for their MVP (one slow request each, cached)
+            # league events: read for their MVP and prize money (one slow request each, cached)
             if getattr(config, "MVP_FROM_LEAGUES", True) and ev["year"] >= 2022:
-                ev["mvp"] = prize_pool_mvp(lp.html(ev["page"]))
+                html = lp.html(ev["page"])
+                ev["mvp"] = prize_pool_mvp(html)
+                ev["prizes"] = prize_pool_placements(html)
             continue
         html = lp.html(ev["page"])
+        ev["prizes"] = prize_pool_placements(html)
         winner = config.WINNER_OVERRIDES.get(ev["page"]) or prize_pool_winner(html)
         ev["winner"] = winner
         ev["mvp"] = prize_pool_mvp(html)  # awarded from 2022 on
@@ -111,18 +117,51 @@ def team_key_map(events):
     for keys in groups.values():
         main = max(keys, key=lambda k: (uses[k], len(k)))
         out.update({k: main for k in keys})
+    for other, main in getattr(config, "TEAM_SAME_AS", {}).items():
+        target = out.get(main, main)
+        out.update({k: target for k, v in list(out.items()) if v == other or k == other})
+        out.setdefault(other, target)
     return out
+
+
+def event_prizes(ev, canon):
+    """{team key: prize in USD} for one event. The prize pool links team PAGES, the rosters
+    use display names; they almost always normalize to the same key. When they don't
+    ('Nongshim RedForce' vs 'NS RedForce'), take the closest-named team at that event."""
+    teams = {canon.get(norm(c["team"]), norm(c["team"])) for c in ev.get("cards", [])}
+    out = {}
+    for title, usd in ev.get("prizes") or []:
+        k = canon.get(norm(title), norm(title))
+        if k not in teams:
+            left = [t for t in teams if t not in out]
+            best = max(left, key=lambda t: SequenceMatcher(None, k, t).ratio(), default=None)
+            if not best or SequenceMatcher(None, k, best).ratio() < 0.5:
+                print(f"  ! prize for '{title}' at {ev['page']} doesn't match a roster")
+                continue
+            k = best
+        out[k] = out.get(k, 0) + usd
+    return out
+
+
+def card_shares(card, prize):
+    """Liquipedia-style estimate: the team's prize split evenly between its starters."""
+    starters = [pl for pl in card["players"] if not pl["sub"]] or card["players"]
+    return {pl["page"]: prize / len(starters) for pl in starters}
 
 
 def build_players(lp, events):
     raw = defaultdict(lambda: {"ids": set(), "events": set(), "wins": set(), "captain": set(),
-                               "teams": defaultdict(set), "last_year": 0, "starter": False})
+                               "teams": defaultdict(set), "last_year": 0, "starter": False,
+                               "earnings": 0.0})
     team_names = defaultdict(Counter)
     canon = team_key_map(events)
     for ev in events:
+        prizes = event_prizes(ev, canon)
         for card in ev["cards"]:
             tkey = canon.get(norm(card["team"]), norm(card["team"]))
             team_names[tkey][card["team"]] += 1
+            for page, usd in card_shares(card, prizes.get(tkey, 0)).items():
+                raw[page]["earnings"] += usd
             won = bool(ev["winner"]) and tkey == canon.get(norm(ev["winner"]), norm(ev["winner"]))
             for pl in card["players"]:
                 p = raw[pl["page"]]
@@ -150,7 +189,7 @@ def build_players(lp, events):
             "ids": set(info["alt_ids"]),
             "events": set(), "wins": set(), "captain": set(), "mvps": set(),
             "teams": defaultdict(set),
-            "last_year": 0, "starter": False, "has_page": text is not None,
+            "last_year": 0, "starter": False, "has_page": text is not None, "earnings": 0.0,
         })
         m["ids"] |= p["ids"]
         m["events"] |= p["events"]
@@ -160,6 +199,7 @@ def build_players(lp, events):
             m["teams"][team] |= evs
         m["last_year"] = max(m["last_year"], p["last_year"])
         m["starter"] |= p["starter"]
+        m["earnings"] += p["earnings"]
 
     # Event MVPs -> the player they name
     by_name = {}
@@ -190,6 +230,7 @@ def build_players(lp, events):
             "last_year": m["last_year"],
             "starter": m["starter"],
             "has_page": m["has_page"],
+            "earnings": round(m["earnings"]),  # est. VCT prize money (USD), tier 1 events only
         })
     teams = {k: c.most_common(1)[0][0] for k, c in team_names.items()}
     return players, teams
@@ -201,10 +242,13 @@ def build_team_info(events, teams):
     canon = team_key_map(events)
     key = lambda name: canon.get(norm(name), norm(name))
     for ev in events:
+        prizes = event_prizes(ev, canon)
         for card in ev["cards"]:
             k = key(card["team"])
             t = info.setdefault(k, {"key": k, "name": teams.get(k, card["team"]), "events": [],
-                                    "wins": [], "last_year": 0})
+                                    "wins": [], "last_year": 0, "earnings": 0})
+            if ev["page"] not in t["events"]:
+                t["earnings"] += prizes.get(k, 0)  # VCT prize money (USD), tier 1 events only
             if ev["page"] not in t["events"]:
                 t["events"].append(ev["page"])
             if ev.get("winner") and key(ev["winner"]) == k and ev["page"] not in t["wins"]:
@@ -230,7 +274,7 @@ def build_dataset(lp, today):
     dataset = {
         "generated": today.isoformat(),
         "events": [{k: ev.get(k) for k in ("page", "name", "kind", "international", "finished",
-                                           "year", "winner", "mvp")} for ev in events],
+                                           "year", "winner", "mvp", "prizes")} for ev in events],
         "teams": teams,
         "team_info": build_team_info(events, teams),
         "players": players,

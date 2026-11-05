@@ -187,6 +187,34 @@ def prize_pool_winner(html):
     return a.get("title") if a else None
 
 
+def prize_pool_placements(html):
+    """Every paid row of the rendered prize pool: [(team page title, prize in USD), ...].
+    Shared places ("5-6") put the prize on the first row only, so it's carried down."""
+    if not html:
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    table = soup.select_one("table.prizepooltable-placement")
+    if not table:
+        return []
+    out, prize = [], None
+    for row in table.select("tr")[1:]:
+        cells = row.find_all(["td", "th"], recursive=False)
+        if any("prizepooltable-place" in (c.get("class") or []) for c in cells):
+            prize = None  # a new place: find its $ USD cell
+            for c in cells:
+                if "prizepooltable-col-team" in (c.get("class") or []):
+                    continue
+                m = re.fullmatch(r"\$\s?([\d,]+)", c.get_text(" ", strip=True))
+                if m:
+                    prize = int(m[1].replace(",", ""))
+                    break
+        for cell in row.select(".prizepooltable-col-team"):
+            a = cell.select_one(".name a[title]") or cell.select_one("a[title]")
+            if a and prize:
+                out.append((a.get("title"), prize))
+    return out
+
+
 def prize_pool_mvp(html):
     """Player page title in the rendered 'Award | MVP' table, if the event has one."""
     if not html:

@@ -47,6 +47,37 @@ GENERIC_CALLOUTS = {"Main", "Site", "Lobby", "Spawn", "Link", "Long", "Short",
                     "Top", "Bottom", "Mid", "Window", "Garden", "Back"}
 
 
+# Variant (chroma) names end in "(Variant 2 Pink)", "(Variant 3 Red/Green)",
+# "(Variant 1 Bubblegum)"... Each maps to the plain colors a player would say.
+# Names that aren't colors (Kumo, Raze, Pacific, Dance Fever...) are left out.
+BASE_COLORS = ["Red", "Orange", "Yellow", "Green", "Teal", "Blue", "Purple", "Pink",
+               "Black", "White", "Gray", "Brown", "Gold", "Silver"]
+COLOR_WORDS = {
+    "grey": "Gray", "bubblegum": "Pink", "rose gold": "Pink", "scarlet": "Red", "ruby": "Red",
+    "navy": "Blue", "cobalt": "Blue", "indigo": "Blue", "aquamarine": "Teal", "violet": "Purple",
+    "emerald": "Green", "moss": "Green", "obsidian": "Black", "onyx": "Black", "dark": "Black",
+    "ivory": "White", "pearl": "White", "cream": "White", "tan": "Brown", "copper": "Brown",
+    "bronze": "Brown",
+}
+
+
+def variant_colors(skin):
+    """Plain colors of a skin's variants (not its default look): ['Pink', 'Gold']."""
+    out = set()
+    for chroma in (skin.get("chromas") or [])[1:]:
+        m = re.search(r"\(([^()]*)\)\s*$", chroma.get("displayName") or "")
+        if not m:
+            continue
+        for part in re.sub(r"^Variant \d+\s*", "", m[1]).split("/"):
+            part = part.strip().lower()
+            color = COLOR_WORDS.get(part) or next(
+                (c for c in BASE_COLORS if c.lower() == part or part.split()[-1] == c.lower()
+                 or part.split()[0] == c.lower()), None)
+            if color:
+                out.add(color)
+    return sorted(out, key=BASE_COLORS.index)
+
+
 def clean(s):
     return re.sub(r"\s+", " ", (s or "")).strip()
 
@@ -147,7 +178,8 @@ def build_weapons(raw):
             obtained = next((from_contract[lv.get("uuid")] for lv in s.get("levels") or []
                              if lv.get("uuid") in from_contract), "Store (VP)")
             skins.append(item(name, {"weapon": wname, "category": cat, "edition": tier,
-                                     "collection": collection, "obtained": obtained},
+                                     "collection": collection, "obtained": obtained,
+                                     "colors": variant_colors(s)},
                               score, icon, extra_aliases=[short, collection, wname if wname != "Melee" else ""]))
             # Aliases like "reaver" or "vandal" only count when they point to one
             # answer in a question; prompts.py drops them when they're ambiguous.

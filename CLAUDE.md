@@ -43,6 +43,19 @@ first, then shows conditions that make sense for it.
 - Skin `obtained`: "Battle pass" / "Agent contract" / "Event pass" from the
   `contracts` endpoint, otherwise "Store (VP)".
 - Skipped on purpose: "Standard" and "Random Favorite" skins, duplicate maps.
+- Skin `colors`: plain colors of a skin's variants (chromas after the default),
+  from names like "(Variant 2 Pink)"; synonyms (Bubblegum -> Pink, Scarlet -> Red)
+  in `COLOR_WORDS` in game.py; non-color names (Kumo, Raze, Pacific) are ignored.
+- Prize money (Nov 2026): every finished event's rendered prize pool is parsed
+  (`prize_pool_placements`, same cached page as winners/MVPs, no extra requests)
+  into `events[].prizes`. Team `earnings` = exact sum of its tier 1 prizes. Player
+  `earnings` = ESTIMATE: each prize split evenly between the card's starters
+  (questions say "est."). Prize-pool team names are matched to roster names by key,
+  else the closest-named team at that event. `TEAM_SAME_AS` in config.py merges
+  one team listed under two names ("NS RedForce" = "Nongshim RedForce").
+- Name conditions: `name_has` (a letter, or "digit") and `name_starts` on the
+  player's display name (accents folded); teams have `name_has` too. Two pros can
+  share a name (two "Klaus"), so avoid questions where that collides.
 - VLR.gg is NOT a source: its terms ban scraping and republishing. Stats would
   need written permission (community@vlr.gg).
 

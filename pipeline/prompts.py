@@ -18,6 +18,7 @@ Adding a filter for a game pool = one attribute in game.py + one line in GAME_PO
 """
 import json
 import math
+import unicodedata
 import re
 from collections import defaultdict
 from datetime import date
@@ -41,7 +42,7 @@ TIERS = [
     ("deep_cut", 85, 0.20),            # Immortal
     ("one_in_a_krillion", 100, None),  # Radiant: the single rarest answer
 ]
-MIN_ANSWERS = 12  # questions with fewer valid answers are flagged in the admin page
+MIN_ANSWERS = 8  # questions with fewer valid answers are flagged in the admin page
 POINTS = {name: pts for name, pts, _ in TIERS} | {"too_clever": 15}
 
 
@@ -67,7 +68,7 @@ GAME_POOLS = {
     "skins":     {"label": "Weapon skins",
                   "fields": {"weapon": "Weapon", "category": "Weapon type",
                              "edition": "Edition", "collection": "Collection",
-                             "obtained": "How you get it"}},
+                             "obtained": "How you get it", "colors": "Has a variant in"}},
     "maps":      {"label": "Maps", "fields": {"type": "Map type"}},
     "callouts":  {"label": "Map callouts",
                   "fields": {"map": "Map", "map_type": "Map type", "area": "Area"}},
@@ -191,6 +192,30 @@ def check_mvp(p, value, ctx):
     return bool(hit), 0.5 * max(len(hit) - 1, 0), {"MVP at": _names(hit, ctx)}
 
 
+def _usd(n):
+    return f"${n:,.0f}"
+
+
+def check_earnings(p, value, ctx):
+    """Estimated VCT prize money: each tier 1 prize split evenly between the team's starters."""
+    usd = p.get("earnings", 0)
+    return usd >= int(value), 0, {"VCT prize money (est.)": _usd(usd)}
+
+
+def _name_has(name, value):
+    """'digit' = has a number in it ('s0m', 'F0rsakeN'); otherwise a letter, any case."""
+    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()  # LêwN -> lewn
+    return any(ch.isdigit() for ch in name) if value == "digit" else value in name
+
+
+def check_name_has(p, value, ctx):
+    return _name_has(p["id"], value), 0, {}
+
+
+def check_name_starts(p, value, ctx):
+    return p["id"].lower().startswith(value), 0, {}
+
+
 # Teams pool: each check gets a team from team_info
 def team_played_at(t, value, ctx):
     pool = t["events"]
@@ -205,9 +230,20 @@ def team_won(t, value, ctx):
     return bool(won), 0.4 * max(len(won) - 1, 0), {}
 
 
+def team_earnings(t, value, ctx):
+    usd = t.get("earnings", 0)
+    return usd >= int(value), 0, {"VCT prize money": _usd(usd)}
+
+
+def team_name_has(t, value, ctx):
+    return _name_has(t["name"], value), 0, {}
+
+
 TEAM_CONDITIONS = {
     "played_at": {"label": "Played at event", "values": "all_events", "check": team_played_at},
     "won":       {"label": "Won international event", "values": "intl_events", "check": team_won},
+    "earnings":  {"label": "Won at least (VCT prize money)", "values": "team_earnings", "check": team_earnings},
+    "name_has":  {"label": "Name contains", "values": "letters", "check": team_name_has},
 }
 
 
@@ -221,6 +257,9 @@ CONDITIONS = {
     "mvp":            {"label": "Was finals MVP (2022+)",   "values": "mvp_events",  "check": check_mvp},
     "igl_region":     {"label": "Was IGL in league",        "values": "regions",     "check": check_igl_region},
     "played_region":  {"label": "Played in league",         "values": "regions",     "check": check_played_region},
+    "earnings":       {"label": "Won at least (VCT prize money, est.)", "values": "player_earnings", "check": check_earnings},
+    "name_has":       {"label": "Name contains",            "values": "letters",     "check": check_name_has},
+    "name_starts":    {"label": "Name starts with",         "values": "first_letters", "check": check_name_starts},
 }
 
 
@@ -246,6 +285,13 @@ def _player_values(ds):
                           [{"value": e["page"], "label": e["name"]}
                            for e in by_year([e for e in events if e["year"] >= 2025])],
         "regions": [{"value": r, "label": f"VCT {r}"} for r in REGIONS],
+        "player_earnings": [{"value": str(n), "label": f"${n:,}"}
+                            for n in (25_000, 50_000, 100_000, 150_000, 200_000, 250_000, 300_000)],
+        "team_earnings": [{"value": str(n), "label": f"${n:,}"}
+                          for n in (100_000, 250_000, 500_000, 750_000, 1_000_000)],
+        "letters": [{"value": "digit", "label": "a number (0-9)"}] +
+                   [{"value": c, "label": f"the letter {c.upper()}"} for c in "abcdefghijklmnopqrstuvwxyz"],
+        "first_letters": [{"value": c, "label": c.upper()} for c in "abcdefghijklmnopqrstuvwxyz"],
         "mvp_events": [{"value": "any", "label": "any VCT event"}] + kinds +
                       [{"value": e["page"], "label": e["name"]}
                        for e in by_year([e for e in events if e.get("mvp")])],

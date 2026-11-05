@@ -46,5 +46,10 @@ MVP_FROM_LEAGUES = True
 # If an event's winner can't be read from its prize pool: {"page": "Team"}
 WINNER_OVERRIDES = {}
 
+# The same team under two names that don't share a root ({"other name": "main name"},
+# both normalized: lowercase letters and digits only). The roster, wins and prize
+# money of the first are counted under the second.
+TEAM_SAME_AS = {"nsredforce": "nongshimredforce"}
+
 # Port for the admin page (python pipeline/admin.py)
 ADMIN_PORT = 8765

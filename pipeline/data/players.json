@@ -9,7 +9,57 @@
    "finished": true,
    "year": 2026,
    "winner": "Leviatán",
-   "mvp": "Neon (Argentine player)"
+   "mvp": "Neon (Argentine player)",
+   "prizes": [
+    [
+     "Leviatán",
+     350000
+    ],
+    [
+     "Paper Rex",
+     200000
+    ],
+    [
+     "EDward Gaming",
+     125000
+    ],
+    [
+     "Team Vitality",
+     75000
+    ],
+    [
+     "FUT Esports",
+     50000
+    ],
+    [
+     "XLG Esports",
+     50000
+    ],
+    [
+     "G2 Esports",
+     35000
+    ],
+    [
+     "Team Heretics",
+     35000
+    ],
+    [
+     "Global Esports",
+     25000
+    ],
+    [
+     "NRG",
+     25000
+    ],
+    [
+     "Dragon Ranger Gaming",
+     15000
+    ],
+    [
+     "FULL SENSE",
+     15000
+    ]
+   ]
   },
   {
    "page": "VCT/2026/Stage 1/Masters",
@@ -19,7 +69,57 @@
    "finished": true,
    "year": 2026,
    "winner": "Nongshim RedForce",
-   "mvp": "Dambi"
+   "mvp": "Dambi",
+   "prizes": [
+    [
+     "Nongshim RedForce",
+     350000
+    ],
+    [
+     "Paper Rex",
+     200000
+    ],
+    [
+     "NRG",
+     125000
+    ],
+    [
+     "G2 Esports",
+     75000
+    ],
+    [
+     "All Gamers",
+     50000
+    ],
+    [
+     "BBL Esports",
+     50000
+    ],
+    [
+     "Gentle Mates",
+     35000
+    ],
+    [
+     "FURIA",
+     35000
+    ],
+    [
+     "Team Liquid",
+     25000
+    ],
+    [
+     "T1",
+     25000
+    ],
+    [
+     "EDward Gaming",
+     15000
+    ],
+    [
+     "XLG Esports",
+     15000
+    ]
+   ]
   },
   {
    "page": "VCT/2025/Stage 2/Masters",
@@ -29,7 +129,57 @@
    "finished": true,
    "year": 2025,
    "winner": "Paper Rex",
-   "mvp": "F0rsakeN"
+   "mvp": "F0rsakeN",
+   "prizes": [
+    [
+     "Paper Rex",
+     350000
+    ],
+    [
+     "Fnatic",
+     200000
+    ],
+    [
+     "Wolves Esports",
+     125000
+    ],
+    [
+     "G2 Esports",
+     75000
+    ],
+    [
+     "Gen.G Esports",
+     50000
+    ],
+    [
+     "Sentinels",
+     50000
+    ],
+    [
+     "XLG Esports",
+     35000
+    ],
+    [
+     "Rex Regum Qeon",
+     35000
+    ],
+    [
+     "Bilibili Gaming",
+     25000
+    ],
+    [
+     "Team Liquid",
+     25000
+    ],
+    [
+     "MIBR",
+     15000
+    ],
+    [
+     "Team Heretics",
+     15000
+    ]
+   ]
   },
   {
    "page": "VCT/2025/Stage 1/Masters",
@@ -39,7 +189,41 @@
    "finished": true,
    "year": 2025,
    "winner": "T1",
-   "mvp": "Meteor"
+   "mvp": "Meteor",
+   "prizes": [
+    [
+     "T1",
+     250000
+    ],
+    [
+     "G2 Esports",
+     100000
+    ],
+    [
+     "EDward Gaming",
+     65000
+    ],
+    [
+     "Team Vitality",
+     35000
+    ],
+    [
+     "DRX",
+     15000
+    ],
+    [
+     "Team Liquid",
+     15000
+    ],
+    [
+     "Sentinels",
+     10000
+    ],
+    [
+     "Trace Esports",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/Stage 2/Masters",
@@ -49,7 +233,57 @@
    "finished": true,
    "year": 2024,
    "winner": "Gen.G Esports",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Gen.G Esports",
+     350000
+    ],
+    [
+     "Team Heretics",
+     200000
+    ],
+    [
+     "G2 Esports",
+     125000
+    ],
+    [
+     "100 Thieves",
+     75000
+    ],
+    [
+     "Paper Rex",
+     50000
+    ],
+    [
+     "FUT Esports",
+     50000
+    ],
+    [
+     "EDward Gaming",
+     35000
+    ],
+    [
+     "Fnatic",
+     35000
+    ],
+    [
+     "FunPlus Phoenix",
+     25000
+    ],
+    [
+     "Leviatán",
+     25000
+    ],
+    [
+     "Dragon Ranger Gaming",
+     15000
+    ],
+    [
+     "T1",
+     15000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/Stage 1/Masters",
@@ -59,7 +293,41 @@
    "finished": true,
    "year": 2024,
    "winner": "Sentinels",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Sentinels",
+     250000
+    ],
+    [
+     "Gen.G Esports",
+     100000
+    ],
+    [
+     "Paper Rex",
+     65000
+    ],
+    [
+     "LOUD",
+     35000
+    ],
+    [
+     "EDward Gaming",
+     15000
+    ],
+    [
+     "Karmine Corp",
+     15000
+    ],
+    [
+     "FunPlus Phoenix",
+     10000
+    ],
+    [
+     "Team Heretics",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2023/Masters",
@@ -69,7 +337,57 @@
    "finished": true,
    "year": 2023,
    "winner": "Fnatic",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Fnatic",
+     350000
+    ],
+    [
+     "Evil Geniuses",
+     200000
+    ],
+    [
+     "Paper Rex",
+     125000
+    ],
+    [
+     "NRG",
+     75000
+    ],
+    [
+     "Team Liquid",
+     50000
+    ],
+    [
+     "EDward Gaming",
+     50000
+    ],
+    [
+     "DRX",
+     35000
+    ],
+    [
+     "LOUD",
+     35000
+    ],
+    [
+     "T1",
+     25000
+    ],
+    [
+     "FUT Esports",
+     25000
+    ],
+    [
+     "Natus Vincere",
+     15000
+    ],
+    [
+     "Attacking Soul Esports",
+     15000
+    ]
+   ]
   },
   {
    "page": "VCT/2022/Stage 2/Masters",
@@ -79,7 +397,57 @@
    "finished": true,
    "year": 2022,
    "winner": "FunPlus Phoenix",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "FunPlus Phoenix",
+     200000
+    ],
+    [
+     "Paper Rex",
+     120000
+    ],
+    [
+     "OpTic Gaming",
+     85000
+    ],
+    [
+     "Fnatic",
+     65000
+    ],
+    [
+     "DRX",
+     40000
+    ],
+    [
+     "Leviatán",
+     40000
+    ],
+    [
+     "Guild Esports",
+     25000
+    ],
+    [
+     "XSET",
+     25000
+    ],
+    [
+     "KRÜ Esports",
+     15000
+    ],
+    [
+     "Northeption",
+     15000
+    ],
+    [
+     "LOUD",
+     10000
+    ],
+    [
+     "XERXIA",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2022/Stage 1/Masters",
@@ -89,7 +457,61 @@
    "finished": true,
    "year": 2022,
    "winner": "OpTic Gaming",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "OpTic Gaming",
+     200000
+    ],
+    [
+     "LOUD",
+     120000
+    ],
+    [
+     "ZETA DIVISION",
+     85000
+    ],
+    [
+     "Paper Rex",
+     65000
+    ],
+    [
+     "DRX",
+     40000
+    ],
+    [
+     "G2 Esports",
+     40000
+    ],
+    [
+     "Team Liquid",
+     25000
+    ],
+    [
+     "The Guard",
+     25000
+    ],
+    [
+     "Ninjas in Pyjamas",
+     15000
+    ],
+    [
+     "XERXIA",
+     15000
+    ],
+    [
+     "Fnatic",
+     10000
+    ],
+    [
+     "KRÜ Esports",
+     10000
+    ],
+    [
+     "FunPlus Phoenix",
+     25000
+    ]
+   ]
   },
   {
    "page": "VALORANT Champions Tour/2021/Stage 3/Masters",
@@ -99,7 +521,73 @@
    "finished": true,
    "year": 2021,
    "winner": "Gambit Esports",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Gambit Esports",
+     225000
+    ],
+    [
+     "Team Envy",
+     125000
+    ],
+    [
+     "100 Thieves",
+     85000
+    ],
+    [
+     "G2 Esports",
+     85000
+    ],
+    [
+     "Acend",
+     25000
+    ],
+    [
+     "Sentinels",
+     25000
+    ],
+    [
+     "Vision Strikers",
+     25000
+    ],
+    [
+     "KRÜ Esports",
+     25000
+    ],
+    [
+     "SuperMassive Blaze",
+     10000
+    ],
+    [
+     "Keyd Stars",
+     10000
+    ],
+    [
+     "Crazy Raccoon",
+     10000
+    ],
+    [
+     "F4Q",
+     10000
+    ],
+    [
+     "Paper Rex",
+     10000
+    ],
+    [
+     "ZETA DIVISION",
+     10000
+    ],
+    [
+     "Havan Liberty",
+     10000
+    ],
+    [
+     "Bren Esports",
+     10000
+    ]
+   ]
   },
   {
    "page": "VALORANT Champions Tour/2021/Stage 2/Masters",
@@ -109,7 +597,49 @@
    "finished": true,
    "year": 2021,
    "winner": "Sentinels",
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Sentinels",
+     200000
+    ],
+    [
+     "Fnatic",
+     100000
+    ],
+    [
+     "NUTURN Gaming",
+     80000
+    ],
+    [
+     "Team Liquid",
+     60000
+    ],
+    [
+     "Version1",
+     40000
+    ],
+    [
+     "Team Vikings",
+     40000
+    ],
+    [
+     "X10 Esports",
+     25000
+    ],
+    [
+     "KRÜ Esports",
+     25000
+    ],
+    [
+     "Crazy Raccoon",
+     15000
+    ],
+    [
+     "Sharks Esports",
+     15000
+    ]
+   ]
   },
   {
    "page": "VALORANT Champions Tour/2021/Champions",
@@ -119,7 +649,73 @@
    "finished": true,
    "year": 2021,
    "winner": "Acend",
-   "mvp": "Zeek"
+   "mvp": "Zeek",
+   "prizes": [
+    [
+     "Acend",
+     350000
+    ],
+    [
+     "Gambit Esports",
+     150000
+    ],
+    [
+     "Team Liquid",
+     90000
+    ],
+    [
+     "KRÜ Esports",
+     90000
+    ],
+    [
+     "Team Secret",
+     40000
+    ],
+    [
+     "Cloud9",
+     40000
+    ],
+    [
+     "X10 CRIT",
+     40000
+    ],
+    [
+     "Fnatic",
+     40000
+    ],
+    [
+     "Team Envy",
+     20000
+    ],
+    [
+     "Sentinels",
+     20000
+    ],
+    [
+     "Team Vikings",
+     20000
+    ],
+    [
+     "Vision Strikers",
+     20000
+    ],
+    [
+     "Keyd Stars",
+     20000
+    ],
+    [
+     "FURIA",
+     20000
+    ],
+    [
+     "Crazy Raccoon",
+     20000
+    ],
+    [
+     "FULL SENSE",
+     20000
+    ]
+   ]
   },
   {
    "page": "VCT/2022/Champions",
@@ -129,7 +725,73 @@
    "finished": true,
    "year": 2022,
    "winner": "LOUD",
-   "mvp": "Aspas"
+   "mvp": "Aspas",
+   "prizes": [
+    [
+     "LOUD",
+     300000
+    ],
+    [
+     "OpTic Gaming",
+     150000
+    ],
+    [
+     "DRX",
+     110000
+    ],
+    [
+     "FunPlus Phoenix",
+     80000
+    ],
+    [
+     "XSET",
+     60000
+    ],
+    [
+     "Fnatic",
+     60000
+    ],
+    [
+     "Leviatán",
+     40000
+    ],
+    [
+     "Team Liquid",
+     40000
+    ],
+    [
+     "Paper Rex",
+     25000
+    ],
+    [
+     "ZETA DIVISION",
+     25000
+    ],
+    [
+     "KRÜ Esports",
+     25000
+    ],
+    [
+     "100 Thieves",
+     25000
+    ],
+    [
+     "EDward Gaming",
+     15000
+    ],
+    [
+     "BOOM Esports",
+     15000
+    ],
+    [
+     "XERXIA",
+     15000
+    ],
+    [
+     "FURIA",
+     15000
+    ]
+   ]
   },
   {
    "page": "VCT/2023/Champions",
@@ -139,7 +801,73 @@
    "finished": true,
    "year": 2023,
    "winner": "Evil Geniuses",
-   "mvp": "Demon1"
+   "mvp": "Demon1",
+   "prizes": [
+    [
+     "Evil Geniuses",
+     1000000
+    ],
+    [
+     "Paper Rex",
+     400000
+    ],
+    [
+     "LOUD",
+     250000
+    ],
+    [
+     "Fnatic",
+     130000
+    ],
+    [
+     "DRX",
+     85000
+    ],
+    [
+     "EDward Gaming",
+     85000
+    ],
+    [
+     "FUT Esports",
+     50000
+    ],
+    [
+     "Bilibili Gaming",
+     50000
+    ],
+    [
+     "Giants",
+     30000
+    ],
+    [
+     "T1",
+     30000
+    ],
+    [
+     "NRG",
+     30000
+    ],
+    [
+     "Natus Vincere",
+     30000
+    ],
+    [
+     "KRÜ Esports",
+     20000
+    ],
+    [
+     "FunPlus Phoenix",
+     20000
+    ],
+    [
+     "ZETA DIVISION",
+     20000
+    ],
+    [
+     "Team Liquid",
+     20000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/Champions",
@@ -149,7 +877,73 @@
    "finished": true,
    "year": 2024,
    "winner": "EDward Gaming",
-   "mvp": "ZmjjKK"
+   "mvp": "ZmjjKK",
+   "prizes": [
+    [
+     "EDward Gaming",
+     1000000
+    ],
+    [
+     "Team Heretics",
+     400000
+    ],
+    [
+     "Leviatán",
+     250000
+    ],
+    [
+     "Sentinels",
+     130000
+    ],
+    [
+     "DRX",
+     85000
+    ],
+    [
+     "Fnatic",
+     85000
+    ],
+    [
+     "Trace Esports",
+     50000
+    ],
+    [
+     "G2 Esports",
+     50000
+    ],
+    [
+     "KRÜ Esports",
+     30000
+    ],
+    [
+     "Gen.G Esports",
+     30000
+    ],
+    [
+     "Team Vitality",
+     30000
+    ],
+    [
+     "Paper Rex",
+     30000
+    ],
+    [
+     "Bilibili Gaming",
+     20000
+    ],
+    [
+     "FunPlus Phoenix",
+     20000
+    ],
+    [
+     "TALON",
+     20000
+    ],
+    [
+     "FUT Esports",
+     20000
+    ]
+   ]
   },
   {
    "page": "VCT/2025/Champions",
@@ -159,7 +953,73 @@
    "finished": true,
    "year": 2025,
    "winner": "NRG",
-   "mvp": "Brawk"
+   "mvp": "Brawk",
+   "prizes": [
+    [
+     "NRG",
+     1000000
+    ],
+    [
+     "Fnatic",
+     400000
+    ],
+    [
+     "DRX",
+     250000
+    ],
+    [
+     "Paper Rex",
+     130000
+    ],
+    [
+     "MIBR",
+     85000
+    ],
+    [
+     "Team Heretics",
+     85000
+    ],
+    [
+     "G2 Esports",
+     50000
+    ],
+    [
+     "GIANTX",
+     50000
+    ],
+    [
+     "XLG Esports",
+     30000
+    ],
+    [
+     "Rex Regum Qeon",
+     30000
+    ],
+    [
+     "Team Liquid",
+     30000
+    ],
+    [
+     "T1",
+     30000
+    ],
+    [
+     "Sentinels",
+     20000
+    ],
+    [
+     "Bilibili Gaming",
+     20000
+    ],
+    [
+     "EDward Gaming",
+     20000
+    ],
+    [
+     "Dragon Ranger Gaming",
+     20000
+    ]
+   ]
   },
   {
    "page": "VCT/2026/Champions",
@@ -169,7 +1029,73 @@
    "finished": true,
    "year": 2026,
    "winner": "LOUD",
-   "mvp": "Erde"
+   "mvp": "Erde",
+   "prizes": [
+    [
+     "LOUD",
+     1000000
+    ],
+    [
+     "Team Vitality",
+     400000
+    ],
+    [
+     "100 Thieves",
+     250000
+    ],
+    [
+     "G2 Esports",
+     130000
+    ],
+    [
+     "NRG",
+     85000
+    ],
+    [
+     "T1",
+     85000
+    ],
+    [
+     "Nongshim RedForce",
+     50000
+    ],
+    [
+     "Paper Rex",
+     50000
+    ],
+    [
+     "FUT Esports",
+     30000
+    ],
+    [
+     "Global Esports",
+     30000
+    ],
+    [
+     "Team Liquid",
+     30000
+    ],
+    [
+     "Karmine Corp",
+     30000
+    ],
+    [
+     "JD Gaming",
+     20000
+    ],
+    [
+     "EDward Gaming",
+     20000
+    ],
+    [
+     "TYLOO",
+     20000
+    ],
+    [
+     "XLG Esports",
+     20000
+    ]
+   ]
   },
   {
    "page": "VCT/2023/LOCK_IN_São_Paulo",
@@ -179,7 +1105,137 @@
    "finished": true,
    "year": 2023,
    "winner": "Fnatic",
-   "mvp": "Leo"
+   "mvp": "Leo",
+   "prizes": [
+    [
+     "Fnatic",
+     100000
+    ],
+    [
+     "LOUD",
+     60000
+    ],
+    [
+     "DRX",
+     40000
+    ],
+    [
+     "Natus Vincere",
+     40000
+    ],
+    [
+     "NRG",
+     25000
+    ],
+    [
+     "TALON",
+     25000
+    ],
+    [
+     "Leviatán",
+     25000
+    ],
+    [
+     "100 Thieves",
+     25000
+    ],
+    [
+     "Giants",
+     10000
+    ],
+    [
+     "Karmine Corp",
+     10000
+    ],
+    [
+     "Cloud9",
+     10000
+    ],
+    [
+     "Evil Geniuses",
+     10000
+    ],
+    [
+     "Team Secret",
+     10000
+    ],
+    [
+     "Team Vitality",
+     10000
+    ],
+    [
+     "FUT Esports",
+     10000
+    ],
+    [
+     "FURIA Esports",
+     10000
+    ],
+    [
+     "KOI",
+     5000
+    ],
+    [
+     "DetonatioN FocusMe",
+     5000
+    ],
+    [
+     "Gen.G Esports",
+     5000
+    ],
+    [
+     "FunPlus Phoenix",
+     5000
+    ],
+    [
+     "BBL Esports",
+     5000
+    ],
+    [
+     "Paper Rex",
+     5000
+    ],
+    [
+     "Team Heretics",
+     5000
+    ],
+    [
+     "MIBR",
+     5000
+    ],
+    [
+     "Team Liquid",
+     5000
+    ],
+    [
+     "KRÜ Esports",
+     5000
+    ],
+    [
+     "ZETA DIVISION",
+     5000
+    ],
+    [
+     "Global Esports",
+     5000
+    ],
+    [
+     "Rex Regum Qeon",
+     5000
+    ],
+    [
+     "EDward Gaming",
+     5000
+    ],
+    [
+     "Sentinels",
+     5000
+    ],
+    [
+     "T1",
+     5000
+    ]
+   ]
   },
   {
    "page": "VCT/2023/Americas_League",
@@ -189,7 +1245,33 @@
    "finished": true,
    "year": 2023,
    "winner": null,
-   "mvp": "Aspas"
+   "mvp": "Aspas",
+   "prizes": [
+    [
+     "LOUD",
+     100000
+    ],
+    [
+     "NRG",
+     65000
+    ],
+    [
+     "Evil Geniuses",
+     40000
+    ],
+    [
+     "Cloud9",
+     25000
+    ],
+    [
+     "Leviatán",
+     15000
+    ],
+    [
+     "FURIA Esports",
+     5000
+    ]
+   ]
   },
   {
    "page": "VCT/2023/EMEA_League",
@@ -199,7 +1281,33 @@
    "finished": true,
    "year": 2023,
    "winner": null,
-   "mvp": "Alfajer"
+   "mvp": "Alfajer",
+   "prizes": [
+    [
+     "Team Liquid",
+     100000
+    ],
+    [
+     "Fnatic",
+     65000
+    ],
+    [
+     "FUT Esports",
+     40000
+    ],
+    [
+     "Natus Vincere",
+     25000
+    ],
+    [
+     "Team Vitality",
+     10000
+    ],
+    [
+     "Giants",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2023/Pacific_League",
@@ -209,7 +1317,33 @@
    "finished": true,
    "year": 2023,
    "winner": null,
-   "mvp": "Something"
+   "mvp": "Something",
+   "prizes": [
+    [
+     "Paper Rex",
+     100000
+    ],
+    [
+     "DRX",
+     65000
+    ],
+    [
+     "T1",
+     40000
+    ],
+    [
+     "Gen.G Esports",
+     25000
+    ],
+    [
+     "Team Secret",
+     10000
+    ],
+    [
+     "ZETA DIVISION",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/Americas_League/Kickoff",
@@ -219,7 +1353,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/Americas_League/Stage_1",
@@ -229,7 +1364,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/Americas_League/Stage_2",
@@ -239,7 +1375,33 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Leviatán",
+     100000
+    ],
+    [
+     "G2 Esports",
+     65000
+    ],
+    [
+     "KRÜ Esports",
+     40000
+    ],
+    [
+     "100 Thieves",
+     25000
+    ],
+    [
+     "Cloud9",
+     10000
+    ],
+    [
+     "Sentinels",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/EMEA_League/Kickoff",
@@ -249,7 +1411,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/EMEA_League/Stage_1",
@@ -259,7 +1422,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/EMEA_League/Stage_2",
@@ -269,7 +1433,33 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Fnatic",
+     100000
+    ],
+    [
+     "Team Vitality",
+     65000
+    ],
+    [
+     "Team Heretics",
+     40000
+    ],
+    [
+     "FUT Esports",
+     25000
+    ],
+    [
+     "Natus Vincere",
+     10000
+    ],
+    [
+     "Karmine Corp",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/Pacific_League/Kickoff",
@@ -279,7 +1469,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": "Karon"
+   "mvp": "Karon",
+   "prizes": []
   },
   {
    "page": "VCT/2024/Pacific_League/Stage_1",
@@ -289,7 +1480,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/Pacific_League/Stage_2",
@@ -299,7 +1491,33 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Gen.G Esports",
+     100000
+    ],
+    [
+     "DRX",
+     65000
+    ],
+    [
+     "Paper Rex",
+     40000
+    ],
+    [
+     "TALON",
+     25000
+    ],
+    [
+     "Rex Regum Qeon",
+     10000
+    ],
+    [
+     "Team Secret",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2024/China_League/Kickoff",
@@ -309,7 +1527,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/China_League/Stage_1",
@@ -319,7 +1538,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2024/China_League/Stage_2",
@@ -329,7 +1549,8 @@
    "finished": true,
    "year": 2024,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/Americas_League/Kickoff",
@@ -339,7 +1560,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/Americas_League/Stage_1",
@@ -349,7 +1571,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/Americas_League/Stage_2",
@@ -359,7 +1582,33 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "G2 Esports",
+     100000
+    ],
+    [
+     "NRG",
+     65000
+    ],
+    [
+     "Sentinels",
+     40000
+    ],
+    [
+     "Cloud9",
+     25000
+    ],
+    [
+     "Leviatán",
+     10000
+    ],
+    [
+     "100 Thieves",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2025/EMEA_League/Kickoff",
@@ -369,7 +1618,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/EMEA_League/Stage_1",
@@ -379,7 +1629,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/EMEA_League/Stage_2",
@@ -389,7 +1640,33 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Team Liquid",
+     100000
+    ],
+    [
+     "GIANTX",
+     65000
+    ],
+    [
+     "BBL Esports",
+     40000
+    ],
+    [
+     "Natus Vincere",
+     25000
+    ],
+    [
+     "Fnatic",
+     10000
+    ],
+    [
+     "Team Heretics",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2025/Pacific_League/Kickoff",
@@ -399,7 +1676,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/Pacific_League/Stage_1",
@@ -409,7 +1687,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/Pacific_League/Stage_2",
@@ -419,7 +1698,33 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": "Something"
+   "mvp": "Something",
+   "prizes": [
+    [
+     "Paper Rex",
+     100000
+    ],
+    [
+     "Rex Regum Qeon",
+     65000
+    ],
+    [
+     "TALON",
+     40000
+    ],
+    [
+     "T1",
+     25000
+    ],
+    [
+     "Nongshim RedForce",
+     10000
+    ],
+    [
+     "DRX",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2025/China_League/Kickoff",
@@ -429,7 +1734,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": "ZmjjKK"
+   "mvp": "ZmjjKK",
+   "prizes": []
   },
   {
    "page": "VCT/2025/China_League/Stage_1",
@@ -439,7 +1745,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2025/China_League/Stage_2",
@@ -449,7 +1756,8 @@
    "finished": true,
    "year": 2025,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/Americas_League/Kickoff",
@@ -459,7 +1767,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/Americas_League/Stage_1",
@@ -469,7 +1778,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/Americas_League/Stage_2",
@@ -479,7 +1789,33 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "100 Thieves",
+     100000
+    ],
+    [
+     "LOUD",
+     65000
+    ],
+    [
+     "NRG",
+     40000
+    ],
+    [
+     "G2 Esports",
+     25000
+    ],
+    [
+     "Leviatán",
+     10000
+    ],
+    [
+     "MIBR",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2026/EMEA_League/Kickoff",
@@ -489,7 +1825,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/EMEA_League/Stage_1",
@@ -499,7 +1836,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/EMEA_League/Stage_2",
@@ -509,7 +1847,33 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "Karmine Corp",
+     100000
+    ],
+    [
+     "Team Liquid",
+     65000
+    ],
+    [
+     "FUT Esports",
+     40000
+    ],
+    [
+     "Fire Flux Esports",
+     25000
+    ],
+    [
+     "Enterprise Esports",
+     10000
+    ],
+    [
+     "BBL Esports",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2026/Pacific_League/Kickoff",
@@ -519,7 +1883,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/Pacific_League/Stage_1",
@@ -529,7 +1894,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/Pacific_League/Stage_2",
@@ -539,7 +1905,33 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": "UdoTan"
+   "mvp": "UdoTan",
+   "prizes": [
+    [
+     "Global Esports",
+     100000
+    ],
+    [
+     "Nongshim RedForce",
+     65000
+    ],
+    [
+     "T1",
+     40000
+    ],
+    [
+     "VARREL",
+     25000
+    ],
+    [
+     "Paper Rex",
+     10000
+    ],
+    [
+     "Gen.G Esports",
+     10000
+    ]
+   ]
   },
   {
    "page": "VCT/2026/China_League/Kickoff",
@@ -549,7 +1941,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": "K1ra"
+   "mvp": "K1ra",
+   "prizes": []
   },
   {
    "page": "VCT/2026/China_League/Stage_1",
@@ -559,7 +1952,8 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": []
   },
   {
    "page": "VCT/2026/China_League/Stage_2",
@@ -569,7 +1963,33 @@
    "finished": true,
    "year": 2026,
    "winner": null,
-   "mvp": null
+   "mvp": null,
+   "prizes": [
+    [
+     "TYLOO",
+     100000
+    ],
+    [
+     "JD Gaming",
+     65000
+    ],
+    [
+     "Bilibili Gaming",
+     40000
+    ],
+    [
+     "Nova Esports",
+     25000
+    ],
+    [
+     "XLG Esports",
+     10000
+    ],
+    [
+     "All Gamers",
+     10000
+    ]
+   ]
   }
  ],
  "teams": {
@@ -648,7 +2068,6 @@
   "titanesportsclub": "Titan Esports Club",
   "2gameesports": "2GAME Esports",
   "apeks": "Apeks",
-  "nsredforce": "NS RedForce",
   "m80": "M80",
   "bestia": "BESTIA",
   "fluxow7m": "Fluxo W7M",
@@ -689,7 +2108,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 595000
   },
   {
    "key": "2gameesports",
@@ -701,7 +2121,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "ateam",
@@ -710,7 +2131,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "acend",
@@ -722,7 +2144,8 @@
    "wins": [
     "VALORANT Champions Tour/2021/Champions"
    ],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 375000
   },
   {
    "key": "allgamers",
@@ -740,7 +2163,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 60000
   },
   {
    "key": "apeks",
@@ -751,7 +2175,8 @@
     "VCT/2025/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2025
+   "last_year": 2025,
+   "earnings": 0
   },
   {
    "key": "attackingsoulesports",
@@ -760,7 +2185,8 @@
     "VCT/2023/Masters"
    ],
    "wins": [],
-   "last_year": 2023
+   "last_year": 2023,
+   "earnings": 15000
   },
   {
    "key": "bblesports",
@@ -780,7 +2206,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 105000
   },
   {
    "key": "bestia",
@@ -789,7 +2216,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "bilibiligaming",
@@ -810,7 +2238,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 155000
   },
   {
    "key": "bleedesports",
@@ -822,7 +2251,8 @@
     "VCT/2025/Pacific_League/Kickoff"
    ],
    "wins": [],
-   "last_year": 2025
+   "last_year": 2025,
+   "earnings": 0
   },
   {
    "key": "boomesports",
@@ -834,7 +2264,8 @@
     "VCT/2025/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2025
+   "last_year": 2025,
+   "earnings": 15000
   },
   {
    "key": "brenesports",
@@ -843,7 +2274,8 @@
     "VALORANT Champions Tour/2021/Stage 3/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 10000
   },
   {
    "key": "cloud9",
@@ -863,7 +2295,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 110000
   },
   {
    "key": "crazyraccoon",
@@ -874,7 +2307,8 @@
     "VALORANT Champions Tour/2021/Champions"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 45000
   },
   {
    "key": "detonationfocusme",
@@ -893,7 +2327,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 5000
   },
   {
    "key": "dragonrangergaming",
@@ -913,7 +2348,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 50000
   },
   {
    "key": "drx",
@@ -940,7 +2376,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 840000
   },
   {
    "key": "edwardgaming",
@@ -971,7 +2408,8 @@
    "wins": [
     "VCT/2024/Champions"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 1450000
   },
   {
    "key": "eintrachtfrankfurt",
@@ -980,7 +2418,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "enterpriseesports",
@@ -989,7 +2428,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 10000
   },
   {
    "key": "envy",
@@ -1002,7 +2442,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 145000
   },
   {
    "key": "eternalfire",
@@ -1012,7 +2453,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "evilgeniuses",
@@ -1035,7 +2477,8 @@
    "wins": [
     "VCT/2023/Champions"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 1250000
   },
   {
    "key": "f4q",
@@ -1044,7 +2487,8 @@
     "VALORANT Champions Tour/2021/Stage 3/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 10000
   },
   {
    "key": "firefluxesports",
@@ -1053,7 +2497,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 25000
   },
   {
    "key": "fluxow7m",
@@ -1062,7 +2507,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "fnatic",
@@ -1095,7 +2541,8 @@
     "VCT/2023/Masters",
     "VCT/2023/LOCK_IN_São_Paulo"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 1750000
   },
   {
    "key": "fullsense",
@@ -1108,7 +2555,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 35000
   },
   {
    "key": "funplusphoenix",
@@ -1135,7 +2583,8 @@
    "wins": [
     "VCT/2022/Stage 2/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 385000
   },
   {
    "key": "furia",
@@ -1157,7 +2606,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 85000
   },
   {
    "key": "futesports",
@@ -1182,7 +2632,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 340000
   },
   {
    "key": "g2esports",
@@ -1209,7 +2660,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 955000
   },
   {
    "key": "gambitesports",
@@ -1221,7 +2673,8 @@
    "wins": [
     "VALORANT Champions Tour/2021/Stage 3/Masters"
    ],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 375000
   },
   {
    "key": "gengesports",
@@ -1246,7 +2699,8 @@
    "wins": [
     "VCT/2024/Stage 2/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 670000
   },
   {
    "key": "gentlemates",
@@ -1264,7 +2718,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 35000
   },
   {
    "key": "giants",
@@ -1275,7 +2730,8 @@
     "VCT/2023/EMEA_League"
    ],
    "wins": [],
-   "last_year": 2023
+   "last_year": 2023,
+   "earnings": 50000
   },
   {
    "key": "giantx",
@@ -1293,7 +2749,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 115000
   },
   {
    "key": "globalesports",
@@ -1314,7 +2771,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 160000
   },
   {
    "key": "guildesports",
@@ -1323,7 +2781,8 @@
     "VCT/2022/Stage 2/Masters"
    ],
    "wins": [],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 25000
   },
   {
    "key": "havanliberty",
@@ -1332,7 +2791,8 @@
     "VALORANT Champions Tour/2021/Stage 3/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 10000
   },
   {
    "key": "jdgaming",
@@ -1350,7 +2810,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 85000
   },
   {
    "key": "joblife",
@@ -1359,7 +2820,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "karminecorp",
@@ -1380,7 +2842,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 165000
   },
   {
    "key": "kbg",
@@ -1389,7 +2852,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "keydstars",
@@ -1399,7 +2863,8 @@
     "VALORANT Champions Tour/2021/Champions"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 30000
   },
   {
    "key": "koi",
@@ -1415,7 +2880,8 @@
     "VCT/2025/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2025
+   "last_year": 2025,
+   "earnings": 5000
   },
   {
    "key": "kruesports",
@@ -1442,7 +2908,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 285000
   },
   {
    "key": "leviatan",
@@ -1468,7 +2935,8 @@
    "wins": [
     "VCT/2026/Stage 2/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 865000
   },
   {
    "key": "loud",
@@ -1497,7 +2965,8 @@
     "VCT/2022/Champions",
     "VCT/2026/Champions"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 1975000
   },
   {
    "key": "m80",
@@ -1506,7 +2975,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "mibr",
@@ -1527,7 +2997,8 @@
     "VCT/2026/Americas_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 115000
   },
   {
    "key": "natusvincere",
@@ -1548,7 +3019,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 145000
   },
   {
    "key": "ninjasinpyjamas",
@@ -1557,7 +3029,8 @@
     "VCT/2022/Stage 1/Masters"
    ],
    "wins": [],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 15000
   },
   {
    "key": "nongshimredforce",
@@ -1567,6 +3040,7 @@
     "VCT/2026/Champions",
     "VCT/2025/Pacific_League/Kickoff",
     "VCT/2025/Pacific_League/Stage_1",
+    "VCT/2025/Pacific_League/Stage_2",
     "VCT/2026/Pacific_League/Kickoff",
     "VCT/2026/Pacific_League/Stage_1",
     "VCT/2026/Pacific_League/Stage_2"
@@ -1574,7 +3048,8 @@
    "wins": [
     "VCT/2026/Stage 1/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 475000
   },
   {
    "key": "northeption",
@@ -1583,7 +3058,8 @@
     "VCT/2022/Stage 2/Masters"
    ],
    "wins": [],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 15000
   },
   {
    "key": "novaesports",
@@ -1600,7 +3076,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 25000
   },
   {
    "key": "nrg",
@@ -1627,16 +3104,8 @@
    "wins": [
     "VCT/2025/Champions"
    ],
-   "last_year": 2026
-  },
-  {
-   "key": "nsredforce",
-   "name": "NS RedForce",
-   "events": [
-    "VCT/2025/Pacific_League/Stage_2"
-   ],
-   "wins": [],
-   "last_year": 2025
+   "last_year": 2026,
+   "earnings": 1535000
   },
   {
    "key": "nuturngaming",
@@ -1645,7 +3114,8 @@
     "VALORANT Champions Tour/2021/Stage 2/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 80000
   },
   {
    "key": "onsidegaming",
@@ -1654,7 +3124,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "opticgaming",
@@ -1667,7 +3138,8 @@
    "wins": [
     "VCT/2022/Stage 1/Masters"
    ],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 435000
   },
   {
    "key": "paperrex",
@@ -1702,7 +3174,8 @@
    "wins": [
     "VCT/2025/Stage 2/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 2075000
   },
   {
    "key": "pcificesports",
@@ -1713,7 +3186,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "qtdig",
@@ -1722,7 +3196,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "rexregumqeon",
@@ -1743,7 +3218,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 145000
   },
   {
    "key": "sentinels",
@@ -1773,7 +3249,8 @@
     "VCT/2024/Stage 1/Masters",
     "VALORANT Champions Tour/2021/Stage 2/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 760000
   },
   {
    "key": "sharksesports",
@@ -1782,7 +3259,8 @@
     "VALORANT Champions Tour/2021/Stage 2/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 15000
   },
   {
    "key": "sharperesports",
@@ -1791,7 +3269,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "supermassiveblaze",
@@ -1800,7 +3279,8 @@
     "VALORANT Champions Tour/2021/Stage 3/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 10000
   },
   {
    "key": "t1",
@@ -1828,7 +3308,8 @@
    "wins": [
     "VCT/2025/Stage 1/Masters"
    ],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 570000
   },
   {
    "key": "talon",
@@ -1845,7 +3326,8 @@
     "VCT/2025/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2025
+   "last_year": 2025,
+   "earnings": 110000
   },
   {
    "key": "teamheretics",
@@ -1870,7 +3352,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 800000
   },
   {
    "key": "teamliquid",
@@ -1900,7 +3383,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 680000
   },
   {
    "key": "teamsecret",
@@ -1920,7 +3404,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 70000
   },
   {
    "key": "teamvikings",
@@ -1930,7 +3415,8 @@
     "VALORANT Champions Tour/2021/Champions"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 60000
   },
   {
    "key": "teamvitality",
@@ -1953,7 +3439,8 @@
     "VCT/2026/EMEA_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 625000
   },
   {
    "key": "theguard",
@@ -1962,7 +3449,8 @@
     "VCT/2022/Stage 1/Masters"
    ],
    "wins": [],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 25000
   },
   {
    "key": "titanesportsclub",
@@ -1979,7 +3467,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "traceesports",
@@ -1998,7 +3487,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 60000
   },
   {
    "key": "tyloo",
@@ -2016,7 +3506,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 120000
   },
   {
    "key": "ulfesports",
@@ -2025,7 +3516,8 @@
     "VCT/2026/EMEA_League/Kickoff"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "varrel",
@@ -2036,7 +3528,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 25000
   },
   {
    "key": "version1",
@@ -2045,7 +3538,8 @@
     "VALORANT Champions Tour/2021/Stage 2/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 40000
   },
   {
    "key": "visionstrikers",
@@ -2055,7 +3549,8 @@
     "VALORANT Champions Tour/2021/Champions"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 45000
   },
   {
    "key": "wolvesesports",
@@ -2073,7 +3568,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 125000
   },
   {
    "key": "x10crit",
@@ -2082,7 +3578,8 @@
     "VALORANT Champions Tour/2021/Champions"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 40000
   },
   {
    "key": "x10esports",
@@ -2091,7 +3588,8 @@
     "VALORANT Champions Tour/2021/Stage 2/Masters"
    ],
    "wins": [],
-   "last_year": 2021
+   "last_year": 2021,
+   "earnings": 25000
   },
   {
    "key": "xerxia",
@@ -2102,7 +3600,8 @@
     "VCT/2022/Champions"
    ],
    "wins": [],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 40000
   },
   {
    "key": "xiptoesports",
@@ -2111,7 +3610,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 0
   },
   {
    "key": "xlgesports",
@@ -2130,7 +3630,8 @@
     "VCT/2026/China_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 160000
   },
   {
    "key": "xset",
@@ -2140,7 +3641,8 @@
     "VCT/2022/Champions"
    ],
    "wins": [],
-   "last_year": 2022
+   "last_year": 2022,
+   "earnings": 85000
   },
   {
    "key": "zetadivision",
@@ -2163,7 +3665,8 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "last_year": 2026
+   "last_year": 2026,
+   "earnings": 155000
   }
  ],
  "players": [
@@ -2228,7 +3731,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 171000
   },
   {
    "page": "Trent",
@@ -2289,7 +3793,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 171000
   },
   {
    "page": "Leaf",
@@ -2353,7 +3858,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 181000
   },
   {
    "page": "Jawgemo",
@@ -2417,7 +3923,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 368000
   },
   {
    "page": "Babybay",
@@ -2455,7 +3962,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 53000
   },
   {
    "page": "CHICHOO",
@@ -2523,7 +4031,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 290000
   },
   {
    "page": "Nobody",
@@ -2595,7 +4104,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 290000
   },
   {
    "page": "ZmjjKK",
@@ -2666,7 +4176,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 290000
   },
   {
    "page": "Smoggy",
@@ -2733,7 +4244,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 287000
   },
   {
    "page": "Jieni7",
@@ -2773,7 +4285,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 29000
   },
   {
    "page": "Wo0t",
@@ -2821,7 +4334,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 157000
   },
   {
    "page": "RieNs",
@@ -2873,7 +4387,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 159000
   },
   {
    "page": "Koshmaras",
@@ -2901,7 +4416,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Boo",
@@ -2959,7 +4475,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 160000
   },
   {
    "page": "Benjyfishy",
@@ -3011,7 +4528,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 159000
   },
   {
    "page": "Invy",
@@ -3063,7 +4581,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 98000
   },
   {
    "page": "D4v41",
@@ -3139,7 +4658,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 415000
   },
   {
    "page": "F0rsakeN",
@@ -3215,7 +4735,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 415000
   },
   {
    "page": "Jinggg",
@@ -3285,7 +4806,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 400000
   },
   {
    "page": "Something",
@@ -3349,7 +4871,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 325000
   },
   {
    "page": "SpikeziN",
@@ -3389,7 +4912,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 72000
   },
   {
    "page": "Sato",
@@ -3423,7 +4947,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 74000
   },
   {
    "page": "Neon (Argentine player)",
@@ -3457,7 +4982,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 72000
   },
   {
    "page": "KiNgg",
@@ -3516,7 +5042,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 173000
   },
   {
    "page": "Blowz",
@@ -3549,7 +5076,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 72000
   },
   {
    "page": "Brawk",
@@ -3593,7 +5121,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 268000
   },
   {
    "page": "Ethan",
@@ -3663,7 +5192,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 535000
   },
   {
    "page": "Keiko",
@@ -3717,7 +5247,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 89000
   },
   {
    "page": "Mada",
@@ -3761,7 +5292,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 268000
   },
   {
    "page": "Skuba",
@@ -3801,7 +5333,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 268000
   },
   {
    "page": "Rarga",
@@ -3845,7 +5378,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 32000
   },
   {
    "page": "Happywei",
@@ -3890,7 +5424,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 32000
   },
   {
    "page": "NoMan",
@@ -3930,7 +5465,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "Lysoar",
@@ -3990,7 +5526,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 59000
   },
   {
    "page": "WsLeo",
@@ -4031,7 +5568,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 19000
   },
   {
    "page": "Vo0kashu",
@@ -4079,7 +5617,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "Life",
@@ -4137,7 +5676,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 20000
   },
   {
    "page": "Nicc",
@@ -4185,7 +5725,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "SpiritZ1",
@@ -4223,7 +5764,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Flex1n",
@@ -4276,7 +5818,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 11000
   },
   {
    "page": "Akeman",
@@ -4312,7 +5855,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Sayonara",
@@ -4344,7 +5888,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 95000
   },
   {
    "page": "PROFEK",
@@ -4384,7 +5929,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 103000
   },
   {
    "page": "Jamppi",
@@ -4453,7 +5999,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 181000
   },
   {
    "page": "Derke",
@@ -4526,7 +6073,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 328000
   },
   {
    "page": "Chronicle",
@@ -4598,7 +6146,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 465000
   },
   {
    "page": "Yetujey",
@@ -4648,7 +6197,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 43000
   },
   {
    "page": "Xeus",
@@ -4686,7 +6236,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "KROSTALY",
@@ -4718,7 +6269,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "S0pp",
@@ -4752,7 +6304,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "SociablEE",
@@ -4799,7 +6352,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 32000
   },
   {
    "page": "Leviathan (Thai player)",
@@ -4829,7 +6383,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "JitboyS",
@@ -4879,7 +6434,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "Killua",
@@ -4915,7 +6471,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 11000
   },
   {
    "page": "Primmie",
@@ -4955,7 +6512,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 15000
   },
   {
    "page": "Crws",
@@ -5023,7 +6581,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 46000
   },
   {
    "page": "Seph1roth",
@@ -5052,7 +6611,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kr1stal",
@@ -5090,7 +6650,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 27667
   },
   {
    "page": "UdoTan",
@@ -5131,7 +6692,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 27667
   },
   {
    "page": "Autumn (Australian player)",
@@ -5183,7 +6745,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 38667
   },
   {
    "page": "Xavi8k",
@@ -5222,7 +6785,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 27667
   },
   {
    "page": "PatMen",
@@ -5266,7 +6830,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 143667
   },
   {
    "page": "Nerve",
@@ -5294,7 +6859,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Koalanoob",
@@ -5332,7 +6898,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Eeiu",
@@ -5379,7 +6946,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 29000
   },
   {
    "page": "Artzin",
@@ -5430,7 +6998,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 27000
   },
   {
    "page": "Alym",
@@ -5458,7 +7027,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Basic",
@@ -5488,7 +7058,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Shr1mp",
@@ -5524,7 +7095,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "K1ra",
@@ -5566,7 +7138,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Iamgrq",
@@ -5596,7 +7169,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "F4ngeer",
@@ -5626,7 +7200,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Au1",
@@ -5652,7 +7227,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Spitfires",
@@ -5692,7 +7268,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Rosé",
@@ -5722,7 +7299,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Lovers rock",
@@ -5753,7 +7331,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Loita",
@@ -5783,7 +7362,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Lar0k",
@@ -5813,7 +7393,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Crewen",
@@ -5843,7 +7424,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Xross",
@@ -5877,7 +7459,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 93000
   },
   {
    "page": "Rb",
@@ -5917,6 +7500,7 @@
    "mvps": [],
    "teams": {
     "nongshimredforce": [
+     "VCT/2025/Pacific_League/Stage_2",
      "VCT/2026/Champions",
      "VCT/2026/Pacific_League/Kickoff",
      "VCT/2026/Pacific_League/Stage_1",
@@ -5942,14 +7526,12 @@
      "VCT/2024/China_League/Stage_2",
      "VCT/2025/China_League/Kickoff",
      "VCT/2025/China_League/Stage_1"
-    ],
-    "nsredforce": [
-     "VCT/2025/Pacific_League/Stage_2"
     ]
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 186333
   },
   {
    "page": "Ivy (Korean player)",
@@ -5979,19 +7561,18 @@
     "nongshimredforce": [
      "VCT/2025/Pacific_League/Kickoff",
      "VCT/2025/Pacific_League/Stage_1",
+     "VCT/2025/Pacific_League/Stage_2",
      "VCT/2026/Champions",
      "VCT/2026/Pacific_League/Kickoff",
      "VCT/2026/Pacific_League/Stage_1",
      "VCT/2026/Pacific_League/Stage_2",
      "VCT/2026/Stage 1/Masters"
-    ],
-    "nsredforce": [
-     "VCT/2025/Pacific_League/Stage_2"
     ]
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 95000
   },
   {
    "page": "Francis",
@@ -6027,19 +7608,18 @@
     "nongshimredforce": [
      "VCT/2025/Pacific_League/Kickoff",
      "VCT/2025/Pacific_League/Stage_1",
+     "VCT/2025/Pacific_League/Stage_2",
      "VCT/2026/Champions",
      "VCT/2026/Pacific_League/Kickoff",
      "VCT/2026/Pacific_League/Stage_1",
      "VCT/2026/Pacific_League/Stage_2",
      "VCT/2026/Stage 1/Masters"
-    ],
-    "nsredforce": [
-     "VCT/2025/Pacific_League/Stage_2"
     ]
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 95000
   },
   {
    "page": "Dambi",
@@ -6071,19 +7651,18 @@
     "nongshimredforce": [
      "VCT/2025/Pacific_League/Kickoff",
      "VCT/2025/Pacific_League/Stage_1",
+     "VCT/2025/Pacific_League/Stage_2",
      "VCT/2026/Champions",
      "VCT/2026/Pacific_League/Kickoff",
      "VCT/2026/Pacific_League/Stage_1",
      "VCT/2026/Pacific_League/Stage_2",
      "VCT/2026/Stage 1/Masters"
-    ],
-    "nsredforce": [
-     "VCT/2025/Pacific_League/Stage_2"
     ]
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 95000
   },
   {
    "page": "Cb",
@@ -6129,7 +7708,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Starxo",
@@ -6179,7 +7759,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 83000
   },
   {
    "page": "Minny",
@@ -6215,7 +7796,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Marteen",
@@ -6261,7 +7843,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "GLYPH",
@@ -6294,7 +7877,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Bipo",
@@ -6326,7 +7910,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Wayne",
@@ -6356,7 +7941,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14286
   },
   {
    "page": "Purp0",
@@ -6396,7 +7982,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14286
   },
   {
    "page": "NAts",
@@ -6464,7 +8051,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 164286
   },
   {
    "page": "MiniBoo",
@@ -6516,7 +8104,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 126286
   },
   {
    "page": "Kamo",
@@ -6568,7 +8157,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 54286
   },
   {
    "page": "Stax",
@@ -6640,7 +8230,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 174333
   },
   {
    "page": "Munchkin",
@@ -6714,7 +8305,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 184333
   },
   {
    "page": "Meteor",
@@ -6783,7 +8375,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 216000
   },
   {
    "page": "IZu",
@@ -6835,7 +8428,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 94000
   },
   {
    "page": "BuZz",
@@ -6909,7 +8503,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 212333
   },
   {
    "page": "Carpe",
@@ -6961,7 +8556,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "JonahP",
@@ -7016,7 +8612,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 118000
   },
   {
    "page": "Coconut",
@@ -7060,7 +8657,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 13000
   },
   {
    "page": "Viva",
@@ -7107,7 +8705,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 13000
   },
   {
    "page": "Midi",
@@ -7132,7 +8731,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Boaster",
@@ -7201,7 +8801,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 350000
   },
   {
    "page": "Alfajer",
@@ -7266,7 +8867,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 320000
   },
   {
    "page": "Kaajak",
@@ -7305,7 +8907,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 122000
   },
   {
    "page": "Crashies",
@@ -7375,7 +8978,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 277000
   },
   {
    "page": "Xffero",
@@ -7429,7 +9033,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 32000
   },
   {
    "page": "Jemkin",
@@ -7473,7 +9078,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 28000
   },
   {
    "page": "Monyet",
@@ -7527,7 +9133,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 42000
   },
   {
    "page": "Kushy",
@@ -7567,7 +9174,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "Crazyguy",
@@ -7615,7 +9223,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "Zekken",
@@ -7680,7 +9289,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 122000
   },
   {
    "page": "Johnqt",
@@ -7734,7 +9344,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 102000
   },
   {
    "page": "Zellsis",
@@ -7796,7 +9407,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 117000
   },
   {
    "page": "Bang",
@@ -7854,7 +9466,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 124000
   },
   {
    "page": "N4RRATE",
@@ -7906,7 +9519,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 55000
   },
   {
    "page": "Xenom",
@@ -7942,7 +9556,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 20000
   },
   {
    "page": "Cortezia",
@@ -7983,7 +9598,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 20000
   },
   {
    "page": "Aspas",
@@ -8054,7 +9670,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 272000
   },
   {
    "page": "Verno",
@@ -8094,7 +9711,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 22000
   },
   {
    "page": "Whz",
@@ -8143,7 +9761,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 31000
   },
   {
    "page": "Knight",
@@ -8191,7 +9810,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 31000
   },
   {
    "page": "Levius",
@@ -8231,7 +9851,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 9000
   },
   {
    "page": "Nephh",
@@ -8276,7 +9897,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 21000
   },
   {
    "page": "Rushia",
@@ -8314,7 +9936,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Spring",
@@ -8356,7 +9979,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "Yuicaw",
@@ -8409,7 +10033,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 47000
   },
   {
    "page": "SiuFatBB",
@@ -8454,7 +10079,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 49000
   },
   {
    "page": "Juicy",
@@ -8486,7 +10112,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "PaTiTek",
@@ -8532,7 +10159,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 78000
   },
   {
    "page": "SerialKiller",
@@ -8560,7 +10188,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "T3xture",
@@ -8617,7 +10246,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 129000
   },
   {
    "page": "Karon",
@@ -8670,7 +10300,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 128000
   },
   {
    "page": "Ash (Korean player)",
@@ -8704,7 +10335,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Foxy9",
@@ -8757,7 +10389,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 58000
   },
   {
    "page": "Suggest",
@@ -8791,7 +10424,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Mindfreak (Indonesian player)",
@@ -8849,7 +10483,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 207000
   },
   {
    "page": "S1Mon",
@@ -8881,7 +10516,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 213000
   },
   {
    "page": "FengF",
@@ -8923,7 +10559,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "HeiB",
@@ -8968,7 +10605,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Kai",
@@ -9016,7 +10654,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "LuoK1ng",
@@ -9065,7 +10704,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Biank",
@@ -9110,7 +10750,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 22000
   },
   {
    "page": "Kicks",
@@ -9156,7 +10797,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 41286
   },
   {
    "page": "Sayf",
@@ -9208,7 +10850,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 66000
   },
   {
    "page": "Trexx",
@@ -9262,7 +10905,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 73286
   },
   {
    "page": "Less",
@@ -9324,7 +10968,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 189000
   },
   {
    "page": "Kamyk",
@@ -9368,7 +11013,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "MaKo",
@@ -9435,7 +11081,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 176333
   },
   {
    "page": "Flashback",
@@ -9471,7 +11118,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 85000
   },
   {
    "page": "Freeing",
@@ -9510,7 +11158,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 55000
   },
   {
    "page": "HYUNMIN",
@@ -9548,7 +11197,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 55000
   },
   {
    "page": "BeYN",
@@ -9596,7 +11246,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 83000
   },
   {
    "page": "Sylvan",
@@ -9638,7 +11289,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 55000
   },
   {
    "page": "Asuna",
@@ -9690,7 +11342,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 119000
   },
   {
    "page": "Cryocells",
@@ -9746,7 +11399,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 114000
   },
   {
    "page": "Boostio",
@@ -9792,7 +11446,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 270000
   },
   {
    "page": "Haodong",
@@ -9849,7 +11504,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 41000
   },
   {
    "page": "Leo",
@@ -9896,7 +11552,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 141000
   },
   {
    "page": "Icy",
@@ -9934,7 +11591,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 48000
   },
   {
    "page": "AAAAY",
@@ -9984,7 +11642,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16000
   },
   {
    "page": "BerLIN",
@@ -10039,7 +11698,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 33000
   },
   {
    "page": "Lakia",
@@ -10091,7 +11751,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 135333
   },
   {
    "page": "Mazino",
@@ -10155,7 +11816,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 123000
   },
   {
    "page": "Tex",
@@ -10202,7 +11864,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 79000
   },
   {
    "page": "C0M",
@@ -10260,7 +11923,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 327000
   },
   {
    "page": "TvirusLuke",
@@ -10298,7 +11962,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "TZH",
@@ -10339,7 +12004,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Shion7",
@@ -10367,7 +12033,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "MrFaliN",
@@ -10415,7 +12082,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 44000
   },
   {
    "page": "QRaxs",
@@ -10461,7 +12129,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 44000
   },
   {
    "page": "ATA KAPTAN",
@@ -10505,7 +12174,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 44000
   },
   {
    "page": "CNed",
@@ -10563,7 +12233,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 116000
   },
   {
    "page": "Sayaplayer",
@@ -10606,7 +12277,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 28000
   },
   {
    "page": "Xccurate",
@@ -10636,7 +12308,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Rossy",
@@ -10678,7 +12351,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Sacy",
@@ -10731,7 +12405,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 177000
   },
   {
    "page": "TenZ",
@@ -10777,7 +12452,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 128000
   },
   {
    "page": "Curry",
@@ -10809,7 +12485,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Saadhak",
@@ -10875,7 +12552,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 194000
   },
   {
    "page": "Cauanzin",
@@ -10929,7 +12607,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 99000
   },
   {
    "page": "Tuyz",
@@ -10979,7 +12658,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 96000
   },
   {
    "page": "AmbitioN",
@@ -11023,7 +12703,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Muggle",
@@ -11053,7 +12734,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Shin",
@@ -11087,7 +12769,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Magnum",
@@ -11136,7 +12819,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 45000
   },
   {
    "page": "Tomaszy",
@@ -11170,7 +12854,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Soulcas",
@@ -11218,7 +12903,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 78000
   },
   {
    "page": "Redgar",
@@ -11262,7 +12948,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 110000
   },
   {
    "page": "CigaretteS",
@@ -11289,7 +12976,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "Mojj",
@@ -11319,7 +13007,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "Qw1",
@@ -11350,7 +13039,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 25000
   },
   {
    "page": "ANGE1",
@@ -11402,7 +13092,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 90000
   },
   {
    "page": "Shao",
@@ -11457,7 +13148,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 90000
   },
   {
    "page": "Zyppan",
@@ -11509,7 +13201,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 85000
   },
   {
    "page": "SUYGETSU",
@@ -11572,7 +13265,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 111000
   },
   {
    "page": "S0m",
@@ -11614,7 +13308,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 252000
   },
   {
    "page": "FNS",
@@ -11667,7 +13362,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 155000
   },
   {
    "page": "Victor",
@@ -11724,7 +13420,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 155000
   },
   {
    "page": "Ardiis",
@@ -11774,7 +13471,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 102000
   },
   {
    "page": "Demon1",
@@ -11836,7 +13534,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 252000
   },
   {
    "page": "Zest",
@@ -11878,7 +13577,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 70000
   },
   {
    "page": "Xeta",
@@ -11913,7 +13613,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 28000
   },
   {
    "page": "Ban",
@@ -11959,7 +13660,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 29000
   },
   {
    "page": "INTRO",
@@ -11985,7 +13687,8 @@
    },
    "last_year": 2023,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Monk",
@@ -12028,7 +13731,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Zjc",
@@ -12071,7 +13775,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "YHchen",
@@ -12101,7 +13806,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Bunt",
@@ -12135,7 +13841,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Mistic",
@@ -12175,7 +13882,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 55000
   },
   {
    "page": "Enzo",
@@ -12212,7 +13920,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 27000
   },
   {
    "page": "AYRIN",
@@ -12244,7 +13953,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 18000
   },
   {
    "page": "BcJ",
@@ -12274,7 +13984,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 19000
   },
   {
    "page": "Dephh",
@@ -12305,7 +14016,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 18000
   },
   {
    "page": "Benkai",
@@ -12347,7 +14059,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 65000
   },
   {
    "page": "Tacolilla",
@@ -12383,7 +14096,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "Melser",
@@ -12437,7 +14151,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 35000
   },
   {
    "page": "Adverso",
@@ -12473,7 +14188,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16000
   },
   {
    "page": "Shyy",
@@ -12523,7 +14239,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 38000
   },
   {
    "page": "Koldamenta",
@@ -12557,7 +14274,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "Russ",
@@ -12589,7 +14307,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Yay",
@@ -12644,7 +14363,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 118000
   },
   {
    "page": "Marved",
@@ -12693,7 +14413,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 116000
   },
   {
    "page": "Foxz",
@@ -12735,7 +14456,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "Sushiboys",
@@ -12777,7 +14499,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "SScary",
@@ -12827,7 +14550,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 21000
   },
   {
    "page": "Surf",
@@ -12869,7 +14593,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 13000
   },
   {
    "page": "Derialy",
@@ -12893,7 +14618,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "BlackWiz",
@@ -12917,7 +14643,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Xnfri",
@@ -12947,7 +14674,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "JoxJo",
@@ -12973,7 +14701,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "PANcada",
@@ -13021,7 +14750,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 87000
   },
   {
    "page": "Klaus",
@@ -13065,7 +14795,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 42000
   },
   {
    "page": "Nagzet",
@@ -13108,7 +14839,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 43000
   },
   {
    "page": "Delz1k",
@@ -13142,7 +14874,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 38000
   },
   {
    "page": "Keznit",
@@ -13201,7 +14934,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 51000
   },
   {
    "page": "Nukkye",
@@ -13239,7 +14973,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 35000
   },
   {
    "page": "AvovA",
@@ -13279,7 +15014,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "Mixwell",
@@ -13312,7 +15048,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "Hoody",
@@ -13352,7 +15089,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 18000
   },
   {
    "page": "Meddo",
@@ -13376,7 +15114,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "NeT",
@@ -13416,7 +15155,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "H1ber",
@@ -13444,7 +15184,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Otom",
@@ -13468,7 +15209,8 @@
    },
    "last_year": 2022,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "L1NK",
@@ -13496,7 +15238,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 35000
   },
   {
    "page": "ScreaM",
@@ -13534,7 +15277,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 45000
   },
   {
    "page": "Nivera",
@@ -13569,7 +15313,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 33000
   },
   {
    "page": "Laz",
@@ -13611,7 +15356,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 31000
   },
   {
    "page": "Crow",
@@ -13645,7 +15391,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 31000
   },
   {
    "page": "Dep",
@@ -13689,7 +15436,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 29000
   },
   {
    "page": "SugarZ3ro",
@@ -13743,7 +15491,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 29000
   },
   {
    "page": "TENNN",
@@ -13777,7 +15526,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 29000
   },
   {
    "page": "Wait",
@@ -13801,7 +15551,8 @@
    },
    "last_year": 2022,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Xand",
@@ -13835,7 +15586,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Jonn",
@@ -13859,7 +15611,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Seraph",
@@ -13889,7 +15642,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Bezn1",
@@ -13913,7 +15667,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "D3ffo",
@@ -13941,7 +15696,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 75000
   },
   {
    "page": "Sheydos",
@@ -13989,7 +15745,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 76000
   },
   {
    "page": "PAura",
@@ -14021,7 +15778,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Turko",
@@ -14051,7 +15809,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Russ (Turkish player)",
@@ -14076,7 +15835,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Izzy",
@@ -14106,7 +15866,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Brave",
@@ -14142,7 +15903,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "BONECOLD",
@@ -14176,7 +15938,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 79000
   },
   {
    "page": "Kiles",
@@ -14205,7 +15968,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 75000
   },
   {
    "page": "Zeek",
@@ -14239,7 +16003,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 76000
   },
   {
    "page": "Keloqz",
@@ -14271,7 +16036,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 18000
   },
   {
    "page": "ShahZaM",
@@ -14305,7 +16071,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 49000
   },
   {
    "page": "SicK",
@@ -14335,7 +16102,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 49000
   },
   {
    "page": "Zombs",
@@ -14365,7 +16133,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 49000
   },
   {
    "page": "Dapr",
@@ -14395,7 +16164,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 49000
   },
   {
    "page": "Hiko",
@@ -14419,7 +16189,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Nitr0",
@@ -14443,7 +16214,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Steel",
@@ -14468,7 +16240,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Heat",
@@ -14518,7 +16291,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 21000
   },
   {
    "page": "JhoW",
@@ -14544,7 +16318,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "V1xen",
@@ -14571,7 +16346,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "Murizzz",
@@ -14603,7 +16379,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Ntk",
@@ -14629,7 +16406,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Myssen",
@@ -14653,7 +16431,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Shion",
@@ -14677,7 +16456,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Pleets",
@@ -14702,7 +16482,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Liazzi",
@@ -14735,7 +16516,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Krain",
@@ -14760,7 +16542,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "K1Ng",
@@ -14792,7 +16575,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14333
   },
   {
    "page": "FiveK",
@@ -14818,7 +16602,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Bunny (Chae Joon-hyuk)",
@@ -14842,7 +16627,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Efina",
@@ -14871,7 +16657,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Zunba",
@@ -14895,7 +16682,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Esperanza",
@@ -14919,7 +16707,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Takej",
@@ -14950,7 +16739,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Reita",
@@ -14980,7 +16770,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Barce",
@@ -15006,7 +16797,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Makiba",
@@ -15032,7 +16824,8 @@
    },
    "last_year": 2021,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Bazzi",
@@ -15068,7 +16861,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6333
   },
   {
    "page": "Ade",
@@ -15094,7 +16888,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5333
   },
   {
    "page": "Fisker",
@@ -15121,7 +16916,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5333
   },
   {
    "page": "Neth",
@@ -15157,7 +16953,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8333
   },
   {
    "page": "Medusa",
@@ -15194,7 +16991,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6333
   },
   {
    "page": "Minty",
@@ -15218,7 +17016,8 @@
    },
    "last_year": 2021,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Shiba",
@@ -15242,7 +17041,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "JessieVash",
@@ -15290,7 +17090,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16000
   },
   {
    "page": "DubsteP",
@@ -15322,7 +17123,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14000
   },
   {
    "page": "BORKUM",
@@ -15358,7 +17160,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14000
   },
   {
    "page": "Dispenser",
@@ -15386,7 +17189,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Witz",
@@ -15414,7 +17218,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Vanity",
@@ -15450,7 +17255,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 20000
   },
   {
    "page": "Effys",
@@ -15474,7 +17280,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Penny",
@@ -15512,7 +17319,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Jammyz",
@@ -15537,7 +17345,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Kryptix",
@@ -15561,7 +17370,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Doma",
@@ -15597,7 +17407,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 28000
   },
   {
    "page": "Solo",
@@ -15621,7 +17432,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16000
   },
   {
    "page": "Peri",
@@ -15645,7 +17457,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16000
   },
   {
    "page": "Allow",
@@ -15669,7 +17482,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16000
   },
   {
    "page": "Frz",
@@ -15711,7 +17525,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 13000
   },
   {
    "page": "GtnziN",
@@ -15739,7 +17554,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "Sutecas",
@@ -15765,7 +17581,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 12000
   },
   {
    "page": "DeNaro",
@@ -15789,7 +17606,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Fra",
@@ -15813,7 +17631,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Light",
@@ -15837,7 +17656,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Gaabxx",
@@ -15862,7 +17682,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Prozin",
@@ -15886,7 +17707,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Rion",
@@ -15910,7 +17732,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Zepher",
@@ -15934,7 +17757,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Patiphan",
@@ -15968,7 +17792,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 13000
   },
   {
    "page": "Mwzera",
@@ -16013,7 +17838,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Mitch",
@@ -16043,7 +17869,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 13000
   },
   {
    "page": "Xeppaa",
@@ -16087,7 +17914,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 22000
   },
   {
    "page": "Khalil",
@@ -16127,7 +17955,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Nozwerr",
@@ -16170,7 +17999,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 15000
   },
   {
    "page": "Mazin",
@@ -16214,7 +18044,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "ChAlalala",
@@ -16239,7 +18070,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "JohnOlsen",
@@ -16263,7 +18095,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "LAMMYSNAX",
@@ -16287,7 +18120,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "PTC",
@@ -16319,7 +18153,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "SuperBusS",
@@ -16343,7 +18178,8 @@
    },
    "last_year": 2021,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Derrek",
@@ -16385,7 +18221,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Stellar",
@@ -16417,7 +18254,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Will",
@@ -16441,7 +18279,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Dimasick",
@@ -16465,7 +18304,8 @@
    },
    "last_year": 2022,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Dgzin",
@@ -16508,7 +18348,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "BlaZek1ng",
@@ -16540,7 +18381,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Fl1pzjder",
@@ -16574,7 +18416,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Berserx",
@@ -16610,7 +18453,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Famouz",
@@ -16640,7 +18484,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "Daveeys",
@@ -16668,7 +18513,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Fit1nho",
@@ -16704,7 +18550,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Rhyme",
@@ -16733,7 +18580,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Cloud",
@@ -16785,7 +18633,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 33000
   },
   {
    "page": "Rin",
@@ -16812,7 +18661,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 10000
   },
   {
    "page": "Yosemite",
@@ -16862,7 +18712,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14000
   },
   {
    "page": "LostMe",
@@ -16886,7 +18737,8 @@
    },
    "last_year": 2023,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "WudiYuChEn",
@@ -16914,7 +18766,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Mta",
@@ -16946,7 +18799,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 14000
   },
   {
    "page": "WoodAy1",
@@ -16974,7 +18828,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Hiro",
@@ -17015,7 +18870,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 42000
   },
   {
    "page": "CeNder",
@@ -17049,7 +18905,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "RunneR",
@@ -17089,7 +18946,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 19000
   },
   {
    "page": "Governor",
@@ -17129,7 +18987,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 9000
   },
   {
    "page": "Westside",
@@ -17165,7 +19024,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "Flickless",
@@ -17201,7 +19061,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "Ara",
@@ -17235,7 +19096,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "GRUBINHO",
@@ -17277,7 +19139,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 23000
   },
   {
    "page": "DH",
@@ -17306,7 +19169,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 19000
   },
   {
    "page": "Flicker",
@@ -17334,7 +19198,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Timotino",
@@ -17364,7 +19229,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 70000
   },
   {
    "page": "Vora",
@@ -17397,7 +19263,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 70000
   },
   {
    "page": "Slowly",
@@ -17435,7 +19302,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "Scales",
@@ -17469,7 +19337,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "Splash",
@@ -17501,7 +19370,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "Erv",
@@ -17531,7 +19401,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 24000
   },
   {
    "page": "Xihe",
@@ -17555,7 +19426,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Avez",
@@ -17595,7 +19467,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "Dos9",
@@ -17633,7 +19506,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 26000
   },
   {
    "page": "LêwN",
@@ -17671,7 +19545,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 34000
   },
   {
    "page": "Lukxo",
@@ -17709,7 +19584,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 213000
   },
   {
    "page": "Darker",
@@ -17741,7 +19617,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 213000
   },
   {
    "page": "Erde",
@@ -17776,7 +19653,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 213000
   },
   {
    "page": "Tkzin",
@@ -17804,7 +19682,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 213000
   },
   {
    "page": "DaviH",
@@ -17832,7 +19711,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 213000
   },
   {
    "page": "Jkuro",
@@ -17873,7 +19753,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Zhe",
@@ -17903,7 +19784,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "Crownfisher",
@@ -17929,7 +19811,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 17000
   },
   {
    "page": "GSR",
@@ -17954,7 +19837,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "Stew",
@@ -17996,7 +19880,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Sharks",
@@ -18020,7 +19905,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "AsLanM4shadoW",
@@ -18046,7 +19932,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "QutionerX",
@@ -18078,7 +19965,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "SouhcNi",
@@ -18104,7 +19992,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Newzera",
@@ -18128,7 +20017,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Xms",
@@ -18155,7 +20045,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Wolfen",
@@ -18182,7 +20073,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "MOLSI",
@@ -18216,7 +20108,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Destrian",
@@ -18244,7 +20137,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Twisten",
@@ -18270,7 +20164,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Axeddy",
@@ -18294,7 +20189,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Jzz",
@@ -18328,7 +20224,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "RgLM",
@@ -18359,7 +20256,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Anthem",
@@ -18391,7 +20289,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "TS",
@@ -18417,7 +20316,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "EKo",
@@ -18449,7 +20349,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Secret",
@@ -18474,7 +20375,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "SkRossi",
@@ -18501,7 +20403,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Emman",
@@ -18525,7 +20428,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "EJAY",
@@ -18551,7 +20455,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 1000
   },
   {
    "page": "Lmemore",
@@ -18584,7 +20489,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 3000
   },
   {
    "page": "GarnetS",
@@ -18610,7 +20516,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Jremy",
@@ -18647,7 +20554,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 6000
   },
   {
    "page": "Jakee",
@@ -18678,7 +20586,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Runi",
@@ -18706,7 +20615,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "ZE1SH",
@@ -18730,7 +20640,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Weber",
@@ -18754,7 +20665,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "GodDead",
@@ -18778,7 +20690,8 @@
    },
    "last_year": 2023,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "2GE",
@@ -18813,7 +20726,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Apotheon",
@@ -18843,7 +20757,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NaturE",
@@ -18878,7 +20793,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Supamen",
@@ -18918,7 +20834,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "OXY",
@@ -18958,7 +20875,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 7000
   },
   {
    "page": "Wippie",
@@ -18982,7 +20900,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kon4n",
@@ -19008,7 +20927,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Havoc",
@@ -19040,7 +20960,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Moose",
@@ -19066,7 +20987,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Palla",
@@ -19098,7 +21020,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Rich",
@@ -19124,7 +21047,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Pa1nt",
@@ -19148,7 +21072,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Elite",
@@ -19182,7 +21107,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Reazy",
@@ -19214,7 +21140,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "ShadoW",
@@ -19243,7 +21170,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "BeyAz",
@@ -19272,7 +21200,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NataNk",
@@ -19308,7 +21237,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "LogaN",
@@ -19336,7 +21266,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "TakaS",
@@ -19364,7 +21295,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Wailers",
@@ -19392,7 +21324,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Harmii",
@@ -19418,7 +21351,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "KAdavra",
@@ -19449,7 +21383,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Famsii",
@@ -19473,7 +21408,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Meiy",
@@ -19514,7 +21450,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "SSeeS",
@@ -19557,7 +21494,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Popogachi",
@@ -19583,7 +21521,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Lightningfast",
@@ -19611,7 +21550,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Polvi",
@@ -19639,7 +21579,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Estrella",
@@ -19676,7 +21617,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 4000
   },
   {
    "page": "Lenne",
@@ -19700,7 +21642,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NDG",
@@ -19726,7 +21669,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Hiroronn",
@@ -19755,7 +21699,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Yuran",
@@ -19787,7 +21732,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Deryeon",
@@ -19828,7 +21774,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Egoist",
@@ -19852,7 +21799,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Retla",
@@ -19879,7 +21827,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Wild0reoo",
@@ -19909,7 +21858,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "DeLb",
@@ -19952,7 +21902,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Sword9",
@@ -19988,7 +21939,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "X3b",
@@ -20012,7 +21964,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "B3Ar",
@@ -20040,7 +21993,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "YiHao",
@@ -20066,7 +22020,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "MarT1n",
@@ -20096,7 +22051,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "O0o0o",
@@ -20130,7 +22086,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "OBONE",
@@ -20168,7 +22125,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "PangH",
@@ -20192,7 +22150,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "GuanG",
@@ -20232,7 +22191,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "NeveR",
@@ -20256,7 +22216,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Ninebody",
@@ -20290,7 +22251,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "AakRR",
@@ -20319,7 +22281,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "ICEKING",
@@ -20348,7 +22311,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Mikiya",
@@ -20370,7 +22334,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Sztwo",
@@ -20401,7 +22366,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Qiuye",
@@ -20429,7 +22395,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Abo",
@@ -20473,7 +22440,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "LockM",
@@ -20501,7 +22469,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "B1ack",
@@ -20533,7 +22502,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Shameless",
@@ -20560,7 +22530,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "YoU",
@@ -20595,7 +22566,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Cxyy",
@@ -20625,7 +22597,8 @@
    },
    "last_year": 2025,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Aluba",
@@ -20660,7 +22633,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "COLDFISH",
@@ -20694,7 +22668,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Pl1xx",
@@ -20722,7 +22697,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Babyblue",
@@ -20754,7 +22730,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Cyah",
@@ -20780,7 +22757,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "FFs",
@@ -20805,7 +22783,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Dingwei",
@@ -20835,7 +22814,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "AC",
@@ -20861,7 +22841,8 @@
    },
    "last_year": 2024,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Swerl",
@@ -20894,7 +22875,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "V1ya",
@@ -20921,7 +22903,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Eren",
@@ -20953,7 +22936,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Ezeir",
@@ -20989,7 +22973,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "YorkMonster",
@@ -21014,7 +22999,8 @@
    },
    "last_year": 2024,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Z1Yan",
@@ -21044,7 +23030,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Zander",
@@ -21073,7 +23060,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "V1c",
@@ -21107,7 +23095,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Raafa",
@@ -21133,7 +23122,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Add3r",
@@ -21158,7 +23148,8 @@
    },
    "last_year": 2025,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Bdog",
@@ -21182,7 +23173,8 @@
    },
    "last_year": 2025,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "V1nNy",
@@ -21208,7 +23200,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Lz",
@@ -21236,7 +23229,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Pryze",
@@ -21267,7 +23261,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Silentzz",
@@ -21299,7 +23294,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Zap",
@@ -21327,7 +23323,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Gobera",
@@ -21357,7 +23354,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Askia",
@@ -21382,7 +23380,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "PxS",
@@ -21411,7 +23410,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kess",
@@ -21435,7 +23435,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Dantedeu5",
@@ -21463,7 +23464,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Okeanos",
@@ -21494,7 +23496,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "RobbieBk",
@@ -21522,7 +23525,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Virtyy",
@@ -21550,7 +23554,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Urango",
@@ -21574,7 +23579,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Vakk",
@@ -21598,7 +23604,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Filu",
@@ -21632,7 +23639,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Flyuh",
@@ -21660,7 +23668,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Ruxic",
@@ -21694,7 +23703,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Click (German player)",
@@ -21722,7 +23732,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Hype",
@@ -21746,7 +23757,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Florescent",
@@ -21774,7 +23786,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Batujnax",
@@ -21809,7 +23822,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "CyvOph",
@@ -21841,7 +23855,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Chiwa",
@@ -21871,7 +23886,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Alexiiik",
@@ -21895,7 +23911,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Pyrolll",
@@ -21919,7 +23936,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "UNFAKE",
@@ -21951,7 +23969,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "KovaQ",
@@ -21982,7 +24001,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "BaddyG",
@@ -22006,7 +24026,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "MONSTEERR",
@@ -22035,7 +24056,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Veqaj",
@@ -22067,7 +24089,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Proxh",
@@ -22094,7 +24117,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "ComeBack",
@@ -22128,7 +24152,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "OLIZERA",
@@ -22152,7 +24177,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Akame",
@@ -22186,7 +24212,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Art",
@@ -22215,7 +24242,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Gyen",
@@ -22243,7 +24271,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "JinboongE",
@@ -22274,7 +24303,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Yoman",
@@ -22302,7 +24332,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "KellyS",
@@ -22338,7 +24369,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "PapiChulo",
@@ -22366,7 +24398,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "PatrickWHO",
@@ -22394,7 +24427,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "CLZ",
@@ -22422,7 +24456,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "SyouTa",
@@ -22455,7 +24490,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Xdll",
@@ -22489,7 +24525,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Margaret",
@@ -22512,9 +24549,7 @@
    "teams": {
     "nongshimredforce": [
      "VCT/2025/Pacific_League/Kickoff",
-     "VCT/2025/Pacific_League/Stage_1"
-    ],
-    "nsredforce": [
+     "VCT/2025/Pacific_League/Stage_1",
      "VCT/2025/Pacific_League/Stage_2"
     ],
     "qtdig": [
@@ -22523,7 +24558,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Persia",
@@ -22545,15 +24581,14 @@
    "teams": {
     "nongshimredforce": [
      "VCT/2025/Pacific_League/Kickoff",
-     "VCT/2025/Pacific_League/Stage_1"
-    ],
-    "nsredforce": [
+     "VCT/2025/Pacific_League/Stage_1",
      "VCT/2025/Pacific_League/Stage_2"
     ]
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Shiro (Indonesian player)",
@@ -22581,7 +24616,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NcSlasher",
@@ -22609,7 +24645,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Thyy",
@@ -22641,7 +24678,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "TenTen",
@@ -22671,7 +24709,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Nizzy",
@@ -22696,7 +24735,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "ZesBeeW",
@@ -22720,7 +24760,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Lsn",
@@ -22746,7 +24787,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "XiYiJi",
@@ -22774,7 +24816,8 @@
    },
    "last_year": 2025,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "MrCANI",
@@ -22800,7 +24843,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Dynamite",
@@ -22835,7 +24879,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "5CM",
@@ -22861,7 +24906,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Cangshu",
@@ -22887,7 +24933,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Ying",
@@ -22915,7 +24962,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Baize",
@@ -22937,7 +24985,8 @@
    },
    "last_year": 2025,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Waituu",
@@ -22963,7 +25012,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "CoCo",
@@ -22995,7 +25045,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Player (Chinese player)",
@@ -23020,7 +25071,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Hanche",
@@ -23046,7 +25098,8 @@
    },
    "last_year": 2025,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Bai",
@@ -23074,7 +25127,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Lucas",
@@ -23107,7 +25161,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kklin",
@@ -23135,7 +25190,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Yoyo",
@@ -23163,7 +25219,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Bao",
@@ -23187,7 +25244,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "BenG",
@@ -23211,7 +25269,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Infiltrator",
@@ -23235,7 +25294,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kyu",
@@ -23264,7 +25324,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Reduxx",
@@ -23293,7 +25354,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Eggsterr",
@@ -23321,7 +25383,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "P0PPIN",
@@ -23348,7 +25411,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Inspire",
@@ -23373,7 +25437,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Canezerra",
@@ -23400,7 +25465,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Jackk",
@@ -23426,7 +25492,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Notexxd",
@@ -23451,7 +25518,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Bao (Vietnamese player)",
@@ -23477,7 +25545,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Paincakes",
@@ -23503,7 +25572,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Zerona",
@@ -23531,7 +25601,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Jerrwin",
@@ -23557,7 +25628,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "FireBallOps",
@@ -23582,7 +25654,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Nightz",
@@ -23606,7 +25679,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NiSMO",
@@ -23633,7 +25707,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Spaz",
@@ -23658,7 +25733,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Boni",
@@ -23682,7 +25758,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Alvinboy",
@@ -23708,7 +25785,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "David",
@@ -23734,7 +25812,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Chubi",
@@ -23758,7 +25837,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Loss",
@@ -23782,7 +25862,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Zanatsu",
@@ -23806,7 +25887,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Brinks",
@@ -23835,7 +25917,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Baha",
@@ -23860,7 +25943,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Seven",
@@ -23888,7 +25972,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Qpert",
@@ -23918,7 +26003,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NINJA",
@@ -23947,7 +26033,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Al0rante",
@@ -23976,7 +26063,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Nekky",
@@ -24008,7 +26096,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Favian",
@@ -24038,7 +26127,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Audaz",
@@ -24068,7 +26158,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "D3mur",
@@ -24092,7 +26183,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "SturNN",
@@ -24116,7 +26208,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Echo (Turkish player)",
@@ -24146,7 +26239,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Chloric",
@@ -24174,7 +26268,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "ExiT",
@@ -24200,7 +26295,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kolosha",
@@ -24226,7 +26322,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Jesse",
@@ -24250,7 +26347,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Waddle",
@@ -24274,7 +26372,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Spear",
@@ -24298,7 +26397,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Iluri",
@@ -24324,7 +26424,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Kozzy",
@@ -24348,7 +26449,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Lime",
@@ -24372,7 +26474,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Kachoww",
@@ -24396,7 +26499,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Hezacoil",
@@ -24420,7 +26524,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "DeadInk",
@@ -24444,7 +26549,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "B1squw1",
@@ -24466,7 +26572,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Pa1ze",
@@ -24490,7 +26597,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Azury",
@@ -24514,7 +26622,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Musashi",
@@ -24541,7 +26650,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Jamelinho213",
@@ -24565,7 +26675,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Fizzy",
@@ -24589,7 +26700,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kendo",
@@ -24613,7 +26725,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Yatsuka",
@@ -24642,7 +26755,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Caedye",
@@ -24671,7 +26785,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Hermes",
@@ -24701,7 +26816,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "ZynX",
@@ -24727,7 +26843,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Juv3nile",
@@ -24755,7 +26872,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 16667
   },
   {
    "page": "Absol",
@@ -24783,7 +26901,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Zexy",
@@ -24811,7 +26930,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "XuNa",
@@ -24839,7 +26959,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Oonzmlp",
@@ -24871,7 +26992,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Klaus (Korean player)",
@@ -24899,7 +27021,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "C1ndeR",
@@ -24927,7 +27050,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Yong",
@@ -24953,7 +27077,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "KiTae",
@@ -24978,7 +27103,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Rimuru",
@@ -25003,7 +27129,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Zeus (Filipino player)",
@@ -25029,7 +27156,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "RaxcaL",
@@ -25053,7 +27181,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 2000
   },
   {
    "page": "Xiesta",
@@ -25080,7 +27209,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Xan",
@@ -25104,7 +27234,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "STYRON",
@@ -25128,7 +27259,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NaTz",
@@ -25157,7 +27289,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "NIZ",
@@ -25181,7 +27314,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Laz (Thai player)",
@@ -25206,7 +27340,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kadoom",
@@ -25230,7 +27365,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Apinya",
@@ -25254,7 +27390,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Pkm",
@@ -25278,7 +27415,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Misaya",
@@ -25302,7 +27440,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kippei",
@@ -25326,7 +27465,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Wolverine",
@@ -25350,7 +27490,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Ray (Korean player)",
@@ -25374,7 +27515,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Cloudy (Korean player)",
@@ -25398,7 +27540,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Endoistzin",
@@ -25423,7 +27566,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Doffy",
@@ -25447,7 +27591,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Canady",
@@ -25471,7 +27616,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "ALerT",
@@ -25495,7 +27641,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Bud",
@@ -25523,7 +27670,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Setrod",
@@ -25551,7 +27699,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Kodeth",
@@ -25573,7 +27722,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Green",
@@ -25602,7 +27752,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Xlele",
@@ -25632,7 +27783,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "QiutiaN",
@@ -25665,7 +27817,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Jowa",
@@ -25692,7 +27845,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Satoshi",
@@ -25717,7 +27871,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Septem7",
@@ -25742,7 +27897,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Youze",
@@ -25766,7 +27922,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Yilai",
@@ -25790,7 +27947,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Ben1Ley",
@@ -25812,7 +27970,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Swagzor",
@@ -25838,7 +27997,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 5000
   },
   {
    "page": "Glacier (Taiwanese player)",
@@ -25864,7 +28024,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "R1ckLee",
@@ -25886,7 +28047,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "FT",
@@ -25910,7 +28072,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 8000
   },
   {
    "page": "Ra1ny",
@@ -25935,7 +28098,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "FKEY",
@@ -25957,7 +28121,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Toosy",
@@ -25979,7 +28144,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Nothing",
@@ -26001,7 +28167,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Verse",
@@ -26023,7 +28190,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Tonk",
@@ -26047,7 +28215,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Sibeastw0w",
@@ -26071,7 +28240,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Krst1Ng",
@@ -26095,7 +28265,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Beijy",
@@ -26117,7 +28288,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Folykiki",
@@ -26141,7 +28313,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Layla",
@@ -26167,7 +28340,8 @@
    },
    "last_year": 2026,
    "starter": true,
-   "has_page": true
+   "has_page": true,
+   "earnings": 0
   },
   {
    "page": "Pink",
@@ -26189,7 +28363,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   },
   {
    "page": "Chaos",
@@ -26211,7 +28386,8 @@
    },
    "last_year": 2026,
    "starter": false,
-   "has_page": false
+   "has_page": false,
+   "earnings": 0
   }
  ]
 }
