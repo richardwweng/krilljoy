@@ -56,7 +56,7 @@ export default function RaceHome() {
       {rules && <RaceHowTo onClose={() => setRules(false)} />}
       <div className="race-title">
         <h1>Treasure race</h1>
-        <p className="muted">Everyone gets the same questions, back to back. Rarer answers sink you faster. First to the chest wins; everyone else gets 30 seconds to make it too.</p>
+        <p className="muted">Everyone gets the same questions, back to back. Rarer answers sink you faster. First to the chest wins; everyone else gets 1 minute to make it too.</p>
       </div>
       {!connected && <p className="panel race-warn">Connecting to the race server…</p>}
       {error && <p className="panel race-error" role="alert">{error}</p>}

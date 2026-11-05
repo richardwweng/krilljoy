@@ -85,7 +85,7 @@ export default function RoomLobby({ room, serverNow }: { room: RoomView; serverN
             <li>Same questions, same order for everyone. No timer.</li>
             <li>Rarer answers sink you further. Wrong guesses are free.</li>
             <li>Stuck? Skip unlocks after 25 seconds (0 m).</li>
-            <li>First to the chest wins; everyone else gets 30 seconds to make it too.</li>
+            <li>First to the chest wins; everyone else gets 1 minute to make it too.</li>
           </ul>
           {room.isPublic && (
             <p className="race-note big">{startsIn !== null ? <>Lobby full! Starting in <b>{startsIn}s</b></> : <>Starts 30 s after the lobby fills up ({seated.length}/{room.maxPlayers}){isHost ? ", or press Start" : ""}</>}</p>

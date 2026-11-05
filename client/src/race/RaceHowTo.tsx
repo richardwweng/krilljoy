@@ -25,7 +25,7 @@ export default function RaceHowTo({ onClose }: { onClose: () => void }) {
       <ul className="race-howto-list">
         <li><b>Wrong guesses are free.</b> Keep typing. Close spellings get suggested: press Enter again to confirm.</li>
         <li><b>Stuck?</b> After 25 seconds you can skip (0 m).</li>
-        <li><b>First to the chest wins.</b> Everyone else then gets a 30-second last call. Reach the chest in time and you place by finish order; after that, places go by depth.</li>
+        <li><b>First to the chest wins.</b> Everyone else then gets a 1-minute last call. Reach the chest in time and you place by finish order; after that, places go by depth.</li>
         <li><b>Race length</b> is picked by the host: {LENGTHS.map((l) => `${l.label} ${l.metres.toLocaleString("en-US")} m`).join(" · ")}. Quick play is Normal.</li>
         <li><b>Watch the others</b> on the gauge and leaderboard as they dive.</li>
       </ul>

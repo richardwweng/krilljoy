@@ -114,7 +114,7 @@ export default function RaceRun({ room, serverNow }: { room: RoomView; serverNow
 
       {lastCall !== null && (
         <div className="last-call panel" role="status">
-          <b>{room.firstFinisher}</b> opened the chest! {me.finished ? "Waiting for the others:" : "Last call:"} <span className="lc-time">0:{String(lastCall).padStart(2, "0")}</span>
+          <b>{room.firstFinisher}</b> opened the chest! {me.finished ? "Waiting for the others:" : "Last call:"} <span className="lc-time">{Math.floor(lastCall / 60)}:{String(lastCall % 60).padStart(2, "0")}</span>
         </div>
       )}
 

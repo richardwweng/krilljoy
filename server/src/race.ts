@@ -8,7 +8,7 @@ export const RACE_LENGTHS = { short: 1500, normal: 3000, long: 5000 } as const; 
 export type RaceLength = keyof typeof RACE_LENGTHS;
 export const METRES_PER_POINT = 10;
 export const SKIP_AFTER_MS = 25_000; // Skip unlocks 25 s into a question (Richard's call); skipping = 0 m
-export const LAST_CALL_MS = 30_000; // after the first player opens the chest, everyone else gets 30 s
+export const LAST_CALL_MS = 60_000; // after the first player opens the chest, everyone else gets 1 minute (Richard's call)
 export const IDLE_END_MS = 15 * 60_000; // nobody answers, guesses or skips for 15 min: end the race (Richard's call)
 
 export interface RoundLog {

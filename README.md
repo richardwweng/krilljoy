@@ -36,7 +36,7 @@ counts, but the rarer it is, the deeper you dive.
 - **Same questions, same order** for everyone in the room, back to back.
   **No timer**: lock in a valid answer and the next one appears.
 - **Rarer answers sink you faster.** First diver to reach the treasure chest
-  wins. Everyone else gets a **30-second last call**; after that, places go by
+  wins. Everyone else gets a **1-minute last call**; after that, places go by
   depth.
 - **Stuck?** Skip unlocks after 25 seconds (0 m).
 - **Watch everyone dive live** on the shared gauge and leaderboard.

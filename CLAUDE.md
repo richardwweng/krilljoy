@@ -308,7 +308,7 @@ Copy the mechanics, not Krillion's branding or assets.
      shared/match.ts (typo -> "suggest" -> player confirms; "which one?" for
      ambiguous; wrong guesses free). Skip unlocks after 25 s (0 m).
    - Host picks length: Short 1,500 / Normal 3,000 / Long 5,000 m (quick play =
-     Normal). First to the treasure chest wins; then a 30 s LAST CALL for the
+     Normal). First to the treasure chest wins; then a 60 s LAST CALL (Richard, Nov 2026; was 30 s) for the
      rest; placings = finish order, then depth (ties: fewer skips).
    - Live depths: shared gauge (every diver's marker, chest at the bottom) +
      live leaderboard. Results: podium, standings, your answers. Public rooms
