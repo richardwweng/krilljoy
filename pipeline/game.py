@@ -61,6 +61,36 @@ COLOR_WORDS = {
 }
 
 
+# What a skin's upgrade levels unlock (levelItem in valorant-api), in plain words.
+# Level 1 (the base skin) has no levelItem.
+UPGRADE_LABELS = {
+    "Finisher": "Finisher", "KillBanner": "Kill banner", "KillCounter": "Kill counter",
+    "SoundEffects": "Sound effects", "VFX": "VFX", "Animation": "Animation",
+    "Transformation": "Transformation", "TopFrag": "Top frag effect", "KillEffect": "Kill effect",
+    "Voiceover": "Voiceover", "InspectAndKill": "Inspect and kill effect",
+}
+
+
+def skin_upgrades(skin):
+    out = []
+    for lv in skin.get("levels") or []:
+        kind = (lv.get("levelItem") or "").split("::")[-1]
+        label = UPGRADE_LABELS.get(kind)
+        if label and label not in out:
+            out.append(label)
+    return out
+
+
+# Gun price bands a question can ask about ("costs 2,000+ credits"). A gun gets
+# every band it fits, so "1,000+" also includes the 2,000+ guns.
+def cost_bands(cost):
+    if cost is None:
+        return []
+    bands = ["Under 1,000 credits"] if cost < 1000 else ["1,000+ credits"]
+    bands += [f"{n:,}+ credits" for n in (2000, 3000) if cost >= n]
+    return bands
+
+
 def variant_colors(skin):
     """Plain colors of a skin's variants (not its default look): ['Pink', 'Gold']."""
     out = set()
@@ -159,7 +189,11 @@ def build_weapons(raw):
         wname = clean(w["displayName"])
         cat = CATEGORY_LABELS.get(w["category"].split("::")[-1], w["category"].split("::")[-1])
         cost = (w.get("shopData") or {}).get("cost", 0)
-        weapons.append(item(wname, {"category": cat}, cost // 500, w.get("displayIcon")))
+        pen = ((w.get("weaponStats") or {}).get("wallPenetration") or "").split("::")[-1]
+        weapons.append(item(wname, {"category": cat,
+                                    "cost": cost_bands(cost if w.get("shopData") else None),
+                                    "wall_penetration": pen},
+                            cost // 500, w.get("displayIcon")))
         for s in w["skins"]:
             tier_id = s.get("contentTierUuid")
             if not tier_id:  # "Standard Vandal", "Random Favorite Skin", default melee
@@ -179,7 +213,7 @@ def build_weapons(raw):
                              if lv.get("uuid") in from_contract), "Store (VP)")
             skins.append(item(name, {"weapon": wname, "category": cat, "edition": tier,
                                      "collection": collection, "obtained": obtained,
-                                     "colors": variant_colors(s)},
+                                     "colors": variant_colors(s), "upgrades": skin_upgrades(s)},
                               score, icon, extra_aliases=[short, collection, wname if wname != "Melee" else ""]))
             # Aliases like "reaver" or "vandal" only count when they point to one
             # answer in a question; prompts.py drops them when they're ambiguous.

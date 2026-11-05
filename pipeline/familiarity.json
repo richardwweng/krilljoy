@@ -862,7 +862,7 @@
   "F4Q": 2
  },
  "ability_tags": {
-  "_about": "What each ability does, for questions like 'Name an ability that does damage'. Decay (temporary health loss) counts as damage. Hand-tagged by Claude.",
+  "_about": "What each ability does, for questions like 'Name an ability that does damage'. Decay (temporary health loss) counts as damage. Hand-tagged by Claude. movement = dashes, jumps, glides and teleports; slow includes 'hinder'; trap = set-ups that trigger on (or are sprung on) enemies who walk into them.",
   "damage": [
    "Hot Hands",
    "Blaze",
@@ -941,7 +941,9 @@
    "Devour",
    "Resurrection",
    "Pick-me-up",
-   "Run it Back"
+   "Run it Back",
+   "Evolution",
+   "M-pulse"
   ],
   "info": [
    "Recon Bolt",
@@ -960,6 +962,56 @@
    "Trademark",
    "Nightfall",
    "Hunter's Fury"
+  ],
+  "movement": [
+   "Updraft",
+   "Tailwind",
+   "Drift",
+   "High Gear",
+   "Lightspeed",
+   "Flow",
+   "Blast Pack",
+   "Shrouded Step",
+   "From the Shadows",
+   "GATECRASH",
+   "Rendezvous",
+   "Crosscut",
+   "Refract"
+  ],
+  "slow": [
+   "Slow Orb",
+   "GravNet",
+   "High Tide",
+   "Storm Surge",
+   "Reckoning",
+   "Bassquake",
+   "Trademark",
+   "Razorvine",
+   "Seekers",
+   "Saturate",
+   "Convergent Paths"
+  ],
+  "concuss": [
+   "Nova Pulse",
+   "Fault Line",
+   "Rolling Thunder",
+   "Relay Bolt",
+   "Wingman",
+   "Trailblazer",
+   "Sonic Sensor",
+   "Special Delivery",
+   "M-pulse",
+   "Displacement"
+  ],
+  "trap": [
+   "Trapwire",
+   "ALARMBOT",
+   "Trademark",
+   "Sonic Sensor",
+   "Shear",
+   "Chokehold",
+   "Razorvine",
+   "Nanoswarm"
   ]
  },
  "team_aliases": {

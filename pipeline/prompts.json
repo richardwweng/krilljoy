@@ -1617,5 +1617,164 @@
     ],
     "overrides": {},
     "enabled": true
+  },
+  {
+    "id": "passive_ability",
+    "text": "Name a passive ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:slot",
+        "value": "Passive"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "duelist_ult",
+    "text": "Name a Duelist's ultimate",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:role",
+        "value": "Duelist"
+      },
+      {
+        "type": "is:slot",
+        "value": "Ultimate (X)"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "movement_ability",
+    "text": "Name a movement ability (dash, jump or teleport)",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "movement"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "slow_ability",
+    "text": "Name an ability that slows",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "slow"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "concuss_ability",
+    "text": "Name an ability that concusses",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "concuss"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "trap_ability",
+    "text": "Name a trap ability",
+    "pool": "abilities",
+    "conditions": [
+      {
+        "type": "is:effects",
+        "value": "trap"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "vandal_finisher",
+    "text": "Name a Vandal skin with a finisher",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Vandal"
+      },
+      {
+        "type": "is:upgrades",
+        "value": "Finisher"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "phantom_finisher",
+    "text": "Name a Phantom skin with a finisher",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Phantom"
+      },
+      {
+        "type": "is:upgrades",
+        "value": "Finisher"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "sheriff_finisher",
+    "text": "Name a Sheriff skin with a finisher",
+    "pool": "skins",
+    "conditions": [
+      {
+        "type": "is:weapon",
+        "value": "Sheriff"
+      },
+      {
+        "type": "is:upgrades",
+        "value": "Finisher"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "gun_2000",
+    "text": "Name a gun that costs 2,000+ credits",
+    "pool": "weapons",
+    "conditions": [
+      {
+        "type": "is:cost",
+        "value": "2,000+ credits"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
+  },
+  {
+    "id": "gun_under_1000",
+    "text": "Name a gun that costs under 1,000 credits",
+    "pool": "weapons",
+    "conditions": [
+      {
+        "type": "is:cost",
+        "value": "Under 1,000 credits"
+      }
+    ],
+    "overrides": {},
+    "enabled": true
   }
 ]

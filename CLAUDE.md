@@ -38,8 +38,16 @@ first, then shows conditions that make sense for it.
   (kj, brim…) in familiarity.json. Team names also get "Team"/"Esports"/"Gaming"
   dropped automatically (`team_aliases()` in prompts.py). Skins already accept
   the name without the gun ("Reaver" for Reaver Vandal) when that's unambiguous.
-- Ability `effects` (damage, flash, smoke, wall, heal, info) are hand tagged in
-  `ability_tags` in familiarity.json; untagged = "other". Add new agents' abilities there.
+- Ability `effects` (damage, flash, smoke, wall, heal, info, movement, slow,
+  concuss, trap) are hand tagged in `ability_tags` in familiarity.json from the
+  in-game descriptions; untagged = "other". Add new agents' abilities there.
+- Ability `slot` (Q/E/C/Ultimate (X)/Passive) comes from valorant-api, whose Q/E/C
+  labels DON'T always match the real keys (it lists Phoenix's Curveball as E).
+  Ultimate and Passive are reliable; don't write "signature/E" questions from it.
+- Weapon `cost` = price bands ("Under 1,000 credits", "1,000+", "2,000+", "3,000+";
+  a gun gets every band it fits) and `wall_penetration` (Low/Medium/High; only 6
+  High guns). Skin `upgrades` = what its levels unlock (Finisher, Kill banner,
+  VFX…); kill banners are nearly all battle-pass Classics.
 - Skin `obtained`: "Battle pass" / "Agent contract" / "Event pass" from the
   `contracts` endpoint, otherwise "Store (VP)".
 - Skipped on purpose: "Standard" and "Random Favorite" skins, duplicate maps.
