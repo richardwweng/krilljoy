@@ -359,6 +359,18 @@
     "bbl"
    ],
    "pinned": false
+  },
+  "2026-12-04": {
+   "prompts": [
+    "team_digit",
+    "name_digit",
+    "phantom_finisher",
+    "gun_2000",
+    "vandal_finisher",
+    "name_z",
+    "earn_team_500k"
+   ],
+   "pinned": false
   }
  }
 }

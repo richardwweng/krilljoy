@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-04",
-  "data_generated": "2026-11-04",
+  "generated": "2026-11-05",
+  "data_generated": "2026-11-05",
   "game_version": "13.09.00.5777412",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -147041,6 +147041,15 @@
       "thailand",
       "toronto_2025",
       "bbl"
+    ],
+    "2026-12-04": [
+      "team_digit",
+      "name_digit",
+      "phantom_finisher",
+      "gun_2000",
+      "vandal_finisher",
+      "name_z",
+      "earn_team_500k"
     ]
   }
 }
