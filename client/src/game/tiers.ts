@@ -5,12 +5,12 @@ import type { TierKey } from "../types";
 export const TIERS: Record<TierKey, { name: string; color: string; emoji: string; icon: string }> = {
   plankton:          { name: "Silver",   color: "#c3ccd6", emoji: "⬜", icon: "/ranks/silver.png" },
   too_clever:        { name: "Gold",     color: "#f2c14e", emoji: "🟨", icon: "/ranks/gold.png" },
-  schooler:          { name: "Platinum", color: "#3fd1c4", emoji: "✅", icon: "/ranks/platinum.png" },
-  rare:              { name: "Diamond",  color: "#c08cff", emoji: "🔷", icon: "/ranks/diamond.png" },
-  deep_cut:          { name: "Immortal", color: "#ff5a6e", emoji: "🔥", icon: "/ranks/immortal.png" },
-  one_in_a_krillion: { name: "Radiant",  color: "#fff3a6", emoji: "⭐", icon: "/ranks/radiant.png" },
+  schooler:          { name: "Platinum", color: "#3fd1c4", emoji: "🟦", icon: "/ranks/platinum.png" },
+  rare:              { name: "Diamond",  color: "#c08cff", emoji: "🟪", icon: "/ranks/diamond.png" },
+  deep_cut:          { name: "Immortal", color: "#ff5a6e", emoji: "🟥", icon: "/ranks/immortal.png" },
+  one_in_a_krillion: { name: "Radiant",  color: "#fff3a6", emoji: "🏆", icon: "/ranks/radiant.png" },
 };
-// Share text emoji, lowest to highest (Richard's picks): ⬜ 🟨 ✅ 🔷 🔥 ⭐, and ❔ for no answer
+// Share text emoji, lowest to highest (Richard's picks, Nov 2026): ⬜ 🟨 🟦 🟪 🟥 🏆, and ❔ for no answer
 
 // Most obvious to rarest
 export const TIER_ORDER: TierKey[] = ["plankton", "too_clever", "schooler", "rare", "deep_cut", "one_in_a_krillion"];

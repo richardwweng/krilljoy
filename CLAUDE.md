@@ -254,8 +254,10 @@ Copy the mechanics, not Krillion's branding or assets.
    - Rank icons: Valorant's real rank icons (Richard supplied the files),
      `client/public/ranks/*.png`, 128px. Allowed by Riot's "Legal Jibber
      Jabber" fan policy (free, non-commercial, with the disclaimer that's in the
-     footer). Share text emoji (Richard's picks): ⬜ Silver, 🟨 Gold, ✅ Platinum,
-     🔷 Diamond, 🔥 Immortal, ⭐ Radiant, ❔ no answer.
+     footer). Share text emoji (Richard's picks, Nov 2026): ⬜ Silver, 🟨 Gold, 🟦 Platinum,
+     🟪 Diamond, 🟥 Immortal, 🏆 Radiant, ❔ no answer. Share text copies Krillion's
+     layout: "Krilljoy #N 🤿", the score in POINTS (not metres), a blank line, the
+     squares, then the site link.
    - Look: the "Pixel blend" style (Richard, Nov 2026): retro pixel ocean
      that darkens with depth, Valorant red (#ff4655) + navy, notched LOCK IN
      buttons, pixel gems in rank colors, VT323 font everywhere (what Krillion
