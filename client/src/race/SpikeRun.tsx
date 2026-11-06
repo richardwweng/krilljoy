@@ -154,7 +154,7 @@ export default function SpikeRun({ room, serverNow }: { room: RoomView; serverNo
         </div>
 
         <SplashScene slots={slots} turn={room.phase === "racing" ? turnIndex : undefined}
-          spike={{ frac, label: onBreak ? "ready…" : `${secs}s`, hot: frac <= 0.25 && !onBreak }}>
+          spike={{ frac, label: onBreak ? "ready…" : `${secs}s`, hot: frac <= 0.25 && !onBreak, boom: s.event.kind === "detonate" && now - s.event.at < 900 }}>
           {q && (
             <div className="panel splash-q">
               <div className="label accent">{POOL_LABELS[q.pool] ?? "Valorant"} · question {s.qNumber}</div>

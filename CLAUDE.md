@@ -353,8 +353,10 @@ Copy the mechanics, not Krillion's branding or assets.
      per room, last pick remembered (localStorage `krilljoy:agent`). The list comes from
      `client/public/data/agents.json`, written by `write_agents()` in game.py on every
      build (nightly commits it), so new agents appear automatically. Never draw
-     Valorant's characters, pets or the Spike ourselves; the spike sprite is our own
-     sea mine.
+     Valorant's characters, pets or the Spike ourselves. The spike in the arena is Riot's
+     official "Standard" game-mode icon (valorant-api.com gamemodes, Richard's pick): grey
+     while the lobby waits, red glow growing as the turn clock runs down (--heat), flash
+     when it goes off; our pixel sea mine (SPIKE sprite) is the fallback if it can't load.
    - Chat (like ERS): public rooms = 10 preset quick messages only; private rooms =
      free text too, slurs/swears starred out server-side (obscenity). Spam limit
      5 per 5 s. Emoji reactions (8) pop over your seat for 3 s. "Turn chat off" toggle.

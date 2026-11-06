@@ -663,10 +663,17 @@ select.race-input { font-size: 22px; }
 .scene-spike { position: absolute; z-index: 3; width: 132px; height: 132px; transform: translate(-50%, -50%);
   left: calc(50% + cos(var(--t)) * var(--rx) * 0.2 * var(--pull)); top: calc(var(--cy) + sin(var(--t)) * var(--ry) * 0.2 * var(--pull));
   transition: left 0.45s steps(6), top 0.45s steps(6); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }
-.scene-spike.hot > span[role="img"] { animation: shake 0.25s steps(2) infinite; }
+/* the Spike: white icon whose red glow grows as the clock runs down (--heat 0 → 1) */
+.spike-art { position: relative; display: grid; place-items: center; width: 76px; height: 76px; }
+.spike-art img { width: 100%; height: 100%; object-fit: contain;
+  filter: drop-shadow(0 0 calc(1px + var(--heat, 0) * 9px) rgb(255 70 85 / calc(0.25 + var(--heat, 0) * 0.75))) drop-shadow(0 0 calc(var(--heat, 0) * 3px) #ff4655); }
+.scene-spike.hot > .spike-art { animation: shake 0.25s steps(2) infinite; }
+.scene-spike.boom > .spike-art { animation: spike-boom 0.9s steps(6); }
+@keyframes spike-boom { 0% { transform: scale(1); } 20% { transform: scale(1.6); filter: brightness(2.2) drop-shadow(0 0 18px #fff); } 55% { transform: scale(0.85); } 100% { transform: scale(1); } }
 .scene-spike.hot .spike-ring { background: conic-gradient(#ffd0d4 calc(var(--p) * 360deg), #0b1a2d calc(var(--p) * 360deg)); }
 .scene-spike.asleep .spike-ring { opacity: 0.25; }
-.scene-spike.asleep > span[role="img"] { animation: bob 2.4s steps(4) infinite; }
+.scene-spike.asleep > .spike-art { animation: bob 2.4s steps(4) infinite; }
+.scene-spike.asleep .spike-art img { filter: grayscale(1) brightness(0.6); opacity: 0.7; }
 .scene-spike .spike-time { font-size: 22px; }
 
 .splash-title { pointer-events: none; padding: 4px 0 2px; }
@@ -758,7 +765,7 @@ select.race-input { font-size: 22px; }
   .said-bubble { max-width: 112px; padding: 2px 5px; font-size: 12px; gap: 3px; }
   .emote-bubble { font-size: 26px; padding: 4px 7px 6px; }
   .scene-spike { width: 96px; height: 96px; }
-  .scene-spike > span[role="img"] { transform: scale(0.66); margin: -10px 0; }
+  .scene-spike > .spike-art { width: 54px; height: 54px; }
   .scene-spike .spike-time { font-size: 17px; }
   .splash-q { padding: 8px 10px; }
   .splash-prompt { font-size: 23px; }
@@ -783,7 +790,7 @@ select.race-input { font-size: 22px; }
   .splash-prompt { font-size: 20px; }
   .scene-ring { --rx: 38%; --ry: 34%; min-height: 290px; }
   .scene-spike { width: 80px; height: 80px; }
-  .scene-spike > span[role="img"] { transform: scale(0.55); margin: -14px 0; }
+  .scene-spike > .spike-art { width: 46px; height: 46px; }
   .rock-seat .rock-sprite { transform: scale(0.55); margin: -11px 0 -14px; }
   .rock-seat .agent-avatar { width: 38px; height: 38px; }
   .bar-row { grid-template-columns: minmax(0, 1fr) 88px 40px 40px; }

@@ -6,6 +6,23 @@ import { TIERS } from "../game/tiers";
 import type { TierKey } from "../types";
 import { Hearts } from "./Hearts";
 import AgentAvatar from "./AgentAvatar";
+import { useState } from "react";
+
+// Riot's official "Standard" game-mode icon (the Spike from above), from valorant-api.com,
+// used under Riot's fan content policy like the rank and agent icons. If it can't load,
+// our own pixel sea mine stands in.
+const SPIKE_ICON = "https://media.valorant-api.com/gamemodes/96bd3920-4f36-d026-2b28-c683eb0bcac5/displayicon.png";
+
+function SpikeArt() {
+  const [broken, setBroken] = useState(false);
+  return (
+    <span className="spike-art" role="img" aria-label="The spike">
+      {broken
+        ? <Sprite rows={SPIKE} colors={SPIKE_COLORS} scale={5} />
+        : <img src={SPIKE_ICON} alt="" draggable={false} onError={() => setBroken(true)} />}
+    </span>
+  );
+}
 import LifeMeter, { type MeterPart } from "./LifeMeter";
 
 export interface Slot {
@@ -32,7 +49,7 @@ export default function SplashScene({ slots, turn, spike, children, onPickMine }
   slots: Slot[];
   onPickMine?: () => void; // lobby: tap your own agent to change it
   turn?: number; // index of whose turn it is (the spike drifts toward them)
-  spike?: { frac: number; label: string; hot: boolean; asleep?: boolean };
+  spike?: { frac: number; label: string; hot: boolean; asleep?: boolean; boom?: boolean };
   children?: ReactNode; // the title (lobby) or the question card (game)
 }) {
   const n = slots.length;
@@ -79,11 +96,11 @@ export default function SplashScene({ slots, turn, spike, children, onPickMine }
         ))}
         {spike && (
           <div
-            className={`scene-spike${spike.hot ? " hot" : ""}${spike.asleep ? " asleep" : ""}`}
-            style={{ ["--p" as string]: spike.frac, ["--t" as string]: toward !== null ? `${toward}deg` : "90deg", ["--pull" as string]: toward !== null ? 1 : 0 }}
+            className={`scene-spike${spike.hot ? " hot" : ""}${spike.asleep ? " asleep" : ""}${spike.boom ? " boom" : ""}`}
+            style={{ ["--p" as string]: spike.frac, ["--heat" as string]: spike.asleep ? 0 : 1 - spike.frac, ["--t" as string]: toward !== null ? `${toward}deg` : "90deg", ["--pull" as string]: toward !== null ? 1 : 0 }}
           >
             <div className="spike-ring" />
-            <Sprite rows={SPIKE} colors={SPIKE_COLORS} scale={5} label="The spike" />
+            <SpikeArt />
             <div className="spike-time">{spike.label}</div>
           </div>
         )}
