@@ -371,6 +371,18 @@
     "earn_team_500k"
    ],
    "pinned": false
+  },
+  "2026-12-05": {
+   "prompts": [
+    "duelist_ult",
+    "trap_ability",
+    "earn_player_250k",
+    "earn_player_100k",
+    "gold_skin",
+    "pink_skin",
+    "name_q"
+   ],
+   "pinned": false
   }
  }
 }

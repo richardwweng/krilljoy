@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-05",
-  "data_generated": "2026-11-05",
+  "generated": "2026-11-06",
+  "data_generated": "2026-11-06",
   "game_version": "13.09.00.5777412",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146772,15 +146772,6 @@
     }
   ],
   "schedule": {
-    "2026-11-04": [
-      "sunset_callout",
-      "any_ability",
-      "damage_ability",
-      "lotus_callout",
-      "taiwan",
-      "turkey",
-      "canada"
-    ],
     "2026-11-05": [
       "initiator_ability",
       "igl_china",
@@ -147050,6 +147041,15 @@
       "vandal_finisher",
       "name_z",
       "earn_team_500k"
+    ],
+    "2026-12-05": [
+      "duelist_ult",
+      "trap_ability",
+      "earn_player_250k",
+      "earn_player_100k",
+      "gold_skin",
+      "pink_skin",
+      "name_q"
     ]
   }
 }
