@@ -18,6 +18,7 @@ import Reveal from "./screens/Reveal";
 import Results from "./screens/Results";
 import HowTo from "./screens/HowTo";
 import RaceHowTo from "./race/RaceHowTo";
+import { howToMode } from "./race/mode";
 import Stats from "./screens/Stats";
 
 type Screen = "home" | "dive";
@@ -149,7 +150,7 @@ export default function App() {
           </footer>
         )}
       </div>
-      {popup === "howto" && (inRace ? <RaceHowTo onClose={() => setPopup(null)} /> : <HowTo onClose={() => setPopup(null)} />)}
+      {popup === "howto" && (inRace ? <RaceHowTo mode={howToMode()} onClose={() => setPopup(null)} /> : <HowTo onClose={() => setPopup(null)} />)}
       {popup === "stats" && <Stats today={date} onClose={() => setPopup(null)} />}
       {toast && <div className="toast" role="status">{toast}</div>}
     </>

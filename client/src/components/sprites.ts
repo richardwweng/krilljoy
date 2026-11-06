@@ -33,3 +33,46 @@ export const JELLY = ["...RRRR...", ".RRRRRRRR.", "RRPRRRRRRR", "RRRRRRRRRR", "R
 export const CHEST = [".OOOOOOO.", "OYYYYYYYO", "OOOOOOOOO", "OYYYKYYYO", "OYYYYYYYO", "OOOOOOOOO"];
 export const OPEN_CHEST = [".OOOOOOOOO.", "O.........O", "OYYYYYYYYYO", "OOOOOOOOOOO", "OYYYYKYYYYO", "OYYYYYYYYYO", "OOOOOOOOOOO"];
 export const CHEST_COLORS = { O: "#7a4a1e", Y: "#f2c14e", K: "#06101c" };
+
+// Spike splash: an original pixel spike, a spiked sea mine with a glowing red core
+export const SPIKE = [
+  "......MM......",
+  "......MM......",
+  "..M...DD...M..",
+  "...MDDDDDDM...",
+  "...DDMMMMDD...",
+  "..DDMRRRRMDD..",
+  "MMDDMRWWRMDDMM",
+  "MMDDMRWWRMDDMM",
+  "..DDMRRRRMDD..",
+  "...DDMMMMDD...",
+  "...MDDDDDDM...",
+  "..M...DD...M..",
+  "......MM......",
+  "......MM......",
+];
+export const SPIKE_COLORS = { M: "#8a9bb0", D: "#2a3646", R: "#ff4655", W: "#fff1f2" };
+export const BOOM = [
+  "....Y...Y....",
+  ".Y...O.O...Y.",
+  "...OOOROOO...",
+  "..ORRRRRRRO..",
+  "Y.ORRWWWRRO.Y",
+  "..ORRWWWRRO..",
+  "..ORRRRRRRO..",
+  "...OOOROOO...",
+  ".Y...O.O...Y.",
+  "....Y...Y....",
+];
+export const BOOM_COLORS = { Y: "#f2c14e", O: "#ff8a3d", R: "#ff4655", W: "#fff1f2" };
+export const HEART = [".XX.XX.", "XXXXXXX", "XXXXXXX", ".XXXXX.", "..XXX..", "...X..."];
+
+// Spike splash: each player is a jellyfish (with eyes) on a rock. All original.
+export const JELLY_FACE = ["...RRRR...", ".RRRRRRRR.", "RRPRRRRRRR", "RRKRRRRKRR", "RRRRRRRRRR",
+  ".R.R..R.R.", ".R.R..R.R.", "R..R..R..R", "..R....R..", ".R......R."];
+export const ROCKS = [
+  ["....DDDDDD....", "..DDMMMMMMDD..", ".DMMLLMMMMMMD.", "DMMLMMMMMMMMMD", "DMMMMMMMMMMMMD", "DKMMMMMMMMMMKD", ".DKKMMMMMMKKD.", "..DDKKKKKKDD.."],
+  ["...G...G..G...", "..GG.G.GG.G...", "..DDGDDDGDDD..", ".DMMMMMMMMMMD.", "DMLLMMMMMMMMMD", "DMMMMMMMMMMMKD", ".DKMMMMMMMMKD.", "..DDKKKKKKDD.."],
+  [".....DDDD.....", "...DDLLMMDD...", "..DMLMMMMMMD..", ".DMMMMMMMMMMD.", "DMMMMMMMMMMMMD", "DMMMMMMMMMMMKD", "DKKMMMMMMMKKKD", ".DDDKKKKKKDDD."],
+];
+export const ROCK_COLORS = { D: "#14202f", M: "#34465e", L: "#56708f", K: "#223147", G: "#3f8a5a" };

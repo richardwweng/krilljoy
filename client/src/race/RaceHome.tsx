@@ -2,21 +2,41 @@ import { useEffect, useState, type FormEvent } from "react";
 import { navigate } from "../nav";
 import { sound } from "../game/sound";
 import { ask, getSocket, playerToken, saveName, savedName, useConnected } from "./socket";
-import { LENGTHS, type PublicRoom, type RaceLength } from "./types";
+import { LENGTHS, MODES, PACES, modeInfo, type Mode, type PublicRoom, type RaceLength, type SpikePace } from "./types";
 import RaceHowTo from "./RaceHowTo";
+import { setHowToMode } from "./mode";
 
-/** The race page: your name, Quick play, Host a room, Join by code, and the public rooms. */
+function savedMode(): Mode {
+  try { return localStorage.getItem("krilljoy:mode") === "spike" ? "spike" : "race"; } catch { return "race"; }
+}
+
+/** The multiplayer page: pick a mode, your name, Quick play, Host a room, Join by code,
+ *  and the public rooms. */
 export default function RaceHome() {
   const connected = useConnected();
+  const [mode, setMode] = useState<Mode>(savedMode);
   const [name, setName] = useState(savedName());
   const [length, setLength] = useState<RaceLength>("normal");
-  const [maxPlayers, setMaxPlayers] = useState(8);
+  const [pace, setPace] = useState<SpikePace>("normal");
+  const [maxPlayers, setMaxPlayers] = useState(modeInfo(savedMode()).quick);
   const [isPublic, setIsPublic] = useState(false);
   const [code, setCode] = useState("");
   const [rooms, setRooms] = useState<PublicRoom[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [rules, setRules] = useState(false);
+  const info = modeInfo(mode);
+
+  useEffect(() => {
+    setHowToMode(mode);
+    try { localStorage.setItem("krilljoy:mode", mode); } catch { /* fine */ }
+  }, [mode]);
+
+  const pickMode = (m: Mode) => {
+    sound.click();
+    setMode(m);
+    setMaxPlayers(modeInfo(m).quick);
+  };
 
   useEffect(() => {
     const s = getSocket();
@@ -53,10 +73,14 @@ export default function RaceHome() {
         <button type="button" className="btn-dark race-back" onClick={() => { sound.click(); navigate("/"); }}><span className="wide-only">◂ Daily dive · play solo</span><span className="narrow-only">◂ Daily dive</span></button>
         <button type="button" className="btn-dark race-rules-btn" onClick={() => { sound.click(); setRules(true); }}><span className="wide-only">? How it works</span><span className="narrow-only">? Rules</span></button>
       </div>
-      {rules && <RaceHowTo onClose={() => setRules(false)} />}
-      <div className="race-title">
-        <h1>Treasure race</h1>
-        <p className="muted">Everyone gets the same questions, back to back. Rarer answers sink you faster. First to the chest wins; everyone else gets 1 minute to make it too.</p>
+      {rules && <RaceHowTo mode={mode} onClose={() => setRules(false)} />}
+      <div className="mode-tabs" role="tablist" aria-label="Game mode">
+        {MODES.map((m) => (
+          <button key={m.id} type="button" role="tab" aria-selected={mode === m.id} className={`mode-tab${mode === m.id ? " on" : ""}`} onClick={() => pickMode(m.id)}>
+            <span className="mode-icon" aria-hidden="true">{m.icon}</span>
+            <span><b>{m.name}</b><small>{m.blurb}</small></span>
+          </button>
+        ))}
       </div>
       {!connected && <p className="panel race-warn">Connecting to the race server…</p>}
       {error && <p className="panel race-error" role="alert">{error}</p>}
@@ -64,7 +88,7 @@ export default function RaceHome() {
       <div className="race-cols">
         <div className="race-left">
           <section className="panel race-box">
-            <h2 className="section-title">Who’s diving</h2>
+            <h2 className="section-title">Who’s playing</h2>
             <label className="label" htmlFor="race-name">Your name</label>
             <input id="race-name" className="race-input" value={name} maxLength={16} placeholder="what the lobby calls you"
               onChange={(e) => setName(e.target.value)} autoComplete="nickname" />
@@ -72,30 +96,43 @@ export default function RaceHome() {
 
           <section className="panel race-box">
             <h2 className="section-title">Play now</h2>
-            <button type="button" className="btn-red btn-big" disabled={!connected || busy} onClick={() => go("quickplay", {})}>Quick play</button>
-            <p className="race-note">Joins a public lobby (or opens one). Races start 30 s after the lobby fills up, or when the host presses Start. Normal length, 3,000 m.</p>
+            <button type="button" className="btn-red btn-big" disabled={!connected || busy} onClick={() => go("quickplay", { mode })}>Quick play</button>
+            <p className="race-note">Joins a public {info.name} lobby (or opens one). Games start 30 s after the lobby fills up ({info.quick} players), or when the host presses Start.{mode === "race" ? " Normal length, 5,000 m." : ""}</p>
           </section>
 
           <section className="panel race-box">
             <h2 className="section-title">Host</h2>
-            <div className="race-field">
-              <span className="label">Race length</span>
-              <div className="seg" role="group" aria-label="Race length">
-                {LENGTHS.map((l) => (
-                  <button key={l.id} type="button" aria-pressed={length === l.id} onClick={() => { sound.click(); setLength(l.id); }}>
-                    {l.label}<small>{l.metres.toLocaleString("en-US")} m</small>
-                  </button>
-                ))}
+            {mode === "race" ? (
+              <div className="race-field">
+                <span className="label">Race length</span>
+                <div className="seg" role="group" aria-label="Race length">
+                  {LENGTHS.map((l) => (
+                    <button key={l.id} type="button" aria-pressed={length === l.id} onClick={() => { sound.click(); setLength(l.id); }}>
+                      {l.label}<small>{l.metres.toLocaleString("en-US")} m</small>
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="race-field">
+                <span className="label">Questions last</span>
+                <div className="seg" role="group" aria-label="How long each question lasts">
+                  {PACES.map((p) => (
+                    <button key={p.id} type="button" aria-pressed={pace === p.id} onClick={() => { sound.click(); setPace(p.id); }}>
+                      {p.label}<small>{p.note}</small>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             <div className="race-field">
               <label className="label" htmlFor="race-max">Players</label>
               <select id="race-max" className="race-input" value={maxPlayers} onChange={(e) => setMaxPlayers(Number(e.target.value))}>
-                {Array.from({ length: 9 }, (_, i) => i + 2).map((n) => <option key={n} value={n}>up to {n}</option>)}
+                {Array.from({ length: info.max - 1 }, (_, i) => i + 2).map((n) => <option key={n} value={n}>up to {n}</option>)}
               </select>
             </div>
             <label className="race-check"><input type="checkbox" checked={isPublic} onChange={(e) => setIsPublic(e.target.checked)} /> List it publicly (anyone can join from the list)</label>
-            <button type="button" className="btn-dark race-host" disabled={!connected || busy} onClick={() => go("host", { length, maxPlayers, isPublic })}>Host a room</button>
+            <button type="button" className="btn-dark race-host" disabled={!connected || busy} onClick={() => go("host", { mode, length, pace, maxPlayers: Math.min(maxPlayers, info.max), isPublic })}>Host a room</button>
           </section>
 
           <form className="panel race-box" onSubmit={joinCode}>
@@ -116,9 +153,9 @@ export default function RaceHome() {
             return (
               <div key={r.code} className="room-row">
                 <span className="room-code">{r.code}</span>
-                <span className="room-info"><b>{r.host}</b><small>{r.players}/{r.maxPlayers} · {r.phase === "lobby" ? "in the lobby" : "racing"} · {LENGTHS.find((l) => l.id === r.length)?.label}</small></span>
+                <span className="room-info"><b>{r.host}</b><small>{modeInfo(r.mode ?? "race").name} · {r.players}/{r.maxPlayers} · {r.phase === "lobby" ? "in the lobby" : "playing"}{r.mode === "spike" ? "" : ` · ${LENGTHS.find((l) => l.id === r.length)?.label}`}</small></span>
                 {open ? <button type="button" className="btn-ghost room-join" disabled={busy} onClick={() => go("join", { code: r.code })}>Join ▸</button>
-                      : <span className="room-full">{r.phase === "lobby" ? "Full" : "Racing"}</span>}
+                      : <span className="room-full">{r.phase === "lobby" ? "Full" : "Playing"}</span>}
               </div>
             );
           })}

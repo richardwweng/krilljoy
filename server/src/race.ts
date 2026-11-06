@@ -4,7 +4,7 @@
 import { ambiguousOptions, matchAnswer } from "../../shared/match.ts";
 import { allPrompts, getPrompt, knownAnswerNames, type Prompt } from "./data.ts";
 
-export const RACE_LENGTHS = { short: 1500, normal: 3000, long: 5000 } as const; // metres to the chest
+export const RACE_LENGTHS = { short: 3000, normal: 5000, long: 7000 } as const; // metres to the chest
 export type RaceLength = keyof typeof RACE_LENGTHS;
 export const METRES_PER_POINT = 10;
 export const SKIP_AFTER_MS = 25_000; // Skip unlocks 25 s into a question (Richard's call); skipping = 0 m

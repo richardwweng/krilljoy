@@ -1,5 +1,6 @@
-// Krilljoy race server. Holds every room, runs the race clock, and is the referee:
-// answers are checked here, so everyone's race follows the same rules.
+// Krilljoy multiplayer server. Holds every room, runs the clocks, and is the referee:
+// answers are checked here, so everyone plays by the same rules. Two modes share the
+// rooms and lobbies: Treasure race (race.ts) and Spike splash (spike.ts).
 //
 //   npm run dev     (on your computer, restarts when you save)
 //   npm start       (on Render)
@@ -7,11 +8,20 @@ import { createServer } from "node:http";
 import { Server, type Socket } from "socket.io";
 import { randomUUID } from "node:crypto";
 import { RegExpMatcher, englishDataset, englishRecommendedTransformers } from "obscenity";
-import { allPrompts, getPrompt } from "./data.ts";
+import { allAgents, allPrompts, getPrompt } from "./data.ts";
 import {
   RACE_LENGTHS, SKIP_AFTER_MS, currentPrompt, isOver, skip, standings, startRace, submitAnswer,
   type Race, type RaceLength,
 } from "./race.ts";
+import {
+  LIFE_EVERY, MAX_LIVES, SPIKE_LIVES, SPIKE_PACES, answerLimit, currentSpikePrompt, leaveSpike, spikeStandings, startSpike,
+  submitSpike, tickSpike, type Spike, type SpikePace,
+} from "./spike.ts";
+
+import { CHAT_KEEP, EMOTES, QUICK_CHAT, allowChat, allowEmote, cleanChat, emoteVisible, type ChatLine } from "./chat.ts";
+
+type Mode = "race" | "spike";
+const MODES: Mode[] = ["race", "spike"];
 
 type Person = {
   id: string; // public ID, safe to show everyone
@@ -21,12 +31,18 @@ type Person = {
   leaveTimer?: ReturnType<typeof setTimeout>;
   left: boolean; // gave up their seat mid-race (still shown in the results)
   lastAnswerAt: number;
+  chatTimes: number[]; // recent chat messages, for the spam limit
+  emote: { emoji: string; at: number } | null; // the emoji bubble above their seat
+  avatar: string; // the agent they sit as in Spike splash (one per agent per room)
 };
 
 type Phase = "lobby" | "countdown" | "racing" | "results";
 
 type Room = {
   code: string;
+  mode: Mode;
+  pace: SpikePace; // Spike splash: how long each question lasts
+  spike: Spike | null;
   phase: Phase;
   isPublic: boolean; // listed on the race page; Quick play puts people here
   hostId: string | null;
@@ -41,11 +57,13 @@ type Room = {
   timers: ReturnType<typeof setTimeout>[];
   autoTimer: ReturnType<typeof setTimeout> | null; // the public auto-start, kept apart so it can be cancelled alone
   createdAt: number;
+  chat: ChatLine[];
+  chatSeq: number;
 };
 
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ"; // 4 letters like ABCD; no I/L/O to mix up
-const MAX_PLAYERS = 10;
-const DEFAULT_PLAYERS = 8;
+const MAX_PLAYERS: Record<Mode, number> = { race: 10, spike: 8 }; // Spike splash: 8 max (Richard's call)
+const DEFAULT_PLAYERS: Record<Mode, number> = { race: 8, spike: 6 }; // also the Quick play room size
 const COUNTDOWN_MS = 3_000; // "3, 2, 1, dive!"
 const PUBLIC_START_MS = 30_000; // public lobby: starts 30 s after it fills up (Richard's call);
                                 // before that, the host can press Start any time
@@ -67,15 +85,20 @@ function makeCode(): string {
   return rooms.has(code) ? makeCode() : code;
 }
 
-function makeRoom(isPublic: boolean, length: RaceLength = "normal", maxPlayers = DEFAULT_PLAYERS): Room {
+function makeRoom(isPublic: boolean, mode: Mode = "race", length: RaceLength = "normal", maxPlayers = DEFAULT_PLAYERS[mode], pace: SpikePace = "normal"): Room {
   const room: Room = {
-    code: makeCode(), phase: "lobby", isPublic, hostId: null, length, maxPlayers, players: [], race: null,
-    kicked: new Set(), countdownEndsAt: null, autoStartAt: null, returnAt: null, timers: [], autoTimer: null, createdAt: Date.now(),
+    code: makeCode(), mode, pace, spike: null, phase: "lobby", isPublic, hostId: null, length, maxPlayers, players: [], race: null,
+    kicked: new Set(), countdownEndsAt: null, autoStartAt: null, returnAt: null, timers: [], autoTimer: null, createdAt: Date.now(), chat: [], chatSeq: 0,
   };
   rooms.set(room.code, room);
   later(room, () => { if (!room.players.length) closeRoom(room); }, 5 * 60_000); // nobody came
-  console.log("Room created:", room.code, isPublic ? "(public)" : "");
+  console.log("Room created:", room.code, mode, isPublic ? "(public)" : "");
   return room;
+}
+
+function say(room: Room, by: Person | null, text: string) {
+  room.chat.push({ id: ++room.chatSeq, by: by?.id ?? null, name: by?.name ?? "", text, at: Date.now() });
+  if (room.chat.length > CHAT_KEEP) room.chat.splice(0, room.chat.length - CHAT_KEEP);
 }
 
 function later(room: Room, fn: () => void, ms: number) {
@@ -109,6 +132,7 @@ function view(room: Room, me: Person) {
     const r = race?.racers.get(p.id);
     return {
       id: p.id, name: p.name, connected: !!p.socketId, left: p.left,
+      emote: p.emote && emoteVisible(p.emote.at, now) ? p.emote : null, avatar: p.avatar,
       depth: r?.depth ?? 0, answered: r?.history.filter((h) => h.answerId).length ?? 0,
       skips: r?.skips ?? 0, finished: r?.finishedAt != null, place: place.get(p.id) ?? null,
     };
@@ -116,7 +140,7 @@ function view(room: Room, me: Person) {
   const mine = race?.racers.get(me.id);
   const prompt = race && mine && room.phase === "racing" ? currentPrompt(race, mine) : null;
   return {
-    code: room.code, phase: room.phase, isPublic: room.isPublic, hostId: room.hostId, you: me.id,
+    code: room.code, mode: room.mode, pace: room.pace, phase: room.phase, isPublic: room.isPublic, hostId: room.hostId, you: me.id,
     length: room.length, target: RACE_LENGTHS[room.length], maxPlayers: room.maxPlayers, now,
     countdownEndsAt: room.countdownEndsAt, autoStartAt: room.autoStartAt, returnAt: room.returnAt,
     lastCallEndsAt: race?.lastCallEndsAt ?? null,
@@ -132,6 +156,38 @@ function view(room: Room, me: Person) {
       depth: r.depth, finished: r.finishedAt != null, timeMs: r.finishedAt != null ? r.finishedAt - race.startAt : null,
       skips: r.skips, misses: r.misses,
       history: r.history.map((h) => ({ ...h, text: getPrompt(h.promptId)?.text ?? h.promptId })),
+    })) : null,
+    spike: room.spike ? spikeView(room, room.spike) : null,
+    chat: room.chat,
+    quickChat: QUICK_CHAT,
+    emotes: EMOTES,
+  };
+}
+
+function spikeView(room: Room, s: Spike) {
+  const prompt = currentSpikePrompt(s);
+  const total = prompt?.answers.length ?? 0;
+  const limit = answerLimit(total, s.pace);
+  return {
+    lives: SPIKE_LIVES,
+    maxLives: MAX_LIVES,
+    lifeEvery: LIFE_EVERY,
+    lastLife: s.lastLife,
+    qNumber: s.qNumber,
+    question: prompt ? { text: prompt.text, pool: prompt.pool, total, limit: Number.isFinite(limit) ? limit : null } : null,
+    said: s.said,
+    turn: s.turn,
+    turnStartsAt: s.turnStartsAt,
+    turnEndsAt: s.turnEndsAt,
+    seats: s.seats.map((id) => {
+      const p = s.players.get(id)!;
+      return { id, lives: p.lives, out: p.outAt !== null, points: p.points, answers: p.said.length, meter: p.meter, meterParts: p.meterParts, last: p.last };
+    }),
+    event: s.event,
+    results: room.phase === "results" ? spikeStandings(s).map((p, i) => ({
+      id: p.id, place: i + 1, name: room.players.find((x) => x.id === p.id)?.name ?? "?",
+      lives: p.lives, out: p.outAt !== null, points: p.points, detonations: p.detonations, misses: p.misses, livesGained: p.livesGained,
+      said: p.said.map((x) => ({ ...x, text: getPrompt(x.promptId)?.text ?? x.promptId })),
     })) : null,
   };
 }
@@ -157,6 +213,7 @@ function publicRooms() {
     .map((r) => ({
       code: r.code, host: r.players.find((p) => p.id === r.hostId)?.name ?? r.players[0]?.name ?? "",
       players: r.players.filter((p) => !p.left).length, maxPlayers: r.maxPlayers, phase: r.phase, length: r.length,
+      mode: r.mode, pace: r.pace,
     }))
     .sort((a, b) => Number(a.phase !== "lobby") - Number(b.phase !== "lobby") || b.players - a.players)
     .slice(0, 50);
@@ -197,7 +254,14 @@ function beginCountdown(room: Room) {
   room.autoStartAt = null;
   room.returnAt = null;
   room.countdownEndsAt = Date.now() + COUNTDOWN_MS;
-  room.race = startRace(seated(room).map((p) => p.id), room.length, room.countdownEndsAt);
+  const ids = seated(room).map((p) => p.id);
+  if (room.mode === "spike") {
+    room.race = null;
+    room.spike = startSpike(ids, room.pace, room.countdownEndsAt);
+  } else {
+    room.spike = null;
+    room.race = startRace(ids, room.length, room.countdownEndsAt);
+  }
   room.players = seated(room); // people who left before the start don't take a lane
   later(room, () => {
     room.phase = "racing";
@@ -209,11 +273,15 @@ function beginCountdown(room: Room) {
   sendRoomList();
 }
 
-// Once a second during a race: end it when the last call runs out
+// During a game: the race checks its last call once a second; Spike splash checks the
+// turn clock five times a second so the spike goes off on time.
 function tick(room: Room) {
-  if (room.phase !== "racing" || !room.race) return;
+  if (room.phase !== "racing") return;
+  if (room.spike && tickSpike(room.spike, Date.now())) {
+    if (!checkOver(room)) sendRoom(room);
+  }
   if (checkOver(room)) return;
-  later(room, () => tick(room), 1000);
+  later(room, () => tick(room), room.spike ? 200 : 1000);
 }
 
 function activeIds(room: Room) {
@@ -221,10 +289,14 @@ function activeIds(room: Room) {
 }
 
 function checkOver(room: Room): boolean {
+  if (room.phase !== "racing") return false;
   const race = room.race;
-  if (!race || room.phase !== "racing") return false;
-  if (!isOver(race, Date.now(), activeIds(room))) return false;
-  race.endedAt = Date.now();
+  if (room.spike) {
+    if (room.spike.endedAt === null) return false;
+  } else {
+    if (!race || !isOver(race, Date.now(), activeIds(room))) return false;
+    race.endedAt = Date.now();
+  }
   room.phase = "results";
   clearTimers(room);
   if (room.isPublic) {
@@ -233,7 +305,8 @@ function checkOver(room: Room): boolean {
   }
   sendRoom(room);
   sendRoomList();
-  console.log(`Race over in ${room.code}:`, standings(race).map((r) => `${r.depth}m`).join(", "));
+  if (race) console.log(`Race over in ${room.code}:`, standings(race).map((r) => `${r.depth}m`).join(", "));
+  else console.log(`Spike splash over in ${room.code}`);
   return true;
 }
 
@@ -241,6 +314,7 @@ function backToLobby(room: Room) {
   clearTimers(room);
   room.phase = "lobby";
   room.race = null;
+  room.spike = null;
   room.returnAt = null;
   room.players = room.players.filter((p) => !p.left && p.socketId);
   if (!room.players.length) return closeRoom(room);
@@ -252,9 +326,11 @@ function backToLobby(room: Room) {
 
 function removePlayer(room: Room, p: Person) {
   clearTimeout(p.leaveTimer);
+  say(room, null, `${p.name} left`);
   if (room.phase === "racing" || room.phase === "countdown") {
     p.left = true; // keep their lane and depth for the results
     p.socketId = null;
+    if (room.spike) leaveSpike(room.spike, p.id, Date.now()); // Spike splash: leaving = out
   } else {
     room.players = room.players.filter((x) => x !== p);
   }
@@ -290,6 +366,16 @@ const safeAck = (ack: unknown): Ack => (typeof ack === "function" ? (ack as Ack)
 // The reply callback is the last argument, whether or not anything was sent before it
 const lastAck = (args: unknown[]): Ack => safeAck(args.findLast((a) => typeof a === "function"));
 
+/** A random agent nobody in the room is using yet (new players start as one). */
+function freeAgent(room: Room): string {
+  const taken = new Set(seated(room).map((p) => p.avatar));
+  const all = allAgents();
+  if (!all.length) return "Jett"; // agent list missing: everyone still gets someone
+  const free = all.filter((a) => !taken.has(a.name));
+  const list = free.length ? free : all;
+  return list[Math.floor(Math.random() * list.length)].name;
+}
+
 function seat(socket: Socket, room: Room, token: string, rawName: unknown, ack: Ack) {
   if (room.kicked.has(token)) return ack({ ok: false, error: "The host removed you from this room." });
   let person = room.players.find((p) => p.token === token);
@@ -298,8 +384,9 @@ function seat(socket: Socket, room: Room, token: string, rawName: unknown, ack: 
     if (seated(room).length >= room.maxPlayers) return ack({ ok: false, error: "That room is full." });
     const name = cleanName(rawName);
     if (typeof name !== "string") return ack({ ok: false, error: name.error });
-    person = { id: randomUUID().slice(0, 8), token, name, socketId: null, left: false, lastAnswerAt: 0 };
+    person = { id: randomUUID().slice(0, 8), token, name, socketId: null, left: false, lastAnswerAt: 0, chatTimes: [], emote: null, avatar: freeAgent(room) };
     room.players.push(person);
+    say(room, null, `${name} joined`);
   }
   // Coming back (or switching tabs): take the seat over
   leaveCurrent(socket, room);
@@ -333,24 +420,27 @@ io.on("connection", (socket) => {
   socket.on("unwatchRooms", () => socket.leave("room-list"));
 
   // Quick play: the fullest public lobby that has space, or a new one
-  socket.on("quickplay", (msg: { token: string; name?: string }, ack) => {
+  socket.on("quickplay", (msg: { token: string; name?: string; mode?: Mode }, ack) => {
     const reply = safeAck(ack);
     if (!msg?.token) return reply({ ok: false, error: "Missing player ID." });
+    const mode: Mode = MODES.includes(msg.mode as Mode) ? (msg.mode as Mode) : "race";
     const open = [...rooms.values()]
-      .filter((r) => r.isPublic && r.phase === "lobby" && seated(r).length < r.maxPlayers && !r.kicked.has(msg.token))
+      .filter((r) => r.isPublic && r.mode === mode && r.phase === "lobby" && seated(r).length < r.maxPlayers && !r.kicked.has(msg.token))
       .sort((a, b) => seated(b).length - seated(a).length)[0];
-    seat(socket, open ?? makeRoom(true), msg.token, msg.name, reply);
+    seat(socket, open ?? makeRoom(true, mode), msg.token, msg.name, reply);
   });
 
   // Host a room (private by default: share the code)
-  socket.on("host", (msg: { token: string; name?: string; length?: RaceLength; maxPlayers?: number; isPublic?: boolean }, ack) => {
+  socket.on("host", (msg: { token: string; name?: string; mode?: Mode; length?: RaceLength; pace?: SpikePace; maxPlayers?: number; isPublic?: boolean }, ack) => {
     const reply = safeAck(ack);
     if (!msg?.token) return reply({ ok: false, error: "Missing player ID." });
+    const mode: Mode = MODES.includes(msg.mode as Mode) ? (msg.mode as Mode) : "race";
     const length = msg.length && msg.length in RACE_LENGTHS ? msg.length : "normal";
-    const max = Math.min(MAX_PLAYERS, Math.max(2, Number(msg.maxPlayers) || DEFAULT_PLAYERS));
+    const pace = SPIKE_PACES.includes(msg.pace as SpikePace) ? (msg.pace as SpikePace) : "normal";
+    const max = Math.min(MAX_PLAYERS[mode], Math.max(2, Number(msg.maxPlayers) || DEFAULT_PLAYERS[mode]));
     const name = cleanName(msg.name);
     if (typeof name !== "string") return reply({ ok: false, error: name.error });
-    const room = makeRoom(!!msg.isPublic, length, max);
+    const room = makeRoom(!!msg.isPublic, mode, length, max, pace);
     seat(socket, room, msg.token, name, reply);
   });
 
@@ -365,13 +455,58 @@ io.on("connection", (socket) => {
 
   socket.on("leave", () => leaveCurrent(socket));
 
+  // Chat: public rooms send a preset message by number; private rooms send any text
+  socket.on("chat", (msg: { text?: string; quick?: number }) => {
+    const at = where.get(socket.id);
+    if (!at || at.person.left) return;
+    const { room, person } = at;
+    let text: string | null;
+    if (room.isPublic) text = QUICK_CHAT[Number(msg?.quick)] ?? null;
+    else text = typeof msg?.quick === "number" ? QUICK_CHAT[msg.quick] ?? null : cleanChat(msg?.text);
+    if (!text || !allowChat(person.chatTimes, Date.now())) return;
+    say(room, person, text);
+    sendRoom(room);
+  });
+
+  // Emoji bubble above your seat for a few seconds
+  socket.on("emote", (i: number) => {
+    const at = where.get(socket.id);
+    const emoji = EMOTES[Number(i)];
+    if (!at || at.person.left || !emoji) return;
+    const now = Date.now();
+    if (at.person.emote && !allowEmote(at.person.emote.at, now)) return;
+    at.person.emote = { emoji, at: now };
+    sendRoom(at.room);
+    later(at.room, () => sendRoom(at.room), 3_100); // clears the bubble for everyone
+  });
+
+  // Pick your agent (lobby only; each agent once per room, like agent select)
+  socket.on("avatar", (name: unknown, ...rest: unknown[]) => {
+    const ack = lastAck([name, ...rest]);
+    const at = where.get(socket.id);
+    if (!at || at.room.phase !== "lobby") return ack({ ok: false, error: "You can only switch agents in the lobby." });
+    const agent = allAgents().find((a) => a.name === name);
+    if (!agent) return ack({ ok: false, error: "Unknown agent." });
+    const holder = seated(at.room).find((p) => p.avatar === agent.name && p !== at.person);
+    if (holder) return ack({ ok: false, error: `${holder.name} already has ${agent.name}.` });
+    at.person.avatar = agent.name;
+    ack({ ok: true });
+    sendRoom(at.room);
+  });
+
   // Host controls (lobby only)
-  socket.on("settings", (msg: { length?: RaceLength; maxPlayers?: number; isPublic?: boolean }) => {
+  socket.on("settings", (msg: { mode?: Mode; length?: RaceLength; pace?: SpikePace; maxPlayers?: number; isPublic?: boolean }) => {
     const at = where.get(socket.id);
     if (!at || at.room.hostId !== at.person.id || at.room.phase !== "lobby") return;
     const room = at.room;
+    // Switching game: Spike splash seats 8 at most, so only if everyone fits
+    if (MODES.includes(msg.mode as Mode) && msg.mode !== room.mode && seated(room).length <= MAX_PLAYERS[msg.mode as Mode]) {
+      room.mode = msg.mode as Mode;
+      room.maxPlayers = Math.min(room.maxPlayers, MAX_PLAYERS[room.mode]);
+    }
     if (msg.length && msg.length in RACE_LENGTHS) room.length = msg.length;
-    if (msg.maxPlayers) room.maxPlayers = Math.min(MAX_PLAYERS, Math.max(Math.max(2, seated(room).length), Number(msg.maxPlayers)));
+    if (SPIKE_PACES.includes(msg.pace as SpikePace)) room.pace = msg.pace as SpikePace;
+    if (msg.maxPlayers) room.maxPlayers = Math.min(MAX_PLAYERS[room.mode], Math.max(Math.max(2, seated(room).length), Number(msg.maxPlayers)));
     if (typeof msg.isPublic === "boolean" && msg.isPublic !== room.isPublic) {
       room.isPublic = msg.isPublic;
       cancelAutoStart(room); // private: no countdown; public again: it starts over from 30 s
@@ -408,11 +543,23 @@ io.on("connection", (socket) => {
   socket.on("answer", (text: string, ack) => {
     const reply = safeAck(ack);
     const at = where.get(socket.id);
-    const race = at?.room.race;
-    if (!at || !race || at.room.phase !== "racing") return reply({ kind: "closed" });
+    if (!at || at.room.phase !== "racing") return reply({ kind: "closed" });
     const now = Date.now();
     if (now - at.person.lastAnswerAt < MIN_ANSWER_GAP_MS) return reply({ kind: "slow" });
     at.person.lastAnswerAt = now;
+    const spike = at.room.spike;
+    if (spike) {
+      const result = submitSpike(spike, at.person.id, String(text ?? ""), now);
+      if (result.kind === "used") {
+        const by = at.room.players.find((p) => p.id === result.by)?.name ?? "someone";
+        return reply({ ...result, byName: by });
+      }
+      reply(result);
+      if (result.kind === "ok") sendRoom(at.room);
+      return;
+    }
+    const race = at.room.race;
+    if (!race) return reply({ kind: "closed" });
     const racer = race.racers.get(at.person.id);
     if (!racer) return reply({ kind: "closed" });
     const result = submitAnswer(race, racer, String(text ?? ""), now);

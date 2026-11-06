@@ -16,7 +16,7 @@ from datetime import date
 import config
 import prompts as P
 from data import build_dataset, load_dataset
-from game import build_game, load_game
+from game import build_game, load_game, write_agents
 
 
 def main():
@@ -43,6 +43,7 @@ def main():
             print(f"  ! couldn't refresh game data ({type(e).__name__}: {e}); using saved copy")
             game = load_game()
 
+    write_agents(game)
     path, built = P.publish(P.load_prompts(), ds, today, game)
     print()
     for pr in built:

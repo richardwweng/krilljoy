@@ -42,11 +42,31 @@ counts, but the rarer it is, the deeper you dive.
 - **Watch everyone dive live** on the shared gauge and leaderboard.
 - **Getting in:** Quick play (a public lobby that starts 30 seconds after it
   fills up), Host a room (4-letter code + invite link), or join by code. The
-  host picks the length: Short 1,500 m, Normal 3,000 m, Long 5,000 m.
+  host picks the length: Short 3,000 m, Normal 5,000 m, Long 7,000 m.
 
 | Lobby | Last call | Podium |
 |---|---|---|
 | ![Race lobby with a room code](docs/race-lobby.png) | ![Last call after someone reached the chest](docs/race-last-call.png) | ![Race results podium](docs/race-results.png) |
+
+### Spike splash (multiplayer)
+
+![A five-player Spike splash game: agents on rocks around the spike](docs/spike-splash.png)
+
+- **Pass the spike.** Everyone sits in a circle and takes turns naming an
+  answer to the same question. Any valid answer nobody has said yet passes
+  the spike on.
+- **Don't let it go off on you.** Each turn has a clock (15 seconds, a little
+  shorter every lap). Run out and the spike splashes on you: you lose a life
+  and a new question starts. Lose both lives and you're out. Last one
+  standing wins.
+- **Rare answers earn extra lives.** Every answer fills your bar by its rank
+  (a Radiant fills it ten times faster than a Silver). A full bar is +1 life.
+- **Pick your agent** in the lobby, chat with the room (quick messages in
+  public rooms), and react with emojis.
+- Only questions with 15+ answers are used. The host picks how long each
+  question lasts: Short, Normal, or Long (until the spike goes off).
+
+![Spike splash lobby](docs/spike-splash-lobby.png)
 
 ## Ranks
 
@@ -211,13 +231,14 @@ krilljoy/
 │   └── extract.py        Reads Liquipedia templates and HTML
 ├── client/               The game website (React + TypeScript + Vite)
 │   ├── public/data/dive.json   Answer banks, written by the pipeline
+│   ├── public/data/agents.json Agent select list, written by the pipeline
 │   └── src/
 │       ├── game/         Daily rules: picking, saving, sharing, sounds
-│       ├── race/         Treasure race: lobby, rooms, race, results, rules
+│       ├── race/         Multiplayer: Treasure race + Spike splash, chat, agent select
 │       ├── components/   Ocean, depth gauge, HUD, pixel sprites
 │       └── screens/      Home, question, reveal, results, pop-ups
 ├── server/               Race server (Node + Socket.IO): rooms and referee
-│   └── src/              index.ts (rooms), race.ts (rules), data.ts (answers)
+│   └── src/              index.ts (rooms), race.ts + spike.ts (rules), chat.ts, data.ts (answers)
 ├── shared/match.ts       Answer matching used by both the game and the server
 ├── docs/                 README images
 └── CLAUDE.md             Project brief for Claude Code

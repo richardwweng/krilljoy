@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "krilljoy-nightly"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pipeline/data pipeline/schedule.json client/public/data/dive.json
+          git add pipeline/data pipeline/schedule.json client/public/data/dive.json client/public/data/agents.json
           if git diff --cached --quiet; then
             echo "Nothing changed tonight."
           else

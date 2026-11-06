@@ -297,3 +297,18 @@ def load_game():
     if not GAME_FILE.exists():
         return None
     return json.loads(GAME_FILE.read_text(encoding="utf-8"))
+
+
+# The agents players can sit as in Spike splash (name + official icon), as a small file the
+# game and the race server both read. Rewritten on every build, so a new agent shows up in
+# agent select by itself once valorant-api.com lists them.
+AGENTS_FILE = Path(__file__).resolve().parent.parent / "client" / "public" / "data" / "agents.json"
+
+
+def write_agents(game):
+    agents = sorted(({"name": a["id"], "icon": a["icon"]} for a in game["pools"]["agents"] if a.get("icon")),
+                    key=lambda a: a["name"].lower())
+    text = json.dumps(agents, indent=1, ensure_ascii=False) + "\n"
+    if not AGENTS_FILE.exists() or AGENTS_FILE.read_text(encoding="utf-8") != text:
+        AGENTS_FILE.write_text(text, encoding="utf-8")
+        print(f"  agent select: {len(agents)} agents -> {AGENTS_FILE.name}")

@@ -127,6 +127,18 @@ export const sound = {
     noise(0, 1.4, { vol: 0.22, from: 1400, to: 160 });
     for (let i = 0; i < 7; i++) bubble(0.1 + i * 0.13 + Math.random() * 0.05);
   },
+  /** Spike splash: the spike's beep (faster as time runs out) */
+  beep(urgent = false) { tone(urgent ? 1568 : 1318, 0, 0.06, { vol: urgent ? 0.1 : 0.06 }); },
+  /** Spike splash: detonation */
+  boom() {
+    noise(0, 0.9, { vol: 0.45, from: 1800, to: 80 });
+    tone(90, 0, 0.6, { type: "sine", vol: 0.4, slide: 30 });
+    tone(60, 0.05, 0.7, { type: "triangle", vol: 0.25, slide: 25 });
+  },
+  /** Spike splash: a full meter turns into an extra life */
+  life() { arp([72, 76, 79, 84, 88], 0.07, { type: "triangle", vol: 0.2 }); },
+  /** Spike splash: someone else answered and passed the spike */
+  pass() { tone(880, 0, 0.05, { vol: 0.07 }); tone(1320, 0.05, 0.06, { vol: 0.07 }); },
   /** End screen: one ping with echoes */
   sonar() {
     const c = ac();

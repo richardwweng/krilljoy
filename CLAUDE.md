@@ -307,7 +307,7 @@ Copy the mechanics, not Krillion's branding or assets.
      in a row), back to back, NO timer. Answers checked on the server with
      shared/match.ts (typo -> "suggest" -> player confirms; "which one?" for
      ambiguous; wrong guesses free). Skip unlocks after 25 s (0 m).
-   - Host picks length: Short 1,500 / Normal 3,000 / Long 5,000 m (quick play =
+   - Host picks length: Short 3,000 / Normal 5,000 / Long 7,000 m (Richard, Nov 2026; quick play =
      Normal). First to the treasure chest wins; then a 60 s LAST CALL (Richard, Nov 2026; was 30 s) for the
      rest; placings = finish order, then depth (ties: fewer skips).
    - Live depths: shared gauge (every diver's marker, chest at the bottom) +
@@ -330,7 +330,37 @@ Copy the mechanics, not Krillion's branding or assets.
      button on the race home. Each localhost tab is its own player (sessionStorage token).
    - Note: dive.json is public, so a determined cheater could look answers up.
      Fine for friends; a ranked mode would need the server to hold answers privately.
-4. **Later:** rated matchmaking, leaderboards, "better than X%" curve, real
+4. **Spike splash** (built Nov 2026; Krillion's Puffer Party, Valorant themed). Richard's rules:
+   - Same rooms/lobbies as Treasure race; the room has a `mode` ("race" | "spike").
+     Max 8 players, Quick play rooms of 6. Quick play keeps modes in separate rooms.
+   - Players sit in a circle on rocks around the spike (you always at the bottom,
+     phone too). Take turns naming answers to the same question; any valid unused
+     answer passes the spike. Turn clock 15 s, 1 s shorter per lap, min 7 s. Run out
+     = the spike goes off on you: -1 life (start with 2), fresh question, 3 s break.
+     0 lives = out; last one standing wins (solo practice: until you're out).
+   - Only questions with 15+ answers. A question also changes after N answers:
+     Normal = min(18, max(8, round(n/4)+2)), Short = half, Long = until it goes off
+     (`answerLimit` in spike.ts), or when fewer unused answers remain than players.
+   - Extra lives: each answer adds its rank points to a meter; 400 = +1 life, max 4
+     (LIFE_EVERY / MAX_LIVES, tunable). The bar is drawn in pieces, one per answer
+     in its rank colour (`meterParts`; the answer that fills it spills into the next bar).
+   - Each seat shows that player's latest answer in a bubble (wraps up to 4 lines,
+     never cut off) until it's their turn again. No list of all answers under the
+     question (Richard's call); "already said by X" tells you about repeats.
+   - Avatars = Riot's official agent icons (fan policy, like rank icons), in a ring of
+     the player's colour. Agent select in the lobby (tap your own agent): one agent
+     per room, last pick remembered (localStorage `krilljoy:agent`). The list comes from
+     `client/public/data/agents.json`, written by `write_agents()` in game.py on every
+     build (nightly commits it), so new agents appear automatically. Never draw
+     Valorant's characters, pets or the Spike ourselves; the spike sprite is our own
+     sea mine.
+   - Chat (like ERS): public rooms = 10 preset quick messages only; private rooms =
+     free text too, slurs/swears starred out server-side (obscenity). Spam limit
+     5 per 5 s. Emoji reactions (8) pop over your seat for 3 s. "Turn chat off" toggle.
+   - Code: server/src/spike.ts (pure rules), chat.ts, index.ts (mode branches);
+     client/src/race/Spike*.tsx, SplashScene.tsx (seabed arena shared by lobby and
+     game), AgentPicker/AgentAvatar, LifeMeter, ChatPanel, EmojiButton.
+5. **Later:** rated matchmaking, leaderboards, "better than X%" curve, real
    answer counts ("N players chose this").
 
 ## Conventions

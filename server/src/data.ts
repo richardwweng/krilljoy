@@ -46,3 +46,24 @@ export function knownAnswerNames(): Set<string> {
   reloadIfChanged();
   return known;
 }
+
+// ---------- agent select (Spike splash) ----------
+// agents.json is written by the pipeline from valorant-api.com on every build (the nightly
+// rebuild included), so new agents appear without code changes. Reloaded when it changes.
+export interface Agent { name: string; icon: string }
+const AGENTS_FILE = process.env.AGENTS_JSON ?? fileURLToPath(new URL("../../client/public/data/agents.json", import.meta.url));
+let agentsMtime = 0;
+let agents: Agent[] = [];
+
+export function allAgents(): Agent[] {
+  try {
+    const mtime = statSync(AGENTS_FILE).mtimeMs;
+    if (mtime !== agentsMtime) {
+      agents = (JSON.parse(readFileSync(AGENTS_FILE, "utf8")) as Agent[]).filter((a) => a && a.name);
+      agentsMtime = mtime;
+    }
+  } catch (e) {
+    if (!agents.length) console.error(`Couldn't read the agent list at ${AGENTS_FILE}:`, (e as Error).message);
+  }
+  return agents;
+}

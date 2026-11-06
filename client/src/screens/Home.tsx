@@ -30,7 +30,7 @@ export default function Home({ date, started, finished, ready, onBegin, onHowTo,
           <button type="button" className="btn-dark" onClick={onHowTo}>How to play</button>
           <button type="button" className="btn-dark" onClick={onStats}>Stats</button>
         </div>
-        <button type="button" className="btn-dark race-cta" onClick={onRace}>⚑ Treasure race · play with friends</button>
+        <button type="button" className="btn-dark race-cta" onClick={onRace}>⚑ Play with friends · Treasure race & Spike splash</button>
       </div>
     </main>
   );
