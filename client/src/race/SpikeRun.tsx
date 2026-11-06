@@ -146,9 +146,6 @@ export default function SpikeRun({ room, serverNow }: { room: RoomView; serverNo
           <div className="top-box"><small>{room.isPublic ? "Public" : "Private"}</small><b>{room.code}</b></div>
           <div className="top-mid">
             <div className="label">Question {s.qNumber}</div>
-            <div className="spike-pips" aria-hidden="true">
-              {q?.limit ? Array.from({ length: q.limit }, (_, i) => <i key={i} className={i < s.said.length ? "on" : ""} />) : null}
-            </div>
           </div>
           <div className="top-box right"><small>Still in</small><b>{alive}/{s.seats.length}</b></div>
         </div>
