@@ -338,9 +338,10 @@ Copy the mechanics, not Krillion's branding or assets.
      answer passes the spike. Turn clock 15 s, 1 s shorter per lap, min 7 s. Run out
      = the spike goes off on you: -1 life (start with 2), fresh question, 3 s break.
      0 lives = out; last one standing wins (solo practice: until you're out).
-   - Only questions with 15+ answers. A question also changes after N answers:
-     Normal = min(18, max(8, round(n/4)+2)), Short = half, Long = until it goes off
-     (`answerLimit` in spike.ts), or when fewer unused answers remain than players.
+   - Only questions with 15+ answers, in a random order. A question also changes after
+     min(18, max(8, round(n/4)+2)) answers (`answerLimit` in spike.ts, "normal"), or when
+     fewer unused answers remain than players. No host option for this (Richard removed
+     "Questions last" Short/Long, Nov 2026; the short/long code paths are unused).
    - Extra lives: each answer adds its rank points to a meter; 400 = +1 life, max 4
      (LIFE_EVERY / MAX_LIVES, tunable). The bar is drawn in pieces, one per answer
      in its rank colour (`meterParts`; the answer that fills it spills into the next bar).

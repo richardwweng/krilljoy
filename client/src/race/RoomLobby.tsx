@@ -4,7 +4,7 @@ import { sound } from "../game/sound";
 import { getSocket } from "./socket";
 import { useTicker } from "./useRoom";
 import { colorFor } from "./colors";
-import { LENGTHS, MODES, PACES, modeInfo, type RoomView } from "./types";
+import { LENGTHS, MODES, modeInfo, type RoomView } from "./types";
 
 /** Waiting room: share the code, see who's in, the host sets the race up and starts it. */
 export default function RoomLobby({ room, serverNow }: { room: RoomView; serverNow: () => number }) {
@@ -82,18 +82,7 @@ export default function RoomLobby({ room, serverNow }: { room: RoomView; serverN
                     ))}
                   </div>
                 </div>
-              ) : (
-                <div className="race-field">
-                  <span className="label">Questions last</span>
-                  <div className="seg" role="group" aria-label="How long each question lasts">
-                    {PACES.map((p) => (
-                      <button key={p.id} type="button" aria-pressed={room.pace === p.id} onClick={() => { sound.click(); s.emit("settings", { pace: p.id }); }}>
-                        {p.label}<small>{p.note}</small>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
+              ) : null}
               <div className="race-field">
                 <label className="label" htmlFor="lobby-max">Players</label>
                 <select id="lobby-max" className="race-input" value={room.maxPlayers} onChange={(e) => s.emit("settings", { maxPlayers: Number(e.target.value) })}>
@@ -105,7 +94,7 @@ export default function RoomLobby({ room, serverNow }: { room: RoomView; serverN
           ) : (
             room.mode === "race"
               ? <p className="race-note big">Chest at <b>{room.target.toLocaleString("en-US")} m</b> ({LENGTHS.find((l) => l.id === room.length)?.label})</p>
-              : <p className="race-note big">Questions last: <b>{PACES.find((p) => p.id === room.pace)?.label}</b> ({PACES.find((p) => p.id === room.pace)?.note})</p>
+              : null
           )}
           {room.mode === "race" ? (
             <ul className="race-rules">

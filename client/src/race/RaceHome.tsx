@@ -2,7 +2,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { navigate } from "../nav";
 import { sound } from "../game/sound";
 import { ask, getSocket, playerToken, saveName, savedName, useConnected } from "./socket";
-import { LENGTHS, MODES, PACES, modeInfo, type Mode, type PublicRoom, type RaceLength, type SpikePace } from "./types";
+import { LENGTHS, MODES, modeInfo, type Mode, type PublicRoom, type RaceLength } from "./types";
 import RaceHowTo from "./RaceHowTo";
 import { setHowToMode } from "./mode";
 
@@ -17,7 +17,6 @@ export default function RaceHome() {
   const [mode, setMode] = useState<Mode>(savedMode);
   const [name, setName] = useState(savedName());
   const [length, setLength] = useState<RaceLength>("normal");
-  const [pace, setPace] = useState<SpikePace>("normal");
   const [maxPlayers, setMaxPlayers] = useState(modeInfo(savedMode()).quick);
   const [isPublic, setIsPublic] = useState(false);
   const [code, setCode] = useState("");
@@ -113,18 +112,7 @@ export default function RaceHome() {
                   ))}
                 </div>
               </div>
-            ) : (
-              <div className="race-field">
-                <span className="label">Questions last</span>
-                <div className="seg" role="group" aria-label="How long each question lasts">
-                  {PACES.map((p) => (
-                    <button key={p.id} type="button" aria-pressed={pace === p.id} onClick={() => { sound.click(); setPace(p.id); }}>
-                      {p.label}<small>{p.note}</small>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
+            ) : null}
             <div className="race-field">
               <label className="label" htmlFor="race-max">Players</label>
               <select id="race-max" className="race-input" value={maxPlayers} onChange={(e) => setMaxPlayers(Number(e.target.value))}>
@@ -132,7 +120,7 @@ export default function RaceHome() {
               </select>
             </div>
             <label className="race-check"><input type="checkbox" checked={isPublic} onChange={(e) => setIsPublic(e.target.checked)} /> List it publicly (anyone can join from the list)</label>
-            <button type="button" className="btn-dark race-host" disabled={!connected || busy} onClick={() => go("host", { mode, length, pace, maxPlayers: Math.min(maxPlayers, info.max), isPublic })}>Host a room</button>
+            <button type="button" className="btn-dark race-host" disabled={!connected || busy} onClick={() => go("host", { mode, length, maxPlayers: Math.min(maxPlayers, info.max), isPublic })}>Host a room</button>
           </section>
 
           <form className="panel race-box" onSubmit={joinCode}>

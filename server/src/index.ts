@@ -14,7 +14,7 @@ import {
   type Race, type RaceLength,
 } from "./race.ts";
 import {
-  LIFE_EVERY, MAX_LIVES, SPIKE_LIVES, SPIKE_PACES, answerLimit, currentSpikePrompt, leaveSpike, spikeStandings, startSpike,
+  LIFE_EVERY, MAX_LIVES, SPIKE_LIVES, answerLimit, currentSpikePrompt, leaveSpike, spikeStandings, startSpike,
   submitSpike, tickSpike, type Spike, type SpikePace,
 } from "./spike.ts";
 
@@ -436,7 +436,7 @@ io.on("connection", (socket) => {
     if (!msg?.token) return reply({ ok: false, error: "Missing player ID." });
     const mode: Mode = MODES.includes(msg.mode as Mode) ? (msg.mode as Mode) : "race";
     const length = msg.length && msg.length in RACE_LENGTHS ? msg.length : "normal";
-    const pace = SPIKE_PACES.includes(msg.pace as SpikePace) ? (msg.pace as SpikePace) : "normal";
+    const pace: SpikePace = "normal"; // question length always follows the answer count (Richard's call; no host option)
     const max = Math.min(MAX_PLAYERS[mode], Math.max(2, Number(msg.maxPlayers) || DEFAULT_PLAYERS[mode]));
     const name = cleanName(msg.name);
     if (typeof name !== "string") return reply({ ok: false, error: name.error });
@@ -505,7 +505,6 @@ io.on("connection", (socket) => {
       room.maxPlayers = Math.min(room.maxPlayers, MAX_PLAYERS[room.mode]);
     }
     if (msg.length && msg.length in RACE_LENGTHS) room.length = msg.length;
-    if (SPIKE_PACES.includes(msg.pace as SpikePace)) room.pace = msg.pace as SpikePace;
     if (msg.maxPlayers) room.maxPlayers = Math.min(MAX_PLAYERS[room.mode], Math.max(Math.max(2, seated(room).length), Number(msg.maxPlayers)));
     if (typeof msg.isPublic === "boolean" && msg.isPublic !== room.isPublic) {
       room.isPublic = msg.isPublic;

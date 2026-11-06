@@ -63,8 +63,9 @@ counts, but the rarer it is, the deeper you dive.
   (a Radiant fills it ten times faster than a Silver). A full bar is +1 life.
 - **Pick your agent** in the lobby, chat with the room (quick messages in
   public rooms), and react with emojis.
-- Only questions with 15+ answers are used. The host picks how long each
-  question lasts: Short, Normal, or Long (until the spike goes off).
+- Questions come in a random order, and only ones with 15+ answers are used.
+  A question lasts 8 to 18 answers (more for questions with more answers), or
+  until the spike goes off.
 
 ![Spike splash lobby](docs/spike-splash-lobby.png)
 

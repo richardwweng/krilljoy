@@ -58,7 +58,7 @@ function SpikeRules() {
         <li><b>Last one standing wins.</b></li>
         <li><b>Your clock</b> starts at 15 seconds and gets 1 second shorter every lap around the table, down to 7.</li>
         <li><b>No repeats.</b> Every answer said is off the table for that question. Wrong guesses are free while your time lasts, and close spellings get suggested: press Enter again to confirm.</li>
-        <li><b>New question</b> after the spike goes off, or once a question has had its share of answers (8 to 18, depending on how many it has). The host can make questions shorter or longer.</li>
+        <li><b>New question</b> after the spike goes off, or once a question has had its share of answers (8 to 18: questions with more answers last longer). Questions come in a random order.</li>
         <li><b>Extra lives:</b> every answer fills your meter by its rank (Silver 10 points … Radiant 100). Every 400 points = <b>+1 life</b>, up to 4. So rare answers keep you alive longer.</li>
       </ul>
       <p className="muted">Up to 8 players. Only questions with 15 or more answers are used. Quick play joins a public lobby that starts 30 seconds after it fills up (6 players), or when its host presses Start.</p>

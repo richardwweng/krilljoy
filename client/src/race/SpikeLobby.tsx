@@ -12,7 +12,7 @@ import RaceHowTo from "./RaceHowTo";
 import AgentPicker, { AGENT_KEY } from "./AgentPicker";
 import AgentAvatar from "./AgentAvatar";
 import { ask } from "./socket";
-import { MODES, PACES, type RoomView } from "./types";
+import { MODES, type RoomView } from "./types";
 
 /** Spike splash waiting room: everyone on their rock, empty rocks for open seats. */
 export default function SpikeLobby({ room, serverNow }: { room: RoomView; serverNow: () => number }) {
@@ -113,16 +113,6 @@ export default function SpikeLobby({ room, serverNow }: { room: RoomView; server
                 </div>
               </div>
               <div className="race-field">
-                <span className="label">Questions last</span>
-                <div className="seg" role="group" aria-label="How long each question lasts">
-                  {PACES.map((p) => (
-                    <button key={p.id} type="button" aria-pressed={room.pace === p.id} onClick={() => { sound.click(); s.emit("settings", { pace: p.id }); }}>
-                      {p.label}<small>{p.note}</small>
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div className="race-field">
                 <label className="label" htmlFor="splash-max">Seats</label>
                 <select id="splash-max" className="race-input" value={room.maxPlayers} onChange={(e) => s.emit("settings", { maxPlayers: Number(e.target.value) })}>
                   {Array.from({ length: 7 }, (_, i) => i + 2).filter((n) => n >= seated.length).map((n) => <option key={n} value={n}>{n} seats</option>)}
@@ -131,7 +121,7 @@ export default function SpikeLobby({ room, serverNow }: { room: RoomView; server
               <label className="race-check"><input type="checkbox" checked={room.isPublic} onChange={(e) => s.emit("settings", { isPublic: e.target.checked })} /> Public (anyone can join from the list; quick chat only)</label>
             </>
           ) : (
-            <p>Questions last: <b>{PACES.find((p) => p.id === room.pace)?.label}</b> ({PACES.find((p) => p.id === room.pace)?.note}) · {room.maxPlayers} seats · {room.isPublic ? "public" : "private"}. Only the host can change these.</p>
+            <p>{room.maxPlayers} seats · {room.isPublic ? "public" : "private"}. Only the host can change these.</p>
           )}
           <div className="race-field">
             <span className="label">Invite link</span>
