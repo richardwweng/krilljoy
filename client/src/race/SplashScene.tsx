@@ -64,11 +64,11 @@ export default function SplashScene({ slots, turn, spike, children, onPickMine }
         {slots.map((s, i) => (
           <div
             key={s.id ?? `empty-${i}`}
-            className={`rock-seat${s.id ? "" : " empty"}${i === turn ? " turn" : ""}${s.out ? " out" : ""}${s.you ? " me" : ""}${s.plusOne ? " gained" : ""}`}
+            className={`rock-seat${s.id ? "" : " empty"}${i === turn ? " turn" : ""}${Math.cos((angleOf(i) * Math.PI) / 180) < -0.3 ? " west" : ""}${s.emote ? " emoting" : ""}${s.out ? " out" : ""}${s.you ? " me" : ""}${s.plusOne ? " gained" : ""}`}
             style={{ ["--a" as string]: `${angleOf(i)}deg`, ["--c" as string]: s.color }}
           >
             {s.emote && <span className="emote-bubble" key={s.emote}>{s.emote}</span>}
-            {s.said && !s.emote && (
+            {s.said && (
               <span className="said-bubble" style={{ ["--tier" as string]: TIERS[s.said.tier as TierKey]?.color }}>
                 <TierGem tier={s.said.tier as TierKey} scale={2} /><span className="said-text">{s.said.answerId}</span>
               </span>

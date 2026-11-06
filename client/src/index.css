@@ -607,7 +607,7 @@ select.race-input { font-size: 22px; }
 
 .scene { display: flex; flex-direction: column; flex: 1; margin-top: 4px; }
 .scene-top { position: relative; z-index: 4; width: min(680px, 100%); margin: 0 auto -6px; text-align: center; }
-.scene-ring { position: relative; flex: 1; min-height: 460px; --rx: 40%; --ry: 33%; --cy: 51%; }
+.scene-ring { position: relative; flex: 1; min-height: 460px; --rx: 40%; --ry: 31%; --cy: 53%; } /* top seats sit a little lower, so their answer bubbles clear the question card */
 .scene-floor { position: absolute; left: 1%; right: 1%; top: 4%; bottom: 0; border-radius: 50%;
   background:
     repeating-linear-gradient(172deg, transparent 0 13px, #ffffff0a 13px 15px, transparent 15px 31px),
@@ -654,6 +654,12 @@ select.race-input { font-size: 22px; }
 /* answers wrap (up to 4 lines, enough for the longest skin names) instead of being cut off */
 .said-text { min-width: 0; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; line-clamp: 4; overflow: hidden;
   white-space: normal; overflow-wrap: anywhere; text-align: left; line-height: 1.1; }
+/* seats across the top: bubbles go underneath, so the question card never covers them */
+/* emoji = a small badge on the avatar's outer shoulder (away from the spike and the question) */
+.rock-seat .emote-bubble { bottom: auto; top: 8px; left: calc(50% + 24px); transform: none; z-index: 4; font-size: 28px; padding: 4px 6px 6px; }
+.rock-seat.west .emote-bubble { left: auto; right: calc(50% + 24px); }
+/* a seat showing an emoji sits on top of everything (the spike, the question, other seats) */
+.rock-seat.emoting { z-index: 8; }
 .rock-seat.turn .said-bubble { display: none; } /* their bubble clears when it's their turn again */
 .emote-bubble { font-size: 34px; line-height: 1; padding: 6px 10px 8px; background: #f4ede0; clip-path: var(--cut); animation: pop 0.3s steps(3); }
 .emote-bubble::after { content: ""; }
@@ -752,7 +758,7 @@ select.race-input { font-size: 22px; }
   .top-mid .label { font-size: 12px; }
   .top-mid .spike-pips { margin: 4px 0 0; gap: 3px; }
   .top-mid .spike-pips i { width: 9px; height: 9px; }
-  .scene-ring { --rx: 37%; --ry: 33%; --cy: 53%; min-height: 300px; }
+  .scene-ring { --rx: 37%; --ry: 31%; --cy: 55%; min-height: 300px; }
   .scene-floor { left: -2%; right: -2%; }
   .rock-seat { width: 84px; }
   .rock-seat .rock-sprite { transform: scale(0.62); margin: -9px 0 -12px; }
@@ -762,8 +768,10 @@ select.race-input { font-size: 22px; }
   .agent-initial { font-size: 20px; }
   .rock-name { font-size: 15px; max-width: 84px; }
   .rock-meter { width: 64px; }
-  .said-bubble { max-width: 112px; padding: 2px 5px; font-size: 12px; gap: 3px; }
-  .emote-bubble { font-size: 26px; padding: 4px 7px 6px; }
+  .said-bubble { max-width: 104px; padding: 1px 4px; font-size: 11px; gap: 3px; }
+  .rock-seat.me .said-bubble { display: none; } /* phones: your own answer would sit on the spike, and you know it */
+  .rock-seat .emote-bubble { top: 4px; left: calc(50% + 18px); font-size: 22px; padding: 3px 5px 5px; }
+  .rock-seat.west .emote-bubble { left: auto; right: calc(50% + 18px); }
   .scene-spike { width: 96px; height: 96px; }
   .scene-spike > .spike-art { width: 54px; height: 54px; }
   .scene-spike .spike-time { font-size: 17px; }
