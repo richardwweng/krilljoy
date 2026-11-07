@@ -383,6 +383,18 @@
     "name_q"
    ],
    "pinned": false
+  },
+  "2026-12-06": {
+   "prompts": [
+    "sheriff_finisher",
+    "info_ability",
+    "name_x",
+    "purple_phantom",
+    "gun_under_1000",
+    "vct_igl",
+    "played_americas"
+   ],
+   "pinned": false
   }
  }
 }
