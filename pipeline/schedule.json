@@ -395,6 +395,18 @@
     "played_americas"
    ],
    "pinned": false
+  },
+  "2026-12-07": {
+   "prompts": [
+    "heal_ability",
+    "red_vandal",
+    "flash_ability",
+    "pink_knife",
+    "japan",
+    "korea_masters",
+    "champions_2022"
+   ],
+   "pinned": false
   }
  }
 }
