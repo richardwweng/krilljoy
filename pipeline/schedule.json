@@ -407,6 +407,18 @@
     "champions_2022"
    ],
    "pinned": false
+  },
+  "2026-12-08": {
+   "prompts": [
+    "concuss_ability",
+    "passive_ability",
+    "haven_callout",
+    "champions_winner",
+    "played_china",
+    "played_pacific",
+    "team_secret"
+   ],
+   "pinned": false
   }
  }
 }
