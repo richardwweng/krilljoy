@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-09",
-  "data_generated": "2026-11-09",
+  "generated": "2026-11-10",
+  "data_generated": "2026-11-10",
   "game_version": "13.09.00.5777412",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146772,15 +146772,6 @@
     }
   ],
   "schedule": {
-    "2026-11-08": [
-      "toronto_2025",
-      "controller_ability",
-      "b_callout",
-      "vct_igl",
-      "played_americas",
-      "japan",
-      "outlaw_skin"
-    ],
     "2026-11-09": [
       "any_map",
       "bind_callout",
@@ -147050,6 +147041,15 @@
       "played_china",
       "played_pacific",
       "team_secret"
+    ],
+    "2026-12-09": [
+      "slow_ability",
+      "smoke_ability",
+      "lotus_callout",
+      "abyss_callout",
+      "igl_americas",
+      "furia",
+      "vct_mvp"
     ]
   }
 }

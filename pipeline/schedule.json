@@ -419,6 +419,18 @@
     "team_secret"
    ],
    "pinned": false
+  },
+  "2026-12-09": {
+   "prompts": [
+    "slow_ability",
+    "smoke_ability",
+    "lotus_callout",
+    "abyss_callout",
+    "igl_americas",
+    "furia",
+    "vct_mvp"
+   ],
+   "pinned": false
   }
  }
 }
