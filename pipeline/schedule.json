@@ -431,6 +431,18 @@
     "vct_mvp"
    ],
    "pinned": false
+  },
+  "2026-12-10": {
+   "prompts": [
+    "movement_ability",
+    "wall_ability",
+    "judge_skin",
+    "global_esports",
+    "intl_team",
+    "lockin",
+    "russia"
+   ],
+   "pinned": false
   }
  }
 }

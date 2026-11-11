@@ -1,5 +1,5 @@
 {
- "game_version": "13.09.00.5777412",
+ "game_version": "13.10.00.5893614",
  "source": "valorant-api.com",
  "pools": {
   "agents": [
@@ -4662,7 +4662,7 @@
      "colors": [],
      "upgrades": []
     },
-    "score": 5.75
+    "score": 7.0
    },
    {
     "id": "Titanmail Ares",
@@ -6863,6 +6863,26 @@
      "upgrades": []
     },
     "score": 15.25
+   },
+   {
+    "id": "Snowfall Vandal",
+    "aliases": [
+     "snowfall",
+     "snowfall vandal",
+     "snowfallvandal",
+     "vandal"
+    ],
+    "icon": "https://media.valorant-api.com/weaponskins/9e7e9007-4945-a414-d5b3-eabbb551be0e/displayicon.png",
+    "attrs": {
+     "weapon": "Vandal",
+     "category": "Rifle",
+     "edition": "Deluxe",
+     "collection": "Snowfall",
+     "obtained": "Store (VP)",
+     "colors": [],
+     "upgrades": []
+    },
+    "score": 15.0
    },
    {
     "id": "Reaver Vandal",
@@ -10758,7 +10778,7 @@
      "colors": [],
      "upgrades": []
     },
-    "score": 13.75
+    "score": 15.0
    },
    {
     "id": "Reaver Phantom",
@@ -12234,7 +12254,7 @@
      "colors": [],
      "upgrades": []
     },
-    "score": 7.75
+    "score": 9.0
    },
    {
     "id": "Sovereign Judge",
@@ -15807,7 +15827,7 @@
      "colors": [],
      "upgrades": []
     },
-    "score": 7.75
+    "score": 9.0
    },
    {
     "id": "Infinity Classic",
@@ -19653,6 +19673,26 @@
      ]
     },
     "score": 16.25
+   },
+   {
+    "id": "Snowfall Bandit",
+    "aliases": [
+     "bandit",
+     "snowfall",
+     "snowfall bandit",
+     "snowfallbandit"
+    ],
+    "icon": "https://media.valorant-api.com/weaponskins/19a38b38-47e0-c122-9094-8d9acde98e85/displayicon.png",
+    "attrs": {
+     "weapon": "Bandit",
+     "category": "Sidearm",
+     "edition": "Deluxe",
+     "collection": "Snowfall",
+     "obtained": "Store (VP)",
+     "colors": [],
+     "upgrades": []
+    },
+    "score": 7.0
    },
    {
     "id": "Reaver Bandit",
@@ -28177,6 +28217,26 @@
     "score": 18.25
    },
    {
+    "id": "Snowfall Marshal",
+    "aliases": [
+     "marshal",
+     "snowfall",
+     "snowfall marshal",
+     "snowfallmarshal"
+    ],
+    "icon": "https://media.valorant-api.com/weaponskins/3abd59e8-43ae-d32f-c150-3f84a8e6d27b/displayicon.png",
+    "attrs": {
+     "weapon": "Marshal",
+     "category": "Sniper",
+     "edition": "Deluxe",
+     "collection": "Snowfall",
+     "obtained": "Store (VP)",
+     "colors": [],
+     "upgrades": []
+    },
+    "score": 9.0
+   },
+   {
     "id": "Sovereign Marshal",
     "aliases": [
      "marshal",
@@ -29783,6 +29843,26 @@
      ]
     },
     "score": 16.75
+   },
+   {
+    "id": "Snowfall Spectre",
+    "aliases": [
+     "snowfall",
+     "snowfall spectre",
+     "snowfallspectre",
+     "spectre"
+    ],
+    "icon": "https://media.valorant-api.com/weaponskins/59ad51a9-4552-7e6c-d0f1-d6a7ca9a499c/displayicon.png",
+    "attrs": {
+     "weapon": "Spectre",
+     "category": "SMG",
+     "edition": "Deluxe",
+     "collection": "Snowfall",
+     "obtained": "Store (VP)",
+     "colors": [],
+     "upgrades": []
+    },
+    "score": 11.0
    },
    {
     "id": "Reaver Spectre",
@@ -32894,6 +32974,27 @@
     "score": 20.25
    },
    {
+    "id": "Prime Axe",
+    "aliases": [
+     "prime",
+     "prime axe",
+     "primeaxe"
+    ],
+    "icon": "https://media.valorant-api.com/weaponskins/e100dff1-4cf5-54ec-aa65-6fadbc22973b/displayicon.png",
+    "attrs": {
+     "weapon": "Melee",
+     "category": "Melee",
+     "edition": "Exclusive",
+     "collection": "Prime",
+     "obtained": "Store (VP)",
+     "colors": [],
+     "upgrades": [
+      "VFX"
+     ]
+    },
+    "score": 18.75
+   },
+   {
     "id": "Prime//2.0 Karambit",
     "aliases": [
      "prime//2.0",
@@ -32912,27 +33013,6 @@
      "colors": [],
      "upgrades": [
       "Animation"
-     ]
-    },
-    "score": 18.75
-   },
-   {
-    "id": "Prime Axe",
-    "aliases": [
-     "prime",
-     "prime axe",
-     "primeaxe"
-    ],
-    "icon": "https://media.valorant-api.com/weaponskins/e100dff1-4cf5-54ec-aa65-6fadbc22973b/displayicon.png",
-    "attrs": {
-     "weapon": "Melee",
-     "category": "Melee",
-     "edition": "Exclusive",
-     "collection": "Prime",
-     "obtained": "Store (VP)",
-     "colors": [],
-     "upgrades": [
-      "VFX"
      ]
     },
     "score": 18.75
@@ -34334,7 +34414,26 @@
      "colors": [],
      "upgrades": []
     },
-    "score": 17.75
+    "score": 19.0
+   },
+   {
+    "id": "Snowfall Axe",
+    "aliases": [
+     "snowfall",
+     "snowfall axe",
+     "snowfallaxe"
+    ],
+    "icon": "https://media.valorant-api.com/weaponskins/6e8cdb91-47e8-079f-23cf-bd81bc1ec6e1/displayicon.png",
+    "attrs": {
+     "weapon": "Melee",
+     "category": "Melee",
+     "edition": "Exclusive",
+     "collection": "Snowfall",
+     "obtained": "Store (VP)",
+     "colors": [],
+     "upgrades": []
+    },
+    "score": 19.0
    },
    {
     "id": "Reaver Knife",
@@ -34358,13 +34457,13 @@
     "score": 20.5
    },
    {
-    "id": "Reaver Karambit",
+    "id": "Reaver Butterfly Knife",
     "aliases": [
      "reaver",
-     "reaver karambit",
-     "reaverkarambit"
+     "reaver butterfly knife",
+     "reaverbutterflyknife"
     ],
-    "icon": "https://media.valorant-api.com/weaponskins/b73d7b16-4652-bc5b-5c4c-068aabb19d0a/displayicon.png",
+    "icon": "https://media.valorant-api.com/weaponskins/81c37ac1-48d4-9747-7fd6-56932358a3fe/displayicon.png",
     "attrs": {
      "weapon": "Melee",
      "category": "Melee",
@@ -34383,13 +34482,13 @@
     "score": 22.0
    },
    {
-    "id": "Reaver Butterfly Knife",
+    "id": "Reaver Karambit",
     "aliases": [
      "reaver",
-     "reaver butterfly knife",
-     "reaverbutterflyknife"
+     "reaver karambit",
+     "reaverkarambit"
     ],
-    "icon": "https://media.valorant-api.com/weaponskins/81c37ac1-48d4-9747-7fd6-56932358a3fe/displayicon.png",
+    "icon": "https://media.valorant-api.com/weaponskins/b73d7b16-4652-bc5b-5c4c-068aabb19d0a/displayicon.png",
     "attrs": {
      "weapon": "Melee",
      "category": "Melee",

@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-10",
-  "data_generated": "2026-11-10",
-  "game_version": "13.09.00.5777412",
+  "generated": "2026-11-11",
+  "data_generated": "2026-11-11",
+  "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
   "prompts": [
@@ -20780,7 +20780,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 11.73,
-          "share": 13.78,
+          "share": 13.75,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -20811,7 +20811,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 11.71,
-          "share": 13.62,
+          "share": 13.59,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -20842,7 +20842,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.77,
-          "share": 7.1,
+          "share": 7.08,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -20874,7 +20874,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.77,
-          "share": 7.08,
+          "share": 7.07,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -20906,7 +20906,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.76,
-          "share": 7.01,
+          "share": 7.0,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -20937,7 +20937,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.76,
-          "share": 3.51,
+          "share": 3.5,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -20968,7 +20968,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.76,
-          "share": 3.51,
+          "share": 3.5,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21000,7 +21000,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.76,
-          "share": 3.51,
+          "share": 3.5,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21121,7 +21121,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.72,
-          "share": 3.42,
+          "share": 3.41,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21270,7 +21270,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.75,
-          "share": 0.88,
+          "share": 0.87,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21365,7 +21365,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.71,
-          "share": 0.85,
+          "share": 0.84,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21603,7 +21603,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.71,
-          "share": 0.43,
+          "share": 0.42,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21635,7 +21635,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.71,
-          "share": 0.43,
+          "share": 0.42,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -21664,7 +21664,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.68,
-          "share": 0.42,
+          "share": 0.41,
           "evidence": {
             "weapon": "Vandal",
             "category": "Rifle",
@@ -22216,6 +22216,29 @@
             "category": "Rifle",
             "edition": "Deluxe",
             "collection": "Minima",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
+          "id": "Snowfall Vandal",
+          "aliases": [
+            "snowfall",
+            "snowfall vandal",
+            "snowfallvandal"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/9e7e9007-4945-a414-d5b3-eabbb551be0e/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "schooler",
+          "points": 30,
+          "score": 5.65,
+          "share": 0.2,
+          "evidence": {
+            "weapon": "Vandal",
+            "category": "Rifle",
+            "edition": "Deluxe",
+            "collection": "Snowfall",
             "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
@@ -25015,6 +25038,29 @@
           }
         },
         {
+          "id": "Snowfall Phantom",
+          "aliases": [
+            "snowfall",
+            "snowfall phantom",
+            "snowfallphantom"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/2e170ea2-434d-5a0f-dc28-3aada990a266/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "schooler",
+          "points": 30,
+          "score": 5.45,
+          "share": 0.25,
+          "evidence": {
+            "weapon": "Phantom",
+            "category": "Rifle",
+            "edition": "Deluxe",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
           "id": "Wasteland Phantom",
           "aliases": [
             "wasteland",
@@ -25079,29 +25125,6 @@
             "edition": "Deluxe",
             "collection": "Kingdom",
             "obtained": "Battle pass",
-            "colors": [],
-            "upgrades": []
-          }
-        },
-        {
-          "id": "Snowfall Phantom",
-          "aliases": [
-            "snowfall",
-            "snowfall phantom",
-            "snowfallphantom"
-          ],
-          "icon": "https://media.valorant-api.com/weaponskinchromas/2e170ea2-434d-5a0f-dc28-3aada990a266/fullrender.png",
-          "source": "valorant-api.com",
-          "tier": "schooler",
-          "points": 30,
-          "score": 5.44,
-          "share": 0.24,
-          "evidence": {
-            "weapon": "Phantom",
-            "category": "Rifle",
-            "edition": "Deluxe",
-            "collection": "Snowfall",
-            "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
           }
@@ -30045,7 +30068,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 11.51,
-          "share": 6.58,
+          "share": 6.57,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30070,7 +30093,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 11.49,
-          "share": 6.5,
+          "share": 6.49,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30176,7 +30199,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.5,
-          "share": 3.28,
+          "share": 3.27,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30200,7 +30223,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.5,
-          "share": 3.28,
+          "share": 3.27,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30225,7 +30248,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.49,
-          "share": 3.25,
+          "share": 3.24,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30249,7 +30272,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30278,7 +30301,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30306,7 +30329,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30334,7 +30357,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30362,7 +30385,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30391,7 +30414,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30419,7 +30442,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -30447,7 +30470,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.52,
-          "share": 1.66,
+          "share": 1.65,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31520,7 +31543,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.5,
-          "share": 0.21,
+          "share": 0.2,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31549,7 +31572,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.5,
-          "share": 0.21,
+          "share": 0.2,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31579,7 +31602,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.5,
-          "share": 0.21,
+          "share": 0.2,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31781,7 +31804,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31810,7 +31833,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31839,7 +31862,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31868,7 +31891,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31897,7 +31920,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31929,7 +31952,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31957,7 +31980,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -31986,7 +32009,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -32015,7 +32038,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -32044,7 +32067,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -32073,7 +32096,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 0.15,
+          "share": 0.14,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -33605,6 +33628,50 @@
           }
         },
         {
+          "id": "Snowfall Axe",
+          "aliases": [
+            "snowfall axe",
+            "snowfallaxe"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/6e8cdb91-47e8-079f-23cf-bd81bc1ec6e1/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.49,
+          "share": 0.1,
+          "evidence": {
+            "weapon": "Melee",
+            "category": "Melee",
+            "edition": "Exclusive",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
+          "id": "Snowfall Wand",
+          "aliases": [
+            "snowfall wand",
+            "snowfallwand"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/29dd7a19-4654-af07-59bb-14b11db66e1a/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.49,
+          "share": 0.1,
+          "evidence": {
+            "weapon": "Melee",
+            "category": "Melee",
+            "edition": "Exclusive",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
           "id": "Wasteland Crowbar",
           "aliases": [
             "wasteland",
@@ -33914,29 +33981,6 @@
             "edition": "Exclusive",
             "collection": "Ruin",
             "obtained": "Battle pass",
-            "colors": [],
-            "upgrades": []
-          }
-        },
-        {
-          "id": "Snowfall Wand",
-          "aliases": [
-            "snowfall",
-            "snowfall wand",
-            "snowfallwand"
-          ],
-          "icon": "https://media.valorant-api.com/weaponskinchromas/29dd7a19-4654-af07-59bb-14b11db66e1a/fullrender.png",
-          "source": "valorant-api.com",
-          "tier": "deep_cut",
-          "points": 85,
-          "score": 5.48,
-          "share": 0.1,
-          "evidence": {
-            "weapon": "Melee",
-            "category": "Melee",
-            "edition": "Exclusive",
-            "collection": "Snowfall",
-            "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
           }
@@ -36332,7 +36376,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.49,
-          "share": 20.16,
+          "share": 20.1,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36363,7 +36407,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.47,
-          "share": 19.92,
+          "share": 19.86,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36395,7 +36439,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.53,
-          "share": 10.36,
+          "share": 10.33,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36427,7 +36471,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.52,
-          "share": 5.13,
+          "share": 5.11,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36459,7 +36503,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.52,
-          "share": 5.13,
+          "share": 5.11,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36490,7 +36534,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.51,
-          "share": 5.11,
+          "share": 5.1,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36521,7 +36565,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.49,
-          "share": 5.02,
+          "share": 5.01,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36623,7 +36667,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.49,
-          "share": 2.52,
+          "share": 2.51,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -36773,7 +36817,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.46,
-          "share": 1.24,
+          "share": 1.23,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -37034,7 +37078,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.45,
-          "share": 0.31,
+          "share": 0.3,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -37177,6 +37221,29 @@
           }
         },
         {
+          "id": "Snowfall Spectre",
+          "aliases": [
+            "snowfall",
+            "snowfall spectre",
+            "snowfallspectre"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/59ad51a9-4552-7e6c-d0f1-d6a7ca9a499c/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "schooler",
+          "points": 30,
+          "score": 4.41,
+          "share": 0.3,
+          "evidence": {
+            "weapon": "Spectre",
+            "category": "SMG",
+            "edition": "Deluxe",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
           "id": "Wasteland Spectre",
           "aliases": [
             "wasteland",
@@ -37211,7 +37278,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.4,
-          "share": 0.3,
+          "share": 0.29,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -37234,7 +37301,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.4,
-          "share": 0.3,
+          "share": 0.29,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -37257,7 +37324,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.4,
-          "share": 0.3,
+          "share": 0.29,
           "evidence": {
             "weapon": "Spectre",
             "category": "SMG",
@@ -65721,6 +65788,29 @@
           }
         },
         {
+          "id": "Snowfall Classic",
+          "aliases": [
+            "snowfall",
+            "snowfall classic",
+            "snowfallclassic"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/5bf9cf8c-40b7-26d1-a96d-04858dcf7972/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "plankton",
+          "points": 10,
+          "score": 4.29,
+          "share": 0.29,
+          "evidence": {
+            "weapon": "Classic",
+            "category": "Sidearm",
+            "edition": "Deluxe",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
           "id": "Kingdom Classic",
           "aliases": [
             "kingdom",
@@ -65739,29 +65829,6 @@
             "edition": "Deluxe",
             "collection": "Kingdom",
             "obtained": "Battle pass",
-            "colors": [],
-            "upgrades": []
-          }
-        },
-        {
-          "id": "Snowfall Classic",
-          "aliases": [
-            "snowfall",
-            "snowfall classic",
-            "snowfallclassic"
-          ],
-          "icon": "https://media.valorant-api.com/weaponskinchromas/5bf9cf8c-40b7-26d1-a96d-04858dcf7972/fullrender.png",
-          "source": "valorant-api.com",
-          "tier": "plankton",
-          "points": 10,
-          "score": 4.28,
-          "share": 0.29,
-          "evidence": {
-            "weapon": "Classic",
-            "category": "Sidearm",
-            "edition": "Deluxe",
-            "collection": "Snowfall",
-            "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
           }
@@ -71599,7 +71666,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.2,
-          "share": 24.03,
+          "share": 23.7,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71630,7 +71697,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.17,
-          "share": 11.81,
+          "share": 11.65,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71661,7 +71728,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.17,
-          "share": 11.77,
+          "share": 11.6,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71694,7 +71761,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.17,
-          "share": 5.88,
+          "share": 5.8,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71725,7 +71792,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 5.19,
-          "share": 2.99,
+          "share": 2.95,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71758,7 +71825,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 5.12,
-          "share": 2.85,
+          "share": 2.81,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71782,7 +71849,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 5.08,
-          "share": 2.77,
+          "share": 2.73,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71805,7 +71872,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.68,
-          "share": 2.11,
+          "share": 2.08,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71836,7 +71903,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.68,
-          "share": 2.11,
+          "share": 2.08,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71867,7 +71934,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.68,
-          "share": 2.11,
+          "share": 2.08,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71898,12 +71965,35 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.09,
-          "share": 1.4,
+          "share": 1.38,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
             "edition": "Deluxe",
             "collection": "Minima",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
+          "id": "Snowfall Marshal",
+          "aliases": [
+            "snowfall",
+            "snowfall marshal",
+            "snowfallmarshal"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/3abd59e8-43ae-d32f-c150-3f84a8e6d27b/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "schooler",
+          "points": 30,
+          "score": 4.09,
+          "share": 1.38,
+          "evidence": {
+            "weapon": "Marshal",
+            "category": "Sniper",
+            "edition": "Deluxe",
+            "collection": "Snowfall",
             "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
@@ -71921,7 +72011,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.09,
-          "share": 1.4,
+          "share": 1.38,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71944,7 +72034,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.08,
-          "share": 1.38,
+          "share": 1.37,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71967,7 +72057,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.06,
-          "share": 1.37,
+          "share": 1.35,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -71991,7 +72081,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.04,
-          "share": 1.35,
+          "share": 1.33,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72014,7 +72104,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.59,
-          "share": 0.99,
+          "share": 0.98,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72041,7 +72131,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.59,
-          "share": 0.99,
+          "share": 0.98,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72068,7 +72158,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.59,
-          "share": 0.99,
+          "share": 0.98,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72095,7 +72185,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.58,
-          "share": 0.98,
+          "share": 0.97,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72118,7 +72208,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.58,
-          "share": 0.98,
+          "share": 0.97,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72141,7 +72231,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.58,
-          "share": 0.98,
+          "share": 0.97,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72164,7 +72254,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.58,
-          "share": 0.98,
+          "share": 0.97,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72187,7 +72277,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.58,
-          "share": 0.98,
+          "share": 0.97,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72210,7 +72300,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.58,
-          "share": 0.98,
+          "share": 0.96,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72233,7 +72323,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.34,
-          "share": 0.83,
+          "share": 0.82,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72257,7 +72347,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.13,
-          "share": 0.72,
+          "share": 0.71,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72282,7 +72372,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.12,
-          "share": 0.71,
+          "share": 0.7,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72307,7 +72397,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.08,
-          "share": 0.69,
+          "share": 0.68,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72333,7 +72423,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.06,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72361,7 +72451,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.06,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72388,7 +72478,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.06,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72411,7 +72501,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.05,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72434,7 +72524,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.05,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72458,7 +72548,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72482,7 +72572,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72505,7 +72595,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72528,7 +72618,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72552,7 +72642,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72575,7 +72665,7 @@
           "tier": "rare",
           "points": 60,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72598,7 +72688,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72622,7 +72712,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72645,7 +72735,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72670,7 +72760,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72693,7 +72783,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 3.04,
-          "share": 0.68,
+          "share": 0.67,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72716,7 +72806,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.08,
-          "share": 0.35,
+          "share": 0.34,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72742,7 +72832,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.08,
-          "share": 0.35,
+          "share": 0.34,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72765,7 +72855,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.05,
-          "share": 0.34,
+          "share": 0.33,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72788,7 +72878,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.04,
-          "share": 0.34,
+          "share": 0.33,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72811,7 +72901,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.04,
-          "share": 0.34,
+          "share": 0.33,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -72834,7 +72924,7 @@
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 2.04,
-          "share": 0.34,
+          "share": 0.33,
           "evidence": {
             "weapon": "Marshal",
             "category": "Sniper",
@@ -74540,7 +74630,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.18,
-          "share": 3.56,
+          "share": 3.55,
           "evidence": {
             "weapon": "Judge",
             "category": "Shotgun",
@@ -74718,7 +74808,7 @@
           "source": "valorant-api.com",
           "tier": "plankton",
           "points": 10,
-          "score": 4.08,
+          "score": 4.09,
           "share": 0.83,
           "evidence": {
             "weapon": "Judge",
@@ -76862,7 +76952,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 11.52,
-          "share": 3.34,
+          "share": 3.33,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -76890,7 +76980,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 11.52,
-          "share": 3.34,
+          "share": 3.33,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -77171,7 +77261,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.5,
-          "share": 1.65,
+          "share": 1.64,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -77195,7 +77285,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 10.5,
-          "share": 1.65,
+          "share": 1.64,
           "evidence": {
             "weapon": "Melee",
             "category": "Melee",
@@ -80270,7 +80360,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 7.18,
-          "share": 0.17,
+          "share": 0.16,
           "evidence": {
             "weapon": "Guardian",
             "category": "Rifle",
@@ -84018,6 +84108,50 @@
           }
         },
         {
+          "id": "Snowfall Axe",
+          "aliases": [
+            "snowfall axe",
+            "snowfallaxe"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskins/6e8cdb91-47e8-079f-23cf-bd81bc1ec6e1/displayicon.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.49,
+          "share": 0.05,
+          "evidence": {
+            "weapon": "Melee",
+            "category": "Melee",
+            "edition": "Exclusive",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
+          "id": "Snowfall Wand",
+          "aliases": [
+            "snowfall wand",
+            "snowfallwand"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/29dd7a19-4654-af07-59bb-14b11db66e1a/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "rare",
+          "points": 60,
+          "score": 5.49,
+          "share": 0.05,
+          "evidence": {
+            "weapon": "Melee",
+            "category": "Melee",
+            "edition": "Exclusive",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
           "id": "Wasteland Crowbar",
           "aliases": [
             "wasteland",
@@ -84327,29 +84461,6 @@
             "edition": "Exclusive",
             "collection": "Ruin",
             "obtained": "Battle pass",
-            "colors": [],
-            "upgrades": []
-          }
-        },
-        {
-          "id": "Snowfall Wand",
-          "aliases": [
-            "snowfall",
-            "snowfall wand",
-            "snowfallwand"
-          ],
-          "icon": "https://media.valorant-api.com/weaponskinchromas/29dd7a19-4654-af07-59bb-14b11db66e1a/fullrender.png",
-          "source": "valorant-api.com",
-          "tier": "rare",
-          "points": 60,
-          "score": 5.48,
-          "share": 0.05,
-          "evidence": {
-            "weapon": "Melee",
-            "category": "Melee",
-            "edition": "Exclusive",
-            "collection": "Snowfall",
-            "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
           }
@@ -100378,9 +100489,6 @@
             "IGL at": [
               "Champions 2026",
               "Masters London 2026",
-              "Masters Santiago 2026",
-              "VCT '26 China Kickoff",
-              "VCT '26 China Stage 1",
               "VCT '26 China Stage 2"
             ]
           }
@@ -124778,7 +124886,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.63,
-          "share": 1.98,
+          "share": 1.97,
           "evidence": {
             "weapon": "Ares",
             "category": "Machine gun",
@@ -124943,6 +125051,29 @@
           }
         },
         {
+          "id": "Snowfall Ares",
+          "aliases": [
+            "snowfall",
+            "snowfall ares",
+            "snowfallares"
+          ],
+          "icon": "https://media.valorant-api.com/weaponskinchromas/84410f60-427f-bdbf-713f-15a115d97a44/fullrender.png",
+          "source": "valorant-api.com",
+          "tier": "schooler",
+          "points": 30,
+          "score": 3.57,
+          "share": 0.95,
+          "evidence": {
+            "weapon": "Ares",
+            "category": "Machine gun",
+            "edition": "Deluxe",
+            "collection": "Snowfall",
+            "obtained": "Store (VP)",
+            "colors": [],
+            "upgrades": []
+          }
+        },
+        {
           "id": "Nunca Olvidados Ares",
           "aliases": [
             "nunca olvidados",
@@ -124985,29 +125116,6 @@
             "edition": "Deluxe",
             "collection": "Hivemind",
             "obtained": "Battle pass",
-            "colors": [],
-            "upgrades": []
-          }
-        },
-        {
-          "id": "Snowfall Ares",
-          "aliases": [
-            "snowfall",
-            "snowfall ares",
-            "snowfallares"
-          ],
-          "icon": "https://media.valorant-api.com/weaponskinchromas/84410f60-427f-bdbf-713f-15a115d97a44/fullrender.png",
-          "source": "valorant-api.com",
-          "tier": "schooler",
-          "points": 30,
-          "score": 3.56,
-          "share": 0.94,
-          "evidence": {
-            "weapon": "Ares",
-            "category": "Machine gun",
-            "edition": "Deluxe",
-            "collection": "Snowfall",
-            "obtained": "Store (VP)",
             "colors": [],
             "upgrades": []
           }
@@ -146772,15 +146880,6 @@
     }
   ],
   "schedule": {
-    "2026-11-09": [
-      "any_map",
-      "bind_callout",
-      "korea_masters",
-      "bbl",
-      "played_china",
-      "mid_callout",
-      "phantom_skin"
-    ],
     "2026-11-10": [
       "icebox_callout",
       "champions_winner",
@@ -147050,6 +147149,15 @@
       "igl_americas",
       "furia",
       "vct_mvp"
+    ],
+    "2026-12-10": [
+      "movement_ability",
+      "wall_ability",
+      "judge_skin",
+      "global_esports",
+      "intl_team",
+      "lockin",
+      "russia"
     ]
   }
 }
