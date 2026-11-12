@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-11",
-  "data_generated": "2026-11-11",
+  "generated": "2026-11-12",
+  "data_generated": "2026-11-12",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146880,15 +146880,6 @@
     }
   ],
   "schedule": {
-    "2026-11-10": [
-      "icebox_callout",
-      "champions_winner",
-      "frenzy_skin",
-      "ascent_callout",
-      "team_secret",
-      "bucky_skin",
-      "champions_2022"
-    ],
     "2026-11-11": [
       "melee_skin",
       "played_pacific",
@@ -147158,6 +147149,15 @@
       "intl_team",
       "lockin",
       "russia"
+    ],
+    "2026-12-11": [
+      "initiator_ability",
+      "a_callout",
+      "shorty_skin",
+      "ghost_skin",
+      "intl_winner",
+      "team_liquid",
+      "igl_emea"
     ]
   }
 }

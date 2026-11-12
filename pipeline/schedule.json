@@ -443,6 +443,18 @@
     "russia"
    ],
    "pinned": false
+  },
+  "2026-12-11": {
+   "prompts": [
+    "initiator_ability",
+    "a_callout",
+    "shorty_skin",
+    "ghost_skin",
+    "intl_winner",
+    "team_liquid",
+    "igl_emea"
+   ],
+   "pinned": false
   }
  }
 }
