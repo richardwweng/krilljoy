@@ -455,6 +455,18 @@
     "igl_emea"
    ],
    "pinned": false
+  },
+  "2026-12-12": {
+   "prompts": [
+    "contract_skin",
+    "operator_skin",
+    "controller_ability",
+    "b_callout",
+    "igl_pacific",
+    "brazil_champions",
+    "champions_2021"
+   ],
+   "pinned": false
   }
  }
 }
