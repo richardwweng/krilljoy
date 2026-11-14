@@ -467,6 +467,18 @@
     "champions_2021"
    ],
    "pinned": false
+  },
+  "2026-12-13": {
+   "prompts": [
+    "outlaw_skin",
+    "phantom_skin",
+    "any_map",
+    "china",
+    "canada",
+    "madrid_2024",
+    "korea"
+   ],
+   "pinned": false
   }
  }
 }

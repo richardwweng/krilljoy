@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-13",
-  "data_generated": "2026-11-13",
+  "generated": "2026-11-14",
+  "data_generated": "2026-11-14",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146880,15 +146880,6 @@
     }
   ],
   "schedule": {
-    "2026-11-12": [
-      "vct_mvp",
-      "furia",
-      "guardian_skin",
-      "exclusive_skin",
-      "lockin",
-      "intl_team",
-      "any_weapon"
-    ],
     "2026-11-13": [
       "spectre_skin",
       "intl_winner",
@@ -147158,6 +147149,15 @@
       "igl_pacific",
       "brazil_champions",
       "champions_2021"
+    ],
+    "2026-12-13": [
+      "outlaw_skin",
+      "phantom_skin",
+      "any_map",
+      "china",
+      "canada",
+      "madrid_2024",
+      "korea"
     ]
   }
 }
