@@ -491,6 +491,18 @@
     "igl_china"
    ],
    "pinned": false
+  },
+  "2026-12-15": {
+   "prompts": [
+    "mid_callout",
+    "ascent_callout",
+    "melee_skin",
+    "ultimate",
+    "sentinels",
+    "taiwan",
+    "usa_intl"
+   ],
+   "pinned": false
   }
  }
 }
