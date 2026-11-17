@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-16",
-  "data_generated": "2026-11-16",
+  "generated": "2026-11-17",
+  "data_generated": "2026-11-17",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146880,15 +146880,6 @@
     }
   ],
   "schedule": {
-    "2026-11-15": [
-      "stinger_skin",
-      "bulldog_skin",
-      "champions_2021",
-      "breeze_callout",
-      "madrid_2024",
-      "corrode_callout",
-      "china"
-    ],
     "2026-11-16": [
       "ares_skin",
       "philippines",
@@ -147158,6 +147149,15 @@
       "sentinels",
       "taiwan",
       "usa_intl"
+    ],
+    "2026-12-16": [
+      "icebox_callout",
+      "summit_callout",
+      "sentinel_ability",
+      "exclusive_skin",
+      "fpx",
+      "masters_winner",
+      "kru"
     ]
   }
 }

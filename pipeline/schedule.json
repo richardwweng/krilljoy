@@ -503,6 +503,18 @@
     "usa_intl"
    ],
    "pinned": false
+  },
+  "2026-12-16": {
+   "prompts": [
+    "icebox_callout",
+    "summit_callout",
+    "sentinel_ability",
+    "exclusive_skin",
+    "fpx",
+    "masters_winner",
+    "kru"
+   ],
+   "pinned": false
   }
  }
 }
