@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17",
+ "generated": "2026-11-18",
  "events": [
   {
    "page": "VCT/2026/Stage 2/Masters",
@@ -44,11 +44,11 @@
      35000
     ],
     [
-     "Global Esports",
+     "NRG",
      25000
     ],
     [
-     "NRG",
+     "Global Esports",
      25000
     ],
     [
@@ -112,11 +112,11 @@
      25000
     ],
     [
-     "EDward Gaming",
+     "XLG Esports",
      15000
     ],
     [
-     "XLG Esports",
+     "EDward Gaming",
      15000
     ]
    ]
@@ -172,11 +172,11 @@
      25000
     ],
     [
-     "MIBR",
+     "Team Heretics",
      15000
     ],
     [
-     "Team Heretics",
+     "MIBR",
      15000
     ]
    ]
@@ -4071,9 +4071,7 @@
    ],
    "captain": [
     "VCT/2026/Champions",
-    "VCT/2026/China_League/Kickoff",
     "VCT/2026/China_League/Stage_2",
-    "VCT/2026/Stage 1/Masters",
     "VCT/2026/Stage 2/Masters"
    ],
    "mvps": [],
@@ -5015,10 +5013,7 @@
    "wins": [
     "VCT/2026/Stage 2/Masters"
    ],
-   "captain": [
-    "VCT/2026/Americas_League/Stage_2",
-    "VCT/2026/Stage 2/Masters"
-   ],
+   "captain": [],
    "mvps": [],
    "teams": {
     "leviatan": [

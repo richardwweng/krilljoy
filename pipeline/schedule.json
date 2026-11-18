@@ -515,6 +515,18 @@
     "kru"
    ],
    "pinned": false
+  },
+  "2026-12-17": {
+   "prompts": [
+    "guardian_skin",
+    "any_weapon",
+    "fracture_callout",
+    "champions_2026",
+    "usa",
+    "played_emea",
+    "champions_2024"
+   ],
+   "pinned": false
   }
  }
 }
