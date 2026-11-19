@@ -527,6 +527,18 @@
     "champions_2024"
    ],
    "pinned": false
+  },
+  "2026-12-18": {
+   "prompts": [
+    "val_creator",
+    "pearl_callout",
+    "spectre_skin",
+    "duelist_ability",
+    "brazil",
+    "thailand",
+    "bbl"
+   ],
+   "pinned": false
   }
  }
 }

@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-18",
-  "data_generated": "2026-11-18",
+  "generated": "2026-11-19",
+  "data_generated": "2026-11-19",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146835,15 +146835,6 @@
     }
   ],
   "schedule": {
-    "2026-11-17": [
-      "ultra_skin",
-      "premium_skin",
-      "any_agent",
-      "turkey",
-      "taiwan",
-      "igl_china",
-      "sentinels"
-    ],
     "2026-11-18": [
       "marshal_skin",
       "sheriff_vp",
@@ -147113,6 +147104,15 @@
       "usa",
       "played_emea",
       "champions_2024"
+    ],
+    "2026-12-18": [
+      "val_creator",
+      "pearl_callout",
+      "spectre_skin",
+      "duelist_ability",
+      "brazil",
+      "thailand",
+      "bbl"
     ]
   }
 }
