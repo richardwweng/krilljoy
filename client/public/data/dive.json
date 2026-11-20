@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-19",
-  "data_generated": "2026-11-19",
+  "generated": "2026-11-20",
+  "data_generated": "2026-11-20",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146835,15 +146835,6 @@
     }
   ],
   "schedule": {
-    "2026-11-18": [
-      "marshal_skin",
-      "sheriff_vp",
-      "sunset_callout",
-      "kru",
-      "usa_intl",
-      "masters_winner",
-      "champions_2026"
-    ],
     "2026-11-19": [
       "lotus_callout",
       "damage_ability",
@@ -147113,6 +147104,15 @@
       "brazil",
       "thailand",
       "bbl"
+    ],
+    "2026-12-19": [
+      "classic_skin",
+      "breeze_callout",
+      "odin_skin",
+      "corrode_callout",
+      "toronto_2025",
+      "name_z",
+      "earn_team_500k"
     ]
   }
 }

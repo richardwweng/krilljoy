@@ -539,6 +539,18 @@
     "bbl"
    ],
    "pinned": false
+  },
+  "2026-12-19": {
+   "prompts": [
+    "classic_skin",
+    "breeze_callout",
+    "odin_skin",
+    "corrode_callout",
+    "toronto_2025",
+    "name_z",
+    "earn_team_500k"
+   ],
+   "pinned": false
   }
  }
 }
