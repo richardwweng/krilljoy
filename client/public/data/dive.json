@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-20",
-  "data_generated": "2026-11-20",
+  "generated": "2026-11-21",
+  "data_generated": "2026-11-21",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146835,15 +146835,6 @@
     }
   ],
   "schedule": {
-    "2026-11-19": [
-      "lotus_callout",
-      "damage_ability",
-      "any_ability",
-      "haven_callout",
-      "usa",
-      "played_emea",
-      "fpx"
-    ],
     "2026-11-20": [
       "initiator_ability",
       "judge_skin",
@@ -147113,6 +147104,15 @@
       "toronto_2025",
       "name_z",
       "earn_team_500k"
+    ],
+    "2026-12-20": [
+      "vandal_skin",
+      "split_callout",
+      "bulldog_skin",
+      "any_agent",
+      "name_digit",
+      "team_digit",
+      "earn_player_250k"
     ]
   }
 }

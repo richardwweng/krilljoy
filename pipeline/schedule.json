@@ -551,6 +551,18 @@
     "earn_team_500k"
    ],
    "pinned": false
+  },
+  "2026-12-20": {
+   "prompts": [
+    "vandal_skin",
+    "split_callout",
+    "bulldog_skin",
+    "any_agent",
+    "name_digit",
+    "team_digit",
+    "earn_player_250k"
+   ],
+   "pinned": false
   }
  }
 }
