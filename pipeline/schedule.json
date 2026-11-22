@@ -563,6 +563,18 @@
     "earn_player_250k"
    ],
    "pinned": false
+  },
+  "2026-12-21": {
+   "prompts": [
+    "stinger_skin",
+    "sheriff_skin",
+    "sunset_callout",
+    "any_ability",
+    "name_q",
+    "earn_player_100k",
+    "played_americas"
+   ],
+   "pinned": false
   }
  }
 }
