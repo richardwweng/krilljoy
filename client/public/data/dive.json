@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-22",
-  "data_generated": "2026-11-22",
+  "generated": "2026-11-23",
+  "data_generated": "2026-11-23",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146835,15 +146835,6 @@
     }
   ],
   "schedule": {
-    "2026-11-21": [
-      "ghost_skin",
-      "shorty_skin",
-      "a_callout",
-      "vct_igl",
-      "played_americas",
-      "japan",
-      "bbl"
-    ],
     "2026-11-22": [
       "contract_skin",
       "operator_skin",
@@ -147113,6 +147104,15 @@
       "name_q",
       "earn_player_100k",
       "played_americas"
+    ],
+    "2026-12-22": [
+      "ares_skin",
+      "premium_skin",
+      "damage_ability",
+      "gun_2000",
+      "name_x",
+      "vct_igl",
+      "korea_masters"
     ]
   }
 }

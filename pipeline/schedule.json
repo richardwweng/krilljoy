@@ -575,6 +575,18 @@
     "played_americas"
    ],
    "pinned": false
+  },
+  "2026-12-22": {
+   "prompts": [
+    "ares_skin",
+    "premium_skin",
+    "damage_ability",
+    "gun_2000",
+    "name_x",
+    "vct_igl",
+    "korea_masters"
+   ],
+   "pinned": false
   }
  }
 }
