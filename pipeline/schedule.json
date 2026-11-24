@@ -587,6 +587,18 @@
     "korea_masters"
    ],
    "pinned": false
+  },
+  "2026-12-23": {
+   "prompts": [
+    "ultra_skin",
+    "sheriff_vp",
+    "duelist_ult",
+    "champions_2022",
+    "japan",
+    "team_secret",
+    "played_pacific"
+   ],
+   "pinned": false
   }
  }
 }
