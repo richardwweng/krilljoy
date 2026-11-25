@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-24",
-  "data_generated": "2026-11-24",
+  "generated": "2026-11-25",
+  "data_generated": "2026-11-25",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -2211,7 +2211,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.2,
-          "share": 15.28,
+          "share": 15.27,
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -2234,7 +2234,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.8,
-          "share": 11.58,
+          "share": 11.57,
           "evidence": {
             "tier1_events": 12,
             "international_events": 3,
@@ -2257,7 +2257,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.8,
-          "share": 11.58,
+          "share": 11.57,
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -2281,7 +2281,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.3,
-          "share": 8.19,
+          "share": 8.18,
           "evidence": {
             "tier1_events": 11,
             "international_events": 6,
@@ -2369,7 +2369,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 2.9,
+          "share": 2.89,
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -2389,7 +2389,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 2.9,
+          "share": 2.89,
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -2412,7 +2412,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 2.9,
+          "share": 2.89,
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -2433,7 +2433,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 2.9,
+          "share": 2.89,
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -2453,7 +2453,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 2.9,
+          "share": 2.89,
           "evidence": {
             "tier1_events": 8,
             "international_events": 4,
@@ -2476,7 +2476,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 2.9,
+          "share": 2.89,
           "evidence": {
             "tier1_events": 13,
             "international_events": 8,
@@ -2688,7 +2688,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.2,
-          "share": 0.96,
+          "share": 0.95,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -2710,7 +2710,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.2,
-          "share": 0.96,
+          "share": 0.95,
           "evidence": {
             "tier1_events": 1,
             "international_events": 1,
@@ -2730,7 +2730,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.2,
-          "share": 0.96,
+          "share": 0.95,
           "evidence": {
             "tier1_events": 3,
             "international_events": 3,
@@ -3258,6 +3258,26 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/FireBallOps",
+          "tier": "rare",
+          "points": 60,
+          "score": 1.87,
+          "share": 0.09,
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": [],
+            "countries": [
+              "United States"
+            ]
+          }
+        },
+        {
+          "id": "ion2x",
+          "aliases": [
+            "ion2x"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ion2x",
           "tier": "rare",
           "points": 60,
           "score": 1.87,
@@ -48843,6 +48863,7 @@
         {
           "id": "PapiChulo",
           "aliases": [
+            "papi",
             "papichulo"
           ],
           "icon": null,
@@ -50407,6 +50428,7 @@
         {
           "id": "PapiChulo",
           "aliases": [
+            "papi",
             "papichulo"
           ],
           "icon": null,
@@ -99647,7 +99669,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.8,
-          "share": 13.52,
+          "share": 13.75,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -99670,7 +99692,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.8,
-          "share": 13.52,
+          "share": 13.75,
           "evidence": {
             "tier1_events": 18,
             "international_events": 8,
@@ -99696,7 +99718,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 6.76,
+          "share": 6.88,
           "evidence": {
             "tier1_events": 25,
             "international_events": 15,
@@ -99718,7 +99740,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 6.76,
+          "share": 6.88,
           "evidence": {
             "tier1_events": 20,
             "international_events": 10,
@@ -99740,7 +99762,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 6.76,
+          "share": 6.88,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -99762,7 +99784,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 6.76,
+          "share": 6.88,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -99784,7 +99806,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.5,
-          "share": 5.49,
+          "share": 5.59,
           "evidence": {
             "tier1_events": 3,
             "international_events": 1,
@@ -99807,7 +99829,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.2,
-          "share": 4.46,
+          "share": 4.54,
           "evidence": {
             "tier1_events": 14,
             "international_events": 5,
@@ -99829,7 +99851,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.2,
-          "share": 4.46,
+          "share": 4.54,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -99852,7 +99874,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.8,
-          "share": 3.38,
+          "share": 3.44,
           "evidence": {
             "tier1_events": 19,
             "international_events": 9,
@@ -99874,7 +99896,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.6,
-          "share": 2.94,
+          "share": 2.99,
           "evidence": {
             "tier1_events": 21,
             "international_events": 12,
@@ -99899,7 +99921,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.3,
-          "share": 2.39,
+          "share": 2.43,
           "evidence": {
             "tier1_events": 12,
             "international_events": 8,
@@ -99922,7 +99944,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 1.94,
+          "share": 1.97,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -99949,7 +99971,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 1.94,
+          "share": 1.97,
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
@@ -99969,7 +99991,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 1.94,
+          "share": 1.97,
           "evidence": {
             "tier1_events": 4,
             "international_events": 3,
@@ -99992,7 +100014,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.8,
-          "share": 1.69,
+          "share": 1.72,
           "evidence": {
             "tier1_events": 15,
             "international_events": 6,
@@ -100012,35 +100034,13 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.8,
-          "share": 1.69,
+          "share": 1.72,
           "evidence": {
             "tier1_events": 15,
             "international_events": 6,
             "international_wins": [],
             "IGL at": [
               "(earlier years)"
-            ]
-          }
-        },
-        {
-          "id": "SugarZ3ro",
-          "aliases": [
-            "sugarz3ro"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/SugarZ3ro",
-          "tier": "schooler",
-          "points": 30,
-          "score": 5.8,
-          "share": 1.69,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 4,
-            "international_wins": [],
-            "IGL at": [
-              "VCT '26 Pacific Kickoff",
-              "VCT '26 Pacific Stage 2",
-              "VCT 2026: Pacific S1"
             ]
           }
         },
@@ -100054,7 +100054,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.8,
-          "share": 1.69,
+          "share": 1.72,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -100075,7 +100075,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.3,
-          "share": 1.2,
+          "share": 1.22,
           "evidence": {
             "tier1_events": 13,
             "international_events": 6,
@@ -100097,7 +100097,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.3,
-          "share": 1.2,
+          "share": 1.22,
           "evidence": {
             "tier1_events": 10,
             "international_events": 4,
@@ -100119,7 +100119,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.0,
-          "share": 0.97,
+          "share": 0.99,
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
@@ -100139,7 +100139,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 4.8,
-          "share": 0.85,
+          "share": 0.86,
           "evidence": {
             "tier1_events": 17,
             "international_events": 8,
@@ -100161,7 +100161,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.53,
-          "share": 0.35,
+          "share": 0.36,
           "evidence": {
             "tier1_events": 14,
             "international_events": 6,
@@ -100202,7 +100202,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.0,
-          "share": 0.24,
+          "share": 0.25,
           "evidence": {
             "tier1_events": 12,
             "international_events": 3,
@@ -100223,7 +100223,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 3.0,
-          "share": 0.24,
+          "share": 0.25,
           "evidence": {
             "tier1_events": 12,
             "international_events": 3,
@@ -100243,7 +100243,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.93,
-          "share": 0.23,
+          "share": 0.24,
           "evidence": {
             "tier1_events": 11,
             "international_events": 3,
@@ -100265,7 +100265,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.93,
-          "share": 0.23,
+          "share": 0.24,
           "evidence": {
             "tier1_events": 11,
             "international_events": 3,
@@ -100288,7 +100288,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.93,
-          "share": 0.23,
+          "share": 0.24,
           "evidence": {
             "tier1_events": 11,
             "international_events": 3,
@@ -100308,7 +100308,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.87,
-          "share": 0.22,
+          "share": 0.23,
           "evidence": {
             "tier1_events": 10,
             "international_events": 3,
@@ -100350,7 +100350,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.73,
-          "share": 0.2,
+          "share": 0.21,
           "evidence": {
             "tier1_events": 10,
             "international_events": 2,
@@ -100372,7 +100372,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.73,
-          "share": 0.2,
+          "share": 0.21,
           "evidence": {
             "tier1_events": 8,
             "international_events": 3,
@@ -100392,7 +100392,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.67,
-          "share": 0.19,
+          "share": 0.2,
           "evidence": {
             "tier1_events": 9,
             "international_events": 2,
@@ -100413,7 +100413,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.6,
-          "share": 0.18,
+          "share": 0.19,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -100433,7 +100433,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.6,
-          "share": 0.18,
+          "share": 0.19,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -100456,7 +100456,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.6,
-          "share": 0.18,
+          "share": 0.19,
           "evidence": {
             "tier1_events": 6,
             "international_events": 3,
@@ -100567,7 +100567,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.33,
-          "share": 0.15,
+          "share": 0.16,
           "evidence": {
             "tier1_events": 6,
             "international_events": 1,
@@ -104377,7 +104377,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 25.53,
+          "share": 27.27,
           "evidence": {
             "tier1_events": 25,
             "international_events": 15,
@@ -104397,7 +104397,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 25.53,
+          "share": 27.27,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -104417,7 +104417,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.2,
-          "share": 16.85,
+          "share": 17.99,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -104438,7 +104438,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 7.33,
+          "share": 7.83,
           "evidence": {
             "tier1_events": 8,
             "international_events": 2,
@@ -104460,28 +104460,10 @@
           "tier": "schooler",
           "points": 30,
           "score": 6.0,
-          "share": 7.33,
+          "share": 7.83,
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
-            "international_wins": [],
-            "IGL in": "VCT Pacific"
-          }
-        },
-        {
-          "id": "SugarZ3ro",
-          "aliases": [
-            "sugarz3ro"
-          ],
-          "icon": null,
-          "source": "https://liquipedia.net/valorant/SugarZ3ro",
-          "tier": "schooler",
-          "points": 30,
-          "score": 5.8,
-          "share": 6.38,
-          "evidence": {
-            "tier1_events": 14,
-            "international_events": 4,
             "international_wins": [],
             "IGL in": "VCT Pacific"
           }
@@ -104496,7 +104478,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 5.0,
-          "share": 3.67,
+          "share": 3.92,
           "evidence": {
             "tier1_events": 9,
             "international_events": 5,
@@ -104514,7 +104496,7 @@
           "tier": "rare",
           "points": 60,
           "score": 4.8,
-          "share": 3.19,
+          "share": 3.41,
           "evidence": {
             "tier1_events": 17,
             "international_events": 8,
@@ -104532,7 +104514,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.93,
-          "share": 0.88,
+          "share": 0.93,
           "evidence": {
             "tier1_events": 11,
             "international_events": 3,
@@ -104552,7 +104534,7 @@
           "tier": "rare",
           "points": 60,
           "score": 2.93,
-          "share": 0.88,
+          "share": 0.93,
           "evidence": {
             "tier1_events": 11,
             "international_events": 3,
@@ -104567,10 +104549,10 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Crazyguy",
-          "tier": "deep_cut",
-          "points": 85,
+          "tier": "rare",
+          "points": 60,
           "score": 2.73,
-          "share": 0.76,
+          "share": 0.81,
           "evidence": {
             "tier1_events": 10,
             "international_events": 2,
@@ -104588,7 +104570,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.4,
-          "share": 0.6,
+          "share": 0.65,
           "evidence": {
             "tier1_events": 9,
             "international_events": 0,
@@ -104606,7 +104588,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 2.4,
-          "share": 0.6,
+          "share": 0.65,
           "evidence": {
             "tier1_events": 5,
             "international_events": 2,
@@ -104624,7 +104606,7 @@
           "tier": "one_in_a_krillion",
           "points": 100,
           "score": 2.0,
-          "share": 0.46,
+          "share": 0.49,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -108637,6 +108619,7 @@
         {
           "id": "PapiChulo",
           "aliases": [
+            "papi",
             "papichulo"
           ],
           "icon": null,
@@ -109559,7 +109542,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.1,
-          "share": 2.16,
+          "share": 2.15,
           "evidence": {
             "tier1_events": 17,
             "international_events": 8,
@@ -109586,7 +109569,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.1,
-          "share": 2.16,
+          "share": 2.15,
           "evidence": {
             "tier1_events": 10,
             "international_events": 4,
@@ -109613,7 +109596,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.1,
-          "share": 2.16,
+          "share": 2.15,
           "evidence": {
             "tier1_events": 11,
             "international_events": 4,
@@ -109641,7 +109624,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.1,
-          "share": 2.16,
+          "share": 2.15,
           "evidence": {
             "tier1_events": 18,
             "international_events": 9,
@@ -110196,8 +110179,8 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Blowz",
-          "tier": "schooler",
-          "points": 30,
+          "tier": "plankton",
+          "points": 10,
           "score": 6.15,
           "share": 0.56,
           "evidence": {
@@ -110220,8 +110203,8 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Neon_(Argentine_player)",
-          "tier": "schooler",
-          "points": 30,
+          "tier": "plankton",
+          "points": 10,
           "score": 6.15,
           "share": 0.56,
           "evidence": {
@@ -112212,6 +112195,26 @@
             "international_wins": [],
             "VCT Americas events": [
               "VCT '26 Americas Kickoff"
+            ]
+          }
+        },
+        {
+          "id": "ion2x",
+          "aliases": [
+            "ion2x"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ion2x",
+          "tier": "rare",
+          "points": 60,
+          "score": 1.92,
+          "share": 0.03,
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": [],
+            "VCT Americas events": [
+              "VCT '26 Americas Stage 2"
             ]
           }
         },
@@ -132458,7 +132461,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 26.52,
+          "share": 26.41,
           "evidence": {
             "tier1_events": 22,
             "international_events": 12,
@@ -132477,7 +132480,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.5,
-          "share": 21.54,
+          "share": 21.45,
           "evidence": {
             "tier1_events": 7,
             "international_events": 1,
@@ -132497,7 +132500,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.2,
-          "share": 8.75,
+          "share": 8.71,
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -132516,7 +132519,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.0,
-          "share": 7.62,
+          "share": 7.58,
           "evidence": {
             "tier1_events": 5,
             "international_events": 2,
@@ -132535,7 +132538,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 5.8,
-          "share": 6.63,
+          "share": 6.6,
           "evidence": {
             "tier1_events": 11,
             "international_events": 2,
@@ -132552,7 +132555,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.8,
-          "share": 3.32,
+          "share": 3.3,
           "evidence": {
             "tier1_events": 13,
             "international_events": 6,
@@ -132569,7 +132572,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.8,
-          "share": 3.32,
+          "share": 3.3,
           "evidence": {
             "tier1_events": 11,
             "international_events": 2,
@@ -132586,7 +132589,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 4.3,
-          "share": 2.34,
+          "share": 2.33,
           "evidence": {
             "tier1_events": 12,
             "international_events": 5,
@@ -132603,7 +132606,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 3.33,
-          "share": 1.2,
+          "share": 1.19,
           "evidence": {
             "tier1_events": 11,
             "international_events": 4,
@@ -132624,7 +132627,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 3.27,
-          "share": 1.15,
+          "share": 1.14,
           "evidence": {
             "tier1_events": 14,
             "international_events": 4,
@@ -132642,7 +132645,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 3.07,
-          "share": 1.0,
+          "share": 0.99,
           "evidence": {
             "tier1_events": 13,
             "international_events": 3,
@@ -132761,7 +132764,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.2,
-          "share": 0.55,
+          "share": 0.54,
           "evidence": {
             "tier1_events": 6,
             "international_events": 0,
@@ -132778,7 +132781,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.2,
-          "share": 0.55,
+          "share": 0.54,
           "evidence": {
             "tier1_events": 6,
             "international_events": 0,
@@ -132813,7 +132816,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.0,
-          "share": 0.48,
+          "share": 0.47,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -132830,7 +132833,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.0,
-          "share": 0.48,
+          "share": 0.47,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -132847,7 +132850,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.0,
-          "share": 0.48,
+          "share": 0.47,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -132864,7 +132867,7 @@
           "tier": "schooler",
           "points": 30,
           "score": 2.0,
-          "share": 0.48,
+          "share": 0.47,
           "evidence": {
             "tier1_events": 3,
             "international_events": 0,
@@ -132970,6 +132973,23 @@
           "evidence": {
             "tier1_events": 7,
             "international_events": 6,
+            "international_wins": []
+          }
+        },
+        {
+          "id": "ion2x",
+          "aliases": [
+            "ion2x"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ion2x",
+          "tier": "rare",
+          "points": 60,
+          "score": 1.87,
+          "share": 0.43,
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
             "international_wins": []
           }
         },
@@ -133589,7 +133609,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 9.8,
-          "share": 38.27,
+          "share": 38.21,
           "evidence": {
             "tier1_events": 25,
             "international_events": 15,
@@ -133608,7 +133628,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 8.8,
-          "share": 19.13,
+          "share": 19.1,
           "evidence": {
             "tier1_events": 12,
             "international_events": 3,
@@ -133627,7 +133647,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.8,
-          "share": 9.57,
+          "share": 9.55,
           "evidence": {
             "tier1_events": 25,
             "international_events": 15,
@@ -133646,7 +133666,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 7.3,
-          "share": 6.77,
+          "share": 6.75,
           "evidence": {
             "tier1_events": 9,
             "international_events": 4,
@@ -133666,7 +133686,7 @@
           "tier": "plankton",
           "points": 10,
           "score": 6.2,
-          "share": 3.16,
+          "share": 3.15,
           "evidence": {
             "tier1_events": 15,
             "international_events": 5,
@@ -134303,6 +134323,23 @@
           }
         },
         {
+          "id": "ion2x",
+          "aliases": [
+            "ion2x"
+          ],
+          "icon": null,
+          "source": "https://liquipedia.net/valorant/Ion2x",
+          "tier": "rare",
+          "points": 60,
+          "score": 1.87,
+          "share": 0.16,
+          "evidence": {
+            "tier1_events": 1,
+            "international_events": 0,
+            "international_wins": []
+          }
+        },
+        {
           "id": "Jamelinho213",
           "aliases": [
             "jamelinho213"
@@ -134653,8 +134690,8 @@
           ],
           "icon": null,
           "source": "https://liquipedia.net/valorant/Nizzy",
-          "tier": "rare",
-          "points": 60,
+          "tier": "deep_cut",
+          "points": 85,
           "score": 1.37,
           "share": 0.11,
           "evidence": {
@@ -134919,7 +134956,7 @@
           "tier": "deep_cut",
           "points": 85,
           "score": 0.6,
-          "share": 0.07,
+          "share": 0.06,
           "evidence": {
             "tier1_events": 2,
             "international_events": 2,
@@ -146835,15 +146872,6 @@
     }
   ],
   "schedule": {
-    "2026-11-23": [
-      "outlaw_skin",
-      "b_callout",
-      "phantom_skin",
-      "any_map",
-      "team_secret",
-      "played_pacific",
-      "igl_americas"
-    ],
     "2026-11-24": [
       "bind_callout",
       "mid_callout",
@@ -147113,6 +147141,15 @@
       "japan",
       "team_secret",
       "played_pacific"
+    ],
+    "2026-12-24": [
+      "marshal_skin",
+      "phantom_finisher",
+      "trap_ability",
+      "champions_winner",
+      "played_china",
+      "vct_mvp",
+      "igl_americas"
     ]
   }
 }

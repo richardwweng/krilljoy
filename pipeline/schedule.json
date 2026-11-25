@@ -599,6 +599,18 @@
     "played_pacific"
    ],
    "pinned": false
+  },
+  "2026-12-24": {
+   "prompts": [
+    "marshal_skin",
+    "phantom_finisher",
+    "trap_ability",
+    "champions_winner",
+    "played_china",
+    "vct_mvp",
+    "igl_americas"
+   ],
+   "pinned": false
   }
  }
 }

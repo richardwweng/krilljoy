@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24",
+ "generated": "2026-11-25",
  "events": [
   {
    "page": "VCT/2026/Stage 2/Masters",
@@ -15457,11 +15457,7 @@
     "VCT/2026/Pacific_League/Stage_2"
    ],
    "wins": [],
-   "captain": [
-    "VCT/2026/Pacific_League/Kickoff",
-    "VCT/2026/Pacific_League/Stage_1",
-    "VCT/2026/Pacific_League/Stage_2"
-   ],
+   "captain": [],
    "mvps": [],
    "teams": {
     "zetadivision": [
@@ -24368,6 +24364,7 @@
    "page": "PapiChulo",
    "id": "PapiChulo",
    "aliases": [
+    "papi",
     "papichulo"
    ],
    "countries": [
@@ -25654,6 +25651,31 @@
    "id": "nightz",
    "aliases": [
     "nightz"
+   ],
+   "countries": [
+    "United States"
+   ],
+   "events": [
+    "VCT/2026/Americas_League/Stage_2"
+   ],
+   "wins": [],
+   "captain": [],
+   "mvps": [],
+   "teams": {
+    "envy": [
+     "VCT/2026/Americas_League/Stage_2"
+    ]
+   },
+   "last_year": 2026,
+   "starter": true,
+   "has_page": true,
+   "earnings": 0
+  },
+  {
+   "page": "Ion2x",
+   "id": "ion2x",
+   "aliases": [
+    "ion2x"
    ],
    "countries": [
     "United States"
