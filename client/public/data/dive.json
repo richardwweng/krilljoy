@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-25",
-  "data_generated": "2026-11-25",
+  "generated": "2026-11-26",
+  "data_generated": "2026-11-26",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146872,15 +146872,6 @@
     }
   ],
   "schedule": {
-    "2026-11-24": [
-      "bind_callout",
-      "mid_callout",
-      "frenzy_skin",
-      "bucky_skin",
-      "global_esports",
-      "furia",
-      "vct_mvp"
-    ],
     "2026-11-25": [
       "ascent_callout",
       "icebox_callout",
@@ -147150,6 +147141,15 @@
       "played_china",
       "vct_mvp",
       "igl_americas"
+    ],
+    "2026-12-25": [
+      "vandal_finisher",
+      "pink_skin",
+      "info_ability",
+      "furia",
+      "intl_team",
+      "russia",
+      "global_esports"
     ]
   }
 }

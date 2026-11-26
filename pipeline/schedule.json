@@ -611,6 +611,18 @@
     "igl_americas"
    ],
    "pinned": false
+  },
+  "2026-12-25": {
+   "prompts": [
+    "vandal_finisher",
+    "pink_skin",
+    "info_ability",
+    "furia",
+    "intl_team",
+    "russia",
+    "global_esports"
+   ],
+   "pinned": false
   }
  }
 }
