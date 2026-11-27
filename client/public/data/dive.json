@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-26",
-  "data_generated": "2026-11-26",
+  "generated": "2026-11-27",
+  "data_generated": "2026-11-27",
   "game_version": "13.10.00.5893614",
   "attribution": "Pro-scene data from Liquipedia (liquipedia.net), licensed CC BY-SA 3.0. Game data from valorant-api.com.",
   "tier1_definition": "Appeared on a roster at a VCT international event or a franchised VCT league event (2023+).",
@@ -146872,15 +146872,6 @@
     }
   ],
   "schedule": {
-    "2026-11-25": [
-      "ascent_callout",
-      "icebox_callout",
-      "ultimate",
-      "melee_skin",
-      "intl_team",
-      "lockin",
-      "russia"
-    ],
     "2026-11-26": [
       "summit_callout",
       "sentinel_ability",
@@ -147150,6 +147141,15 @@
       "intl_team",
       "russia",
       "global_esports"
+    ],
+    "2026-12-26": [
+      "gold_skin",
+      "purple_phantom",
+      "gun_under_1000",
+      "lockin",
+      "team_liquid",
+      "intl_winner",
+      "igl_emea"
     ]
   }
 }

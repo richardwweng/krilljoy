@@ -623,6 +623,18 @@
     "global_esports"
    ],
    "pinned": false
+  },
+  "2026-12-26": {
+   "prompts": [
+    "gold_skin",
+    "purple_phantom",
+    "gun_under_1000",
+    "lockin",
+    "team_liquid",
+    "intl_winner",
+    "igl_emea"
+   ],
+   "pinned": false
   }
  }
 }
